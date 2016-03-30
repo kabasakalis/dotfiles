@@ -1,0 +1,7 @@
+[color]
+	ui = true
+[user]
+	name = Spiros Kabasakalis
+	email = kabasakalis@gmail.com
+[push]
+	default = simple
