@@ -1,12 +1,55 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - link:
+    #zsh
+    ~/.zshrc:
+      force: true
+      path: zsh/zshrc
+    ~/.dircolors: zsh/.dircolors
+    ~/build-zsh.sh: zsh/build-zsh.sh
+    #oh-my-zsh
+    ~/.oh-my-zsh/oh-my-zsh.sh:
+      force: true
+      path: oh-my-zsh/oh-my-zsh.sh
+    #bash
     ~/.profile: bash/profile
     ~/.bash_profile: bash/bash_profile
     ~/.bashrc: bash/bashrc
     ~/.bash_logout: bash/bash_logout
     ~/.bash_aliases: bash/bash_aliases
+    #git
     ~/.gitconfig: git/gitconfig
-    ~/.zshrc: zsh/zshrc
+    #Terminator
+    ~/.config/terminator:
+      create: true
+      path: config/terminator
+    #Spacemacs
+    ~/.spacemacs: spacemacs/.spacemacs
+    #Atom
+    ~/.atom/config.cson: atom/config.cson
+    ~/.atom/project-viewer.json: atom/project-viewer.json
+    ~/.atom/packages: atom/packages
+    #Sublime
+    ~/.config/sublime-text-3/Packages/User: sublime/
+    #Ruby
+    ~/.irbrc: ruby/.irbrc
+    ~/.gemrc: ruby/.gemrc
+    ~/.bundle: ruby/.bundle
+    #Spotify
+    ~/.config/spotify: spotify/
+
+
+
+
+
+
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
 
 

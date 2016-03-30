@@ -1,0 +1,39 @@
+{
+    "groups": [
+        {
+            "name": "Rails",
+            "color": "#a0a8fa",
+            "icon": "icon-briefcase",
+            "expanded": true
+        }
+    ],
+    "projects": [
+        {
+            "name": "mymusic_API",
+            "group": "Rails",
+            "paths": {
+                "/home/spiros/projects/mymusic_API": "{\"mymusic_API\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"app\":{\"expanded\":false,\"entries\":{}},\"bin\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"db\":{\"expanded\":false,\"entries\":{}},\"doc\":{\"expanded\":false,\"entries\":{}},\"lib\":{\"expanded\":false,\"entries\":{}},\"log\":{\"expanded\":false,\"entries\":{}},\"public\":{\"expanded\":false,\"entries\":{}},\"spec\":{\"expanded\":false,\"entries\":{}},\"test\":{\"expanded\":false,\"entries\":{}},\"tmp\":{\"expanded\":false,\"entries\":{}},\"vendor\":{\"expanded\":false,\"entries\":{}}}}}"
+            },
+            "buffers": [
+                "/home/spiros/projects/mymusic_API/app/serializers/artist_serializer.rb",
+                "/home/spiros/projects/mymusic_API/app/serializers/genre_serializer.rb",
+                "/home/spiros/projects/mymusic_API/app/serializers/user_serializer.rb",
+                "/home/spiros/projects/mymusic_API/config/boot.rb",
+                "/home/spiros/projects/mymusic_API/config/database.yml",
+                "/home/spiros/projects/mymusic_API/app/serializers/playlist_serializer.rb",
+                "/home/spiros/projects/mymusic_API/app/serializers/track_serializer.rb",
+                "/home/spiros/projects/mymusic_API/app/channels/application_cable/channel.rb"
+            ]
+        },
+        {
+            "name": "vivlio",
+            "group": "Rails",
+            "paths": {
+                "/home/spiros/projects/examples/vivliotopia-gr": "{\"vivliotopia-gr\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"app\":{\"expanded\":true,\"entries\":{\"assets\":{\"expanded\":false,\"entries\":{}},\"controllers\":{\"expanded\":false,\"entries\":{}},\"helpers\":{\"expanded\":false,\"entries\":{}},\"mailers\":{\"expanded\":false,\"entries\":{}},\"models\":{\"expanded\":false,\"entries\":{}},\"presenters\":{\"expanded\":false,\"entries\":{}},\"serializers\":{\"expanded\":true,\"entries\":{}},\"uploaders\":{\"expanded\":false,\"entries\":{}},\"views\":{\"expanded\":false,\"entries\":{}},\"workers\":{\"expanded\":false,\"entries\":{}}}},\"bin\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"db\":{\"expanded\":false,\"entries\":{}},\"doc\":{\"expanded\":false,\"entries\":{}},\"lib\":{\"expanded\":false,\"entries\":{}},\"log\":{\"expanded\":false,\"entries\":{}},\"middleman\":{\"expanded\":false,\"entries\":{}},\"public\":{\"expanded\":true,\"entries\":{}},\"script\":{\"expanded\":false,\"entries\":{}},\"test\":{\"expanded\":false,\"entries\":{}},\"vendor\":{\"expanded\":false,\"entries\":{}}}}}"
+            },
+            "buffers": [
+                "/home/spiros/projects/examples/vivliotopia-gr/app/serializers/product_autocomplete_serializer.rb"
+            ]
+        }
+    ]
+}

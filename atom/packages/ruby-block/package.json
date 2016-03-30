@@ -1,0 +1,84 @@
+{
+  "name": "ruby-block",
+  "main": "./lib/ruby-block",
+  "version": "0.3.5",
+  "description": "Atom highlight matching ruby block",
+  "keywords": [
+    "ruby",
+    "highlight",
+    "jump"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmatsuda/ruby-block.git"
+  },
+  "license": "GPLv2",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "underscore-plus": "1.x"
+  },
+  "readme": "# ruby-block package [![Build Status](https://travis-ci.org/hmatsuda/ruby-block.svg?branch=master)](https://travis-ci.org/hmatsuda/ruby-block) [![Build status](https://ci.appveyor.com/api/projects/status/bnovofmb9wyffqai/branch/master?svg=true)](https://ci.appveyor.com/project/hmatsuda/ruby-block/branch/master)\n\n![A screenshot of your package](http://cl.ly/image/181n0f1R1U0O/ruby-block.gif)\n\nHighlight matching ruby block when cursor is on the following keywords:\n\n`end`, `elsif`, `else`, `when` `rescue` and `ensure`.\n\n\n## Features\n- Highlight matching ruby block\n- Go to matching line (`ctrl-g b`)\n\n## Requirements\nEnable the [`language-ruby`](https://atom.io/packages/language-ruby) package.\n\n## Settings\nYou can change behavior to highlight block by settings menu.\n  \n- Show matching block into bottom panel(like Emacs minibuffer)\n\n![show bottom panel](http://cl.ly/image/0d081N2t2p0f/Image%202015-01-16%20at%201.05.32%20%E5%8D%88%E5%89%8D.png)\n\n- Highlight line of matching block\n\n![highlight line](http://cl.ly/image/1v3N0F1R3B15/test_rb_-__Users_hakutoitoi__atom_packages_ruby-block_-_Atom.png)\n\n- Highlight gutter of matching block\n\n![highlight gutter](http://cl.ly/image/1x0g1e291k0v/Image%202015-01-16%20at%201.03.15%20%E5%8D%88%E5%89%8D.png)\n\nHighlighting line and bottom panel are enable by default.\n\n## Overwriting default styles\nIf you want to change default highliting color, just add styles with preference for color like below into `styles.less`.\n```less\n:host, atom-text-editor, atom-text-editor::shadow {\n  .line-number.ruby-block-highlight {\n    background-color: red;\n  }\n  \n  .highlights {\n    .ruby-block-highlight .region {\n      background-color: red;\n    }\n  }\n}\n```\n\n## Thanks\nPorting the features of [juszczakn](https://github.com/juszczakn)'s great Emacs [Ruby Block Mode](https://github.com/juszczakn/ruby-block) to Atom.\n\n## Contributing\n1. Fork it\n2. Create your feature branch (git checkout -b my-new-feature)\n3. Commit your changes (git commit -am 'Add some feature')\n4. Push to the branch (git push origin my-new-feature)\n5. Create new Pull Request\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/hmatsuda/ruby-block/issues"
+  },
+  "homepage": "https://github.com/hmatsuda/ruby-block#readme",
+  "_id": "ruby-block@0.3.5",
+  "_shasum": "0cb9eac032aab8894c48b40a562227fb40a05171",
+  "_resolved": "file:../d-116224-13500-jmlpjx/package.tgz",
+  "_from": "../d-116224-13500-jmlpjx/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/ruby-block-view.coffee",
+        "lib/ruby-block.coffee"
+      ],
+      ".js": [
+        "node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      ],
+      ".json": [
+        "node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "",
+          "spec"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+'.text.html':
+  'ngFor - Angular 2 snippet':
+    'prefix': 'ng2for'
+    'body': """*ngFor="#${1:item} of ${2:list}\""""
+  'ngIf - Angular 2 snippet':
+    'prefix': 'ng2if'
+    'body': """*ngIf="${1:expression}\""""
+  'ngSwitch - Angular 2 snippet':
+    'prefix': 'ng2switch'
+    'body': """
+    <div [ngSwitch]="${1:conditionExpression}">
+      <template [ngSwitchWhen]="${2:caseExp}">
+
+      </template>
+      <template ngSwitchDefault>
+
+      </template>
+    </div>
+    """
+  'ngClass - Angular 2 snippet':
+    'prefix': 'ng2class'
+    'body': """[ngClass]="{'${1:cssClass}': ${2:expression}}\""""
+  'ngModel - Angular 2 snippet':
+    'prefix': 'ng2model'
+    'body': """[(ngModel)]="${1:binding}\""""

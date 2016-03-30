@@ -1,0 +1,37 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ApplySyntax",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"CoffeeScriptHaml",
+		"Color Highlighter",
+		"Git",
+		"GitGutter",
+		"Haml",
+		"Jade",
+		"Package Control",
+		"Pretty JSON",
+		"Python Nose Testing Snippets",
+		"Sass",
+		"ShellCommand",
+		"SideBarEnhancements",
+		"SideBarGit",
+		"SublimeLinter",
+		"SublimeLinter-contrib-scss-lint",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"Theme - Primer",
+		"Theme - Soda",
+		"Tomorrow Color Schemes",
+		"TypeScript",
+		"Vagrant",
+		"Zeal"
+	]
+}
