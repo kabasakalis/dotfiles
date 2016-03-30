@@ -3,6 +3,8 @@ export ZSH=/home/spiros/.oh-my-zsh
 #256 COLORS
 export TERM="xterm-256color"
 
+setopt AUTO_CD
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -53,7 +55,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby)
+plugins=(git rails ruby bundler copydir copyfile)
 
 # User configuration
 
@@ -150,6 +152,3 @@ export EDITOR='emacs'
   BULLETTRAIN_EXEC_TIME_ELAPSED=5
   BULLETTRAIN_EXEC_TIME_BG='yellow'
   BULLETTRAIN_EXEC_TIME_FG='black'
-
-
-

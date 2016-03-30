@@ -2,6 +2,7 @@
 ----
 
 ### Managed with Dotbot
+`dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml`
 # References
 ----
  * [Your unofficial guide to dotfiles on GitHub.](https://dotfiles.github.io/).

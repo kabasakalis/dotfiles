@@ -6,3 +6,4 @@
 - https://cyAdwmoJyoMEnzVVZQU_@repo.fury.io/drumaddict/
 :update_sources: true
 :verbose: true
+gem: --no-document
