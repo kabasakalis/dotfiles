@@ -23,6 +23,7 @@
     ~/.bash_aliases: bash/bash_aliases
     #git
     ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
     #Terminator
     ~/.config/terminator:
       create: true
@@ -50,6 +51,3 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
-
-

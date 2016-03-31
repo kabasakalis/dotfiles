@@ -1,7 +1,65 @@
-[color]
-	ui = true
 [user]
-	name = Spiros Kabasakalis
-	email = kabasakalis@gmail.com
+  name = Spiros Kabasakalis
+  email = kabasakalis@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore_global
+  safecrlf = warn
+  autocrlf = input
+  pager = less -R -S -x4
+
+[alias]
+  st = status -s -b
+  di = diff
+  co = checkout
+  ci = commit
+  cp = cherry-pick
+  br = branch
+  l = log --oneline --decorate --graph
+  ll = log --pretty=medium --decorate --graph --stat
+  ls = log --name-only --oneline
+  hist = log --pretty=format:\"%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\" --graph --date=short
+  fixup = commit --amend -c HEAD
+  timeline = log --graph --branches --pretty=oneline --decorate
+  untracked-files = ls-files -o --exclude-standard
+  ignored-files = ls-files --others -i --exclude-standard
+  modified-files = ls-files -m
+  unstage = reset HEAD
+  bl = blame -C
+  amend = commit --amend --reuse-message=HEAD
+  oops = reset --hard 'HEAD@{1}'
+  trust = "!sh -c 'mkdir -p .git/safe && hash -r'"
+
+[color]
+  status = auto
+  diff = auto
+  ui = true
+
+[color "branch"]
+  current = red reverse
+  local = blue
+  remote = green
+
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red bold
+  new = green
+  plain = white
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[pull]
+  ff = only
+
 [push]
-	default = simple
+  default = tracking
+
+[merge]
+  tool = opendiff
+
+[rebase]
+  autostash = true

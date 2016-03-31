@@ -3,7 +3,32 @@ export ZSH=/home/spiros/.oh-my-zsh
 #256 COLORS
 export TERM="xterm-256color"
 
+
+###
+# setup options
+###
+#Frequently used directories
 setopt AUTO_CD
+cdpath=($HOME/projects $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/.dotfiles $HOME/Documents)
+# use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
+setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
+setopt CHECK_JOBS             # check bg jobs on exit
+setopt CORRECT                # corrects spelling
+setopt CORRECT_ALL            # corrects spelling
+setopt EXTENDED_GLOB          # globs #, ~ and ^
+setopt EXTENDED_HISTORY       # saves timestamps on history
+setopt GLOB_DOTS              # find dotfiles easier
+setopt HASH_CMDS              # save cmd location to skip PATH lookup
+setopt HIST_EXPIRE_DUPS_FIRST # expire duped history first
+setopt HIST_NO_STORE          # don't save 'history' cmd in history
+setopt INC_APPEND_HISTORY     # append history as command are entered
+setopt LIST_ROWS_FIRST        # completion options left-to-right, top-to-bottom
+setopt LIST_TYPES             # show file types in list
+setopt MARK_DIRS              # adds slash to end of completed dirs
+setopt NUMERIC_GLOB_SORT      # sort numerically first, before alpha
+setopt PROMPT_SUBST           # sub values in prompt (though it seems to work anyway haha)
+setopt RM_STAR_WAIT           # pause before confirming rm *
+setopt SHARE_HISTORY          # share history between open shells
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -27,7 +52,10 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment the following line to disable colors in ls.
 #DISABLE_LS_COLORS="true"
 #LOAD set LS_COLORS from .dircolors
-eval $(dircolors -b $HOME/.dircolors)
+if [ -f ~/.dircolors ]; then
+   eval $(dircolors -b $HOME/.dircolors)
+fi
+
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -78,7 +106,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -105,10 +133,12 @@ chruby 2.3.0
 #editor
 export EDITOR='emacs'
 
-#autojump
-. /usr/share/autojump/autojump.sh
 
-
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="bullet-train"
 #BULLETRAIN CUSTOMIZATION
   # PROMPT
   BULLETTRAIN_PROMPT_CHAR='>'
@@ -152,3 +182,30 @@ export EDITOR='emacs'
   BULLETTRAIN_EXEC_TIME_ELAPSED=5
   BULLETTRAIN_EXEC_TIME_BG='yellow'
   BULLETTRAIN_EXEC_TIME_FG='black'
+
+  ###
+  # ssh host completion
+  ###
+  zstyle -e ':completion:*:(ssh|scp):*' hosts 'reply=(
+    ${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) \
+         /dev/null)"}%%[# ]*}//,/ }
+    ${=${(f)"$(cat /etc/hosts(|)(N) <<(ypcat hosts 2>/dev/null))"}%%\#*}
+  )'
+
+  #git helpers
+  function gdt() {
+    git tag -d $1;
+    git push origin :refs/tags/$1
+  }
+
+
+  #ruby/rails helpers
+  function rake() {
+    if [ -f bin/spring ]; then
+        bin/spring rake --trace $1
+    elif [ -f bin/rake ]; then
+        bin/rake --trace $1
+    else
+        bundle exec rake --trace $1
+    fi
+  }
