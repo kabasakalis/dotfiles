@@ -1,6 +1,5 @@
 # git aliases
 alias ga='git add'
-#alias gp='git push'
 alias gp='git push origin master'
 alias gl='git log'
 alias gst='git status'
@@ -22,7 +21,6 @@ alias gr='git rebase'
 alias cl='clear'
 
 alias port3000='lsof -wni tcp:3000'
-alias aj='autojump'
 
 #navigation
 function cd() {
@@ -54,7 +52,6 @@ alias eprofile='subl ~/.profile'
 alias sub="nohup subl . >/dev/null 2>&1 &"
 alias libsh="subl ~/bashlib/lib.sh --new-window"
 alias bashrc="subl ~/.bashrc --new-window"
-alias dumps="cd ~/Dumps"
 
 
 #Add extra protection against mistakes
@@ -91,9 +88,3 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #general
 alias int="sudo service network-manager restart"
-
-
-
-
-
-
