@@ -29,7 +29,7 @@
       create: true
       path: config/terminator
     #Spacemacs
-    ~/.spacemacs: spacemacs/.spacemacs
+    ~/.spacemacs: spacemacs/.spacemacs.lisp
     #Atom
     ~/.atom/config.cson: atom/config.cson
     ~/.atom/project-viewer.json: atom/project-viewer.json
