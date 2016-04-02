@@ -31,6 +31,7 @@ values."
      markdown
      typescript
      org
+     eyebrowse
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -256,6 +257,12 @@ you should place you code here."
 
 ;;;Neotree
   (setq projectile-switch-project-action 'neotree-projectile-action)
+  (add-hook 'neotree-mode-hook
+            (lambda ()
+              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 ;;Copy Paste
 ;; Imagine the following scenario.  One wants to paste some previously copied

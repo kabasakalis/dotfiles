@@ -22,7 +22,11 @@
             },
             "buffers": [
                 "/home/spiros/.dotfiles/install.conf.yaml",
-                "/home/spiros/.dotfiles/spacemacs/.spacemacs.lisp"
+                "/home/spiros/.dotfiles/spacemacs/.spacemacs.lisp",
+                "/home/spiros/.dotfiles/zsh/zshrc",
+                "/home/spiros/.dotfiles/zsh/zshenv",
+                "/home/spiros/.dotfiles/README.md",
+                "/home/spiros/.dotfiles/.gitignore"
             ]
         },
         {

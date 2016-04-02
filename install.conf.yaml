@@ -10,6 +10,7 @@
       force: true
       path: zsh/zshrc
     ~/.dircolors: zsh/.dircolors
+    ~/.zshenv: zsh/zshenv
     ~/build-zsh.sh: zsh/build-zsh.sh
     #oh-my-zsh
     ~/.oh-my-zsh/oh-my-zsh.sh:
