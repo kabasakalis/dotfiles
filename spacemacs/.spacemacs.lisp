@@ -39,6 +39,10 @@ values."
      ;; syntax-checking
      version-control
      themes-megapack
+     ruby-on-rails
+     (ruby :variables
+           ruby-test-runner 'rspec
+           ruby-enable-enh-ruby-mode t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -263,6 +267,9 @@ you should place you code here."
               (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
               (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+;;;Projectile-Rails
+  (add-hook 'projectile-mode-hook 'projectile-rails-on)
+  (setq projectile-rails-vanilla-command "bin/rails" projectile-rails-spring-command "bin/spring")
 
 ;;Copy Paste
 ;; Imagine the following scenario.  One wants to paste some previously copied
@@ -288,7 +295,6 @@ you should place you code here."
   (fset 'evil-visual-update-x-selection 'ignore)
 
 
-) 
+)
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-

@@ -114,10 +114,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
-# chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby 2.3.0
 
 
 # Set name of the theme to load.
@@ -186,15 +182,32 @@ ZSH_THEME="bullet-train"
 
 
   #ruby/rails helpers
-  function rake() {
-    if [ -f bin/spring ]; then
-        bin/spring rake --trace $1
-    elif [ -f bin/rake ]; then
-        bin/rake --trace $1
-    else
-        bundle exec rake --trace $1
-    fi
-  }
+  # function rake() {
+  #   if [ -f bin/spring ]; then
+  #       bin/spring rake --trace $1
+  #   elif [ -f bin/rake ]; then
+  #       bin/rake --trace $1
+  #   else
+  #       bundle exec rake --trace $1
+  #   fi
+  # }
+
+  # Bundle exec commands
+# bundle_commands=( rake spec rspec cucumber cap watchr rails rackup )
+# function run_bundler_cmd () {
+#     if [ -e ./Gemfile ]; then
+#         echo "bundle exec $@"
+#         bundle exec $@
+#     else
+#         echo "$@"
+#         $@
+#     fi
+# }
+#
+# for cmd in $bundle_commands
+# do
+#     alias $cmd="run_bundler_cmd $cmd"
+# done
 
   # ensure correct PATH
   source $HOME/.zshenv
