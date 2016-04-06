@@ -26,7 +26,11 @@
                 "/home/spiros/.dotfiles/zsh/zshenv",
                 "/home/spiros/.dotfiles/zsh/zshrc",
                 "/home/spiros/.dotfiles/zsh/.dircolors",
-                "/home/spiros/.dotfiles/bash/bash_aliases"
+                "/home/spiros/.dotfiles/tmux/tmux_install.sh",
+                "/home/spiros/.dotfiles/install.conf.yaml",
+                "/home/spiros/.dotfiles/README.md",
+                "/home/spiros/.dotfiles/.gitignore",
+                "/home/spiros/.dotfiles/.gitmodules"
             ]
         },
         {

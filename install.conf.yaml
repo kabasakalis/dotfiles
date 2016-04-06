@@ -11,7 +11,6 @@
       path: zsh/zshrc
     ~/.dircolors: zsh/.dircolors
     ~/.zshenv: zsh/zshenv
-    ~/build-zsh.sh: zsh/build-zsh.sh
     #oh-my-zsh
     ~/.oh-my-zsh/oh-my-zsh.sh:
       force: true
@@ -22,6 +21,8 @@
     ~/.bashrc: bash/bashrc
     ~/.bash_logout: bash/bash_logout
     ~/.bash_aliases: bash/bash_aliases
+    #tmux
+    ~/.scripts: scripts
     #git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global

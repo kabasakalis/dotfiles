@@ -31,19 +31,22 @@ values."
      markdown
      typescript
      org
-     eyebrowse
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+      ; eyebrowse
+      ; (shell :variables
+      ;        shell-default-height 30
+      ;        shell-default-position 'bottom)
+     ; spell-checking
+     ; syntax-checking
      version-control
-     themes-megapack
      ruby-on-rails
+     themes-megapack
      (ruby :variables
            ruby-test-runner 'rspec
            ruby-enable-enh-ruby-mode t)
+     (ranger :variables
+             ranger-show-preview t)
      )
+
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -94,7 +97,7 @@ values."
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
-   dotspacemacs-startup-lists '(recents projects)
+   dotspacemacs-startup-lists '(recents bookmarks projects)
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
@@ -146,7 +149,7 @@ values."
    ;; If non nil `Y' is remapped to `y$'. (default t)
    dotspacemacs-remap-Y-to-y$ t
    ;; Name of the default layout (default "Default")
-   dotspacemacs-default-layout-name "Default"
+   dotspacemacs-default-layout-name "Home"
    ;; If non nil the default layout name is displayed in the mode-line.
    ;; (default nil)
    dotspacemacs-display-default-layout nil
@@ -249,6 +252,11 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  (setq-default
+;; Miscellaneous
+  vc-follow-symlinks t)
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -258,8 +266,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
+;;; ranger
+  (setq ranger-parent-depth 0)
 
 ;;;Neotree
+  (setq neo-theme 'nerd)
   (setq projectile-switch-project-action 'neotree-projectile-action)
   (add-hook 'neotree-mode-hook
             (lambda ()
@@ -267,10 +278,38 @@ you should place you code here."
               (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
               (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+;;; Neotree Layout bug fix
+  ;  (add-hook 'eyebrowse-pre-window-switch-hook
+  ;    (lambda ()
+   ;
+   ;
+  ;  (progn
+  ;    (switch-to-buffer "*Messages*")
+  ;    (let ((old-window-config (window-state-get)))
+  ;      (set-window-dedicated-p nil t)
+  ;      (switch-to-buffer-other-window "*scratch*")
+  ;      (when (version<= emacs-version "24.5")
+  ;        (delete-other-windows)
+  ;        (set-window-dedicated-p nil nil)
+  ;        (window-state-put old-window-config (frame-root-window)))))
+   ;
+   ;
+  ;     ))
+
 ;;;Projectile-Rails
   (add-hook 'projectile-mode-hook 'projectile-rails-on)
   (setq projectile-rails-vanilla-command "bin/rails" projectile-rails-spring-command "bin/spring")
+;;;Helm
+  (setq helm-split-window-in-side-p t
+  helm-always-two-windows nil)
 
+;;;yas snippet
+;;makes tab autocompletion work with shells
+(defun force-yasnippet-off ()
+  (yas-minor-mode -1)
+  (setq yas-dont-activate t))
+  (add-hook 'term-mode-hook #'force-yasnippet-off)
+  (add-hook 'shell-mode-hook #'force-yasnippet-off)
 ;;Copy Paste
 ;; Imagine the following scenario.  One wants to paste some previously copied
 ;; (from application other than Emacs) text to the system's clipboard in place
@@ -298,3 +337,16 @@ you should place you code here."
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(golden-ratio-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
