@@ -5,6 +5,16 @@ alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias df='cd  ~/.dotfiles && dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml'
 
 
+#tmux
+alias tt='tmux'
+alias tl='tmux list-sessions'
+alias ta='tmux attach -t'
+alias tal='tmux attach'
+alias tns='tmux new -s'
+alias tks='tmux kill-session -t'
+alias ti='tmux info'
+
+
 # git aliases
 alias ga='git add'
 alias gp='git push origin master'

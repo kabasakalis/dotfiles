@@ -27,6 +27,7 @@
     ~/.scripts: scripts
     #tmux
     ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux.conf.local: tmux/.tmux.conf.local
     #git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
