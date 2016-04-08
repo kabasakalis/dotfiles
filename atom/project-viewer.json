@@ -21,16 +21,16 @@
                 "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":true,\"entries\":{\"packages\":{\"expanded\":false,\"entries\":{}}}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":true,\"entries\":{\".bundle\":{\"expanded\":false,\"entries\":{}}}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":true,\"entries\":{}}}}}"
             },
             "buffers": [
-                "/home/spiros/.dotfiles/spacemacs/.spacemacs.lisp",
                 "/home/spiros/.dotfiles/sublime/zsh/zshenv",
                 "/home/spiros/.dotfiles/zsh/zshenv",
-                "/home/spiros/.dotfiles/zsh/zshrc",
                 "/home/spiros/.dotfiles/zsh/.dircolors",
-                "/home/spiros/.dotfiles/tmux/tmux_install.sh",
-                "/home/spiros/.dotfiles/install.conf.yaml",
+                "/home/spiros/.dotfiles/tmux/.tmux.conf",
+                "/home/spiros/.dotfiles/spacemacs/.spacemacs.lisp",
+                "/home/spiros/.dotfiles/zsh/zshrc",
                 "/home/spiros/.dotfiles/README.md",
-                "/home/spiros/.dotfiles/.gitignore",
-                "/home/spiros/.dotfiles/.gitmodules"
+                "/home/spiros/.dotfiles/install.conf.yaml",
+                "/home/spiros/.dotfiles/bash/bash_aliases",
+                "/home/spiros/.dotfiles/zsh/zsh_aliases"
             ]
         },
         {

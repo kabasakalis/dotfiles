@@ -31,12 +31,19 @@ values."
      markdown
      typescript
      org
-      ; eyebrowse
+     tmux
+     prodigy
+     ; eyebrowse
       ; (shell :variables
       ;        shell-default-height 30
       ;        shell-default-position 'bottom)
      ; spell-checking
      ; syntax-checking
+     (shell :variables
+             shell-default-shell 'ansi-term
+             shell-default-position  'bottom
+             shell-default-height 30
+             shell-default-term-shell "/bin/zsh")
      version-control
      ruby-on-rails
      themes-megapack
@@ -97,7 +104,7 @@ values."
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
-   dotspacemacs-startup-lists '(recents bookmarks projects)
+   dotspacemacs-startup-lists '(recents projects)
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
@@ -270,14 +277,14 @@ you should place you code here."
   (setq ranger-parent-depth 0)
 
 ;;;Neotree
-  (setq neo-theme 'nerd)
-  (setq projectile-switch-project-action 'neotree-projectile-action)
-  (add-hook 'neotree-mode-hook
-            (lambda ()
-              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+  ; (setq neo-theme 'nerd)
+  ; (setq projectile-switch-project-action 'neotree-projectile-action)
+  ; (add-hook 'neotree-mode-hook
+  ;           (lambda ()
+  ;             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+  ;             (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+  ;             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+  ;             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 ;;; Neotree Layout bug fix
   ;  (add-hook 'eyebrowse-pre-window-switch-hook
   ;    (lambda ()

@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/spiros/.oh-my-zsh
-#256 COLORS
-export TERM="xterm-256color"
+
 
 ###
 # setup options
@@ -109,8 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-   . ~/.bash_aliases
+if [ -f ~/.zsh_aliases ]; then
+   . ~/.zsh_aliases
 fi
 
 
