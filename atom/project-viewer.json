@@ -22,9 +22,7 @@
             },
             "buffers": [
                 "/home/spiros/.dotfiles/install.conf.yaml",
-                "/home/spiros/.dotfiles/zsh/zsh_aliases",
-                "/home/spiros/.dotfiles/tmux/.tmux.conf",
-                "/home/spiros/.dotfiles/tmux/.tmux.conf_BACKUP"
+                "/home/spiros/.dotfiles/spacemacs/.spacemacs.lisp"
             ]
         },
         {

@@ -13,6 +13,7 @@ alias tal='tmux attach'
 alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
 alias ti='tmux info'
+alias td='tmux detach'
 
 
 # git aliases
