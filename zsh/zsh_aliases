@@ -1,9 +1,13 @@
 #Reload zsh
-alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias rl=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 #Dotfiles Regenerate symbolic links
 alias df='cd  ~/.dotfiles && dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml'
 
+#emacs
+alias et='emacsclient -t'
+alias eh="emacsclient -t -e '(spacemacs/home)'"
+alias ec='emacsclient -c'
 
 #tmux
 alias tt='tmux'
@@ -38,7 +42,7 @@ alias gr='git rebase'
 
 #system
 alias cl='clear'
-
+alias k9='kill -9'
 alias port3000='lsof -wni tcp:3000'
 
 #navigation
@@ -90,8 +94,8 @@ alias bs='bin/rails s'
 alias bc='bin/rails c'
 alias bi='bundle install'
 alias mc='mailcatcher'
-alias et='bundle exec rake i18n:export_translations'
-alias it='bundle exec rake i18n:import_translations'
+#alias et='bundle exec rake i18n:export_translations'
+#alias it='bundle exec rake i18n:import_translations'
 alias rap="bundle exec rake assets:precompile"
 
 #static servers

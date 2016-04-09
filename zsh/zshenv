@@ -8,6 +8,8 @@ else
   export EDITOR='subl'
 fi
 
+export ALTERNATE_EDITOR=""
+
 #256 COLORS
 export TERM="xterm-256color"
 

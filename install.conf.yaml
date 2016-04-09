@@ -28,6 +28,7 @@
     #tmux
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.tmux.conf.local: tmux/.tmux.conf.local
+    ~/.bin/tmuxinator.zsh: tmux/tmuxinator.zsh
     #git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global

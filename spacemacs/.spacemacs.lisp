@@ -210,7 +210,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -268,6 +268,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 ;; Miscellaneous
   vc-follow-symlinks t)
 
+  (setq-default initial-buffer-choice  "~/projects")
   )
 
 (defun dotspacemacs/user-config ()
@@ -290,32 +291,7 @@ you should place you code here."
 ;;; ranger
   (setq ranger-parent-depth 0)
 
-;;;Neotree
-  ; (setq neo-theme 'nerd)
-  ; (setq projectile-switch-project-action 'neotree-projectile-action)
-  ; (add-hook 'neotree-mode-hook
-  ;           (lambda ()
-  ;             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-  ;             (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-  ;             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-  ;             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
-;;; Neotree Layout bug fix
-  ;  (add-hook 'eyebrowse-pre-window-switch-hook
-  ;    (lambda ()
-   ;
-   ;
-  ;  (progn
-  ;    (switch-to-buffer "*Messages*")
-  ;    (let ((old-window-config (window-state-get)))
-  ;      (set-window-dedicated-p nil t)
-  ;      (switch-to-buffer-other-window "*scratch*")
-  ;      (when (version<= emacs-version "24.5")
-  ;        (delete-other-windows)
-  ;        (set-window-dedicated-p nil nil)
-  ;        (window-state-put old-window-config (frame-root-window)))))
-   ;
-   ;
-  ;     ))
+
 
 ;;;Projectile-Rails
   (add-hook 'projectile-mode-hook 'projectile-rails-on)
