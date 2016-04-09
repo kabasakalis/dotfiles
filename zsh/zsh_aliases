@@ -19,6 +19,16 @@ alias tks='tmux kill-session -t'
 alias ti='tmux info'
 alias td='tmux detach'
 
+#tmuxinator
+alias txs='tmuxinator start'
+alias txc='tmuxinator copy'
+alias txl='tmuxinator list'
+alias txd='tmuxinator delete'
+alias txdoc='tmuxinator doctor'
+alias txh='tmuxinator help'
+alias txdeb='tmuxinator debug'
+alias txv='tmuxinator version'
+
 
 # git aliases
 alias ga='git add'

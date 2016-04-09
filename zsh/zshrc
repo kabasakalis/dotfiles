@@ -185,16 +185,15 @@ ZSH_THEME="bullet-train"
   #usage e.g: "p csp_build" , "p python" etc
   function p(){
     ps aux | grep -i $1 | grep -v grep
+    pgrep -fl "$1"
   }
   # KILL ALL
   #usage e.g: "ka csp_build" , "ka python" etc
   function ka(){
-    echo 'Processes .. '
-    p "$1"
-    echo 'KILLING .. '
-    ps aux  |  grep -i  $1 |  grep -v grep   |   sudo $(awk '{print "kill -9 " $2}')
-    echo "DONE .. "
-    p "$1"
+    echo "Killing all Processes $1"
+    pgrep -fl "$1"
+    pkill -f "$1"
+    echo "They are dead."
   }
   #ruby/rails helpers
   # function rake() {
