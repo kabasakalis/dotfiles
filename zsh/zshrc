@@ -191,9 +191,13 @@ ZSH_THEME="bullet-train"
   #usage e.g: "ka csp_build" , "ka python" etc
   function ka(){
     echo "Killing all Processes $1"
-    pgrep -fl "$1"
-    pkill -f "$1"
-    echo "They are dead."
+    if [ ! -z "$1" ]; then
+      pgrep -fl "$1"
+      pkill -f "$1"
+      echo "They are dead."
+    else
+      echo 'Aborted.Must provide pattern to match for processes names.'
+    fi
   }
   #ruby/rails helpers
   # function rake() {
@@ -250,8 +254,55 @@ function kemacs(){
   fi
 }
 
-  # ensure correct PATH
-  source $HOME/.zshenv
+#tmux
+function tka(){
+  echo "Killing all tmux sessions"
+  for i in $(tmux ls | grep : | cut -d: -f1); do tmux kill-session -t $i; done
+  echo "Done"
+}
 
-  #tmuxinator
-  source ~/.bin/tmuxinator.zsh
+# ensure correct PATH
+source $HOME/.zshenv
+
+
+#general
+olh() {
+	local port=${1:-3000}
+	open  "Google Chrome" http://localhost:$port;
+ }
+
+ # pull down repo for reading
+ lookup-repo() {
+ 	local pwd=`pwd`
+ 	local target=~/projects/DEMOS
+
+ 	cd "$target"
+ 	git clone "$@"
+ 	cd "$pwd"
+  subl .
+ }
+
+ function get_repo {
+     url=$1;
+     reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+     git clone $url "/home/spiros/projects/DEMOS/$reponame";
+     cd "/home/spiros/projects/DEMOS/$reponame"
+ }
+
+# download any youtube or vimeo video to ~/Videos
+# Very simple,bare wrapper.See gazillions of options at
+# https://github.com/rg3/youtube-dl/blob/master/README.md#output-template-examples
+download-video() {
+	local folder=~/Videos
+	mkdir -p "$folder"
+	cd "$folder"
+  youtube-dl -o '%(title)s.%(ext)s' "$@"
+	cd -
+}
+
+chrome_localhost_tab(){
+  /usr/bin/google-chrome "http://localhost:$1"
+}
+
+#tmuxinator
+source ~/.bin/tmuxinator.zsh
