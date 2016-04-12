@@ -11,7 +11,6 @@ root: ~/projects/mymusic_API
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
-
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
 
@@ -27,15 +26,18 @@ root: ~/projects/mymusic_API
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t testpr
 
+
 windows:
   - spacemacs:  emacsclient -t -e '(spacemacs/home)'
   - console: bundle exec rails console
   - server: 
     - bundle exec rails s
+  - logs: 
+    - tail -f log/development.log
+  - generic zsh:
     - sudo chown -R spiros:no-internet ~/.pki/
     - chmod 777  -R ~/.pki
-    - sudo /usr/bin/google-chrome -c "http://localhost:3000"
-  - logs: tail -f log/development.log
+    - /usr/bin/google-chrome http://localhost:3000
 
 
 

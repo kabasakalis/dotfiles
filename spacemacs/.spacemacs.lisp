@@ -33,10 +33,10 @@ values."
      org
      tmux
      prodigy
-     ; eyebrowse
-      ; (shell :variables
-      ;        shell-default-height 30
-      ;        shell-default-position 'bottom)
+     ;;eyebrowse
+     (shell :variables
+             shell-default-height 30
+             shell-default-position 'bottom)
      ; spell-checking
      ; syntax-checking
      (shell :variables
@@ -339,7 +339,8 @@ you should place you code here."
 ;; `evil-visual-update-x-selection' do nothing:
 ;; (fset 'evil-visual-update-x-selection 'ignore)
   (fset 'evil-visual-update-x-selection 'ignore)
-
+;; Kill ring/ System Clipboard
+  (setq save-interprogram-paste-before-kill t)
 ;;COPY PASTE FROM SYSTEM CLIPBOARD IN TERMINAL MODE,xsel reuired.
   (defun copy-to-clipboard ()
     "Copies selection to x-clipboard."

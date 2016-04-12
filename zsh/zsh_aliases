@@ -18,6 +18,7 @@ alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
 alias ti='tmux info'
 alias td='tmux detach'
+alias treset='ka rails && ka emacs && tka'
 
 #tmuxinator
 alias txs='tmuxinator start'
