@@ -45,6 +45,18 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
+"ctags
+set tags=./tags;
+
+"comment
+Plugin 'tomtom/tcomment_vim'
+
+"Rspec
+Plugin 'thoughtbot/vim-rspec'
+
+" Use ack instead of grep
+set grepprg=ack-grep
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
