@@ -42,6 +42,10 @@
     #vim
     ~/.vimrc: vim/vimrc
     ~/ackrc: vim/ackrc
+    #neovim
+    ~/.config/nvim/init.vim: neovim/init.vim
+    ~/.config/nvim/plugins.vim: neovim/plugins.vim
+
     #Atom
     ~/.atom/config.cson: atom/config.cson
     ~/.atom/project-viewer.json: atom/project-viewer.json

@@ -1,0 +1,36 @@
+{
+  "name": "language-viml",
+  "author": {
+    "name": "Evan Hahn"
+  },
+  "description": "VimL highlighting for Atom, because why not.",
+  "version": "0.3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanHahn/atom-vimL.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# VimL highlighting for Atom\n\nBecause why not.\n\n[Ported](http://atom.io/docs/v0.60.0/converting-a-text-mate-bundle) from a [VimL highlighting bundle for TextMate](https://github.com/skammer/textmate-viml).\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/EvanHahn/atom-vimL/issues"
+  },
+  "homepage": "https://github.com/EvanHahn/atom-vimL#readme",
+  "_id": "language-viml@0.3.0",
+  "_shasum": "ae2fab98a130ef7a379f70ff8db5c32fb67e3108",
+  "_resolved": "file:../d-116314-30948-dce6tt/package.tgz",
+  "_from": "../d-116314-30948-dce6tt/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

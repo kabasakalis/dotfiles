@@ -54,6 +54,9 @@ Plugin 'tomtom/tcomment_vim'
 "Rspec
 Plugin 'thoughtbot/vim-rspec'
 
+"Ctrlp
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " Use ack instead of grep
 set grepprg=ack-grep
 
