@@ -1,7 +1,7 @@
 " Spiros Kabasakalis NeoVim Configuration
 
 set nocompatible   " choose no compatibility with legacy vi
-set encoding=utf-8
+set hidden
 
 " LEADER
 let mapleader=" "
@@ -18,9 +18,23 @@ endif
 set textwidth=80
 set colorcolumn=+1
 " Numbers
+" Display relative line numbers
+"set relativenumber
 set number
 set numberwidth=5
 let g:gitgutter_sign_column_always=1
+
+" use leader to interact with the system clipboard
+nnoremap <Leader>p "*]p
+nnoremap <Leader>P "*]P
+
+nnoremap <Leader>y ma^"*y$`a
+nnoremap <Leader>c ^"*c$
+nnoremap <Leader>d ^"*d$
+
+vnoremap <Leader>y "*y
+vnoremap <Leader>c "*c
+vnoremap <Leader>d "*d
 
 
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -51,9 +65,11 @@ endif
 filetype on
 filetype plugin on
 
+
+
 " TEXT FORMATTING
 filetype indent on
-set nowrap
+"set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -88,14 +104,23 @@ set nojoinspaces
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
+"CtrlP Config
+
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+" Easy bindings for  its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
 
 
 
@@ -104,7 +129,7 @@ endif
 "" Nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Tab completion
@@ -121,6 +146,10 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
+let NERDTreeMapActivateNode='<right>'
+let NERDTreeShowHidden=1
+nmap <leader>j :NERDTreeFind<CR>
+
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -144,6 +173,9 @@ nnoremap <silent> <leader>gt :TestVisit<CR>
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+map <Leader><Left> :bprev<CR>
+map <Leader><Right> :bnext<CR>
 
 
 " Quicker window movement
@@ -169,3 +201,26 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+
+" https://github.com/justinmk/vim-sneak
+" Map Sneak_s using nmap-- not nnoremap. That seems to cause problems
+nmap <Tab> <Plug>Sneak_s
+nmap <S-Tab> <Plug>Sneak_S
+vmap <Tab> <Plug>Sneak_s
+vmap <S-Tab> <Plug>Sneak_S
+
+" vim-move C used for window nav right now
+"let g:move_key_modifier = 'C'
+
+
+"Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+"Ctrl-spc
+nnoremap <silent><C-p> :CtrlSpace O<CR>
