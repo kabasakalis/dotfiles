@@ -74,6 +74,8 @@ alias du="cd ~/Labs/brahma/test/dummy"
 alias labs="cd ~/Labs/ && ls"
 
 alias app="cd ~/projects/app"
+alias demo="cd ~/projects/DEMOS/rails_tutorial_api"
+
 
 #edit common config files
 alias ezshrc='subl ~/.zshrc'
@@ -108,6 +110,7 @@ alias mc='mailcatcher'
 #alias et='bundle exec rake i18n:export_translations'
 #alias it='bundle exec rake i18n:import_translations'
 alias rap="bundle exec rake assets:precompile"
+alias gctags='ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)'
 
 #static servers
 alias met="cd ~/static/metronic_402 && serve"

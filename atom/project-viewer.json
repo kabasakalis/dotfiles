@@ -22,12 +22,10 @@
             },
             "buffers": [
                 "/home/spiros/.dotfiles/tmux/.tmux.conf",
-                "/home/spiros/.dotfiles/vim/vimrc",
                 "/home/spiros/.dotfiles/neovim/init.vim",
                 "/home/spiros/.dotfiles/install.conf.yaml",
                 "/home/spiros/.dotfiles/neovim/plugins.vim",
-                "/home/spiros/.dotfiles/zsh/zshenv",
-                "/home/spiros/.dotfiles/neovim/docs.vim"
+                "/home/spiros/.dotfiles/vim/vimrc"
             ]
         },
         {

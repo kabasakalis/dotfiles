@@ -3,6 +3,12 @@ if &compatible
 end
 
 "vim-plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
+endif
+
 call plug#begin('~/.config/nvim/plugins')
 
 " Thought bot Define bundles via Github repos
@@ -10,10 +16,11 @@ call plug#begin('~/.config/nvim/plugins')
   "Project Management
   Plug 'vim-ctrlspace/vim-ctrlspace'
   Plug 'scrooloose/nerdTree'
+  "Plug 'jistr/vim-nerdtree-tabs'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'terryma/vim-multiple-cursors'
 
-  Plug 'Valloric/YouCompleteMe'
+
   Plug 'rdnetto/YCM-Generator',{ 'branch': 'stable'}
 " Plug 'pbrisbin/vim-mkdir'
   Plug 'scrooloose/syntastic'
@@ -40,6 +47,15 @@ call plug#begin('~/.config/nvim/plugins')
   "Move
   Plug 'justinmk/vim-sneak'
   Plug 'matze/vim-move'
+  Plug 'terryma/vim-smooth-scroll'
+  Plug 'sickill/vim-pasta'
+  Plug 'AndrewRadev/splitjoin.vim'
+
+
+  "Search
+  "Plug 'bronson/vim-visual-star-search'
+
+
 
   "Theme
   Plug 'vim-airline/vim-airline'
@@ -52,6 +68,17 @@ call plug#begin('~/.config/nvim/plugins')
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
+
+  "Plug 'Valloric/YouCompleteMe'
+  "Plug 'ervandew/supertab'
+  "deoplete"
+  function! DoRemote(arg)
+    UpdateRemotePlugins
+  endfunction
+  Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+  Plug 'Shougo/vimproc.vim'
+  Plug 'osyo-manga/vim-monster'
+
 
 
 
