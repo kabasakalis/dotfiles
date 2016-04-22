@@ -16,7 +16,9 @@ call plug#begin('~/.config/nvim/plugins')
   "Project Management
   Plug 'vim-ctrlspace/vim-ctrlspace'
   Plug 'scrooloose/nerdTree'
+  Plug 'tpope/vim-vinegar'
   "Plug 'jistr/vim-nerdtree-tabs'
+
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'terryma/vim-multiple-cursors'
 
@@ -25,7 +27,7 @@ call plug#begin('~/.config/nvim/plugins')
 " Plug 'pbrisbin/vim-mkdir'
   Plug 'scrooloose/syntastic'
 
-" Plug 'tpope/vim-endwise'
+
 " Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-repeat'
@@ -42,6 +44,7 @@ call plug#begin('~/.config/nvim/plugins')
   Plug 'janko-m/vim-test'
   Plug 'thoughtbot/vim-rspec'
   Plug 'ecomba/vim-ruby-refactoring'
+  Plug 'tpope/vim-endwise'
 
   Plug 'vim-scripts/tComment'
   "Move

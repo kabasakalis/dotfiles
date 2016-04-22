@@ -45,6 +45,7 @@ set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set cursorline
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -210,16 +211,31 @@ map <Leader><Right> :bnext<CR>
 
 
 " Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-l> <C-w>l
 
-"Easy Wiondow Resizing
+" Quicker window movement
+nnoremap <Down> <C-w>j
+nnoremap <Up> <C-w>k
+nnoremap <Left> <C-w>h
+nnoremap <Right> <C-w>l
+
+"Easy Window Resizing
 nnoremap <Space><Up> <C-w>5+
 nnoremap <Space><Down> <C-w>5-
 nnoremap <Space><Left> <C-w>5>
 nnoremap <Space><Right> <C-w>5<
+
+" Move to the next buffer
+nmap <C-l> :bnext<CR>
+" Move to the previous buffer
+nmap <C-h> :bprevious<CR>
+"Close buffer workaround
+map <C-x> :bn<cr>:bd #<cr>:bp<cr>
+" Show all open buffers and their status
+nmap <Leader>bl :ls<CR>
 
 
 
@@ -297,8 +313,7 @@ nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
 
 
 
-"Close buffer workaround
-"map <C-x> :bn<cr>:bd #<cr>:bp<cr>
+
 
 " H to beginning of line, L to the end
 noremap H ^
@@ -367,6 +382,27 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" fugitive git bindings
+nnoremap <space>ga :Git add %:p<CR><CR>
+nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>gc :Gcommit -v -q<CR>
+nnoremap <space>gt :Gcommit -v -q %:p<CR>
+nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>ge :Gedit<CR>
+nnoremap <space>gr :Gread<CR>
+nnoremap <space>gw :Gwrite<CR><CR>
+nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <space>gp :Ggrep<Space>
+nnoremap <space>gm :Gmove<Space>
+nnoremap <space>gb :Git branch<Space>
+nnoremap <space>go :Git checkout<Space>
+nnoremap <space>gps :Dispatch! git push<CR>
+nnoremap <space>gpl :Dispatch! git pull<CR>
+
+"" Turn off recording
+map q <Nop>
+
 
 " allows you to visually select a section and then hit @ to run a macro on all lines
 " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.3dcn9prw6
