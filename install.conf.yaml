@@ -45,6 +45,7 @@
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
+    ~/.config/nvim/colors: neovim/colors
     ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
 
 

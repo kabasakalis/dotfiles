@@ -18,14 +18,27 @@
             "name": "dotfiles",
             "group": "Generic",
             "paths": {
-                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":true,\"entries\":{\"packages\":{\"expanded\":false,\"entries\":{}}}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":true,\"entries\":{\".bundle\":{\"expanded\":false,\"entries\":{}}}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":true,\"entries\":{}}}}}"
+                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"neovim\":{\"expanded\":true,\"entries\":{\"colors\":{\"expanded\":false,\"entries\":{}}}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":true,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":true,\"entries\":{}},\"zsh\":{\"expanded\":true,\"entries\":{}}}}}"
             },
             "buffers": [
                 "/home/spiros/.dotfiles/tmux/.tmux.conf",
                 "/home/spiros/.dotfiles/neovim/init.vim",
                 "/home/spiros/.dotfiles/install.conf.yaml",
                 "/home/spiros/.dotfiles/neovim/plugins.vim",
-                "/home/spiros/.dotfiles/vim/vimrc"
+                "/home/spiros/.dotfiles/git/gitconfig",
+                "/home/spiros/.dotfiles/zsh/zshenv"
+            ]
+        },
+        {
+            "name": "hkupty_nvimDOTFILES",
+            "group": "Generic",
+            "paths": {
+                "/home/spiros/projects/DEMOS/dotfiles": "{\"dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"irssi\":{\"expanded\":false,\"entries\":{}},\"nvim\":{\"expanded\":true,\"entries\":{\"nvim\":{\"expanded\":true,\"entries\":{\"spell\":{\"expanded\":false,\"entries\":{}}}}}},\"sbt\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"task\":{\"expanded\":false,\"entries\":{}},\"termite\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"vimperator\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":false,\"entries\":{}}}}}"
+            },
+            "buffers": [
+                "/home/spiros/projects/DEMOS/dotfiles/git/.gitignore_global",
+                "/home/spiros/projects/DEMOS/dotfiles/scripts/scripts/swap-caps",
+                "/home/spiros/projects/DEMOS/dotfiles/nvim/nvim/init.vim"
             ]
         },
         {

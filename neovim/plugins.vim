@@ -16,11 +16,14 @@ call plug#begin('~/.config/nvim/plugins')
   "Project Management
   Plug 'vim-ctrlspace/vim-ctrlspace'
   Plug 'scrooloose/nerdTree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'tpope/vim-vinegar'
+
   "Plug 'jistr/vim-nerdtree-tabs'
 
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'terryma/vim-multiple-cursors'
+  "Plug 'unblevable/quick-scope'
 
 
   Plug 'rdnetto/YCM-Generator',{ 'branch': 'stable'}
@@ -59,18 +62,27 @@ call plug#begin('~/.config/nvim/plugins')
   "Plug 'bronson/vim-visual-star-search'
 
 
+  "Terminal
+  Plug 'kassio/neoterm'
+
+
+  "Git
+  Plug 'airblade/vim-gitgutter'
 
   "Theme
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  "Git
-  Plug 'airblade/vim-gitgutter'
+  Plug 'ryanoasis/vim-devicons'
 
-  "Snippets
-  Plug 'MarcWeber/vim-addon-mw-utils'
-  Plug 'tomtom/tlib_vim'
-  Plug 'garbas/vim-snipmate'
-  Plug 'honza/vim-snippets'
+  " "Snippets
+  " Plug 'MarcWeber/vim-addon-mw-utils'
+  " Plug 'tomtom/tlib_vim'
+  " Plug 'garbas/vim-snipmate'
+  " Plug 'honza/vim-snippets'
+
+  " Snippets
+  Plug 'shougo/neosnippet.vim'
+  Plug 'shougo/neosnippet-snippets'
 
   "Plug 'Valloric/YouCompleteMe'
   "Plug 'ervandew/supertab'

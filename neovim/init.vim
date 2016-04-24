@@ -3,9 +3,10 @@
 """""""""""""""""""""""""""""
 " Standard Set Up           "
 """""""""""""""""""""""""""""
-
+"set encoding=utf8
 set nocompatible   " choose no compatibility with legacy vi
 set hidden
+"set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete 12
 
 " LEADER
 let mapleader=" "
@@ -47,8 +48,10 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set cursorline
 
+
 "" Searching
 set hlsearch                    " highlight matches
+"set nohlsearch                  "Disable search highlight
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
@@ -64,6 +67,110 @@ set formatoptions+=j
 " set foldnestmax=10
 " set foldmethod=indent
 
+" neovim config
+if has("nvim")
+  " change cursor to bar in insert mode
+  "let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+  " disable mouse support, what am I a vimposer?
+  set mouse-=a
+
+  " run tests with :T
+  let test#strategy = "neoterm"
+
+  "neoterm
+  let g:neoterm_position = 'horizontal'
+  let g:neoterm_automap_keys = ',tt'
+  let g:neoterm_size = '10'
+  let g:neoterm_keep_term_open = 1
+  "let g:neoterm_run_tests_bg = 1
+  "let g:neoterm_raise_when_tests_fail = 1
+
+  " pretty much essential: by default in terminal mode, you have to press ctrl-\-n to get into normal mode
+  " ain't nobody got time for that
+  "tnoremap <Esc> <C-\><C-n>
+  :tnoremap <Esc> <C-\><C-n>
+
+  " optional: make it easier to switch between terminal splits
+  " ctrl doesn't work for some reason so I use alt
+  " I think the terminal is capturing ctrl and not bubbling to vim or something
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
+
+  " totally optional: mirror the alt split switching in non-terminal splits
+  " Quicker window movement
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-l> <C-w>l
+
+
+  nnoremap <silent> <f10> :TREPLSendFile<cr>
+  nnoremap <silent> <f9> :TREPLSend<cr>
+  vnoremap <silent> <f9> :TREPLSend<cr>
+
+  " run set test lib
+  " nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
+  " nnoremap <silent> ,rf :call neoterm#test#run('file')<cr>
+  " nnoremap <silent> ,rn :call neoterm#test#run('current')<cr>
+  " nnoremap <silent> ,rr :call neoterm#test#rerun()<cr>
+
+  " Useful maps
+  " hide/close terminal
+  nnoremap <silent> ,th :call neoterm#close()<cr>
+  " clear terminal
+  nnoremap <silent> ,tl :call neoterm#clear()<cr>
+  " kills the current job (send a <c-c>)
+  nnoremap <silent> ,tc :call neoterm#kill()<cr>
+
+
+
+  " Rails commands
+  command! Troutes :T rake routes
+  command! -nargs=+ Troute :T rake routes | grep <args>
+  command! Tmigrate :T rake db:migrate
+
+  " Git commands
+  command! -nargs=+ Tg :T git <args>
+
+
+
+  " terminal toggle
+  tnoremap <F8> <C-\><C-n>
+  set switchbuf+=useopen
+  function! TermEnter()
+    let bufcount = bufnr("$")
+    let currbufnr = 1
+    let nummatches = 0
+    let firstmatchingbufnr = 0
+    while currbufnr <= bufcount
+      if(bufexists(currbufnr))
+        let currbufname = bufname(currbufnr)
+        if(match(currbufname, "term://") > -1)
+          echo currbufnr . ": ". bufname(currbufnr)
+          let nummatches += 1
+          let firstmatchingbufnr = currbufnr
+          break
+        endif
+      endif
+      let currbufnr = currbufnr + 1
+    endwhile
+    if(nummatches >= 1)
+      execute ":terminal ". firstmatchingbufnr
+      startinsert
+    else
+      execute ":terminal"
+    endif
+  endfunction
+  map <F12> :call TermEnter()<CR>
+
+
+
+endif
+
+
 "Plugins managed with vim-plug
 if filereadable(expand("~/.config/nvim/plugins.vim"))
   source ~/.config/nvim/plugins.vim
@@ -72,7 +179,7 @@ endif
 
 " FILE TYPES
 "filetype on
-"filetype plugin indent on
+filetype plugin indent on
 
 filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
@@ -148,9 +255,16 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
 " Easy bindings for  its various modes
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
+" nmap <leader>bb :CtrlPer<cr>
+" nmap <leader>bm :CtrlPMixed<cr>
+" nmap <leader>bs :CtrlPMRU<cr>
+
+" Open file menu
+nnoremap <Leader>o :CtrlP<CR>
+" Open buffer menu
+nnoremap <Leader>b :CtrlPBuffer<CR>
+" Open most recently used files
+nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 
 
@@ -161,7 +275,48 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Tab completion
+" " NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('haml', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('rb', 'Cyan', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('zshrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+" NERDTress File highlighting only the glyph/icon
+" test highlight just the glyph (icons) in nerdtree:
+" autocmd filetype nerdtree highlight rb_icon ctermbg=none ctermfg=Red guifg=#ffa500
+" autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
+" autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
+
+autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
+" if you are using another syn highlight for a given line (e.g.
+" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
+" other highlight to work with it
+autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
+autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+
+" Tab completionF
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 "set wildmode=list:longest,list:full
@@ -175,6 +330,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "endfunction
 "inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 "inoremap <S-Tab> <c-n>
+
 
 let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
@@ -193,12 +349,21 @@ nnoremap <leader><leader> <c-^>
 " nnoremap <Up> :echoe "Use k"<CR>
 " nnoremap <Down> :echoe "Use j"<CR>
 
+
+
+
 " vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
-nnoremap <silent> <leader>gt :TestVisit<CR>
+map <silent> <leader>f :TestFile<CR>
+map <silent> <leader>T :TestSuite<CR>
+map <silent> <leader>t :TestNearest<CR>
+map <silent> <leader>r :TestLast<CR>
+map <silent> <leader>g :TestVisit<CR>
+
+" nnoremap <silent> <Leader>t :TestFile<CR>
+" nnoremap <silent> <Leader>s :TestNearest<CR>
+" nnoremap <silent> <Leader>l :TestLast<CR>
+" nnoremap <silent> <Leader>a :TestSuite<CR>
+" nnoremap <silent> <leader>gt :TestVisit<CR>
 
 
 
@@ -206,21 +371,20 @@ nnoremap <silent> <leader>gt :TestVisit<CR>
 set splitbelow
 set splitright
 
-map <Leader><Left> :bprev<CR>
-map <Leader><Right> :bnext<CR>
 
 
-" Quicker window movement
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-l> <C-w>l
 
 " Quicker window movement
-nnoremap <Down> <C-w>j
-nnoremap <Up> <C-w>k
-nnoremap <Left> <C-w>h
-nnoremap <Right> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Quicker window movement
+" nnoremap <Down> <C-w>j
+" nnoremap <Up> <C-w>k
+" nnoremap <Left> <C-w>h
+" nnoremap <Right> <C-w>l
 
 "Easy Window Resizing
 nnoremap <Space><Up> <C-w>5+
@@ -228,14 +392,15 @@ nnoremap <Space><Down> <C-w>5-
 nnoremap <Space><Left> <C-w>5>
 nnoremap <Space><Right> <C-w>5<
 
-" Move to the next buffer
-nmap <C-l> :bnext<CR>
-" Move to the previous buffer
-nmap <C-h> :bprevious<CR>
-"Close buffer workaround
-map <C-x> :bn<cr>:bd #<cr>:bp<cr>
-" Show all open buffers and their status
-nmap <Leader>bl :ls<CR>
+" Move to the next buffeer
+nmap <C-Right> :bnext<CR>
+" Move to the previous er
+nmap <C-Left> :bprevious<CR>
+"Close er workaround
+map <C-x> :bn<cr>:bd! #<cr>:bp<cr>
+" Show all open ers and their status
+" map <Leader><Left> :bprev<CR>
+" map <Leader><Right> :bnext<CR>
 
 
 
@@ -269,28 +434,42 @@ set diffopt+=vertical
 "Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
-" Enable the list of buffers
+" Enable the list of ers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+
+
+
+" Dev Icons
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_ctrlp = 1
+if exists("g:loaded_webdevicons")
+    call webdevicons#refresh()
+endif
 
 "Ctrl-spc
 nnoremap <silent><C-p> :CtrlSpace O<CR>
 
 "YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
-"autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+"autocmd FileType ruby,eruby let g:rubycomplete_er_loading = 1
 "autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 "supertab
 "let g:SuperTabDefaultCompletionType = "context"
 
-"Completion Use deoplete.
+"Completion Deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
+inoremap <expr><C-@> deoplete#mappings#manual_complete()
 " Set async completion.
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
 set omnifunc=syntaxcomplete#Complete
@@ -313,7 +492,8 @@ nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
 
 
 
-
+" Save file
+  nnoremap <Leader>w :w<CR>
 
 " H to beginning of line, L to the end
 noremap H ^
@@ -411,3 +591,38 @@ function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+
+
+" Relative numbering
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set nornu
+    set number
+  else
+    set rnu
+  endif
+endfunction
+" Toggle between normal and relative numbering.
+nnoremap <leader>\ :call NumberToggle()<cr>
+
+
+" neosnippet.
+" Tell Neosnippet about the other snippets
+"let g:neosnippet#snippets_directory='~/.config/nvim/'
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif

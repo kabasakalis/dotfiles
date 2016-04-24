@@ -11,8 +11,8 @@ cdpath=($HOME/projects $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/.dotfile
 # use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
 setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
 setopt CHECK_JOBS             # check bg jobs on exit
-setopt CORRECT                # corrects spelling
-setopt CORRECT_ALL            # corrects spelling
+#setopt CORRECT                # corrects spelling
+#setopt CORRECT_ALL            # corrects spelling
 setopt EXTENDED_GLOB          # globs #, ~ and ^
 setopt EXTENDED_HISTORY       # saves timestamps on history
 setopt GLOB_DOTS              # find dotfiles easier
