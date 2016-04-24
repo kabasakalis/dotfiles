@@ -111,6 +111,8 @@ if has("nvim")
   nnoremap <silent> <f9> :TREPLSend<cr>
   vnoremap <silent> <f9> :TREPLSend<cr>
 
+  nnoremap <silent> <f8> :Ttoggle<cr>
+
   " run set test lib
   " nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
   " nnoremap <silent> ,rf :call neoterm#test#run('file')<cr>
@@ -137,34 +139,7 @@ if has("nvim")
 
 
 
-  " terminal toggle
-  tnoremap <F8> <C-\><C-n>
-  set switchbuf+=useopen
-  function! TermEnter()
-    let bufcount = bufnr("$")
-    let currbufnr = 1
-    let nummatches = 0
-    let firstmatchingbufnr = 0
-    while currbufnr <= bufcount
-      if(bufexists(currbufnr))
-        let currbufname = bufname(currbufnr)
-        if(match(currbufname, "term://") > -1)
-          echo currbufnr . ": ". bufname(currbufnr)
-          let nummatches += 1
-          let firstmatchingbufnr = currbufnr
-          break
-        endif
-      endif
-      let currbufnr = currbufnr + 1
-    endwhile
-    if(nummatches >= 1)
-      execute ":terminal ". firstmatchingbufnr
-      startinsert
-    else
-      execute ":terminal"
-    endif
-  endfunction
-  map <F12> :call TermEnter()<CR>
+
 
 
 
@@ -591,6 +566,45 @@ function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+
+
+" Workspace Setup
+" ----------------
+function! DefaultWorkspace()
+    " Rough num columns to decide between laptop and big monitor screens
+    " let numcol = 2
+    " if winwidth(0) >= 220
+    "     let numcol = 3
+    " endif
+    let numcol = 2
+
+    " e term://zsh
+    " file Shell\ Two
+    vnew
+
+    vnew
+    e Gemfile
+
+
+
+    :1quit
+    " vsp term://~/projects/
+    " file Context
+    " sp term://zsh
+    " file Shell\ One
+    " wincmd k
+    " resize 4
+    " wincmd h
+    tabnew
+    :Tnew
+    :call neoterm#do('bundle exec rails c')
+    :Tnew
+    :call neoterm#do('bundle exec rails server')
+    :quit
+    tabp
+endfunction
+command! -register DefaultWorkspace call DefaultWorkspace()
 
 
 
