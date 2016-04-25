@@ -430,6 +430,12 @@ endif
 "Ctrl-spc
 nnoremap <silent><C-p> :CtrlSpace O<CR>
 
+
+"ctrlspace
+if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
+
 "YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
 "autocmd FileType ruby,eruby let g:rubycomplete_er_loading = 1
@@ -568,45 +574,31 @@ function! ExecuteMacroOverVisualRange()
 endfunction
 
 
+" Open terminals tab
+function! TermTab()
+  tabnew
+  :Tpos 'vertical'
+  :Tnew
+  :call neoterm#do('bundle exec rails c')
+  :Tnew
+  :call neoterm#do('bundle exec rails server')
+  :quit
+  tabp
+endfunction
+command! -register TermTab call TermTab()
 
 " Workspace Setup
 " ----------------
 function! DefaultWorkspace()
-    " Rough num columns to decide between laptop and big monitor screens
-    " let numcol = 2
-    " if winwidth(0) >= 220
-    "     let numcol = 3
-    " endif
     let numcol = 2
-
-    " e term://zsh
-    " file Shell\ Two
     vnew
-
     vnew
     e Gemfile
-
-
-
     :1quit
-    " vsp term://~/projects/
-    " file Context
-    " sp term://zsh
-    " file Shell\ One
-    " wincmd k
-    " resize 4
-    " wincmd h
-    tabnew
-    :Tnew
-    :call neoterm#do('bundle exec rails c')
-    :Tnew
-    :call neoterm#do('bundle exec rails server')
-    :quit
-    tabp
+    :TermTab
+    let g:neoterm_position='horizontal'
 endfunction
 command! -register DefaultWorkspace call DefaultWorkspace()
-
-
 
 " Relative numbering
 function! NumberToggle()
