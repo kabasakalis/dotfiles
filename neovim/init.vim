@@ -563,6 +563,10 @@ vnoremap <Leader>d "*d
 " place whole file on the system clipboard (and return cursor to where it was)
 nmap <Leader>a maggVG"*y`a
 
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " have x (removes single character) not go into the default registry
 nnoremap x "_x
 " Make X an operator that removes without placing text in the default registry
@@ -574,6 +578,24 @@ vmap x "_d
 " when changing text, don't put the replaced text into the default registry
 nnoremap c "_c
 vnoremap c "_c
+
+
+" Fix the cw at the end of line bug default Vim has special treatment (:help cw)
+nmap cw ce
+nmap dw de
+
+" Quick-fix window navigation
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
+
+" Location list navigation
+nnoremap ]l :lnext<CR>
+nnoremap [l :lprevious<CR>
+
+" Error mnemonic (Neomake uses location list)
+nnoremap ]e :lnext<CR>
+nnoremap [e :lprevious<CR>
+
 
 
 " Enter gives a new line when in command mode without entering insert mode. Likewise, shift+enter gives a new line
@@ -595,6 +617,23 @@ vnoremap < <gv
 " Make the dot command work as expected in visual mode (via
 " https://www.reddit.com/r/vim/comments/3y2mgt/do_you_have_any_minor_customizationsmappings_that/cya0x04)
 vnoremap . :norm.<CR>
+
+" When jump to next match also center screen
+nnoremap n nzz
+nnoremap N Nzz
+vnoremap n nzz
+vnoremap N Nzz
+
+" Same when moving up and down
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-f> <C-f>zz
+nnoremap <C-b> <C-b>zz
+vnoremap <C-u> <C-u>zz
+vnoremap <C-d> <C-d>zz
+vnoremap <C-f> <C-f>zz
+vnoremap <C-b> <C-b>zz
+
 
 "Smooth scroll vim-smooth-scroll
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
