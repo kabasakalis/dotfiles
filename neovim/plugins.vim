@@ -28,7 +28,9 @@ call plug#begin('~/.config/nvim/plugins')
 
   Plug 'rdnetto/YCM-Generator',{ 'branch': 'stable'}
 " Plug 'pbrisbin/vim-mkdir'
-  Plug 'scrooloose/syntastic'
+  " Asynchronous maker and linter (needs linters to work)
+  Plug 'benekastah/neomake', { 'on': ['Neomake'] }
+  "Plug 'scrooloose/syntastic'
 
 
 " Plug 'tpope/vim-eunuch'
@@ -48,6 +50,56 @@ call plug#begin('~/.config/nvim/plugins')
   Plug 'thoughtbot/vim-rspec'
   Plug 'ecomba/vim-ruby-refactoring'
   Plug 'tpope/vim-endwise'
+
+    " ---------------------------------------------------------------------------------------------------------------------
+  " JS (ES6, React) {{{
+  " ---------------------------------------------------------------------------------------------------------------------
+
+  " JS syntax
+  Plug 'jelera/vim-javascript-syntax'
+  " JS libs syntax (React, Angular)
+  Plug 'othree/javascript-libraries-syntax.vim'
+  " JSX syntax (needs vim-javascript for indentation)
+  Plug 'mxw/vim-jsx' | Plug 'pangloss/vim-javascript'
+  " Typescript syntax
+  Plug 'leafgarland/typescript-vim'
+  " JSON syntax
+  Plug 'sheerun/vim-json'
+  "}}}
+
+
+    " ---------------------------------------------------------------------------------------------------------------------
+  " HTML/CSS {{{
+  " ---------------------------------------------------------------------------------------------------------------------
+
+  " HTML5 syntax
+  Plug 'othree/html5.vim'
+  " SCSS syntax
+  Plug 'cakebaker/scss-syntax.vim'
+  " Color highlighter
+  Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xhtml', 'javascript', 'javascript.jsx'] }
+
+
+    " ---------------------------------------------------------------------------------------------------------------------
+  " Other languages {{{
+  " ---------------------------------------------------------------------------------------------------------------------
+
+  " Elixir syntax
+  Plug 'elixir-lang/vim-elixir'
+  " Elm syntax
+  Plug 'lambdatoast/elm.vim'
+  " Yaml indentation
+  Plug 'martin-svk/vim-yaml'
+  " Markdown syntax
+  Plug 'tpope/vim-markdown'
+  " Git syntax
+  Plug 'tpope/vim-git'
+  " Tmux syntax
+  Plug 'tejr/vim-tmux'
+  " Dockerfile
+  Plug 'honza/dockerfile.vim'
+  "}}}
+
 
   Plug 'vim-scripts/tComment'
   "Move

@@ -378,14 +378,67 @@ map <C-x> :bn<cr>:bd! #<cr>:bp<cr>
 " map <Leader><Right> :bnext<CR>
 
 
+" -----------------------------------------------------
+" Neomake settings {{{
+" -----------------------------------------------------
+let g:neomake_verbose=0
+let g:neomake_warning_sign = {
+      \ 'text': '❯',
+      \ 'texthl': 'rubyConstant',
+      \ }
+let g:neomake_error_sign = {
+      \ 'text': '❯',
+      \ 'texthl': 'Identifier',
+      \ }
+"}}}
+let g:neomake_javascript_enabled_makers = ['mri','rubocop','reek']
+let g:neomake_ruby_mri_buffer_output = 1
+"let g:neomake_ruby_rubocop_maker = { 'args': ['-c.rubocop.yml', '-n'], 'cwd': getcwd() }
 
+
+" -----------------------------------------------------
+" 7.1 Run linters after save {{{
+" -----------------------------------------------------
+
+" npm install -g eslint
+"autocmd BufWritePost *.js Neomake eslint
+" npm install -g jsonlint
+autocmd BufWritePost *.json Neomake jsonlint
+" npm install -g typescript
+autocmd BufWritePost *.ts Neomake tsc
+" gem install rubocop
+autocmd BufWritePost *.rb Neomake rubocop
+" ruby
+autocmd BufWritePost *.rb Neomake mri
+" sudo apt-get install elixir
+autocmd BufWritePost *.ex Neomake elixir
+" apt-get install tidy
+autocmd BufWritePost *.html Neomake tidy
+" gem install haml_lint
+autocmd BufWritePost *.haml Neomake hamllint
+" gem install scsslint
+autocmd BufWritePost *.scss Neomake scsslint
+" gem install mdl
+autocmd BufWritePost *.md Neomake mdl
+" apt-get install shellcheck
+autocmd BufWritePost *.sh Neomake shellcheck
+" pip3 install vim-vint
+autocmd BufWritePost *.vim Neomake vint
+"}}}
 
 
 " configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {"regex": "possibly useless use of a variable in void context"}
+" let g:syntastic_check_on_open=1
+" let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+" let g:syntastic_eruby_ruby_quiet_messages =
+"     \ {"regex": "possibly useless use of a variable in void context"}
+" Syntastic settings
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_aggregate_errors = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 
 " Autocomplete with dictionary words when spell check is on
@@ -413,6 +466,7 @@ let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_exclude_preview = 1
 
 
 
@@ -435,6 +489,10 @@ nnoremap <silent><C-p> :CtrlSpace O<CR>
 if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
+let g:CtrlSpaceUseTabline = 1
+let g:CtrlSpaceSaveWorkspaceOnExit = 1
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 
 "YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
