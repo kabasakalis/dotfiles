@@ -25,8 +25,9 @@
                 "/home/spiros/.dotfiles/neovim/init.vim",
                 "/home/spiros/.dotfiles/install.conf.yaml",
                 "/home/spiros/.dotfiles/neovim/plugins.vim",
-                "/home/spiros/.dotfiles/git/gitconfig",
-                "/home/spiros/.dotfiles/zsh/zshenv"
+                "/home/spiros/.dotfiles/zsh/zshenv",
+                "/home/spiros/.dotfiles/zsh/zshrc",
+                "/home/spiros/.dotfiles/ruby/.irbrc"
             ]
         },
         {

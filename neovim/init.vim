@@ -15,6 +15,9 @@ let mapleader=" "
 
 " THEME & LAYOUT
 colorscheme Tomorrow-Night
+
+
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -495,6 +498,10 @@ let g:CtrlSpaceUseTabline = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+let g:ctrlspace_max_files = 100
+let g:ctrlspace_max_search_results = 100
+let g:ctrlspace_use_ruby_bindings = 1
+set wildignore=*.png,*.jpg,*.jpeg
 
 "YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
