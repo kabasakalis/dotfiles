@@ -8,6 +8,8 @@ set nocompatible   " choose no compatibility with legacy vi
 set hidden
 "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete 12
 
+set runtimepath+=~/
+
 " LEADER
 let mapleader=" "
 
@@ -505,10 +507,21 @@ let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 
 "Completion Deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_completion_start_length=2
 let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
+let g:deoplete#sources={}
+let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
+let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
+let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
+let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
+let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
 inoremap <expr><C-@> deoplete#mappings#manual_complete()
+
+
+
+
 " Set async completion.
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
 set omnifunc=syntaxcomplete#Complete
@@ -713,17 +726,31 @@ nnoremap <leader>\ :call NumberToggle()<cr>
 " neosnippet.
 " Tell Neosnippet about the other snippets
 "let g:neosnippet#snippets_directory='~/.config/nvim/'
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+
+"Ultisnips for snippets
+" Disable built-in <C-x><C-k> to be able to go backward
+inoremap <C-x><C-k> <NOP>
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsListSnippets='<C-l>'
+let g:UltiSnipsJumpForwardTrigger='<C-k>'
+let g:UltiSnipsJumpBackwardTrigger='<C-j>'
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
+"user defined snippets
+let g:UltiSnipsSnippetsDir= "~/.vimsnippets"
 
 " SuperTab like snippets behavior.
 "imap <expr><TAB>
 " \ pumvisible() ? "\<C-n>" :
 " \ neosnippet#expandable_or_jumpable() ?
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')

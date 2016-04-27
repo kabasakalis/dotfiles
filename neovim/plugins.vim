@@ -133,8 +133,11 @@ call plug#begin('~/.config/nvim/plugins')
   " Plug 'honza/vim-snippets'
 
   " Snippets
-  Plug 'shougo/neosnippet.vim'
-  Plug 'shougo/neosnippet-snippets'
+  "Plug 'shougo/neosnippet.vim'
+  "Plug 'shougo/neosnippet-snippets'"
+  " Snippet support (C-j)
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
 
   "Plug 'Valloric/YouCompleteMe'
   "Plug 'ervandew/supertab'
