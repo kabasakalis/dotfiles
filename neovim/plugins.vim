@@ -32,6 +32,20 @@ call plug#begin('~/.config/nvim/plugins')
   Plug 'benekastah/neomake', { 'on': ['Neomake'] }
   "Plug 'scrooloose/syntastic'
 
+  " CamelCase and snake_case motions
+  Plug 'bkad/CamelCaseMotion'
+
+
+  " Custom text objects creation (dependency for the latter)
+  Plug 'kana/vim-textobj-user'
+  " Ruby block text object (vir-var)
+  Plug 'nelstrom/vim-textobj-rubyblock'
+
+  " Easily expand selected region
+  Plug 'terryma/vim-expand-region'
+
+  " Easy alignment
+  Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
 
 " Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'

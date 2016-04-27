@@ -28,7 +28,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 "set lines=35 columns=150
 " Make it obvious where 80 characters is
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 " Numbers
 " Display relative line numbers
@@ -45,20 +45,32 @@ set sidescrolloff=3
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
-set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set noswapfile    "New buffers will be loaded without creating a swapfile  http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=1000
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set cursorline
+set clipboard+=unnamed   " Allow to use system clipboard
+set showmatch     " Show matching brackets when text indicator is over them
+set matchtime=2   " How many tenths of a second to blink when matching brackets
+set nostartofline  " Prevent cursor from moving to beginning of line when switching buffers
+set virtualedit=block  " To be able to select past EOL in visual block mode
+set updatetime=1000   " Update time used to create swap file or other things
+set nojoinspaces    " No extra space when joining a line which ends with . ? !
 
+" Time out on key codes but not mappings. Basically this makes terminal Vim work sanely. (by Steve Losh)
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 
 "" Searching
 set hlsearch                    " highlight matches
 "set nohlsearch                  "Disable search highlight
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
+set wrapscan                    " Search again from top when reached the bottom
 set smartcase                   " ... unless they contain at least one capital letter
 " turn on the wildmenu cuz everyone says to
 set wildmenu
@@ -212,7 +224,9 @@ set ttyfast
 
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+"set list " Show listchars by default
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:·,nbsp:·
+"set showbreak=↪
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -561,8 +575,8 @@ noremap <c-a> ^
 noremap <c-e> $
 
 " J and K move up and down 10 lines
-noremap J 10j
-noremap K 10k
+noremap J 5j
+noremap K 5k
 
 " D deletes to the end of the line, and Y yanks to end of line
 nnoremap D d$
@@ -616,7 +630,15 @@ nnoremap [l :lprevious<CR>
 nnoremap ]e :lnext<CR>
 nnoremap [e :lprevious<CR>
 
-
+" Use CamelCaseMotion instead of default motions
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
 
 " Enter gives a new line when in command mode without entering insert mode. Likewise, shift+enter gives a new line
 " above the cursor
