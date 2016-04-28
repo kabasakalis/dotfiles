@@ -1,0 +1,116 @@
+# ===============================================
+# Variables
+# ===============================================
+snippet fun "function" b
+function $1($2) {
+	$3
+}
+endsnippet
+
+# ===============================================
+# Control flow
+# ===============================================
+snippet if "if block" b
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ife "if/esle block" b
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+snippet ifef "if/else if/else block" b
+if ($1) {
+	$2
+} else if ($3) {
+	$4
+} else {
+	$5
+}
+endsnippet
+
+snippet switch "switch case statement" b
+switch (${1:variable}) {
+case ${2:value}:
+	$3
+	break;
+default:
+	return;
+}
+endsnippet
+
+# ===============================================
+# Common functions and constructs
+# ===============================================
+snippet log "console log" w
+console.log('${1:message}');
+endsnippet
+
+snippet bt "bind this" w
+bind(this);
+endsnippet
+
+snippet acl "addChangeListener" w
+addChangeListener(this.${1:_onChange});
+endsnippet
+
+snippet rcl "removeChangeListener" w
+removeChangeListener(this.${1:_onChange});
+endsnippet
+
+# ===============================================
+# Miscleanous
+# ===============================================
+snippet strict "enable strict mode" b
+'use strict';
+endsnippet
+
+snippet /* "block comment" b
+/**
+ * ${1:Description of class or function}
+ */
+endsnippet
+
+snippet req "require statement" b
+require('$1');
+endsnippet
+
+snippet ret "return"
+return($1);
+endsnippet
+
+snippet cp "key value constant pair" b
+${1:KEY}: '$1'
+endsnippet
+
+snippet dbg "debugger" b
+debugger;
+endsnippet
+
+# ===============================================
+# Comment docs
+# ===============================================
+snippet cdoc "class documentation"
+/**
+ * ${1:Class description}
+ */
+endsnippet
+
+snippet fdoc "function documentation"
+/**
+ * ${1:Function description}
+ */
+endsnippet
+
+snippet pdoc "param documentation"
+@param {${1:name}: ${2:type}} ${3:Example or description}
+endsnippet
+
+snippet rdoc "return documentation"
+@return {${1:type}} ${2:Example or description}
+endsnippet

@@ -35,6 +35,9 @@ call plug#begin('~/.config/nvim/plugins')
   " CamelCase and snake_case motions
   Plug 'bkad/CamelCaseMotion'
 
+  " Ag wrapper (Unite grep alternative) search and edit
+  Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF', 'CtrlSFToggle'] }
+
 
   " Custom text objects creation (dependency for the latter)
   Plug 'kana/vim-textobj-user'

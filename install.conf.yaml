@@ -46,10 +46,9 @@
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
     ~/.config/nvim/colors: neovim/colors
+    ~/.config/nvim/autoload/utils.vim: neovim/autoload/utils.vim
     ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
     ~/.vimsnippets: neovim/vimsnippets
-
-
 
     #Atom
     ~/.atom/config.cson: atom/config.cson

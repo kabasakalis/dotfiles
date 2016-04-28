@@ -268,6 +268,12 @@ nnoremap <Leader>f :CtrlPMRUFiles<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeWinSize=50
+let g:NERDTreeAutoDeleteBuffer=1
+let g:NERDTreeShowHidden=1
+let g:NERDTreeHighlightCursorline=0
+let g:NERDTreeRespectWildIgnore=1
 
 " " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -381,17 +387,25 @@ nnoremap <C-l> <C-w>l
 " nnoremap <Right> <C-w>l
 
 "Easy Window Resizing
-nnoremap <Space><Up> <C-w>5+
-nnoremap <Space><Down> <C-w>5-
-nnoremap <Space><Left> <C-w>5>
-nnoremap <Space><Right> <C-w>5<
+" nnoremap <Space><Up> <C-w>5+
+" nnoremap <Space><Down> <C-w>5-
+" nnoremap <Space><Left> <C-w>5>
+" nnoremap <Space><Right> <C-w>5<
 
-" Move to the next buffeer
-nmap <C-Right> :bnext<CR>
-" Move to the previous er
-nmap <C-Left> :bprevious<CR>
-"Close er workaround
-map <C-x> :bn<cr>:bd! #<cr>:bp<cr>
+" Intelligent windows resizing using ctrl + arrow keys
+nnoremap <silent> <C-Right> :call utils#intelligentVerticalResize('right')<CR>
+nnoremap <silent> <C-Left> :call utils#intelligentVerticalResize('left')<CR>
+nnoremap <silent> <C-Up> :resize +1<CR>
+nnoremap <silent> <C-Down> :resize -1<CR>
+
+
+
+" Buffers navigation and management
+nnoremap <leader>] :bn<CR>
+nnoremap <silent>[  :bp<CR>
+
+"Close buffer workaround
+map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 " Show all open ers and their status
 " map <Leader><Left> :bprev<CR>
 " map <Leader><Right> :bnext<CR>
@@ -460,6 +474,10 @@ autocmd BufWritePost *.vim Neomake vint
 " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 
+
+
+
+
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
 
@@ -476,6 +494,18 @@ set diffopt+=vertical
 
 " vim-move C used for window nav right now
 "let g:move_key_modifier = 'C'
+
+" -----------------------------------------------------
+" 4.5 Gitgutter settings {{{
+" -----------------------------------------------------
+let g:gitgutter_map_keys=0
+let g:gitgutter_max_signs=9999
+let g:gitgutter_sign_added='+'
+let g:gitgutter_sign_modified='~'
+let g:gitgutter_sign_removed='-'
+let g:gitgutter_sign_modified_removed='~'
+let g:gitgutter_sign_removed_first_line='-'
+
 
 
 "Airline
@@ -575,31 +605,27 @@ noremap <c-a> ^
 noremap <c-e> $
 
 " J and K move up and down 10 lines
-noremap J 5j
-noremap K 5k
+" noremap J 5j
+" noremap K 5k
 
 " D deletes to the end of the line, and Y yanks to end of line
 nnoremap D d$
 nnoremap Y y$
 
-" use leader to interact with the system clipboard
-nnoremap <Leader>p "*]p
-nnoremap <Leader>P "*]P
-
-nnoremap <Leader>y ma^"*y$`a
-nnoremap <Leader>c ^"*c$
-nnoremap <Leader>d ^"*d$
-
-vnoremap <Leader>y "*y
-vnoremap <Leader>c "*c
-vnoremap <Leader>d "*d
 
 " place whole file on the system clipboard (and return cursor to where it was)
 nmap <Leader>a maggVG"*y`a
 
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+" After block yank and paste, move cursor to the end of operated text and don't override register
+vnoremap y y`]
+vnoremap p "_dP`]
+nnoremap p p`]
+
+" Yank and paste from clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>yy "+yy
+nnoremap <leader>p "+p
 
 " have x (removes single character) not go into the default registry
 nnoremap x "_x
@@ -609,9 +635,19 @@ nmap XX "_dd
 vmap X "_d
 vmap x "_d
 
-" when changing text, don't put the replaced text into the default registry
-nnoremap c "_c
-vnoremap c "_c
+" Don't yank to default register when changing something
+nnoremap c "xc
+xnoremap c "xc
+
+
+" Reselect last-pasted text
+nnoremap gp `[v`]
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+
 
 
 " Fix the cw at the end of line bug default Vim has special treatment (:help cw)
@@ -629,6 +665,42 @@ nnoremap [l :lprevious<CR>
 " Error mnemonic (Neomake uses location list)
 nnoremap ]e :lnext<CR>
 nnoremap [e :lprevious<CR>
+
+" CTags generation / navigation (:tselect to select from menu)
+nnoremap ]t :tn<CR>
+nnoremap [t :tp<CR>
+nnoremap ,ts :ts<CR>
+"nnoremap ,tg :GenerateTags<CR>
+
+
+" Keep the cursor in place while joining lines
+nnoremap J mzJ`z
+
+" [S]plit line (sister to [J]oin lines) S is covered by cc.
+nnoremap <leader>c mzi<CR><ESC>`z
+
+
+" Start substitute on current word under the cursor
+nnoremap ,s :%s///gc<Left><Left><Left>
+
+" Start search on current word under the cursor
+nnoremap ,/ /<CR>
+
+" Start reverse search on current word under the cursor
+nnoremap ,? ?<CR>
+
+" Faster sort
+vnoremap ,s :!sort<CR>
+"}}}
+
+" Easier fold toggling
+nnoremap <leader>z za
+
+" Quiting and saving all
+cnoremap ww wqall
+cnoremap qq qall
+
+
 
 " Use CamelCaseMotion instead of default motions
 map <silent> w <Plug>CamelCaseMotion_w
@@ -684,24 +756,70 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " fugitive git bindings
-nnoremap <space>ga :Git add %:p<CR><CR>
-nnoremap <space>gs :Gstatus<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
-nnoremap <space>gt :Gcommit -v -q %:p<CR>
-nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>ge :Gedit<CR>
-nnoremap <space>gr :Gread<CR>
-nnoremap <space>gw :Gwrite<CR><CR>
-nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <space>gp :Ggrep<Space>
-nnoremap <space>gm :Gmove<Space>
-nnoremap <space>gb :Git branch<Space>
-nnoremap <space>go :Git checkout<Space>
-nnoremap <space>gps :Dispatch! git push<CR>
-nnoremap <space>gpl :Dispatch! git pull<CR>
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <leader>gp :Ggrep<Space>
+nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gps :Dispatch! git push<CR>
+nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 "" Turn off recording
 map q <Nop>
+
+" -----------------------------------------------------
+" 5.9 CtrlSF {{{
+" -----------------------------------------------------
+nnoremap <leader>gg :CtrlSF<Space>
+nnoremap <leader>gG :CtrlSFToggle<Space>
+" nmap     <C-F>f <Plug>CtrlSFPrompt
+" vmap     <C-F>f <Plug>CtrlSFVwordPath
+" vmap     <C-F>F <Plug>CtrlSFVwordExec
+" nmap     <C-F>n <Plug>CtrlSFCwordPath
+" nmap     <C-F>p <Plug>CtrlSFPwordPath
+" nnoremap <C-F>o :CtrlSFOpen<CR>
+" nnoremap <C-F>t :CtrlSFToggle<CR>
+" inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+"}}}
+" -----------------------------------------------------
+" 5.11 Ctrl-SF {{{
+" -----------------------------------------------------
+let g:ctrlsf_mapping = {
+      \ "next"    : "n",
+      \ "prev"    : "N",
+      \ "quit"    : "q",
+      \ "openb"   : "",
+      \ "split"   : "s",
+      \ "tab"     : "",
+      \ "tabb"    : "",
+      \ "popen"   : "",
+      \ "pquit"   : "",
+      \ "loclist" : "",
+      \ }
+
+nnoremap <silent> ,g :call utils#searchCurrentWordWithAg()<CR>
+"}}}
+
+
+
+
+" -----------------------------------------------------
+" 5.10 Vim-Plug {{{
+" -----------------------------------------------------
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pU :PlugUpgrade<CR>
+nnoremap <leader>pc :PlugClean<CR>
+
+
 
 
 " allows you to visually select a section and then hit @ to run a macro on all lines
@@ -772,6 +890,7 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
 "user defined snippets
 let g:UltiSnipsSnippetsDir= "~/.vimsnippets"
+let g:UltiSnipsUsePythonVersion=3
 
 " SuperTab like snippets behavior.
 "imap <expr><TAB>
@@ -785,3 +904,59 @@ let g:UltiSnipsSnippetsDir= "~/.vimsnippets"
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+
+" -----------------------------------------------------
+" 4.10 Clever F settings {{{
+" -----------------------------------------------------
+let g:clever_f_across_no_line=1
+let g:clever_f_smart_case=1
+let g:clever_f_show_prompt=1
+let g:clever_f_chars_match_any_signs=';'
+
+
+" -----------------------------------------------------
+" 4.11 Vim Markdown settings {{{
+" -----------------------------------------------------
+let g:vim_markdown_no_default_key_mappings=1
+let g:vim_markdown_folding_disabled=1
+
+
+" 4.13 Quick scope settings {{{
+" -----------------------------------------------------
+"let g:qs_highlight_on_keys=['f', 'F', 't', 'T']
+
+" -----------------------------------------------------
+" 4.15 Ctrl-SF settings {{{
+" -----------------------------------------------------
+let g:ctrlsf_default_root='project'
+let g:ctrlsf_populate_qflist=1
+let g:ctrlsf_position='bottom'
+let g:ctrlsf_winsize = '30%'
+let g:ctrlsf_auto_close=0
+let g:ctrlsf_regex_pattern=1
+
+
+" -----------------------------------------------------
+" 3.8 Custom commands and functions {{{
+" -----------------------------------------------------
+
+" Generate tags definitions gem install --no-user-install starscope
+command! GenerateTags :call utils#generateCtags()
+
+" Reformat whole or selection from file
+" Needs: npm install js-beautify, gem install ruby-beautify, python
+command! Format :call utils#formatFile()
+nnoremap <silent> ,f :Format<CR>
+
+
+" Annotate file (show values in special # => comments)
+" See gem install --no-user-install seeing_is_believing
+command! Annotate :call utils#annotateFile()
+nnoremap <silent> ,a :Annotate<CR>
+
+" Profile
+command! Profile :call utils#profile()
+
+" Retab
+command! Retab :call utils#retabToFourSpaces()
