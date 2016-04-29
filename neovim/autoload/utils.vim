@@ -1,7 +1,7 @@
 " Informative echo line
 function! g:utils#showToggles() abort
   echom '<F1> NERDTree | <F2> Free | <F3> Paste mode | <F4> Spellcheck | <F5> Reload rc | <F6> Search HL |' .
-        \' <F7> Whitechars | <F8> Vertical Term | <F9> Fire REST Request | <F10> Free  | <F11> How do I |' .
+        \' <F7> Whitechars | <F8> NeoTerm Toggle | <F9> Send line To NeoTerm| <F10> Send File To NeoTerm | <F11> Free |' .
         \' <F12> This message'
 endfunction
 
@@ -75,6 +75,7 @@ function! g:utils#nerdWrapper() abort
     :NERDTreeToggle
   elseif expand('%:t') =~? 'NERD_tree' " In NERD_tree buffer
     wincmd w
+    :NERDTreeToggle
   else " Normal file buffer
     :NERDTreeFind
   endif

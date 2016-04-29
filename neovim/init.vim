@@ -1,4 +1,14 @@
-" Spiros Kabasakalis NeoVim Configuration
+" ######################################################################################################################
+" ### Author : Spiros Kabasakalis <Kabasakalis@gmail.com>                                                            ###
+" ######################################################################################################################
+" ### Neovim Configuration focused on Web development                                                                ###
+" ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
+" ######################################################################################################################
+
+" ======================================================================================================================
+" Plugin manager (Plug) settings
+" ======================================================================================================================
+"{{{
 
 """""""""""""""""""""""""""""
 " Standard Set Up           "
@@ -14,7 +24,48 @@ set runtimepath+=~/
 let mapleader=" "
 
 " THEME & LAYOUT
-colorscheme Tomorrow-Night
+"jellybeans
+"lucid
+"railscasts
+"Tomorrow-Night
+"tropikos
+
+" Color scheme based on time {{{
+if strftime("%H") < 15
+  let g:rehash256=1
+  colorscheme Tomorrow-Night
+  "transparency
+  hi Normal  ctermfg=252 ctermbg=none
+else
+  let g:rehash256=1
+  colorscheme tropikos
+  "transparency
+  hi Normal  ctermfg=252 ctermbg=none
+endif
+"}}}
+
+" Highlight VCS conflict markers {{{
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+"}}}
+
+" Highlight term cursor differently {{{
+highlight TermCursor ctermfg=green guifg=green
+"}}}
+
+" Listchars highlighting {{{
+highlight NonText ctermfg=235 guifg=gray
+highlight SpecialKey ctermfg=235 guifg=gray
+"}}}
+
+" Remove underline in folded lines {{{
+hi! Folded term=NONE cterm=NONE gui=NONE ctermbg=NONE
+"}}}
+
+" Link highlight groups to improve buftabline colors {{{
+hi! link BufTabLineCurrent Identifier
+hi! link BufTabLineActive Comment
+hi! link BufTabLineHidden Comment
+hi! link BufTabLineFill Comment
 
 
 
@@ -118,17 +169,14 @@ if has("nvim")
 
   " totally optional: mirror the alt split switching in non-terminal splits
   " Quicker window movement
+  nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-h> <C-w>h
   nnoremap <C-l> <C-w>l
 
 
-  nnoremap <silent> <f10> :TREPLSendFile<cr>
-  nnoremap <silent> <f9> :TREPLSend<cr>
-  vnoremap <silent> <f9> :TREPLSend<cr>
 
-  nnoremap <silent> <f8> :Ttoggle<cr>
 
   " run set test lib
   " nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
@@ -189,23 +237,9 @@ set smartindent
 set autoindent
 " And when Vim does wrap lines, have it break the lines on spaces and punctuation only (http://vim.wikia.com/wiki/Word_wrap_without_line_breaks)
 set linebreak
-"autocmd BufWritePre * :%s/\s\+$//e " Remove whitespaces on save
 
-augroup vimrcEx
-  autocmd!
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it for commit messages, when the position is invalid, or when
-  " inside an event handler (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
 
-  " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-augroup END
+
 
 
 " Save temporary/backup files not in the local directory, but in your ~/.vim
@@ -316,28 +350,10 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
-" Tab completionF
-" will insert tab at beginning of line,
-" will use completion if not at beginning
-"set wildmode=list:longest,list:full
-"function! InsertTabWrapper()
-"    let col = col('.') - 1
-"    if !col || getline('.')[col - 1] !~ '\k'
-"        return "\<tab>"
-"    else
-"        return "\<c-p>"
-"    endif
-"endfunction
-"inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-"inoremap <S-Tab> <c-n>
-
 
 let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
 nmap <leader>j :NERDTreeFind<CR>
-map <Leader>n :NERDTreeToggle<CR>
-map <Leader>m :NERDTreeFocus<CR>
-
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -547,6 +563,11 @@ let g:ctrlspace_max_search_results = 100
 let g:ctrlspace_use_ruby_bindings = 1
 set wildignore=*.png,*.jpg,*.jpeg
 
+
+" vim-pasta Pasting in Vim with indentation adjusted to destination context.
+let g:pasta_paste_before_mapping = ',O'
+let g:pasta_paste_after_mapping = ',o'
+
 "YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
 "autocmd FileType ruby,eruby let g:rubycomplete_er_loading = 1
@@ -556,7 +577,9 @@ set wildignore=*.png,*.jpg,*.jpeg
 "supertab
 "let g:SuperTabDefaultCompletionType = "context"
 
-"Completion Deoplete
+" -----------------------------------------------------
+" 5.8 Deoplete autocomplete {{{
+" -----------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_completion_start_length=2
 let g:deoplete#sources#omni#input_patterns = {
@@ -568,7 +591,15 @@ let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
 let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
 let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
 let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
-inoremap <expr><C-@> deoplete#mappings#manual_complete()
+"inoremap <expr><C-@> deoplete#mappings#manual_complete()
+" Insert <TAB> or select next match
+inoremap <silent> <expr> <Tab> utils#tabComplete()
+
+" Manually trigger tag autocomplete
+inoremap <silent> <expr> <C-]> utils#manualTagComplete()
+" <C-h>, <BS>: close popup and delete backword char
+inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 
 
 
@@ -780,35 +811,27 @@ map q <Nop>
 " -----------------------------------------------------
 nnoremap <leader>gg :CtrlSF<Space>
 nnoremap <leader>gG :CtrlSFToggle<Space>
-" nmap     <C-F>f <Plug>CtrlSFPrompt
-" vmap     <C-F>f <Plug>CtrlSFVwordPath
-" vmap     <C-F>F <Plug>CtrlSFVwordExec
-" nmap     <C-F>n <Plug>CtrlSFCwordPath
-" nmap     <C-F>p <Plug>CtrlSFPwordPath
-" nnoremap <C-F>o :CtrlSFOpen<CR>
-" nnoremap <C-F>t :CtrlSFToggle<CR>
-" inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-"}}}
-" -----------------------------------------------------
-" 5.11 Ctrl-SF {{{
-" -----------------------------------------------------
 let g:ctrlsf_mapping = {
       \ "next"    : "n",
       \ "prev"    : "N",
       \ "quit"    : "q",
-      \ "openb"   : "",
+      \ "popen"   : "p",
+      \ "pquit"   : "q",
       \ "split"   : "s",
+      \ "openb"   : "",
       \ "tab"     : "",
       \ "tabb"    : "",
-      \ "popen"   : "",
-      \ "pquit"   : "",
       \ "loclist" : "",
       \ }
-
+let g:ctrlsf_auto_close = 0
+let g:ctrlsf_case_sensitive = 'no'
+let g:ctrlsf_default_root = 'project'
+let g:ctrlsf_confirm_save = 1
+let g:ctrlsf_ignore_dir = ['bower_components', 'npm_modules']
+let g:ctrlsf_selected_line_hl = 'op'
+"let g:ctrlsf_context = '-C 3'
 nnoremap <silent> ,g :call utils#searchCurrentWordWithAg()<CR>
 "}}}
-
-
 
 
 " -----------------------------------------------------
@@ -960,3 +983,99 @@ command! Profile :call utils#profile()
 
 " Retab
 command! Retab :call utils#retabToFourSpaces()
+
+
+" ======================================================================================================================
+" 7.0 Autocommands
+" ======================================================================================================================
+"{{{
+
+" Turn spellcheck on for markdown files {{{
+autocmd BufNewFile,BufRead *.md setlocal spell
+"}}}
+
+" Remove trailing whitespaces automatically before save {{{
+autocmd BufWritePre * call utils#stripTrailingWhitespaces()
+"}}}
+
+" Resize splits when the window is resized {{{
+autocmd VimResized * :wincmd =
+"}}}
+
+augroup vimrcEx
+  autocmd!
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+augroup END
+
+" Make sure Vim returns to the same line when you reopen a file. Thanks, Amit and Steve Losh. {{{
+augroup line_return
+  au!
+  au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+"}}}
+
+" -----------------------------------------------------
+" F-key actions {{{
+" -----------------------------------------------------
+
+"F1 NERDTree wrapper
+nnoremap <silent> <F1> :call utils#nerdWrapper()<CR>
+
+"F2 Free
+
+"F3 Paste mode toggling
+nnoremap <silent> <F3> :set paste!<CR> :set paste?<CR>
+
+"F4 Toggle spelling on and off
+nnoremap <silent> <F4> :set spell!<CR> :set spell?<CR>
+
+"F5 Source (reload configuration)
+if has("nvim")
+  nnoremap <silent> <F5> :so ~/.config/nvim/init.vim<CR>
+else
+  nnoremap <silent> <F5> :source $MYNVIMRC<CR>
+endif
+
+"F6 Toggle search highlight
+nnoremap <silent> <F6> :set nohlsearch!<CR> :set nohlsearch?<CR>
+
+"F7 Toggle white characters visibility
+nnoremap <silent> <F7> :set list!<CR> :set list?<CR>
+if has("nvim")  "neovim only
+  "F8 NeoTerm Toggle
+  nnoremap <silent> <F8> :Ttoggle<cr>
+  " New horizontal term buffer
+
+  "F9 Send line To NeoTerm
+  nnoremap <silent> <F9> :TREPLSend<cr>
+
+  "F10 Send File To NeoTErm
+  nnoremap <silent> <F10> :TREPLSendFile<cr>
+else  "vim
+  "F8 Free
+  "nnoremap <silent> <F8>
+  "F9 Free
+  "nnoremap <silent> <F9>
+  "F10 Free
+  "nnoremap <silent> <F10>
+endif
+
+"F11 Free
+
+" Echo out toggles legend on <F12>
+nnoremap <F12> :call utils#showToggles()<CR>
+"}}}

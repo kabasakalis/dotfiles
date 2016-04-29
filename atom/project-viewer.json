@@ -18,7 +18,7 @@
             "name": "dotfiles",
             "group": "Generic",
             "paths": {
-                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"neovim\":{\"expanded\":true,\"entries\":{\"autoload\":{\"expanded\":true,\"entries\":{}},\"colors\":{\"expanded\":false,\"entries\":{}},\"vimsnippets\":{\"expanded\":false,\"entries\":{}}}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":true,\"entries\":{\".bundle\":{\"expanded\":false,\"entries\":{}}}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":false,\"entries\":{}}}}}"
+                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"neovim\":{\"expanded\":true,\"entries\":{\"autoload\":{\"expanded\":true,\"entries\":{}},\"colors\":{\"expanded\":true,\"entries\":{}},\"vimsnippets\":{\"expanded\":false,\"entries\":{}}}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":true,\"entries\":{\".bundle\":{\"expanded\":false,\"entries\":{}}}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":false,\"entries\":{}}}}}"
             },
             "buffers": [
                 "/home/spiros/.dotfiles/tmux/.tmux.conf",
@@ -28,7 +28,9 @@
                 "/home/spiros/.dotfiles/zsh/zshenv",
                 "/home/spiros/.dotfiles/zsh/zshrc",
                 "/home/spiros/.dotfiles/ruby/.irbrc",
-                "/home/spiros/.dotfiles/neovim/autoload/utils.vim"
+                "/home/spiros/.dotfiles/neovim/autoload/utils.vim",
+                "/home/spiros/.dotfiles/neovim/colors/Tomorrow-Night.vim",
+                "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim"
             ]
         },
         {
@@ -47,12 +49,10 @@
             "name": "martin-svk-dotfiles",
             "group": "Generic",
             "paths": {
-                "/home/spiros/projects/DEMOS/dot-files": "{\"dot-files\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"data\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"js\":{\"expanded\":false,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":true,\"entries\":{\"autoload\":{\"expanded\":false,\"entries\":{}},\"other\":{\"expanded\":false,\"entries\":{}},\"spell\":{\"expanded\":false,\"entries\":{}},\"UltiSnips\":{\"expanded\":false,\"entries\":{}}}},\"other\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"shell\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}}}}}"
+                "/home/spiros/projects/DEMOS/dot-files": "{\"dot-files\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"data\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"js\":{\"expanded\":false,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":true,\"entries\":{\"autoload\":{\"expanded\":true,\"entries\":{}},\"other\":{\"expanded\":false,\"entries\":{}},\"spell\":{\"expanded\":false,\"entries\":{}},\"UltiSnips\":{\"expanded\":false,\"entries\":{}}}},\"other\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"shell\":{\"expanded\":true,\"entries\":{\"colors\":{\"expanded\":true,\"entries\":{}}}},\"tmux\":{\"expanded\":false,\"entries\":{}}}}}"
             },
             "buffers": [
-                "/home/spiros/projects/DEMOS/dot-files/neovim/autoload/utils.vim",
                 "/home/spiros/projects/DEMOS/dot-files/neovim/init.vim",
-                "/home/spiros/projects/DEMOS/dot-files/neovim/UltiSnips/ruby.snippets",
                 "/home/spiros/projects/DEMOS/dot-files/shell/zshrc"
             ]
         },
