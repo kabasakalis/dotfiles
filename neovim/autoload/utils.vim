@@ -315,3 +315,43 @@ function! g:utils#retabToFourSpaces() abort
   setlocal tabstop=4 shiftwidth=4 expandtab
   retab
 endfunction
+
+" Open terminals tab for rails
+function! g:utils#RailsConsoles()
+  tabnew
+  :Tpos 'vertical'
+  :Tnew
+  :call neoterm#do('bundle exec rails c')
+  :Tnew
+  :call neoterm#do('bundle exec rails server')
+  :quit
+  tabp
+endfunction
+
+" Workspace Setup
+function! g:utils#DefaultWorkspace()
+    let numcol = 2
+    vnew
+    vnew
+    e Gemfile
+    :1quit
+    :RailsConsoles
+    let g:neoterm_position='horizontal'
+endfunction
+
+" Relative numbering toggle
+function! g:utils#NumberToggle()
+  if(&relativenumber == 1)
+    set nornu
+    set number
+  else
+    set rnu
+  endif
+endfunction
+
+" allows you to visually select a section and then hit @ to run a macro on all lines
+" https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.3dcn9prw6
+function! g:utils#ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction

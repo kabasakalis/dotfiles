@@ -49,6 +49,9 @@
     ~/.config/nvim/autoload/utils.vim: neovim/autoload/utils.vim
     ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
     ~/.vimsnippets: neovim/vimsnippets
+    ~/.config/nvim/dictionary.utf-8.add: neovim/spell/dictionary.utf-8.add
+    #home_assets
+    ~/home_assets: home_assets
 
     #Atom
     ~/.atom/config.cson: atom/config.cson

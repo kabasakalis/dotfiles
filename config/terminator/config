@@ -3,16 +3,16 @@
   title_receive_fg_color = "#809aa0"
   title_transmit_fg_color = "#97c7c6"
 [keybindings]
+  zoom_out = Disabled
   close_term = Disabled
   zoom_in = Disabled
-  zoom_out = Disabled
   close_window = Disabled
 [profiles]
   [[default]]
     use_system_font = False
     background_darkness = 0.54
     background_type = image
-    background_image = /home/spiros/Pictures/Space/Deep Field/Space_Deep.jpg
+    background_image = /home/spiros/home_assets/wallpapers/ng_8.jpg
     cursor_color = "#00ffff"
     scroll_background = False
     cursor_shape = ibeam
