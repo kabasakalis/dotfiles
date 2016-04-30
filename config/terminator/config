@@ -15,8 +15,9 @@
     background_image = /home/spiros/home_assets/wallpapers/ng_8.jpg
     cursor_color = "#00ffff"
     scroll_background = False
+    icon_bell = False
     cursor_shape = ibeam
-    font = Liberation Mono for Powerline 10
+    font = Source Code Pro for Powerline Medium 10
 [layouts]
   [[default]]
     [[[child1]]]

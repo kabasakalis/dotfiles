@@ -30,8 +30,7 @@
                 "/home/spiros/.dotfiles/ruby/.irbrc",
                 "/home/spiros/.dotfiles/neovim/autoload/utils.vim",
                 "/home/spiros/.dotfiles/neovim/colors/Tomorrow-Night.vim",
-                "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
-                "/home/spiros/.dotfiles/config/terminator/config"
+                "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim"
             ]
         },
         {

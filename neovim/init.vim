@@ -260,7 +260,7 @@ endif
 "{{{
 
 " Save file
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
 
 " Quiting and saving all
 cnoremap ww wqall
@@ -272,6 +272,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
 
 " Intelligent windows resizing using ctrl + arrow keys
 nnoremap <silent> <C-Right> :call utils#intelligentVerticalResize('right')<CR>
@@ -287,14 +288,14 @@ nnoremap <leader>\ :call utils#NumberToggle()<cr>
 
 " Buffers navigation and management
 nnoremap <leader>] :bn<CR>
-nnoremap <silent>[  :bp<CR>
+nnoremap <leader>[  :bp<CR>
 "Close buffer workaround
 map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 
 " Quickly open a vertical split of my init.vim and source my init.vim
 nnoremap <silent> <leader>ev :vs ~/.config/nvim/init.vim<CR>
 " Reload init.vim
-nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
+"nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
 
 " H to beginning of line, L to the end
 noremap H ^
@@ -578,6 +579,32 @@ xmap f <Plug>Sneak_s
 xmap F <Plug>Sneak_S
 omap f <Plug>Sneak_s
 omap F <Plug>Sneak_S
+"}}}
+
+" -----------------------------------------------------
+" Easy Motion {{{
+" -----------------------------------------------------
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `m{char}{label}`
+"nmap m <Plug>(easymotion-overwin-f)
+" or
+" `m{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap m <Plug>(easymotion-overwin-f2)
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 "}}}
 
 " -----------------------------------------------------
