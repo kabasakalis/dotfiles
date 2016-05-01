@@ -1,0 +1,45 @@
+{
+  "name": "language-tmux",
+  "version": "0.4.0",
+  "description": "Atom language support for Tmux",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmux-plugins/language-tmux.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "keywords": [
+    "shell",
+    "tmux",
+    "language",
+    "terminal"
+  ],
+  "author": {
+    "name": "Taylon Silmer",
+    "email": "taylonsilva@gmail.com",
+    "url": "https://github.com/taylon"
+  },
+  "dependencies": {},
+  "readme": "[![Build Status](https://travis-ci.org/tmux-plugins/language-tmux.svg?branch=master)](https://travis-ci.org/taylon/language-tmux)\n\n> [Atom](https://atom.io) language package for [Tmux](http://tmux.github.io/) config file\n\n## Install\n\n```bash\n$ apm install language-tmux\n```\n\nOr Settings ➔ Packages ➔ Search for `language-tmux`\n\n## License\n\nMIT © [Taylon Silmer](https://github.com/taylon)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/tmux-plugins/language-tmux/issues"
+  },
+  "homepage": "https://github.com/tmux-plugins/language-tmux#readme",
+  "_id": "language-tmux@0.4.0",
+  "_shasum": "693b58533e109f04f3b6bfdeec3369873b1f0805",
+  "_resolved": "file:../d-11641-15870-z095qo/package.tgz",
+  "_from": "../d-11641-15870-z095qo/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

@@ -37,7 +37,7 @@ alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
 alias ti='tmux info'
 alias td='tmux detach'
-alias treset='ka rails && ka emacs && tka'
+alias treset='ka rails && ka nvim && tka'
 
 #tmuxinator
 alias txs='tmuxinator start'
@@ -74,6 +74,8 @@ alias gr='git rebase'
 alias cl='clear'
 alias k9='kill -9'
 alias port3000='lsof -wni tcp:3000'
+alias path='print -l $path'
+
 
 #navigation
 function cd() {
@@ -176,3 +178,5 @@ alias q='exit'
 alias xcopy='xclip -selection clipboard'
 alias xpaste='xclip -o'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+alias vcs1='google-chrome  ~/home_assets/vim/cheatsheet.png'
+alias vcs2='google-chrome  ~/home_assets/vim/cheatsheet2.pdf'

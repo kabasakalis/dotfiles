@@ -1,24 +1,31 @@
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/spiros/chruby-0.3.8/bin:/home/spiros/.gem/ruby/2.3.0/bin:/home/spiros/neovim/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+# Add my bin folders to PATH
 
-#Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='emacs'
-else
-  export EDITOR='subl'
-fi
+PATH=$(paste -d ":" -s << EOF
+$PATH
+$HOME/.gem/ruby/2.3.0/bin
+$HOME/.rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/bin
+$HOME/.rubies/ruby-2.3.0/bin
+$HOME/chruby-0.3.8/bin
+$HOME/neovim/bin
+$HOME/.dotfiles/scripts
+/usr/local/sbin
+/usr/local/bin
+/usr/sbin
+/usr/bin
+/sbin
+/bin
+EOF
+)
+typeset -U PATH
 
+export MANPATH="/usr/local/man:$MANPATH"
+export EDITOR='nvim'
+# export EDITOR='subl'
+# export EDITOR='atom'
+export MYNVIMRC='~/.config/nvim/init.vim'
 export ALTERNATE_EDITOR=""
-
-#256 COLORS
 export TERM="xterm-256color"
-
-#editor
-#export EDITOR='emacs'
-
-# ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
-
 
 # chruby
 source /usr/local/share/chruby/chruby.sh

@@ -1,13 +1,12 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/spiros/.oh-my-zsh
-
+export ZSH=$HOME/.oh-my-zsh
 
 ###
 # setup options
 ###
 #Frequently used directories
 setopt AUTO_CD
-cdpath=($HOME/projects $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/.dotfiles $HOME/Documents)
+cdpath=($HOME/projects $HOME/projects/DEMOS $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/.dotfiles $HOME/Documents)
 # use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
 setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
 setopt CHECK_JOBS             # check bg jobs on exit

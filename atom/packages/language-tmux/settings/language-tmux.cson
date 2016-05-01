@@ -1,0 +1,3 @@
+'.source.tmux':
+  'editor':
+    'commentStart': '# '

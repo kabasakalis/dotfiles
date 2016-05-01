@@ -18,45 +18,33 @@
             "name": "dotfiles",
             "group": "Generic",
             "paths": {
-                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"home_assets\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":true,\"entries\":{}}}}}"
+                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"home_assets\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":true,\"entries\":{}}}}}"
             },
             "buffers": [
                 "/home/spiros/.dotfiles/tmux/.tmux.conf",
-                "/home/spiros/.dotfiles/neovim/init.vim",
-                "/home/spiros/.dotfiles/install.conf.yaml",
                 "/home/spiros/.dotfiles/neovim/plugins.vim",
-                "/home/spiros/.dotfiles/zsh/zshenv",
-                "/home/spiros/.dotfiles/zsh/zshrc",
-                "/home/spiros/.dotfiles/ruby/.irbrc",
                 "/home/spiros/.dotfiles/neovim/autoload/utils.vim",
                 "/home/spiros/.dotfiles/neovim/colors/Tomorrow-Night.vim",
                 "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
+                "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js",
+                "/home/spiros/.dotfiles/install.conf.yaml",
+                "/home/spiros/.dotfiles/tmuxinator/mymusic_API.yml",
                 "/home/spiros/.dotfiles/zsh/zsh_aliases",
-                "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js"
-            ]
-        },
-        {
-            "name": "hkupty_nvimDOTFILES",
-            "group": "Generic",
-            "paths": {
-                "/home/spiros/projects/DEMOS/dotfiles": "{\"dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"irssi\":{\"expanded\":false,\"entries\":{}},\"nvim\":{\"expanded\":true,\"entries\":{\"nvim\":{\"expanded\":true,\"entries\":{\"spell\":{\"expanded\":false,\"entries\":{}}}}}},\"sbt\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"task\":{\"expanded\":false,\"entries\":{}},\"termite\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"vimperator\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":false,\"entries\":{}}}}}"
-            },
-            "buffers": [
-                "/home/spiros/projects/DEMOS/dotfiles/git/.gitignore_global",
-                "/home/spiros/projects/DEMOS/dotfiles/scripts/scripts/swap-caps",
-                "/home/spiros/projects/DEMOS/dotfiles/nvim/nvim/init.vim"
+                "/home/spiros/.dotfiles/neovim/init.vim"
             ]
         },
         {
             "name": "martin-svk-dotfiles",
             "group": "Generic",
             "paths": {
-                "/home/spiros/projects/DEMOS/dot-files": "{\"dot-files\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"data\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"js\":{\"expanded\":false,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"other\":{\"expanded\":true,\"entries\":{\"devilspie2\":{\"expanded\":false,\"entries\":{}}}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"shell\":{\"expanded\":true,\"entries\":{\"colors\":{\"expanded\":false,\"entries\":{}}}},\"tmux\":{\"expanded\":false,\"entries\":{}}}}}"
+                "/home/spiros/projects/DEMOS/dot-files": "{\"dot-files\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"data\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"js\":{\"expanded\":true,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"other\":{\"expanded\":true,\"entries\":{\"devilspie2\":{\"expanded\":false,\"entries\":{}}}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"shell\":{\"expanded\":true,\"entries\":{\"colors\":{\"expanded\":false,\"entries\":{}}}},\"tmux\":{\"expanded\":true,\"entries\":{}}}}}"
             },
             "buffers": [
                 "/home/spiros/projects/DEMOS/dot-files/neovim/spell/dictionary.utf-8.add",
-                "/home/spiros/projects/DEMOS/dot-files/shell/zshrc",
-                "/home/spiros/projects/DEMOS/dot-files/tmux/tmuxinator-ror-template.yml"
+                "/home/spiros/projects/DEMOS/dot-files/data/cheatsheet2.pdf",
+                "/home/spiros/projects/DEMOS/dot-files/README.md",
+                "/home/spiros/projects/DEMOS/dot-files/linters/rubocop.yml",
+                "/home/spiros/projects/DEMOS/dot-files/tmux/tmux.conf"
             ]
         },
         {
@@ -73,7 +61,8 @@
                 "/home/spiros/projects/mymusic_API/config/database.yml",
                 "/home/spiros/projects/mymusic_API/app/serializers/playlist_serializer.rb",
                 "/home/spiros/projects/mymusic_API/app/serializers/track_serializer.rb",
-                "/home/spiros/projects/mymusic_API/app/channels/application_cable/channel.rb"
+                "/home/spiros/projects/mymusic_API/app/channels/application_cable/channel.rb",
+                "/home/spiros/projects/mymusic_API/.rubocop.yml"
             ]
         }
     ]

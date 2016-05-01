@@ -1,6 +1,7 @@
 - defaults:
     link:
       relink: true
+      create: true
 
 - clean: ['~']
 
@@ -52,7 +53,6 @@
     ~/.config/nvim/dictionary.utf-8.add: neovim/spell/dictionary.utf-8.add
     #home_assets
     ~/home_assets: home_assets
-
     #Atom
     ~/.atom/config.cson: atom/config.cson
     ~/.atom/project-viewer.json: atom/project-viewer.json
@@ -65,12 +65,23 @@
     ~/.bundle: ruby/.bundle
     #Spotify
     ~/.config/spotify: spotify/
-
-
-
-
-
-
+    #linters
+    ~/dev/.eslintrc:
+      create: true
+      path: linters/eslintrc
+    ~/dev/.rubocop.yml:
+      create: true
+      path: linters/rubocop.yml
+    ~/dev/.haml-lint.yml:
+      create: true
+      path: linters/haml-lint.yml
+    #powerline fonts
+    ~/.fonts: fonts/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [sudo zsh ~/.dotfiles/scripts/test1, Test1]
+  #- [sudo zsh ~/.dotfiles/scripts/dotfiles_install.sh, Installing Dotfiles]
+  #- [sudo zsh ~/.dotfiles/scripts/zsh_install.sh, Install zsh]
+  #- [sudo zsh ~/.dotfiles/scripts/tmux_install.sh, Installing Tmux]
+  #- ["wget -O - https://raw.githubusercontent.com/powerline/fonts/master/install.sh | zsh", Installing Powerline fonts]
