@@ -1,8 +1,26 @@
 #Reload zsh
 alias rl=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
+
+#apt-get
+alias install='sudo apt-get install'
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
+alias up='sudo apt-get update && sudo apt-get upgrade -y'
+alias autoremove='sudo apt-get autoremove'
+alias purge='sudo apt-get purge'
+alias dist-upgrade='sudo apt-get dist-upgrade'
+
+# services
+alias ss='sudo service'
+alias ssmysql='sudo service mysql start'
+alias sspgsql='sudo service postgresql start'
+alias ssredis='sudo service redis-server start'
+alias sselastic='sudo service elasticsearch start'
+
+
 #Dotfiles Regenerate symbolic links
-alias df='cd  ~/.dotfiles && dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml'
+alias dot='cd  ~/.dotfiles && dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml'
 
 #emacs
 alias et='emacsclient -t'
@@ -12,7 +30,8 @@ alias ec='emacsclient -c'
 #tmux
 alias tt='tmux'
 alias tl='tmux list-sessions'
-alias ta='tmux attach -t'
+#alias ta='tmux attach -t'
+alias ta='tmux attach -t main || tmux new -s main'
 alias tal='tmux attach'
 alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
@@ -66,6 +85,20 @@ function cd() {
 }
 alias ..='cd ..'
 alias ...='cd ../../'
+
+# Files and directories
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias grep='grep --color=tty -d skip'
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias md='mkdir -p'
+alias rd='rmdir'
+
+
+#specific folders
 alias pr='cd /home/spiros/projects'
 alias core="cd ~/Labs/gy/gyx_core"
 alias jasper="cd ~/Labs/gy/jasper"
@@ -99,6 +132,14 @@ alias tbz='tar -jxvf'
 #Sublime
 alias e='subl . &'
 alias gc="git cola"
+alias v='nvim'
+
+# Bundler
+alias be='bundle exec'
+alias bi='bundle install'
+alias bl='bundle list'
+alias bu='bundle update'
+alias bp='bundle package'
 
 #rails
 alias ns='spring rails s'
@@ -111,6 +152,12 @@ alias mc='mailcatcher'
 #alias it='bundle exec rake i18n:import_translations'
 alias rap="bundle exec rake assets:precompile"
 alias gctags='ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)'
+
+# rake
+alias dbc='rake db:create'
+alias dbm='rake db:migrate'
+alias dbs='rake db:seed'
+alias dbd='rake db:drop'
 
 #static servers
 alias met="cd ~/static/metronic_402 && serve"
@@ -125,3 +172,7 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #general
 alias int="sudo service network-manager restart"
+alias q='exit'
+alias xcopy='xclip -selection clipboard'
+alias xpaste='xclip -o'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
