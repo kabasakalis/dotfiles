@@ -26,8 +26,10 @@
                 "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
                 "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js",
                 "/home/spiros/.dotfiles/install.conf.yaml",
-                "/home/spiros/.dotfiles/scripts/tmux_install.sh",
-                "/home/spiros/.dotfiles/scripts/install_neovim.sh"
+                "/home/spiros/.dotfiles/scripts/install_neovim.sh",
+                "/home/spiros/.dotfiles/tmux/.tmux.conf",
+                "/home/spiros/.dotfiles/zsh/zsh_aliases",
+                "/home/spiros/.dotfiles/tmux/.tmux.conf.local"
             ]
         },
         {
