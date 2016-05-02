@@ -63,6 +63,8 @@
     ~/.irbrc: ruby/.irbrc
     ~/.gemrc: ruby/.gemrc
     ~/.bundle: ruby/.bundle
+    ~/.pryrc: ruby/pryrc
+    ~/.rdebugrc: ruby/rdebugrc
     #Spotify
     ~/.config/spotify: spotify/
     #linters
@@ -77,6 +79,9 @@
       path: linters/haml-lint.yml
     #powerline fonts
     ~/.fonts: fonts/
+    #ag
+    ~/.agignore: misc/agignore
+
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

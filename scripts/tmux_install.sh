@@ -31,10 +31,7 @@ cd /tmp
 
 wget -O $tmux_name.tar.gz https://github.com/tmux/tmux/releases/download/$tmux_version/$tmux_name.tar.gz
 
-
 wget -O $libevent_name.tar.gz https://github.com/libevent/libevent/releases/download/release-$libevent_version-stable/$libevent_name.tar.gz
-
-
 
 wget -O $ncurses_name.tar.gz ftp://ftp.gnu.org/gnu/ncurses/$ncurses_name.tar.gz
 
