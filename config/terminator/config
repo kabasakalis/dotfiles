@@ -12,7 +12,7 @@
     use_system_font = False
     background_darkness = 0.54
     background_type = image
-    background_image = /home/spiros/home_assets/wallpapers/ng_8.jpg
+    background_image = /home/spiros/home_assets/wallpapers/meditator.jpg
     cursor_color = "#00ffff"
     scroll_background = False
     icon_bell = False

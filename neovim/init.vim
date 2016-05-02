@@ -44,7 +44,7 @@ set ruler                         " show the cursor position all the time
 set showcmd                       " display incomplete commands
 set laststatus=2                  " Always display the status line
 set autowrite                     " Automatically :write before running commands
-set cursorline
+"set cursorline                   " Highlight current line
 set clipboard+=unnamed            " Allow to use system clipboard
 set showmatch                     " Show matching brackets when text indicator is over them
 set matchtime=2                   " How many tenths of a second to blink when matching brackets
