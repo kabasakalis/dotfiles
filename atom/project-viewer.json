@@ -30,7 +30,8 @@
                 "/home/spiros/.dotfiles/install.conf.yaml",
                 "/home/spiros/.dotfiles/tmuxinator/mymusic_API.yml",
                 "/home/spiros/.dotfiles/zsh/zsh_aliases",
-                "/home/spiros/.dotfiles/neovim/init.vim"
+                "/home/spiros/.dotfiles/neovim/init.vim",
+                "/home/spiros/.dotfiles/tmux/.tmux.conf.local"
             ]
         },
         {
@@ -42,9 +43,9 @@
             "buffers": [
                 "/home/spiros/projects/DEMOS/dot-files/neovim/spell/dictionary.utf-8.add",
                 "/home/spiros/projects/DEMOS/dot-files/data/cheatsheet2.pdf",
-                "/home/spiros/projects/DEMOS/dot-files/README.md",
                 "/home/spiros/projects/DEMOS/dot-files/linters/rubocop.yml",
-                "/home/spiros/projects/DEMOS/dot-files/tmux/tmux.conf"
+                "/home/spiros/projects/DEMOS/dot-files/tmux/.tmux.conf",
+                "/home/spiros/projects/DEMOS/dot-files/install.sh"
             ]
         },
         {

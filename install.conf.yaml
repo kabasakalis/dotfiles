@@ -80,7 +80,9 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo zsh ~/.dotfiles/scripts/test1, Test1]
+  #- [sudo zsh ~/.dotfiles/scripts/test1, Test1]
+  #- [mkdir -p ~/.tmux, Make .tmux folder]
+  #- ["git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm", Installing tmux plugin manager]
   #- [sudo zsh ~/.dotfiles/scripts/dotfiles_install.sh, Installing Dotfiles]
   #- [sudo zsh ~/.dotfiles/scripts/zsh_install.sh, Install zsh]
   #- [sudo zsh ~/.dotfiles/scripts/tmux_install.sh, Installing Tmux]

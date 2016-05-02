@@ -1,22 +1,13 @@
 
 # (‑●‑●)> released under the WTFPL v2 license, by Gregory Pakosz (@gpakosz)
 
-# window navigation
-unbind n
-unbind p
-bind -n F1 previous-window # select previous window
-bind -n F2 next-window     # select next window
-bind -n F3 new-window -d
-bind -n F4 confirm-before -p "Kill me?" kill-window
-bind Tab last-window        # move to last active window
-
-
-
 # use the powerline patched font variant of the theme, possible values are:
 #   - default
 #   - powerline
-tmux_conf_theme=powerline
+
 #tmux_conf_theme=powerline
+tmux_conf_theme=powerline
+
 
 # display an indicator in the status line when the prefix key has been pressed,
 # possible values are:
