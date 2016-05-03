@@ -1,6 +1,6 @@
 # Dotfiles
 ----
-###### Screenshot from Neovim running in terminal mode inside Terminator
+###### Screenshot from Neovim running in terminal mode with tmux:
 ![Neovim screenshot](https://github.com/drumaddict/dotfiles/blob/master/neovim.jpg)
 ### Managed with Dotbot
 `dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml`
