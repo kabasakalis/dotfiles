@@ -26,20 +26,22 @@
                 "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
                 "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js",
                 "/home/spiros/.dotfiles/config/terminator/config",
-                "/home/spiros/.dotfiles/neovim/init.vim"
+                "/home/spiros/.dotfiles/neovim/init.vim",
+                "/home/spiros/.dotfiles/README.md"
             ]
         },
         {
             "name": "martin-svk-dotfiles",
             "group": "Generic",
             "paths": {
-                "/home/spiros/projects/DEMOS/dot-files": "{\"dot-files\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"data\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"js\":{\"expanded\":true,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"other\":{\"expanded\":true,\"entries\":{\"devilspie2\":{\"expanded\":false,\"entries\":{}}}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"shell\":{\"expanded\":true,\"entries\":{\"colors\":{\"expanded\":false,\"entries\":{}}}},\"tmux\":{\"expanded\":true,\"entries\":{}}}}}"
+                "/home/spiros/projects/DEMOS/dot-files": "{\"dot-files\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"data\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"js\":{\"expanded\":false,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"other\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":true,\"entries\":{}},\"shell\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":true,\"entries\":{}}}}}"
             },
             "buffers": [
                 "/home/spiros/projects/DEMOS/dot-files/neovim/spell/dictionary.utf-8.add",
                 "/home/spiros/projects/DEMOS/dot-files/data/cheatsheet2.pdf",
                 "/home/spiros/projects/DEMOS/dot-files/linters/rubocop.yml",
-                "/home/spiros/projects/DEMOS/dot-files/install.sh"
+                "/home/spiros/projects/DEMOS/dot-files/install.sh",
+                "/home/spiros/projects/DEMOS/dot-files/README.md"
             ]
         },
         {
