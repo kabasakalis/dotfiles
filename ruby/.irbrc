@@ -3,7 +3,7 @@ AwesomePrint.irb!
 
 if ENV['RAILS_ENV']
   rails_env = ENV['RAILS_ENV'].downcase
-elsif Rails and Rails.env
+elsif defined? Rails and Rails.env
   rails_env = Rails.env.downcase
 end
 

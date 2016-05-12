@@ -8,6 +8,7 @@ $HOME/.rubies/ruby-2.3.0/bin
 $HOME/chruby-0.3.8/bin
 $HOME/neovim/bin
 $HOME/.dotfiles/scripts
+/usr/local/heroku/bin
 /usr/local/sbin
 /usr/local/bin
 /usr/sbin

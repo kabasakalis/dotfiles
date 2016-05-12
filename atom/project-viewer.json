@@ -26,8 +26,13 @@
                 "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
                 "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js",
                 "/home/spiros/.dotfiles/config/terminator/config",
+                "/home/spiros/.dotfiles/README.md",
+                "/home/spiros/.dotfiles/ruby/.irbrc",
+                "/home/spiros/.dotfiles/neovim/plugins.vim",
                 "/home/spiros/.dotfiles/neovim/init.vim",
-                "/home/spiros/.dotfiles/README.md"
+                "/home/spiros/.dotfiles/zsh/zsh_aliases",
+                "/home/spiros/.dotfiles/zsh/zshrc",
+                "/home/spiros/.dotfiles/zsh/zshenv"
             ]
         },
         {

@@ -10,13 +10,12 @@
 [profiles]
   [[default]]
     use_system_font = False
-    background_darkness = 0.54
+    background_darkness = 0.74
     background_type = image
     background_image = /home/spiros/home_assets/wallpapers/meditator.jpg
-    cursor_color = "#00ffff"
+    cursor_color = "#326bdc"
     scroll_background = False
     icon_bell = False
-    cursor_shape = ibeam
     font = Source Code Pro for Powerline Medium 10
 [layouts]
   [[default]]
