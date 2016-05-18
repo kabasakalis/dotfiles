@@ -17,6 +17,7 @@
     scroll_background = False
     icon_bell = False
     font = Source Code Pro for Powerline Medium 10
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]

@@ -179,7 +179,7 @@ set fillchars="fold: "            " Characters to fill the statuslines and verti
 " ---------------------------------------------------------------------------------------------------------------------
 " White characters settings {{{
 " ---------------------------------------------------------------------------------------------------------------------
-set list                         " Show listchars by default
+"set list                         " Show listchars by default
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:·,nbsp:·
 "set showbreak=↪
 "}}}
@@ -368,7 +368,7 @@ nnoremap J mzJ`z
 nnoremap <leader>c mzi<CR><ESC>`z
 
 
-" Start substitute on current word under the cursor
+" Start substitute,replace on current word under the cursor
 nnoremap ,s :%s///gc<Left><Left><Left>
 
 " Start search on current word under the cursor
@@ -385,8 +385,8 @@ nnoremap <leader>z za
 
 " Enter gives a new line when in command mode without entering insert mode. Likewise, shift+enter gives a new line
 " above the cursor
-"nmap <CR> o<Esc>
-nnoremap <S-Enter> o<Esc>
+nmap <CR> o<Esc>
+nnoremap <S-Enter> O<Esc>
 
 " j and k don't skip over wrapped lines in following FileTypes, unless given a
 " count (helpful since I display relative line numbers in these file types)
@@ -434,8 +434,8 @@ sunmap ge
 map <silent> <leader>f :TestFile<CR>
 map <silent> <leader>T :TestSuite<CR>
 map <silent> <leader>t :TestNearest<CR>
-map <silent> <leader>r :TestLast<CR>
-map <silent> <leader>g :TestVisit<CR>
+map <silent> <leader>. :TestLast<CR>
+"map <silent> <leader>g :TestVisit<CR>
 
 " allows you to visually select a section and then hit @ to run a macro on all lines
 " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.3dcn9prw6
@@ -470,11 +470,11 @@ if executable('ag')
 endif
 nnoremap <Leader>o :CtrlP<CR>                 " Open file menu
 nnoremap <Leader>b :CtrlPBuffer<CR>           " Open buffer menu
-nnoremap <Leader>f :CtrlPMRUFiles<CR>         " Open most recently used files
+nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
 
 
 " -----------------------------------------------------
-" Nerdtree Config {{{
+" tree Config {{{
 " -----------------------------------------------------
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -550,9 +550,9 @@ autocmd BufWritePost *.json Neomake jsonlint
 " npm install -g typescript
 autocmd BufWritePost *.ts Neomake tsc
 " gem install rubocop
-autocmd BufWritePost *.rb Neomake rubocop
+"autocmd BufWritePost *.rb Neomake rubocop
 " ruby
-autocmd BufWritePost *.rb Neomake mri
+"autocmd BufWritePost *.rb Neomake mri
 " sudo apt-get install elixir
 autocmd BufWritePost *.ex Neomake elixir
 " apt-get install tidy
@@ -571,7 +571,7 @@ autocmd BufWritePost *.vim Neomake vint
 
 
 " -----------------------------------------------------
-" Sneak, replaces f https://github.com/justinmk/vim-sneak {{{
+" Sneak, s f https://github.com/justinmk/vim-sneak {{{
 " -----------------------------------------------------
 nmap f <Plug>Sneak_s
 nmap F <Plug>Sneak_S
@@ -754,7 +754,7 @@ let g:ctrlsf_mapping = {
       \ "tabb"    : "",
       \ "loclist" : "",
       \ }
-let g:ctrlsf_auto_close = 0
+let g:ctrlsf_auto_close = 1
 let g:ctrlsf_case_sensitive = 'no'
 let g:ctrlsf_default_root = 'project'
 let g:ctrlsf_confirm_save = 1
@@ -819,7 +819,7 @@ command! -register DW :call utils#DefaultWorkspace()
 " Generate tags definitions gem install --no-user-install starscope
 command! GenerateTags :call utils#generateCtags()
 
-" Reformat whole or selection from file
+" Reformat whole or selection from file, format
 " Needs: npm install js-beautify, gem install ruby-beautify, python
 command! Format :call utils#formatFile()
 nnoremap <silent> ,f :Format<CR>

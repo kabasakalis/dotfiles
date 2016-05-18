@@ -1,7 +1,7 @@
 # ~/.tmuxinator/testpr.yml
 
-name: mymusic_API
-root: ~/projects/mymusic_API
+name: rspec_demo
+root: ~/projects/DEMOS/rspec-rails-examples
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,16 +28,14 @@ root: ~/projects/mymusic_API
 
 
 windows:
-  - spacemacs:  emacsclient -t -e '(spacemacs/home)'
+  #- spacemacs:  emacsclient -t -e '(spacemacs/home)'
+  - Neovim:  nvim
   - console: bundle exec rails console
-  - server: 
+  - server:
     - bundle exec rails s
-  - logs: 
+  - logs:
     - tail -f log/development.log
   - generic zsh:
     - sudo chown -R spiros:no-internet ~/.pki/
     - chmod 777  -R ~/.pki
     - /usr/bin/google-chrome http://localhost:3000
-
-
-
