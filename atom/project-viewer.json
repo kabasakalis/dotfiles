@@ -35,7 +35,10 @@
                 "/home/spiros/.dotfiles/tmuxinator/rspec_demo.yml",
                 "/home/spiros/.dotfiles/ruby/.bundle/config",
                 "/home/spiros/.dotfiles/ruby/.gemrc",
-                "/home/spiros/.dotfiles/ruby/rdebugrc"
+                "/home/spiros/.dotfiles/ruby/rdebugrc",
+                "/home/spiros/.dotfiles/ruby/.irbrc",
+                "/home/spiros/.dotfiles/ruby/pryrc",
+                "/home/spiros/.dotfiles/install.conf.yaml"
             ]
         },
         {
