@@ -84,13 +84,14 @@
 
 [pull]
   ff = only
+  rebase = true
 
 [push]
   default = tracking
 
 [merge]
   tool = nvim
-  
+
 [rebase]
   autostash = true
 

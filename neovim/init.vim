@@ -292,6 +292,9 @@ nnoremap <leader>[  :bp<CR>
 "Close buffer workaround
 map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 
+"Close all buffers
+map <C-c> :bufdo bd<cr>
+
 " Quickly open a vertical split of my init.vim and source my init.vim
 nnoremap <silent> <leader>ev :vs ~/.config/nvim/init.vim<CR>
 " Reload init.vim
@@ -309,6 +312,9 @@ nnoremap Y y$
 
 " place whole file on the system clipboard (and return cursor to where it was)
 nmap <Leader>a maggVG"*y`a
+
+" Select all contents of file
+nmap <Leader>v <esc>ggVG<CR>
 
 " After block yank and paste, move cursor to the end of operated text and don't override register
 vnoremap y y`]
@@ -719,7 +725,8 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 " Fugitive git {{{
 " -----------------------------------------------------
 "
-nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gi :Git! init<CR>
+nnoremap <leader>ga :Git! add %:p<CR><CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit -v -q<CR>
 nnoremap <leader>gt :Gcommit -v -q %:p<CR>
@@ -727,13 +734,18 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gwq :Gwq<CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
 nnoremap <leader>gp :Ggrep<Space>
 nnoremap <leader>gm :Gmove<Space>
-nnoremap <leader>gb :Git branch<Space>
-nnoremap <leader>go :Git checkout<Space>
-nnoremap <leader>gps :Dispatch! git push<CR>
-nnoremap <leader>gpl :Dispatch! git pull<CR>
+nnoremap <leader>gb :Git! branch<Space>
+nnoremap <leader>go :Git! checkout<Space>
+
+nnoremap <leader>gra :Git! remote add origin master<CR>
+nnoremap <leader>gpf :Git! push --set-upstream origin master<CR>
+nnoremap <leader>gps :Git! push<CR>
+nnoremap <leader>gpl :Git! pull<CR>
+
 "}}}
 
 
@@ -876,6 +888,25 @@ augroup line_return
         \ endif
 augroup END
 "}}}
+
+
+
+" Enable seeing-is-believing mappings only for Ruby
+augroup seeingIsBelievingSettings
+  autocmd!
+
+  autocmd FileType ruby nmap <buffer> ,b <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> ,b <Plug>(seeing-is-believing-mark-and-run)
+
+  autocmd FileType ruby nmap <buffer> ,m <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby xmap <buffer> ,m <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby imap <buffer> ,m <Plug>(seeing-is-believing-mark)
+
+  autocmd FileType ruby nmap <buffer> ,b <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby imap <buffer> ,b <Plug>(seeing-is-believing-run)
+augroup END
+"}}}
+
 
 
 " ======================================================================================================================

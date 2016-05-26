@@ -25,20 +25,13 @@
                 "/home/spiros/.dotfiles/neovim/colors/Tomorrow-Night.vim",
                 "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
                 "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js",
-                "/home/spiros/.dotfiles/config/terminator/config",
                 "/home/spiros/.dotfiles/README.md",
-                "/home/spiros/.dotfiles/neovim/plugins.vim",
-                "/home/spiros/.dotfiles/neovim/init.vim",
-                "/home/spiros/.dotfiles/zsh/zsh_aliases",
-                "/home/spiros/.dotfiles/zsh/zshenv",
                 "/home/spiros/.dotfiles/tmuxinator/mymusic_API.yml",
                 "/home/spiros/.dotfiles/tmuxinator/rspec_demo.yml",
                 "/home/spiros/.dotfiles/ruby/.bundle/config",
-                "/home/spiros/.dotfiles/ruby/.gemrc",
-                "/home/spiros/.dotfiles/ruby/rdebugrc",
-                "/home/spiros/.dotfiles/ruby/.irbrc",
-                "/home/spiros/.dotfiles/ruby/pryrc",
-                "/home/spiros/.dotfiles/install.conf.yaml"
+                "/home/spiros/.dotfiles/neovim/plugins.vim",
+                "/home/spiros/.dotfiles/neovim/init.vim",
+                "/home/spiros/.dotfiles/git/gitconfig"
             ]
         },
         {
