@@ -30,8 +30,9 @@
                 "/home/spiros/.dotfiles/tmuxinator/rspec_demo.yml",
                 "/home/spiros/.dotfiles/ruby/.bundle/config",
                 "/home/spiros/.dotfiles/neovim/plugins.vim",
-                "/home/spiros/.dotfiles/neovim/init.vim",
-                "/home/spiros/.dotfiles/git/gitconfig"
+                "/home/spiros/.dotfiles/git/gitconfig",
+                "/home/spiros/.dotfiles/neovim/docs.vim",
+                "/home/spiros/.dotfiles/neovim/init.vim"
             ]
         },
         {

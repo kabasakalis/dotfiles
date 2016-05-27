@@ -295,6 +295,10 @@ map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 "Close all buffers
 map <C-c> :bufdo bd<cr>
 
+
+"Delete Current File
+nnoremap <leader>rm :call delete(expand('%')) \| bdelete!<CR>
+
 " Quickly open a vertical split of my init.vim and source my init.vim
 nnoremap <silent> <leader>ev :vs ~/.config/nvim/init.vim<CR>
 " Reload init.vim
@@ -484,7 +488,7 @@ nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
 " -----------------------------------------------------
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeWinSize=50
 let g:NERDTreeAutoDeleteBuffer=1
@@ -733,6 +737,9 @@ nnoremap <leader>gt :Gcommit -v -q %:p<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gpu :Git push --set-upstream origin<Space>
+nnoremap <leader>gbr :Git checkout<Space>-b<Space>
+
 nnoremap <leader>gw :Gwrite<CR><CR>
 nnoremap <leader>gwq :Gwq<CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
@@ -821,6 +828,10 @@ let g:vim_markdown_folding_disabled=1
 " Custom commands and functions
 " ======================================================================================================================
 "{{{
+
+
+"Delete currenty file
+command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'Succeeded.' : 'Failed.')
 
 " Open Rails consoles in dedicated tab
 command! -register RailsConsoles :call utils#RailsConsoles()
