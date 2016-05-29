@@ -49,7 +49,6 @@ alias txh='tmuxinator help'
 alias txdeb='tmuxinator debug'
 alias txv='tmuxinator version'
 
-
 #git aliases
 alias ga='git add'
 alias gaa='git add --all'
