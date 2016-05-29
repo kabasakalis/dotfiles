@@ -31,7 +31,7 @@
   lo = log --oneline -n 15
   lg = log --pretty=format:'%h | %cd | %an | %s' -n 15
   ls = log --stat -n 5
-  lol = log --oneline --graph --all --decorate
+	lol = git log --graph --decorate --all --oneline
   g1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   g2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
   wc = whatchanged -p --abbrev-commit --pretty=medium
@@ -43,7 +43,7 @@
   ci = commit
   cp = cherry-pick
   br = branch
-  l = log --oneline --decorate --graph
+  l = log --oneline --decorate --graph --all
   ll = log --pretty=medium --decorate --graph --stat
   ls = log --name-only --oneline
   hist = log --pretty=format:\"%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\" --graph --date=short

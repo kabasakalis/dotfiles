@@ -50,25 +50,66 @@ alias txdeb='tmuxinator debug'
 alias txv='tmuxinator version'
 
 
-# git aliases
+#git aliases
 alias ga='git add'
-alias gp='git push origin master'
-alias gl='git log'
-alias gst='git status'
-alias gd='git diff'
-alias gm='git commit -m'
-alias gma='git commit -am'
-alias gb='git branch'
-alias gc='git checkout'
-alias gra='git remote add'
-alias grr='git remote rm'
-alias gpu='git pull'
+alias gaa='git add --all'
+alias gap='git add --patch'
+alias gdi='git diff'
+alias gds='git diff --staged'
+alias gdt='git difftool --no-prompt'
+alias gcm='git commit -m'
+alias gcma='git commit -am'
+alias gci='git commit --verbose'
+alias gcim='git commit --verbose --reedit-message=HEAD --reset-author'
+alias gamend='git commit --amend --verbose'
 alias gcl='git clone'
 alias gf='git fetch'
-alias gs='git stash'
-alias gsp='git stash pop'
-alias gr='git rebase'
-
+alias gsta='git stash'
+alias gstap='git stash pop'
+alias gpl='git pull'
+alias gp='git push'
+alias gpom='git push origin master'
+alias gpsu='git push --set-upstream'
+alias gpsuom='git push --set-upstream origin master'
+alias gpbm='git push backup master'
+alias gpod='git push origin develop'
+alias gpbd='git push backup develop'
+alias gra='git remote add'
+alias graom='git remote add origin master'
+alias grr='git remote rm'
+alias grv='git remote -v'
+alias grb='git rebase -i'
+alias grb10='git rebase -i HEAD~10'
+alias gs='git status'
+alias gss='git status -sb'
+alias gbr='git branch'
+alias glo='git log --oneline -n 15'
+alias glg="git log --pretty=format:'%h | %cd | %an | %s' -n 15"
+alias gls='git log --stat -n 5'
+alias glol='git log --graph --decorate --all --oneline'
+alias gl1="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative"
+alias gl2="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit"
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gunstage='git reset HEAD --'
+alias gdi='git diff'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gbr='git branch'
+alias gci='git commit'
+alias gcp='git cherry-pick'
+alias gl='git log --oneline --decorate --graph --all'
+alias gll='git log --pretty=medium --decorate --graph --stat'
+alias gls='git log --name-only --oneline'
+alias ghist="git log --pretty=format:\'%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\' --graph --date=short"
+alias gfixup='git commit --amend -c HEAD'
+alias gtimeline='git log --graph --branches --pretty=oneline --decorate'
+alias guntracked_files='git ls-files -o --exclude-standard'
+alias gignored_files='git ls-files --others -i --exclude-standard'
+alias gmodified_files='git ls-files -m'
+alias gbl='git blame -C'
+alias gamend='git commit --amend --reuse-message=HEAD'
+alias goops="git reset --hard 'HEAD@{1}'"
+alias gunstage='git reset HEAD --'
 
 #system
 alias cl='clear'
@@ -109,7 +150,7 @@ alias du="cd ~/Labs/brahma/test/dummy"
 alias labs="cd ~/Labs/ && ls"
 
 alias app="cd ~/projects/app"
-alias demo="cd ~/projects/DEMOS/rails_tutorial_api"
+alias demo="cd ~/projects/DEMOS"
 
 
 #edit common config files

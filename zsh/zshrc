@@ -338,3 +338,15 @@ ex ()
 function get_ruby_version {
   echo -n $(ruby -v | cut -d ' ' -f 2)
 }
+
+
+#generate dummy files
+function gfiles() {
+  basename=$1
+  num=$2
+  echo $basename
+  echo $num
+  for i in {1..$num}; do
+    yes  "File $basename $i Content " | head -5 > "$basename-$i.txt";
+  done
+}
