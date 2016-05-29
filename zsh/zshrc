@@ -344,9 +344,16 @@ function get_ruby_version {
 function gfiles() {
   basename=$1
   num=$2
-  echo $basename
-  echo $num
+  echo "Creating $2 files with a basename of $basename"
   for i in {1..$num}; do
-    yes  "File $basename $i Content " | head -5 > "$basename-$i.txt";
+    yes  "File $basename $i Content " | head -1 > "$basename-$i.txt";
   done
+}
+#dummy commit
+function commit() {
+  gfiles $1 $2 ;
+  echo 'Adding files in index.'
+  gaa;
+  echo 'Commiting...'
+  git commit -m "$1";
 }

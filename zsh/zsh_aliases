@@ -62,32 +62,33 @@ alias gci='git commit --verbose'
 alias gcim='git commit --verbose --reedit-message=HEAD --reset-author'
 alias gamend='git commit --amend --verbose'
 alias gcl='git clone'
-alias gf='git fetch'
+alias gf='git f etch'
 alias gsta='git stash'
 alias gstap='git stash pop'
 alias gpl='git pull'
 alias gp='git push origin master'
-alias gpp='git'
+alias gpp='git push'
 alias gpsu='git push --set-upstream'
 alias gpsuom='git push --set-upstream origin master'
 alias gpbm='git push backup master'
 alias gpod='git push origin develop'
 alias gpbd='git push backup develop'
 alias gra='git remote add'
-alias graom='git remote add origin master'
+alias grao='git remote add origin'
 alias grr='git remote rm'
 alias grv='git remote -v'
 alias grb='git rebase -i'
+alias grbc='git rebase --continue'
 alias grb10='git rebase -i HEAD~10'
 alias gs='git status'
 alias gss='git status -sb'
 alias gbr='git branch'
-alias glo='git log --oneline -n 15'
-alias glg="git log --pretty=format:'%h | %cd | %an | %s' -n 15"
-alias gls='git log --stat -n 5'
-alias glol='git log --graph --decorate --all --oneline'
+alias gl='git log --oneline --decorate --graph --all'
+alias glp="git log --pretty=format:'%h | %cd | %an | %s' "
+alias gls='git log --stat'
 alias gl1="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative"
 alias gl2="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit"
+alias gll='git log --pretty=medium --decorate --graph --stat'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gunstage='git reset HEAD --'
 alias gdi='git diff'
@@ -96,9 +97,7 @@ alias gcob='git checkout -b'
 alias gbr='git branch'
 alias gci='git commit'
 alias gcp='git cherry-pick'
-alias gl='git log --oneline --decorate --graph --all'
-alias gll='git log --pretty=medium --decorate --graph --stat'
-alias gls='git log --name-only --oneline'
+
 alias ghist="git log --pretty=format:\'%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\' --graph --date=short"
 alias gfixup='git commit --amend -c HEAD'
 alias gtimeline='git log --graph --branches --pretty=oneline --decorate'
@@ -167,6 +166,7 @@ alias bashrc="subl ~/.bashrc --new-window"
 
 #Add extra protection against mistakes
 alias rm='rm -i'
+alias rmf='rm -rf'
 alias tgz='tar -zxvf'
 alias tbz='tar -jxvf'
 
@@ -212,7 +212,7 @@ alias ssh_do="ssh -f -L 3310:localhost:3306 root@188.226.230.141 -p 22 -N"
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
-#general
+#l
 alias int="sudo service network-manager restart"
 alias q='exit'
 alias xcopy='xclip -selection clipboard'
