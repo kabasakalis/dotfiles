@@ -86,18 +86,44 @@
   ff = only
   rebase = true
 
-[push]
-  default = tracking
-
-[merge]
-  tool = nvim
-
 [rebase]
   autostash = true
 
 [branch]
-    autosetuprebase = always
+  autosetuprebase = always
+
+[push]
+  default = tracking
+
+[merge]
+	tool = vimdiff
+
+[mergetool]
+  path = nvim
+
+[mergetool "vimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
 [diff]
     tool = nvimdiff
+
 [difftool "nvimdiff"]
     cmd = diff_wrapper "$LOCAL" "$REMOTE"
+
+
+
+#alternative mergetool kdfiff3
+#[difftool "kdiff3"]
+  #path = kdiff3
+  #trustExitCode = false
+#[difftool]
+  #prompt = false
+#[diff]
+  #tool = kdiff3
+#[mergetool "kdiff3"]
+  #path = kdiff3
+  #trustExitCode = false
+#[mergetool]
+  keepBackup = false
+#[merge]
+  tool = kdiff3

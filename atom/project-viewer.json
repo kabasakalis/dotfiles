@@ -32,7 +32,8 @@
                 "/home/spiros/.dotfiles/neovim/docs.vim",
                 "/home/spiros/.dotfiles/neovim/init.vim",
                 "/home/spiros/.dotfiles/zsh/zsh_aliases",
-                "/home/spiros/.dotfiles/zsh/zshrc"
+                "/home/spiros/.dotfiles/zsh/zshrc",
+                "/home/spiros/.dotfiles/git/gitconfig"
             ]
         },
         {
