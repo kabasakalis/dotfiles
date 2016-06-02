@@ -82,32 +82,39 @@ alias grbc='git rebase --continue'
 alias grb10='git rebase -i HEAD~10'
 alias gs='git status'
 alias gss='git status -sb'
-alias gbr='git branch'
+alias gbr='git branch -vv'
 alias gl='git log --oneline --decorate --graph --all'
-alias glp="git log --pretty=format:'%h | %cd | %an | %s' "
-alias gls='git log --stat'
 alias gl1="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative"
 alias gl2="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit"
-alias gll='git log --pretty=medium --decorate --graph --stat'
+alias gl3='git log --graph --branches --pretty=oneline --decorate'
+alias gl4='git log --pretty=medium --decorate --graph --stat'
+alias guntracked_files='gitls-files -o --exclude-standard'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gunstage='git reset HEAD --'
 alias gdi='git diff'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gbr='git branch'
+alias gcot='git checkout --track'
 alias gci='git commit'
 alias gcp='git cherry-pick'
-
-alias ghist="git log --pretty=format:\'%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\' --graph --date=short"
-alias gfixup='git commit --amend -c HEAD'
-alias gtimeline='git log --graph --branches --pretty=oneline --decorate'
-alias guntracked_files='git ls-files -o --exclude-standard'
-alias gignored_files='git ls-files --others -i --exclude-standard'
-alias gmodified_files='git ls-files -m'
+alias gignored='git ls-files --others -i --exclude-standard'
+alias gindex='git ls-files -s'
+alias gmodified='git ls-files -m'
 alias gbl='git blame -C'
 alias gamend='git commit --amend --reuse-message=HEAD'
 alias goops="git reset --hard 'HEAD@{1}'"
-alias gunstage='git reset HEAD --'
+alias gfixup='git commit --amend -c HEAD'
+alias gassume='update-index --assume-unchanged'
+alias gunassume='update-index --no-assume-unchanged'
+alias glistassumed='!git ls-files -v | grep ^h | cut -c 3-'
+alias gassumeall='!git status -s | awk {'print $2'} | xargs git assume'
+alias gunassumeall='!git assumed | xargs git update-index --no-assume-unchanged'
+alias gours='!f() { git checkout --ours $@ && git add $@; }; f'
+alias gtheirs='!f() { git checkout --theirs $@ && git add $@; }; f'
+
+
+
+
 
 #system
 alias cl='clear'
