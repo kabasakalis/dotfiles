@@ -121,7 +121,8 @@ function! g:utils#tabComplete() abort
     return "\<C-n>"
   else
     if !l:col || getline('.')[l:col - 1] !~# '\k'
-      return "\<TAB>"
+      return '\<TAB>'
+      "return "<C-n>"
     else
       return "\<C-n>"
     endif

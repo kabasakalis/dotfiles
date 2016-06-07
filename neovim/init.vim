@@ -464,23 +464,27 @@ endif
 " -----------------------------------------------------
 " CtrlP Config {{{
 " -----------------------------------------------------
-" Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-nnoremap <Leader>o :CtrlP<CR>                 " Open file menu
-nnoremap <Leader>b :CtrlPBuffer<CR>           " Open buffer menu
-nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
+"Disable/Enable
+" let g:loaded_ctrlp = 0
+" " Setup some default ignores
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+"   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+" \}
+" " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+" if executable('ag')
+"   " Use Ag over Grep
+"   set grepprg=ag\ --nogroup\ --nocolor
+"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+"   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+"   " ag is fast enough that CtrlP doesn't need to cache
+"   let g:ctrlp_use_caching = 0
+" endif
+" nnoremap <Leader>o :CtrlP<CR>                 " Open file menu
+" nnoremap <Leader>b :CtrlPBuffer<CR>           " Open buffer menu
+" nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
+" nnoremap <Leader>m :CtrlPMixed<CR>            " Open Mixed
+
 
 
 " -----------------------------------------------------
@@ -678,7 +682,8 @@ let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:ctrlspace_max_files = 100
 let g:ctrlspace_max_search_results = 100
 let g:ctrlspace_use_ruby_bindings = 1
-"nnoremap <silent><C-p> :CtrlSpace O<CR>
+nnoremap <silent><C-p> :CtrlSpace O<CR>
+nnoremap <silent><C-o> :CtrlSpace H<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -738,6 +743,7 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gpu :Git push --set-upstream origin<Space>
+nnoremap <leader>gsu :Git branch<Space>--set-upstrea<Space>
 nnoremap <leader>gbr :Git checkout<Space>-b<Space>
 
 nnoremap <leader>gw :Gwrite<CR><CR>
@@ -805,7 +811,7 @@ nnoremap <leader>pc :PlugClean<CR>
 " Disable built-in <C-x><C-k> to be able to go backward
 inoremap <C-x><C-k> <NOP>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsExpandTrigger='<C-s>'
 let g:UltiSnipsListSnippets='<C-l>'
 let g:UltiSnipsJumpForwardTrigger='<C-k>'
 let g:UltiSnipsJumpBackwardTrigger='<C-j>'

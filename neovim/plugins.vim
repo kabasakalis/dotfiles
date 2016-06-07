@@ -34,12 +34,13 @@ Plug 'godlygeek/tabular', { 'on':  'Tabularize' } " Easy alignment
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Search {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'easymotion/vim-easymotion'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'  Use 'vim-ctrlspace/vim-ctrlspace instead.
 Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF', 'CtrlSFToggle'] } " Ag wrapper (Unite grep alternative) search and edit
 
 " ---------------------------------------------------------------------------------------------------------------------
