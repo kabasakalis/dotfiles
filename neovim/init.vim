@@ -5,16 +5,15 @@
 " ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
 " ######################################################################################################################
 
-"Plugins managed with vim-plug
+"Plugins managed with vim-plug {{{
 if filereadable(expand("~/.config/nvim/plugins.vim"))
   source ~/.config/nvim/plugins.vim
 endif
+"}}}
 
-
-" ======================================================================================================================
+" ---------------------------------------------------------------------------------------------------------------------
 " Basic settings (Neovim defaults: https://neovim.io/doc/user/vim_diff.html#nvim-option-defaults) {{{
 " ======================================================================================================================
-"{{{
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
@@ -73,18 +72,17 @@ set undodir=~/.config/nvim/undo//
 set tags=./tags;                  " Set the tag file search order
 "}}}
 
+" ---------------------------------------------------------------------------------------------------------------------
+" Color and highlighting settings {{{
+" ======================================================================================================================
 
-" ======================================================================================================================
-" Color and highlighting settings
-" ======================================================================================================================
-"{{{
 " Available themes:
 " jellybeans
 " lucid
 " railscasts
 " rrow-Night
 " tropikos
-" Color scheme based on time {{{
+" Color scheme based on time
 " Turn syntax highlighting on
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -107,32 +105,30 @@ else
   "transparency
   hi Normal  ctermfg=252 ctermbg=none
 endif
-"}}}
 
-" Highlight VCS conflict markers {{{
+" Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-"}}}
 
-" Highlight term cursor differently {{{
+
+" Highlight term cursor differently
 highlight TermCursor ctermfg=green guifg=green
-"}}}
 
-" Listchars highlighting {{{
+
+" Listchars highlighting
 highlight NonText ctermfg=235 guifg=gray
 highlight SpecialKey ctermfg=235 guifg=gray
-"}}}
 
-" Remove underline in folded lines {{{
+
+" Remove underline in folded lines
 hi! Folded term=NONE cterm=NONE gui=NONE ctermbg=NONE
-"}}}
 
-" Link highlight groups to improve buftabline colors {{{
+
+" Link highlight groups to improve buftabline colors
 hi! link BufTabLineCurrent Identifier
 hi! link BufTabLineActive Comment
 hi! link BufTabLineHidden Comment
 hi! link BufTabLineFill Comment
 "}}}
-
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Search settings {{{
@@ -175,7 +171,6 @@ set fillchars="fold: "            " Characters to fill the statuslines and verti
 " set nowrap
 "}}}
 
-
 " ---------------------------------------------------------------------------------------------------------------------
 " White characters settings {{{
 " ---------------------------------------------------------------------------------------------------------------------
@@ -205,9 +200,8 @@ set wildignore+=*.gem
 set wildignore+=tmp/**
 "}}}
 
-
-" ======================================================================================================================
-" Neovim specific configuration
+" ---------------------------------------------------------------------------------------------------------------------
+" Neovim specific configuration {{{
 " ======================================================================================================================
 if has("nvim")
   " change cursor to bar in insert mode
@@ -252,12 +246,11 @@ if has("nvim")
   " Git commands
   command! -nargs=+ Tg :T git <args>
 endif
+"}}}
 
-
+" ---------------------------------------------------------------------------------------------------------------------
+" Core key bindings-Remappings {{{
 " ======================================================================================================================
-" Core key bindings-Remappings
-" ======================================================================================================================
-"{{{
 
 " Save file
 nnoremap <Leader>s :w<CR>
@@ -293,7 +286,7 @@ nnoremap <leader>[  :bp<CR>
 map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 
 "Close all buffers
-map <C-c> :bufdo bd<cr>
+"map <C-c> :bufdo bd<cr>
 
 
 "Delete Current File
@@ -460,7 +453,6 @@ if has('conceal')
 endif
 "}}}
 
-
 " -----------------------------------------------------
 " CtrlP Config {{{
 " -----------------------------------------------------
@@ -484,8 +476,7 @@ endif
 " nnoremap <Leader>b :CtrlPBuffer<CR>           " Open buffer menu
 " nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
 " nnoremap <Leader>m :CtrlPMixed<CR>            " Open Mixed
-
-
+"}}}
 
 " -----------------------------------------------------
 " tree Config {{{
@@ -533,7 +524,7 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 " other highlight to work with it
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
-
+"}}}
 
 " -----------------------------------------------------
 " Neomake {{{
@@ -547,11 +538,10 @@ let g:neomake_error_sign = {
       \ 'text': '❯',
       \ 'texthl': 'Identifier',
       \ }
-"}}}
 let g:neomake_javascript_enabled_makers = ['mri','rubocop','reek']
 let g:neomake_ruby_mri_buffer_output = 1
 "let g:neomake_ruby_rubocop_maker = { 'args': ['-c.rubocop.yml', '-n'], 'cwd': getcwd() }
-
+"}}}
 
 " -----------------------------------------------------
 " Run linters after save {{{
@@ -576,13 +566,12 @@ autocmd BufWritePost *.haml Neomake hamllint
 " gem install scsslint
 autocmd BufWritePost *.scss Neomake scsslint
 " gem install mdl
-autocmd BufWritePost *.md Neomake mdl
+" autocmd BufWritePost *.md Neomake mdl
 " apt-get install shellcheck
 autocmd BufWritePost *.sh Neomake shellcheck
 " pip3 install vim-vint
-autocmd BufWritePost *.vim Neomake vint
+"autocmd BufWritePost *.vim Neomake vint
 "}}}
-
 
 " -----------------------------------------------------
 " Sneak, s f https://github.com/justinmk/vim-sneak {{{
@@ -628,6 +617,7 @@ let g:clever_f_across_no_line=1
 let g:clever_f_smart_case=1
 let g:clever_f_show_prompt=1
 let g:clever_f_chars_match_any_signs=';'
+"}}}
 
 " -----------------------------------------------------
 " Gitgutter {{{
@@ -642,7 +632,6 @@ let g:gitgutter_sign_removed_first_line='-'
 let g:gitgutter_sign_column_always=1
 "}}}
 
-
 " -----------------------------------------------------
 " Airline {{{
 " -----------------------------------------------------
@@ -654,7 +643,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_exclude_preview = 1
 "}}}
-
 
 " -----------------------------------------------------
 " Dev Icons {{{
@@ -683,7 +671,7 @@ let g:ctrlspace_max_files = 100
 let g:ctrlspace_max_search_results = 100
 let g:ctrlspace_use_ruby_bindings = 1
 nnoremap <silent><C-p> :CtrlSpace O<CR>
-nnoremap <silent><C-o> :CtrlSpace H<CR>
+nnoremap <silent><C-o> :CtrlSpace h<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -692,7 +680,6 @@ nnoremap <silent><C-o> :CtrlSpace H<CR>
 let g:pasta_paste_before_mapping = ',O'
 let g:pasta_paste_after_mapping = ',o'
 "}}}
-
 
 " -----------------------------------------------------
 " Deoplete autocomplete {{{
@@ -761,7 +748,6 @@ nnoremap <leader>gpl :Git! pull<CR>
 
 "}}}
 
-
 " -----------------------------------------------------
 " Ctrl-SF {{{
 " -----------------------------------------------------
@@ -794,7 +780,6 @@ let g:ctrlsf_regex_pattern=1
 nnoremap <silent> ,g :call utils#searchCurrentWordWithAg()<CR>
 "}}}
 
-
 " -----------------------------------------------------
 " Vim-Plug {{{
 " -----------------------------------------------------
@@ -804,14 +789,13 @@ nnoremap <leader>pU :PlugUpgrade<CR>
 nnoremap <leader>pc :PlugClean<CR>
 "}}}
 
-
 " -----------------------------------------------------
 " Ultisnips for snippets {{{
 " -----------------------------------------------------
 " Disable built-in <C-x><C-k> to be able to go backward
 inoremap <C-x><C-k> <NOP>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<C-s>'
+let g:UltiSnipsExpandTrigger='<C-j>'
 let g:UltiSnipsListSnippets='<C-l>'
 let g:UltiSnipsJumpForwardTrigger='<C-k>'
 let g:UltiSnipsJumpBackwardTrigger='<C-j>'
@@ -829,12 +813,9 @@ let g:vim_markdown_no_default_key_mappings=1
 let g:vim_markdown_folding_disabled=1
 "}}}
 
-
+" -----------------------------------------------------
+" Custom commands and functions {{{
 " ======================================================================================================================
-" Custom commands and functions
-" ======================================================================================================================
-"{{{
-
 
 "Delete currenty file
 command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'Succeeded.' : 'Failed.')
@@ -865,19 +846,17 @@ command! Profile :call utils#profile()
 command! Retab :call utils#retabToFourSpaces()
 "}}}
 
-
+" -----------------------------------------------------
+" Autocommands {{{
 " ======================================================================================================================
-" Autocommands
-" ======================================================================================================================
-"{{{
 
-" Turn spellcheck on for markdown files {{{
+" Turn spellcheck on for markdown files
 autocmd BufNewFile,BufRead *.md setlocal spell
 
-" Remove trailing whitespaces automatically before save {{{
+" Remove trailing whitespaces automatically before save
 autocmd BufWritePre * call utils#stripTrailingWhitespaces()
 
-" Resize splits when the window is resized {{{
+" Resize splits when the window is resized
 autocmd VimResized * :wincmd =
 
 augroup vimrcEx
@@ -896,7 +875,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
 augroup END
 
-" Make sure Vim returns to the same line when you reopen a file. Thanks, Amit and Steve Losh. {{{
+" Make sure Vim returns to the same line when you reopen a file. Thanks, Amit and Steve Losh.
 augroup line_return
   au!
   au BufReadPost *
@@ -906,9 +885,9 @@ augroup line_return
 augroup END
 "}}}
 
-
-
-" Enable seeing-is-believing mappings only for Ruby
+" -----------------------------------------------------
+" Enable seeing-is-believing mappings only for Ruby {{{
+" ======================================================================================================================
 augroup seeingIsBelievingSettings
   autocmd!
 
@@ -924,12 +903,9 @@ augroup seeingIsBelievingSettings
 augroup END
 "}}}
 
-
-
+" -----------------------------------------------------
+" F-key actions {{{
 " ======================================================================================================================
-" F-key actions
-" ======================================================================================================================
-"{{{
 
 "F1 NERDTree wrapper
 nnoremap <silent> <F1> :call utils#nerdWrapper()<CR>

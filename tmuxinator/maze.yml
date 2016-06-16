@@ -31,7 +31,6 @@ root: ~/projects/maze
 windows:
   #- spacemacs:  emacsclient -t -e '(spacemacs/home)'
   - Neovim:  nvim
-  - console: pry
   - generic zsh:
     - ls -la
   - dotfiles:
