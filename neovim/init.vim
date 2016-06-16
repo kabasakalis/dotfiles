@@ -415,12 +415,8 @@ vnoremap N Nzz
 " Center screen when moving up and down
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
-nnoremap <C-f> <C-f>zz
-nnoremap <C-b> <C-b>zz
 vnoremap <C-u> <C-u>zz
 vnoremap <C-d> <C-d>zz
-vnoremap <C-f> <C-f>zz
-vnoremap <C-b> <C-b>zz
 
 " Use CamelCaseMotion instead of default motions
 map <silent> w <Plug>CamelCaseMotion_w
@@ -550,25 +546,25 @@ let g:neomake_ruby_mri_buffer_output = 1
 " npm install -g eslint
 "autocmd BufWritePost *.js Neomake eslint
 " npm install -g jsonlint
-autocmd BufWritePost *.json Neomake jsonlint
+"autocmd BufWritePost *.json Neomake jsonlint
 " npm install -g typescript
-autocmd BufWritePost *.ts Neomake tsc
+"autocmd BufWritePost *.ts Neomake tsc
 " gem install rubocop
 "autocmd BufWritePost *.rb Neomake rubocop
 " ruby
 "autocmd BufWritePost *.rb Neomake mri
 " sudo apt-get install elixir
-autocmd BufWritePost *.ex Neomake elixir
+"autocmd BufWritePost *.ex Neomake elixir
 " apt-get install tidy
-autocmd BufWritePost *.html Neomake tidy
+"autocmd BufWritePost *.html Neomake tidy
 " gem install haml_lint
-autocmd BufWritePost *.haml Neomake hamllint
+"autocmd BufWritePost *.haml Neomake hamllint
 " gem install scsslint
-autocmd BufWritePost *.scss Neomake scsslint
+"autocmd BufWritePost *.scss Neomake scsslint
 " gem install mdl
 " autocmd BufWritePost *.md Neomake mdl
 " apt-get install shellcheck
-autocmd BufWritePost *.sh Neomake shellcheck
+"autocmd BufWritePost *.sh Neomake shellcheck
 " pip3 install vim-vint
 "autocmd BufWritePost *.vim Neomake vint
 "}}}
@@ -711,10 +707,10 @@ autocmd FileType ruby set omnifunc=monster#omnifunc
 " -----------------------------------------------------
 " Smooth scroll vim-smooth-scroll {{{
 " -----------------------------------------------------
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+"noremap <silent> <c-key> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+"noremap <silent> <c-key> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-u> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -772,12 +768,25 @@ let g:ctrlsf_confirm_save = 1
 let g:ctrlsf_ignore_dir = ['bower_components', 'npm_modules']
 let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_populate_qflist=1
-let g:ctrlsf_position='bottom'
-let g:ctrlsf_winsize = '30%'
+let g:ctrlsf_position='right'
+let g:ctrlsf_winsize = '50%'
 let g:ctrlsf_auto_close=0
 let g:ctrlsf_regex_pattern=1
 "let g:ctrlsf_context = '-C 3'
 nnoremap <silent> ,g :call utils#searchCurrentWordWithAg()<CR>
+
+nmap     <c-f>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nmap     <C-F>l <Plug>CtrlSFQuickfixPrompt
+vmap     <C-F>l <Plug>CtrlSFQuickfixVwordPath
+vmap     <C-F>L <Plug>CtrlSFQuickfixVwordExec
+
 "}}}
 
 " -----------------------------------------------------
