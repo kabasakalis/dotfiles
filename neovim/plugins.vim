@@ -1,4 +1,5 @@
 " ======================================================================================================================
+"
 " Plugin manager (Plug) settings.
 " Athor : Spiros Kabasakalis <Kabasakalis@gmail.com>
 " ======================================================================================================================
@@ -35,21 +36,19 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-
 " ---------------------------------------------------------------------------------------------------------------------
 " Search {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'easymotion/vim-easymotion'
 " Plug 'ctrlpvim/ctrlp.vim'  Use 'vim-ctrlspace/vim-ctrlspace instead.
 Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF', 'CtrlSFToggle'] } " Ag wrapper (Unite grep alternative) search and edit
-
+"}}}
 " ---------------------------------------------------------------------------------------------------------------------
 " Project Management {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'scrooloose/nerdTree'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ctrlspace/vim-ctrlspace'
-
 " ---------------------------------------------------------------------------------------------------------------------
 " Terminal {{{
 " ---------------------------------------------------------------------------------------------------------------------
@@ -163,6 +162,7 @@ Plug 'tpope/vim-git'
 Plug 'tejr/vim-tmux'
 " Dockerfile
 Plug 'honza/dockerfile.vim'
+Plug 'digitaltoad/vim-pug'
 "}}}
 
 call plug#end()
