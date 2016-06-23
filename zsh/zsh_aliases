@@ -20,7 +20,7 @@ alias sselastic='sudo service elasticsearch start'
 
 
 #Dotfiles Regenerate symbolic links
-alias dot='cd  ~/.dotfiles && dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml'
+alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
 
 #emacs
 alias et='emacsclient -t'

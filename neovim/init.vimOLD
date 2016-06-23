@@ -916,10 +916,10 @@ augroup END
 " F-key actions {{{
 " ======================================================================================================================
 
-"F1 Cannot be assigned for some reason in Ubuntu 16.04
+"F1 NERDTree wrapper
+nnoremap <silent> <F1> :call utils#nerdWrapper()<CR>
 
-"F2 NERDTree wrapper
-nnoremap <silent> <F2> :call utils#nerdWrapper()<CR>
+"F2 Free
 
 "F3 Paste mode toggling
 nnoremap <silent> <F3> :set paste!<CR> :set paste?<CR>

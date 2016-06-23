@@ -65,8 +65,6 @@
     ~/.bundle: ruby/.bundle
     ~/.pryrc: ruby/pryrc
     ~/.rdebugrc: ruby/rdebugrc
-    #Spotify
-    ~/.config/spotify: spotify/
     #linters
     ~/dev/.eslintrc:
       create: true
