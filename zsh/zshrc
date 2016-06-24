@@ -282,7 +282,7 @@ olh() {
  	cd "$target"
  	git clone "$@"
  	cd "$pwd"
-  subl .
+  nvim  .
  }
 
  function get_repo {

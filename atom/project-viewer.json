@@ -2,40 +2,16 @@
     "groups": [
         {
             "name": "Generic",
-            "color": "#f5eaea",
-            "icon": "icon-arrow-up",
             "expanded": true
         },
         {
             "name": "Rails",
             "color": "#a0a8fa",
             "icon": "icon-briefcase",
-            "expanded": true
+            "expanded": false
         }
     ],
     "projects": [
-        {
-            "name": "dotfiles",
-            "group": "Generic",
-            "paths": {
-                "/home/spiros/.dotfiles": "{\".dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":true,\"entries\":{}},\"home_assets\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"spotify\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":true,\"entries\":{}}}}}"
-            },
-            "buffers": [
-                "/home/spiros/.dotfiles/neovim/autoload/utils.vim",
-                "/home/spiros/.dotfiles/neovim/colors/Tomorrow-Night.vim",
-                "/home/spiros/.dotfiles/neovim/colors/jellybeans.vim",
-                "/home/spiros/.dotfiles/atom/packages/atom-typescript/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/es5/jshint_globals/vars.js",
-                "/home/spiros/.dotfiles/README.md",
-                "/home/spiros/.dotfiles/tmuxinator/mymusic_API.yml",
-                "/home/spiros/.dotfiles/tmuxinator/rspec_demo.yml",
-                "/home/spiros/.dotfiles/ruby/.bundle/config",
-                "/home/spiros/.dotfiles/neovim/docs.vim",
-                "/home/spiros/.dotfiles/neovim/init.vim",
-                "/home/spiros/.dotfiles/zsh/zsh_aliases",
-                "/home/spiros/.dotfiles/zsh/zshrc",
-                "/home/spiros/.dotfiles/neovim/plugins.vim"
-            ]
-        },
         {
             "name": "martin-svk-dotfiles",
             "group": "Generic",
@@ -48,6 +24,16 @@
                 "/home/spiros/projects/DEMOS/dot-files/linters/rubocop.yml",
                 "/home/spiros/projects/DEMOS/dot-files/install.sh",
                 "/home/spiros/projects/DEMOS/dot-files/README.md"
+            ]
+        },
+        {
+            "name": "MyDotfiles",
+            "group": "Generic",
+            "paths": {
+                "/home/spiros/dotfiles": "{\"dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"fonts\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"home_assets\":{\"expanded\":false,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"misc\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":false,\"entries\":{}}}}}"
+            },
+            "buffers": [
+                "/home/spiros/dotfiles/zsh/zsh_aliases"
             ]
         },
         {

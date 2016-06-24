@@ -14,13 +14,14 @@ alias dist-upgrade='sudo apt-get dist-upgrade'
 # services
 alias ss='sudo service'
 alias ssmysql='sudo service mysql start'
-alias sspgsql='sudo service postgresql start'
+alias sspg='sudo service postgresql start'
 alias ssredis='sudo service redis-server start'
 alias sselastic='sudo service elasticsearch start'
 
 
 #Dotfiles Regenerate symbolic links
 alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
+alias dotfiles='nvim ~/dotfiles'
 
 #emacs
 alias et='emacsclient -t'
@@ -113,9 +114,6 @@ alias gours='!f() { git checkout --ours $@ && git add $@; }; f'
 alias gtheirs='!f() { git checkout --theirs $@ && git add $@; }; f'
 
 
-
-
-
 #system
 alias cl='clear'
 alias k9='kill -9'
@@ -148,8 +146,6 @@ alias rd='rmdir'
 
 #specific folders
 alias pr='cd /home/spiros/projects'
-alias core="cd ~/Labs/gy/gyx_core"
-alias jasper="cd ~/Labs/gy/jasper"
 alias br="cd ~/Labs/brahma"
 alias du="cd ~/Labs/brahma/test/dummy"
 alias labs="cd ~/Labs/ && ls"
@@ -159,16 +155,16 @@ alias demo="cd ~/projects/DEMOS"
 
 
 #edit common config files
-alias ezshrc='subl ~/.zshrc'
-alias ebashrc='subl ~/.bashrc'
-alias ebash_aliases='subl ~/.bash_aliases'
-alias egitconfig='subl ~/.gitconfig'
-alias epryrc='subl ~/pryrc'
-alias egemrc='subl ~/.gemrc'
-alias eprofile='subl ~/.profile'
+alias ezshrc='nvim ~/.zshrc'
+alias eohmyzsh="nvim ~/.oh-my-zsh"
+alias ebashrc='nvim ~/.bashrc'
+alias ebash_aliases='nvim ~/.bash_aliases'
+alias ezsh_aliases='nvim ~/.zsh_aliases'
+alias egitconfig='nvim ~/.gitconfig'
+alias epryrc='nvim ~/pryrc'
+alias egemrc='nvim ~/.gemrc'
+alias eprofile='nvim ~/.profile'
 alias sub="nohup subl . >/dev/null 2>&1 &"
-alias libsh="subl ~/bashlib/lib.sh --new-window"
-alias bashrc="subl ~/.bashrc --new-window"
 
 
 #Add extra protection against mistakes
@@ -177,10 +173,19 @@ alias rmf='rm -rf'
 alias tgz='tar -zxvf'
 alias tbz='tar -jxvf'
 
+#trash-cli
+alias tp='trash-put' #trashes files and directories.
+alias te='trash-empty' #empty the trashcan(s).
+alias tl='trash-list' #list trashed file.
+alias rt='restore-trash' #restore a trashed file.
+
+
 #Programs
 #Sublime
 alias e='subl . &'
-alias gc="git cola"
+#Git cola
+alias gc='git cola'
+#Neovim
 alias v='nvim'
 
 # Bundler
@@ -215,18 +220,21 @@ alias met="cd ~/static/metronic_402 && serve"
 alias dob="ssh deploy@188.226.189.157"
 alias ssh_do="ssh -f -L 3310:localhost:3306 root@188.226.230.141 -p 22 -N"
 
-#zsh
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
 
-#l
-alias int="sudo service network-manager restart"
-alias q='exit'
-alias xcopy='xclip -selection clipboard'
-alias xpaste='xclip -o'
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+#cheatsheets
 alias vcs1='google-chrome  ~/home_assets/cheatsheets/vim1.png'
 alias vcs2='google-chrome  ~/home_assets/cheatsheets/vim2.pdf'
 alias rspeccs1='google-chrome  ~/home_assets/cheatsheets/rspec1.pdf'
 alias rspeccs2='google-chrome  ~/home_assets/cheatsheets/rspec2.pdf'
 alias rspeccs3='google-chrome  ~/home_assets/cheatsheets/rspec3.pdf'
+
+#Unity Launcher position
+alias launcherb='gsettings set com.canonical.Unity.Launcher launcher-position Bottom'
+alias launcherl='gsettings set com.canonical.Unity.Launcher launcher-position Left'
+
+#various
+alias int="sudo service network-manager restart"
+alias q='exit'
+alias xcopy='xclip -selection clipboard'
+alias xpaste='xclip -o'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
