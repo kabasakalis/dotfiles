@@ -33,7 +33,10 @@
                 "/home/spiros/dotfiles": "{\"dotfiles\":{\"expanded\":true,\"entries\":{\".git\":{\"expanded\":false,\"entries\":{}},\"atom\":{\"expanded\":false,\"entries\":{}},\"bash\":{\"expanded\":false,\"entries\":{}},\"config\":{\"expanded\":false,\"entries\":{}},\"dotbot\":{\"expanded\":false,\"entries\":{}},\"fonts\":{\"expanded\":false,\"entries\":{}},\"git\":{\"expanded\":false,\"entries\":{}},\"home_assets\":{\"expanded\":false,\"entries\":{}},\"linters\":{\"expanded\":false,\"entries\":{}},\"misc\":{\"expanded\":false,\"entries\":{}},\"neovim\":{\"expanded\":false,\"entries\":{}},\"oh-my-zsh\":{\"expanded\":false,\"entries\":{}},\"ruby\":{\"expanded\":false,\"entries\":{}},\"scripts\":{\"expanded\":false,\"entries\":{}},\"spacemacs\":{\"expanded\":false,\"entries\":{}},\"sublime\":{\"expanded\":false,\"entries\":{}},\"tmux\":{\"expanded\":false,\"entries\":{}},\"tmuxinator\":{\"expanded\":false,\"entries\":{}},\"vim\":{\"expanded\":false,\"entries\":{}},\"zsh\":{\"expanded\":false,\"entries\":{}}}}}"
             },
             "buffers": [
-                "/home/spiros/dotfiles/zsh/zsh_aliases"
+                "/home/spiros/dotfiles/zsh/zsh_aliases",
+                "/home/spiros/dotfiles/zsh/zshenv",
+                "/home/spiros/dotfiles/neovim/plugins.vim",
+                "/home/spiros/dotfiles/neovim/init.vim"
             ]
         },
         {

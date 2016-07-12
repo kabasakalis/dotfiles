@@ -63,7 +63,7 @@ alias gci='git commit --verbose'
 alias gcim='git commit --verbose --reedit-message=HEAD --reset-author'
 alias gamend='git commit --amend --verbose'
 alias gcl='git clone'
-alias gf='git f etch'
+alias gf='git fetch'
 alias gsta='git stash'
 alias gstap='git stash pop'
 alias gpl='git pull'
@@ -93,65 +93,17 @@ alias guntracked_files='gitls-files -o --exclude-standard'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gunstage='git reset HEAD --'
 alias gdi='git diff'
-alias gco='git checkout'
-alias gcob='git checkout -b'
-alias gcot='git checkout --track'
-alias gci='git commit'
-alias gcp='git cherry-pick'
-alias gignored='git ls-files --others -i --exclude-standard'
-alias gindex='git ls-files -s'
-alias gmodified='git ls-files -m'
-alias gbl='git blame -C'
-alias gamend='git commit --amend --reuse-message=HEAD'
-alias goops="git reset --hard 'HEAD@{1}'"
-alias gfixup='git commit --amend -c HEAD'
-alias gassume='update-index --assume-unchanged'
-alias gunassume='update-index --no-assume-unchanged'
-alias glistassumed='!git ls-files -v | grep ^h | cut -c 3-'
-alias gassumeall='!git status -s | awk {'print $2'} | xargs git assume'
-alias gunassumeall='!git assumed | xargs git update-index --no-assume-unchanged'
-alias gours='!f() { git checkout --ours $@ && git add $@; }; f'
-alias gtheirs='!f() { git checkout --theirs $@ && git add $@; }; f'
 
 
-#system
-alias cl='clear'
-alias k9='kill -9'
-alias port3000='lsof -wni tcp:3000'
-alias path='print -l $path'
 
 
-#navigation
-function cd() {
-    new_directory="$*";
-    if [ $# -eq 0 ]; then
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && ls
-}
-alias ..='cd ..'
-alias ...='cd ../../'
-
-# Files and directories
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias grep='grep --color=tty -d skip'
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias md='mkdir -p'
-alias rd='rmdir'
-
-
-#specific folders
-alias pr='cd /home/spiros/projects'
+#Quick nav
 alias br="cd ~/Labs/brahma"
 alias du="cd ~/Labs/brahma/test/dummy"
 alias labs="cd ~/Labs/ && ls"
-
 alias app="cd ~/projects/app"
 alias demo="cd ~/projects/DEMOS"
+alias pr="cd ~/projects"
 
 
 #edit common config files
@@ -169,7 +121,6 @@ alias sub="nohup subl . >/dev/null 2>&1 &"
 
 #Add extra protection against mistakes
 alias rm='rm -i'
-alias rmf='rm -rf'
 alias tgz='tar -zxvf'
 alias tbz='tar -jxvf'
 

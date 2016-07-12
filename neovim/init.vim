@@ -58,7 +58,7 @@ set complete+=kspell              " Autocomplete with dictionary words when spel
 set diffopt+=vertical             " Always use vertical diffs
 set wildmenu                      " turn on the wildmenu cuz everyone says to
 set autoread                      " have vim re-load files when they're changed outside of vim
-set formatoptions+=j              " Delete comment character when joining commented lines
+set formatoptions+=j              " Delete comment charalter when joining commented lines
 set sc                            " show commands as you type them
 set lazyredraw                    " make vim a little speedier
 set ttyfast
@@ -384,7 +384,12 @@ nnoremap ,? ?<CR>
 vnoremap ,s :!sort<CR>
 
 " Easier fold toggling
-nnoremap <leader>z za
+" Toggle
+nnoremap <silent> ,n za
+" Close all
+nnoremap <silent> ,m zM
+" Open  all
+nnoremap <silent> ,r zR
 
 " Enter gives a new line when in command mode without entering insert mode. Likewise, shift+enter gives a new line
 " above the cursor
@@ -453,33 +458,83 @@ endif
 " CtrlP Config {{{
 " -----------------------------------------------------
 "Disable/Enable
-" let g:loaded_ctrlp = 0
-" " Setup some default ignores
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-"   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-" \}
-" " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-" if executable('ag')
-"   " Use Ag over Grep
-"   set grepprg=ag\ --nogroup\ --nocolor
-"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-"   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-"   " ag is fast enough that CtrlP doesn't need to cache
-"   let g:ctrlp_use_caching = 0
-" endif
-" nnoremap <Leader>o :CtrlP<CR>                 " Open file menu
-" nnoremap <Leader>b :CtrlPBuffer<CR>           " Open buffer menu
-" nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
-" nnoremap <Leader>m :CtrlPMixed<CR>            " Open Mixed
+" let g:loaded_ctrlp = 1
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+nnoremap <Leader>o :CtrlP<CR>                 " Open file menu
+nnoremap <Leader>b :CtrlPBuffer<CR>           " Open buffer menu
+nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
+nnoremap <Leader>m :CtrlPMixed<CR>            " Open Mixed
 "}}}
 
+
+" -----------------------------------------------------
+" Startify Config {{{
+" -----------------------------------------------------
+"autocmd User Startified setlocal cursorline
+autocmd User Startified setlocal buftype=
+
+let g:startify_enable_special         = 0
+let g:startify_files_number           = 8
+let g:startify_relative_path          = 1
+let g:startify_change_to_dir          = 1
+let g:startify_update_oldfiles        = 1
+let g:startify_session_autoload       = 1
+let g:startify_session_persistence    = 1
+let g:startify_session_delete_buffers = 1
+
+let g:startify_skiplist = [
+            \ 'COMMIT_EDITMSG',
+            \ 'bundle/.*/doc',
+            \ '/data/repo/neovim/runtime/doc',
+            \ '/Users/mhi/local/vim/share/vim/vim74/doc',
+            \ ]
+
+let g:startify_bookmarks = [
+            \ { 'c': '~/dotfiles/neovim/init.vim' },
+            \ { 'd': '~/dotfiles/neovim/plugins.vim' },
+            \ '~/golfing',
+            \ ]
+
+let g:startify_custom_footer =
+      \ ['', "   Spiros Kabasakalis", '']
+
+hi StartifyBracket ctermfg=240
+hi StartifyFile    ctermfg=147
+hi StartifyFooter  ctermfg=240
+hi StartifyHeader  ctermfg=114
+hi StartifyNumber  ctermfg=215
+hi StartifyPath    ctermfg=245
+hi StartifySlash   ctermfg=240
+hi StartifySpecial ctermfg=240
+
+ let NERDTreeHijackNetrw = 0
+
+"}}}
 " -----------------------------------------------------
 " tree Config {{{
 " -----------------------------------------------------
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd VimEnter *
+            \   if !argc()
+            \ |   Startify
+            \ |   NERDTree
+            \ |   wincmd w
+            \ | endif
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeWinSize=50
 let g:NERDTreeAutoDeleteBuffer=1
@@ -656,18 +711,18 @@ endif
 " -----------------------------------------------------
 " Ctrlspace {{{
 " -----------------------------------------------------
-if executable("ag")
-  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-endif
-let g:CtrlSpaceUseTabline = 1
-let g:CtrlSpaceSaveWorkspaceOnExit = 1
-let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
-let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
-let g:ctrlspace_max_files = 100
-let g:ctrlspace_max_search_results = 100
-let g:ctrlspace_use_ruby_bindings = 1
-nnoremap <silent><C-p> :CtrlSpace O<CR>
-nnoremap <silent><C-o> :CtrlSpace h<CR>
+" if executable("ag")
+"   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+" endif
+" let g:CtrlSpaceUseTabline = 1
+" let g:CtrlSpaceSaveWorkspaceOnExit = 1
+" let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+" let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+" let g:ctrlspace_max_files = 100
+" let g:ctrlspace_max_search_results = 100
+" let g:ctrlspace_use_ruby_bindings = 1
+" nnoremap <silent><C-p> :CtrlSpace O<CR>
+" nnoremap <silent><C-o> :CtrlSpace h<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -749,6 +804,7 @@ nnoremap <leader>gpl :Git! pull<CR>
 " -----------------------------------------------------
 nnoremap <leader>gg :CtrlSF<Space>
 nnoremap <leader>gG :CtrlSFToggle<Space>
+let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_mapping = {
       \ "next"    : "n",
       \ "prev"    : "N",

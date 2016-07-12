@@ -3,10 +3,10 @@
 PATH=$(paste -d ":" -s << EOF
 $PATH
 $HOME/.gem/ruby/2.3.1/bin
-$HOME/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.1/bin
 $HOME/.rubies/ruby-2.3.1/bin
 $HOME/chruby-0.3.9/bin
 $HOME/dotfiles/scripts
+/usr/share/elasticsearch/bin
 /usr/local/heroku/bin
 /usr/local/sbin
 /usr/local/bin
