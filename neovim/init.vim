@@ -479,7 +479,6 @@ nnoremap <Leader>u :CtrlPMRUFiles<CR>         " Open most recently used files
 nnoremap <Leader>m :CtrlPMixed<CR>            " Open Mixed
 "}}}
 
-
 " -----------------------------------------------------
 " Startify Config {{{
 " -----------------------------------------------------
@@ -504,12 +503,45 @@ let g:startify_skiplist = [
 
 let g:startify_bookmarks = [
             \ { 'c': '~/dotfiles/neovim/init.vim' },
-            \ { 'd': '~/dotfiles/neovim/plugins.vim' },
-            \ '~/golfing',
+            \ { 'd': '~/dotfiles/neovim/plugins.vim'},
+            \ { 'e': '~/dotfiles/neovim/autoload/utils.vim'},
+            \ { 'f': '~/dotfiles/zsh/zshrc'},
+            \ { 'g': '~/dotfiles/zsh/zshenv'},
+            \ { 'h': '~/dotfiles/zsh/zsh_aliases'},
+            \ { 'i': '~/dotfiles/install.conf.yaml'}
             \ ]
 
+let g:startify_list_order = [
+            \ ['   Recent'],
+            \ 'files',
+            \ ['   Recent in current'],
+            \ 'dir',
+            \ ['   Sessions:'],
+            \ 'sessions',
+            \ ['   Bookmarks:'],
+            \ 'bookmarks',
+            \ ['   Commands:'],
+            \ 'commands',
+            \ ]
+
+
+let g:startify_commands = [
+    \ ['Vim Reference', 'h ref']
+    \ ]
+
+
+let g:sk = [
+  \ '   ___|         _)                        |  /         |                          |            | _)             \  |                 |  |                    |',
+  \ ' \___ \   __ \   |   __|  _ \    __|      ` /    _` |  __ \    _` |   __|   _` |  |  /   _` |  |  |   __|        \ |   _ \   __|  _` |  |   _` |  __ \    _` |',
+  \ '       |  |   |  |  |    (   | \__ \      . \   (   |  |   |  (   | \__ \  (   |    <   (   |  |  | \__ \      |\  |   __/  |    (   |  |  (   |  |   |  (   |',
+  \ ' _____/   .__/  _| _|   \___/  ____/     _|\_\ \__,_| _.__/  \__,_| ____/ \__,_| _|\_\ \__,_| _| _| ____/     _| \_| \___| _|   \__,_| _| \__,_| _|  _| \__,_|',
+  \ '         _|                                                                                                                                                   '
+  \ ]
+
+let g:startify_custom_header = g:sk
+
 let g:startify_custom_footer =
-      \ ['', "   Spiros Kabasakalis", '']
+      \ ['', "   Neither the past, the present nor the future mind can be found", '']
 
 hi StartifyBracket ctermfg=240
 hi StartifyFile    ctermfg=147
@@ -520,8 +552,14 @@ hi StartifyPath    ctermfg=245
 hi StartifySlash   ctermfg=240
 hi StartifySpecial ctermfg=240
 
- let NERDTreeHijackNetrw = 0
+let NERDTreeHijackNetrw = 0
+let g:startify_session_dir = '~/.config/nvim/sessions'
+let g:startify_session_before_save = [
+        \ 'echo "Cleaning up before saving.."',
+        \ 'silent! NERDTreeTabsClose'
+        \ ]
 
+nnoremap <silent> ,z :Startify<CR>
 "}}}
 " -----------------------------------------------------
 " tree Config {{{
@@ -702,7 +740,7 @@ let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
-let g:webdevicons_enable_ctrlp = 1
+" let g:webdevicons_enable_ctrlp = 1
 if exists("g:loaded_webdevicons")
     call webdevicons#refresh()
 endif
