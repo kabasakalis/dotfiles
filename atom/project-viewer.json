@@ -36,7 +36,8 @@
                 "/home/spiros/dotfiles/zsh/zsh_aliases",
                 "/home/spiros/dotfiles/zsh/zshenv",
                 "/home/spiros/dotfiles/neovim/plugins.vim",
-                "/home/spiros/dotfiles/neovim/init.vim"
+                "/home/spiros/dotfiles/neovim/init.vim",
+                "/home/spiros/dotfiles/neovim/sessions/default"
             ]
         },
         {

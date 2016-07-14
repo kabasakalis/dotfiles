@@ -7,20 +7,30 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +12 app/controllers/account_activations_controller.rb
-badd +1 app/controllers/concernstest.rb
-badd +1 app/controllers/password_resets_controller.rb
-badd +8 app/controllers/relationships_controller.rb
-badd +1 ~/dotfiles/install.conf.yaml
-badd +531 ~/dotfiles/neovim/init.vim
-badd +2 app/controllers/static_pages_controller.rb
-badd +8 app/mailers/user_mailer.rb
+badd +487 ~/dotfiles/neovim/init.vim
+badd +7 app/controllers/static_pages_controller.rb
+badd +2 app/controllers/concernstest.rb
+badd +13 app/controllers/relationships_controller.rb
+badd +0 app/models/user.rb
+badd +1 app/views/users/new.html.erb
+badd +8 Gemfile
+badd +17 singletton_demo.rb
+badd +6 app/policies/user_policy.rb
+badd +0 Rakefile
+badd +0 Procfile
+badd +13 names.txt
 argglobal
 silent! argdel *
-edit app/controllers/password_resets_controller.rb
+edit app/policies/user_policy.rb
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 wincmd t
 set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 137 + 137) / 274)
+exe 'vert 2resize ' . ((&columns * 136 + 137) / 274)
 argglobal
 setlocal fdm=marker
 setlocal fde=0
@@ -30,12 +40,34 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 4 - ((3 * winheight(0) + 27) / 55)
+let s:l = 8 - ((7 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 03|
+8
+normal! 05|
+lcd ~/projects/DEMOS/rails_tutorial_api/app/controllers
+wincmd w
+argglobal
+edit ~/projects/DEMOS/rails_tutorial_api/singletton_demo.rb
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=2
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 17 - ((15 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+17
+normal! 0
+lcd ~/projects/DEMOS/rails_tutorial_api/app/controllers
+wincmd w
+exe 'vert 1resize ' . ((&columns * 137 + 137) / 274)
+exe 'vert 2resize ' . ((&columns * 136 + 137) / 274)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

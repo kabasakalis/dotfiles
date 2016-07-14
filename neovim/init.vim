@@ -484,7 +484,7 @@ nnoremap <Leader>m :CtrlPMixed<CR>            " Open Mixed
 " -----------------------------------------------------
 "autocmd User Startified setlocal cursorline
 autocmd User Startified setlocal buftype=
-
+" let g:startify_disable_at_vimenter    = 0
 let g:startify_enable_special         = 0
 let g:startify_files_number           = 8
 let g:startify_relative_path          = 1
@@ -840,8 +840,6 @@ nnoremap <leader>gpl :Git! pull<CR>
 " -----------------------------------------------------
 " Ctrl-SF {{{
 " -----------------------------------------------------
-nnoremap <leader>gg :CtrlSF<Space>
-nnoremap <leader>gG :CtrlSFToggle<Space>
 let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_mapping = {
       \ "next"    : "n",
@@ -867,19 +865,23 @@ let g:ctrlsf_winsize = '50%'
 let g:ctrlsf_auto_close=0
 let g:ctrlsf_regex_pattern=1
 "let g:ctrlsf_context = '-C 3'
+"
+"
+nnoremap <leader>gg :CtrlSF<Space>
+nnoremap <leader>ss :CtrlSFToggle<CR>
 nnoremap <silent> ,g :call utils#searchCurrentWordWithAg()<CR>
 
-nmap     <c-f>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-nmap     <C-F>l <Plug>CtrlSFQuickfixPrompt
-vmap     <C-F>l <Plug>CtrlSFQuickfixVwordPath
-vmap     <C-F>L <Plug>CtrlSFQuickfixVwordExec
+nmap     <C-S>f <Plug>CtrlSFPrompt
+vmap     <C-S>f <Plug>CtrlSFVwordPath
+vmap     <C-S>F <Plug>CtrlSFVwordExec
+nmap     <C-S>n <Plug>CtrlSFCwordPath
+nmap     <C-S>p <Plug>CtrlSFPwordPath
+nnoremap <C-S>o :CtrlSFOpen<CR>
+nnoremap <C-S>t :CtrlSFToggle<CR>
+inoremap <C-S>t <Esc>:CtrlSFToggle<CR>
+nmap     <C-S>l <Plug>CtrlSFQuickfixPrompt
+vmap     <C-S>l <Plug>CtrlSFQuickfixVwordPath
+vmap     <C-S>L <Plug>CtrlSFQuickfixVwordExec
 
 "}}}
 
