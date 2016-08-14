@@ -28,6 +28,9 @@ alias et='emacsclient -t'
 alias eh="emacsclient -t -e '(spacemacs/home)'"
 alias ec='emacsclient -c'
 
+#neovim
+alias v='nvim'
+
 #tmux
 alias tt='tmux'
 alias tl='tmux list-sessions'
@@ -98,12 +101,11 @@ alias gdi='git diff'
 
 
 #Quick nav
-alias br="cd ~/Labs/brahma"
-alias du="cd ~/Labs/brahma/test/dummy"
 alias labs="cd ~/Labs/ && ls"
 alias app="cd ~/projects/app"
 alias demo="cd ~/projects/DEMOS"
 alias pr="cd ~/projects"
+alias epr="cd ~/eprojects"
 
 
 #edit common config files
@@ -129,47 +131,6 @@ alias tp='trash-put' #trashes files and directories.
 alias te='trash-empty' #empty the trashcan(s).
 alias tl='trash-list' #list trashed file.
 alias rt='restore-trash' #restore a trashed file.
-
-
-#Programs
-#Sublime
-alias e='subl . &'
-#Git cola
-alias gc='git cola'
-#Neovim
-alias v='nvim'
-
-# Bundler
-alias be='bundle exec'
-alias bi='bundle install'
-alias bl='bundle list'
-alias bu='bundle update'
-alias bp='bundle package'
-
-#rails
-alias ns='spring rails s'
-alias rc="spring rails c"
-alias bs='bin/rails s'
-alias bc='bin/rails c'
-alias bi='bundle install'
-alias mc='mailcatcher'
-#alias et='bundle exec rake i18n:export_translations'
-#alias it='bundle exec rake i18n:import_translations'
-alias rap="bundle exec rake assets:precompile"
-alias gctags='ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)'
-
-# rake
-alias dbc='rake db:create'
-alias dbm='rake db:migrate'
-alias dbs='rake db:seed'
-alias dbd='rake db:drop'
-
-#static servers
-alias met="cd ~/static/metronic_402 && serve"
-
-#ssh
-alias dob="ssh deploy@188.226.189.157"
-alias ssh_do="ssh -f -L 3310:localhost:3306 root@188.226.230.141 -p 22 -N"
 
 
 #cheatsheets

@@ -37,7 +37,12 @@
                 "/home/spiros/dotfiles/zsh/zshenv",
                 "/home/spiros/dotfiles/neovim/plugins.vim",
                 "/home/spiros/dotfiles/neovim/init.vim",
-                "/home/spiros/dotfiles/neovim/sessions/default"
+                "/home/spiros/dotfiles/neovim/sessions/default",
+                "/home/spiros/dotfiles/ruby/.irbrc",
+                "/home/spiros/dotfiles/ruby/pryrc",
+                "/home/spiros/dotfiles/tmuxinator/drinks.yml",
+                "/home/spiros/dotfiles/zsh/zshrc",
+                "/home/spiros/dotfiles/neovim/autoload/utils.vim"
             ]
         },
         {

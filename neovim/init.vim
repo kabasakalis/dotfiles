@@ -530,15 +530,12 @@ let g:startify_commands = [
     \ ]
 
 
-let g:sk = [
-  \ '   ___|         _)                        |  /         |                          |            | _)             \  |                 |  |                    |',
-  \ ' \___ \   __ \   |   __|  _ \    __|      ` /    _` |  __ \    _` |   __|   _` |  |  /   _` |  |  |   __|        \ |   _ \   __|  _` |  |   _` |  __ \    _` |',
-  \ '       |  |   |  |  |    (   | \__ \      . \   (   |  |   |  (   | \__ \  (   |    <   (   |  |  | \__ \      |\  |   __/  |    (   |  |  (   |  |   |  (   |',
-  \ ' _____/   .__/  _| _|   \___/  ____/     _|\_\ \__,_| _.__/  \__,_| ____/ \__,_| _|\_\ \__,_| _| _| ____/     _| \_| \___| _|   \__,_| _| \__,_| _|  _| \__,_|',
-  \ '         _|                                                                                                                                                   '
-  \ ]
+" let g:sk = ['Spiros Kabasakalis NeoVim']                                                                                                         ]
 
-let g:startify_custom_header = g:sk
+" let g:startify_custom_header = g:sk
+
+let g:startify_custom_header = [' ',' ', '   Spiros Kabasakalis', '   Custom NeoVim Setup']
+
 
 let g:startify_custom_footer =
       \ ['', "   Neither the past, the present nor the future mind can be found", '']
@@ -866,9 +863,9 @@ let g:ctrlsf_auto_close=0
 let g:ctrlsf_regex_pattern=1
 "let g:ctrlsf_context = '-C 3'
 "
-"
 nnoremap <leader>gg :CtrlSF<Space>
-nnoremap <leader>ss :CtrlSFToggle<CR>
+nnoremap <leader>gG :CtrlSFToggle<Space>
+
 nnoremap <silent> ,g :call utils#searchCurrentWordWithAg()<CR>
 
 nmap     <C-S>f <Plug>CtrlSFPrompt

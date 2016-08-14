@@ -144,3 +144,5 @@ function coreout() {
 
 #autojump
 . /usr/share/autojump/autojump.sh
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
