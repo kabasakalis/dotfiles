@@ -80,8 +80,9 @@ set tags=./tags;                  " Set the tag file search order
 " jellybeans
 " lucid
 " railscasts
-" rrow-Night
+" Tomorrow-Night
 " tropikos
+" gotham256
 " Color scheme based on time
 " Turn syntax highlighting on
 " Switch syntax highlighting on, when the terminal has colors
@@ -96,12 +97,12 @@ endif
 
 if strftime("%H") < 15
   let g:rehash256=1
-  colorscheme Tomorrow-Night
+  colorscheme tender
   "transparency
   hi Normal  ctermfg=252 ctermbg=none
 else
   let g:rehash256=1
-  colorscheme Tomorrow-Night
+  colorscheme tender
   "transparency
   hi Normal  ctermfg=252 ctermbg=none
 endif
