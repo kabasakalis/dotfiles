@@ -102,7 +102,6 @@ alias gdi='git diff'
 
 #Quick nav
 alias labs="cd ~/Labs/ && ls"
-alias app="cd ~/projects/app"
 alias demo="cd ~/projects/DEMOS"
 alias pr="cd ~/projects"
 alias epr="cd ~/eprojects"
@@ -127,9 +126,9 @@ alias tgz='tar -zxvf'
 alias tbz='tar -jxvf'
 
 #trash-cli
-alias tp='trash-put' #trashes files and directories.
-alias te='trash-empty' #empty the trashcan(s).
-alias tl='trash-list' #list trashed file.
+alias trp='trash-put' #trashes files and directories.
+alias tre='trash-empty' #empty the trashcan(s).
+alias trl='trash-list' #list trashed file.
 alias rt='restore-trash' #restore a trashed file.
 
 
@@ -139,6 +138,7 @@ alias vcs2='google-chrome  ~/home_assets/cheatsheets/vim2.pdf'
 alias rspeccs1='google-chrome  ~/home_assets/cheatsheets/rspec1.pdf'
 alias rspeccs2='google-chrome  ~/home_assets/cheatsheets/rspec2.pdf'
 alias rspeccs3='google-chrome  ~/home_assets/cheatsheets/rspec3.pdf'
+alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
 
 #Unity Launcher position
 alias launcherb='gsettings set com.canonical.Unity.Launcher launcher-position Bottom'
