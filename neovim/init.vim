@@ -83,6 +83,7 @@ set tags=./tags;                  " Set the tag file search order
 " Tomorrow-Night
 " tropikos
 " gotham256
+" gotham256
 " Color scheme based on time
 " Turn syntax highlighting on
 " Switch syntax highlighting on, when the terminal has colors
@@ -97,12 +98,12 @@ endif
 
 if strftime("%H") < 15
   let g:rehash256=1
-  colorscheme tender
+  colorscheme Tomorrow-Night
   "transparency
   hi Normal  ctermfg=252 ctermbg=none
 else
   let g:rehash256=1
-  colorscheme tender
+  colorscheme Tomorrow-Night
   "transparency
   hi Normal  ctermfg=252 ctermbg=none
 endif
@@ -658,6 +659,7 @@ let g:neomake_ruby_mri_buffer_output = 1
 "autocmd BufWritePost *.sh Neomake shellcheck
 " pip3 install vim-vint
 "autocmd BufWritePost *.vim Neomake vint
+autocmd BufNewFile,BufRead *.slim set ft=slim
 "}}}
 
 " -----------------------------------------------------
