@@ -30,6 +30,7 @@ alias ec='emacsclient -c'
 
 #neovim
 alias v='nvim'
+alias python=python3
 
 #tmux
 alias tt='tmux'
@@ -98,6 +99,9 @@ alias gunstage='git reset HEAD --'
 alias gdi='git diff'
 
 
+#ruby
+alias ds="DISABLE_SPRING=1"
+
 
 
 #Quick nav
@@ -105,6 +109,8 @@ alias labs="cd ~/Labs/ && ls"
 alias demo="cd ~/projects/DEMOS"
 alias pr="cd ~/projects"
 alias epr="cd ~/eprojects"
+alias vyra="cd ~/projects/vyra"
+alias vb="cd ~/projects/vyra_bookings"
 
 
 #edit common config files
@@ -150,3 +156,5 @@ alias q='exit'
 alias xcopy='xclip -selection clipboard'
 alias xpaste='xclip -o'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+alias pgfix='sudo ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432'
+alias pgrestart='sudo service postgresql restart'

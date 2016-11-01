@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-
-# ~/.tmuxinator/testpr.yml
-#
-
-name: vyra-bookings
-=======
 # ~/.tmuxinator/testpr.yml
 
-name: vyra_bookings
->>>>>>> Added vyra in tmuxinator
-root: ~/projects/vyra-bookings
+name: vyra
+root: ~/projects/vyra
 
 # Optional tmux socket
 # socket_name: foo
@@ -37,22 +29,30 @@ root: ~/projects/vyra-bookings
 
 windows:
   #- spacemacs:  emacsclient -t -e '(spacemacs/home)'
-  - Neovim:  nvim
-  - generic zsh:
-    - ls -la
-  - console: bundle exec rails console
-  - server:
-    - bundle exec rails s
-  - logs:
+  - vyra_vim:
+    - nvim
+  - vyra_console:
+    -  bundle exec rails console
+  - vyra_server:
+    - bundle exec rails s -p 4000
+  - vyra_logs:
     - tail -f log/development.log
   - dotfiles:
-    - cd ~/.dotfiles
+    - cd ~/dotfiles
     - nvim
   - test_examples:
-    - cd ~/projects/DEMOS/rspec-rails-examples
+    - cd ~/projects/rspec-rails-examples
     - nvim
-  - mymusicAPI:
-      - cd ~/projects/mymusic_API
-      - nvim
-
+  - bbs_server:
+    - cd ~/projects/vyra-bookings
+    - bundle exec rails s -p 3000
+  - bbs_logs:
+    - cd ~/projects/vyra-bookings
+    - tail -f log/development.log
+  - bbs_console:
+    - cd ~/projects/vyra-bookings
+    -  bundle exec rails console
+  - bbs:
+    - cd ~/projects/vyra-bookings
+    - nvim
 

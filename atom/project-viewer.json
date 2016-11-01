@@ -42,7 +42,16 @@
                 "/home/spiros/dotfiles/ruby/pryrc",
                 "/home/spiros/dotfiles/tmuxinator/drinks.yml",
                 "/home/spiros/dotfiles/zsh/zshrc",
-                "/home/spiros/dotfiles/neovim/autoload/utils.vim"
+                "/home/spiros/dotfiles/neovim/autoload/utils.vim",
+                "/home/spiros/dotfiles/config/terminator/config",
+                "/home/spiros/dotfiles/install.conf.yaml",
+                "/home/spiros/dotfiles/tmuxinator/vyra-bookings.yml",
+                "/home/spiros/dotfiles/tmuxinator/vyra.yml",
+                "/home/spiros/dotfiles/tmuxinator/emaze.yml",
+                "/home/spiros/dotfiles/tmuxinator/maze.yml",
+                "/home/spiros/dotfiles/scripts/zsh_install.sh",
+                "/home/spiros/dotfiles/scripts/gems_install.sh",
+                "/home/spiros/dotfiles/tmuxinator/mymusic_API.yml"
             ]
         },
         {
