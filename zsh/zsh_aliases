@@ -98,6 +98,11 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gunstage='git reset HEAD --'
 alias gdi='git diff'
 
+#git project specific aliases
+
+alias gpoapi='git push origin bookings_api'
+
+
 
 #ruby
 alias ds="DISABLE_SPRING=1"
