@@ -2,8 +2,8 @@
 
 PATH=$(paste -d ":" -s << EOF
 $PATH
-$HOME/.gem/ruby/2.3.1/bin
-$HOME/.rubies/ruby-2.3.1/bin
+$HOME/.gem/ruby/2.3.2/bin
+$HOME/.rubies/ruby-2.3.2/bin
 $HOME/chruby-0.3.9/bin
 $HOME/dotfiles/scripts
 /usr/share/elasticsearch/bin
@@ -30,7 +30,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.3.1
+chruby 2.3.2
 
 #REMAP CAPS LOCK to CTRL
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"

@@ -84,7 +84,7 @@
 
 [pull]
   ff = only
-  rebase = true
+  rebase = false
 
 [rebase]
   autostash = true
