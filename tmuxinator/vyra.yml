@@ -34,7 +34,7 @@ windows:
   - vyra_console:
     -  bundle exec rails console
   - vyra_server:
-    - bundle exec rails s -p 4000
+    - bundle exec rails s -p 3000
   - vyra_logs:
     - tail -f log/development.log
   - dotfiles:
@@ -45,7 +45,7 @@ windows:
     - nvim
   - bbs_server:
     - cd ~/projects/vyra-bookings
-    - bundle exec rails s -p 3000
+    - bundle exec rails s -p 4000
   - bbs_logs:
     - cd ~/projects/vyra-bookings
     - tail -f log/development.log
