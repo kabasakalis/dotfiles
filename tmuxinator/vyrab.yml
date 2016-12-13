@@ -1,6 +1,6 @@
 # ~/.tmuxinator/testpr.yml
 
-name: vyra
+name: vyrab
 root: ~/projects/vyra
 
 # Optional tmux socket
@@ -40,8 +40,19 @@ windows:
   - dotfiles:
     - cd ~/dotfiles
     - nvim
-  - console1:
+  - test_examples:
+    - cd ~/projects/DEMOS/rspec-rails-examples
+    - nvim
+  - bbs_server:
+    - cd ~/projects/vyra-bookings
+    - bundle exec rails s -p 4000
+  - bbs_logs:
+    - cd ~/projects/vyra-bookings
+    - tail -f log/development.log
+  - bbs_console:
+    - cd ~/projects/vyra-bookings
     -  bundle exec rails console
-  - console2:
-    -  bundle exec rails console
+  - bbs:
+    - cd ~/projects/vyra-bookings
+    - nvim
 

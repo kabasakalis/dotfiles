@@ -42,6 +42,6 @@ windows:
     - cd ~/dotfiles
     - nvim
   - test_examples:
-    - cd ~/projects/rspec-rails-examples
+    - cd ~/projects/DEMOS/rspec-rails-examples
     - nvim
 
