@@ -40,6 +40,12 @@ windows:
   - dotfiles:
     - cd ~/dotfiles
     - nvim
+  - vyrab:
+    - cd ~/projects/vyrab
+    - nvim
+  - vyraapi:
+    - cd ~/projects/vyra-bookings
+    - nvim
   - console1:
     -  bundle exec rails console
   - console2:

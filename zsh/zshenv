@@ -30,7 +30,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.3.2
+chruby 2.3.3
 
 #REMAP CAPS LOCK to CTRL
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
