@@ -107,7 +107,7 @@ alias gpoapi='git push origin bookings_api'
 #ruby
 alias ds="DISABLE_SPRING=1"
 alias fc="ds foreman run rails console"
-alias bl="bundle --gemfile Gemfile.local"
+alias bl="bundle --gemfile Gemfile.rb"
 
 
 
