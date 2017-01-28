@@ -80,7 +80,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby bundler copydir copyfile)
+plugins=(git rails ruby bundler copydir copyfile vi-mode)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 #plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
