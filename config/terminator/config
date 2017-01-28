@@ -1,114 +1,114 @@
 [global_config]
-  title_transmit_bg_color = "#140095"
   title_receive_fg_color = "#809aa0"
+  title_transmit_bg_color = "#140095"
   title_transmit_fg_color = "#97c7c6"
 [keybindings]
-  zoom_out = Disabled
   close_term = Disabled
-  zoom_in = Disabled
   close_window = Disabled
-[profiles]
-  [[default]]
-    use_system_font = False
-    background_darkness = 0.74
-    background_type = image
-    background_image = /home/spiros/home_assets/wallpapers/milky_way_eclipse.jpg
-    cursor_color = "#326bdc"
-    scroll_background = False
-    icon_bell = False
-    font = Source Code Pro for Powerline Medium 10
-    scrollback_infinite = True
+  zoom_in = Disabled
+  zoom_out = Disabled
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
   [[New Layout 2]]
     [[[child0]]]
-      position = 53:24
-      type = Window
       order = 0
       parent = ""
+      position = 53:24
       size = 1867, 1056
+      type = Window
     [[[child1]]]
       labels = None, None
-      type = Notebook
       order = 0
       parent = child0
+      type = Notebook
     [[[child2]]]
+      order = 0
+      parent = child1
       position = 933
       type = HPaned
-      order = 0
-      parent = child1
     [[[child3]]]
+      order = 0
+      parent = child2
       position = 512
       type = VPaned
+    [[[terminal4]]]
       order = 0
-      parent = child2
-    [[[terminal5]]]
+      parent = child3
       profile = default
       type = Terminal
+    [[[terminal5]]]
       order = 1
       parent = child3
-    [[[terminal4]]]
       profile = default
       type = Terminal
-      order = 0
-      parent = child3
+    [[[terminal6]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
     [[[terminal7]]]
-      profile = default
-      type = Terminal
       order = 1
       parent = child1
-    [[[terminal6]]]
       profile = default
       type = Terminal
-      order = 1
-      parent = child2
   [[my]]
     [[[child0]]]
-      position = 53:24
-      type = Window
       order = 0
       parent = ""
+      position = 53:24
       size = 1867, 1056
+      type = Window
     [[[child1]]]
       labels = None, None
-      type = Notebook
       order = 0
       parent = child0
+      type = Notebook
     [[[child2]]]
+      order = 0
+      parent = child1
       position = 933
       type = HPaned
-      order = 0
-      parent = child1
     [[[child3]]]
+      order = 0
+      parent = child2
       position = 512
       type = VPaned
+    [[[terminal4]]]
       order = 0
-      parent = child2
-    [[[terminal5]]]
+      parent = child3
       profile = default
       type = Terminal
+    [[[terminal5]]]
       order = 1
       parent = child3
-    [[[terminal4]]]
       profile = default
       type = Terminal
-      order = 0
-      parent = child3
+    [[[terminal6]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
     [[[terminal7]]]
-      profile = default
-      type = Terminal
       order = 1
       parent = child1
-    [[[terminal6]]]
       profile = default
       type = Terminal
-      order = 1
-      parent = child2
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.74
+    background_image = /home/spiros/home_assets/wallpapers/milky_way_eclipse.jpg
+    background_type = image
+    cursor_color = "#326bdc"
+    font = Source Code Pro for Powerline Medium 10
+    icon_bell = False
+    scroll_background = False
+    scrollback_infinite = True
+    use_system_font = False

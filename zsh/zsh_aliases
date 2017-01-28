@@ -93,7 +93,7 @@ alias gl1="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(
 alias gl2="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit"
 alias gl3='git log --graph --branches --pretty=oneline --decorate'
 alias gl4='git log --pretty=medium --decorate --graph --stat'
-alias guntracked_files='gitls-files -o --exclude-standard'
+alias guntracked_files='git ls-files -o --exclude-standard'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gunstage='git reset HEAD --'
 alias gdi='git diff'

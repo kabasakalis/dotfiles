@@ -1,7 +1,8 @@
-" File:       hybrid.vim
-" Maintainer: Andrew Wong (w0ng)
-" URL:        https://github.com/w0ng/vim-hybrid
-" Modified:   27 Jan 2013 07:33 AM AEST
+" File:       hybrid_material.vim
+" Maintainer: Kristijan Husak (kristijanhusak)
+" URL:        https://github.com/kristijanhusak/vim-hybrid-material
+" BASED ON:   https://github.com/w0ng/vim-hybrid
+" Modified:   16 Apr 2016
 " License:    MIT
 
 " Description:"{{{
@@ -76,7 +77,7 @@ endif
 
 let s:style = &background
 
-let g:colors_name = "hybrid"
+let g:colors_name = "hybrid_material"
 
 "}}}
 " GUI And Cterm Palettes:"{{{
@@ -84,17 +85,10 @@ let g:colors_name = "hybrid"
 
 let s:palette = {'gui' : {} , 'cterm' : {}}
 
-if exists("g:hybrid_reduced_contrast") && g:hybrid_reduced_contrast == 1
-  let s:gui_background = "#232c31"
-  let s:gui_selection  = "#425059"
-  let s:gui_line       = "#2d3c46"
-  let s:gui_comment    = "#6c7a80"
-else
-  let s:gui_background = "#1d1f21"
-  let s:gui_selection  = "#373b41"
-  let s:gui_line       = "#282a2e"
-  let s:gui_comment    = "#707880"
-endif
+let s:gui_background = "#263238"
+let s:gui_selection  = "#455A64"
+let s:gui_line       = "#212D32"
+let s:gui_comment    = "#707880"
 
 let s:palette.gui.background = { 'dark' : s:gui_background , 'light' : "#e4e4e4" }
 let s:palette.gui.foreground = { 'dark' : "#c5c8c6"        , 'light' : "#000000" }
@@ -280,6 +274,14 @@ exe "let s:sp_darkcyan   = ' guisp=". s:palette.gui.darkcyan[s:style]   ."'"
 exe "let s:sp_darkred    = ' guisp=". s:palette.gui.darkred[s:style]    ."'"
 exe "let s:sp_darkpurple = ' guisp=". s:palette.gui.darkpurple[s:style] ."'"
 
+
+" Set bold font depending on options
+if exists("g:enable_bold_font") && g:enable_bold_font == 1
+    let s:fg_bold = s:fmt_bold
+else
+    let s:fg_bold = s:fmt_none
+endif
+
 "}}}
 " Vim Highlighting: (see :help highlight-groups)"{{{
 " ----------------------------------------------------------------------------
@@ -301,7 +303,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 "   Incsearch"
 exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! CursorLineNr"  .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! CursorLineNr"  .s:fg_yellow      .s:bg_none        .s:fg_bold
 exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
@@ -343,17 +345,17 @@ exe "hi! Normal"        .s:fg_foreground  .s:bg_normal      .s:fmt_none
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 
-exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! Constant"        .s:fg_purple         .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
 "   Character"
 "   Number"
 "   Boolean"
 "   Float"
 
-exe "hi! Identifier"      .s:fg_purple      .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_red          .s:bg_none       .s:fmt_none
+exe "hi! Function"        .s:fg_yellow      .s:bg_none        .s:fg_bold
 
-exe "hi! Statement"       .s:fg_blue        .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_blue        .s:bg_none        .s:fg_bold
 "   Conditional"
 "   Repeat"
 "   Label"
@@ -361,18 +363,18 @@ exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
 "   Keyword"
 "   Exception"
 
-exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fg_bold
 "   Include"
 "   Define"
 "   Macro"
 "   PreCondit"
 
-exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fg_bold
 "   StorageClass"
 exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 "   Typedef"
 
-exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_red         .s:bg_none        .s:fmt_none
 "   SpecialChar"
 "   Tag"
 "   Delimiter"
@@ -383,9 +385,9 @@ exe "hi! Underlined"      .s:fg_blue        .s:bg_none        .s:fmt_none
 
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 
-exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
+exe "hi! Error"           .s:fg_purple      .s:bg_darkred     .s:fmt_undr
 
-exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
+exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fg_bold
 
 " Quickfix window highlighting
 exe "hi! qfLineNr"        .s:fg_yellow      .s:bg_none        .s:fmt_none
