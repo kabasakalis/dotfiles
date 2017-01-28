@@ -263,8 +263,8 @@ cnoremap qq qall
 
 " Quicker window movement
 nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
@@ -454,6 +454,18 @@ map q <Nop>
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+"}}}
+
+" -----------------------------------------------------
+" vim-tmux-navigator {{{
+" -----------------------------------------------------
+"" also see settings in tmux.conf Alternatives for next/previous windows.
+"" tmux left right window navifation
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-j> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-k> :TmuxNavigateRight<cr>
+
 "}}}
 
 " -----------------------------------------------------
