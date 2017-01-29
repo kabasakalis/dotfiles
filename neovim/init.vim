@@ -194,7 +194,7 @@ set nospell                       " Disable checking by default (use <F4> to tog
 " ---------------------------------------------------------------------------------------------------------------------
 set completeopt-=preview          " Don't show preview scratch buffers
 set wildignore=*.o,*.obj,*~
-set wildignore+=*.png,*.jpg,*.jpeg
+" set wildignore+=*.png,*.jpg,*.jpeg
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
@@ -263,6 +263,7 @@ cnoremap qq qall
 
 " Quicker window movement
 nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
+" up and down have been  mapped to tmux window navigation
 " nnoremap <C-j> <C-w>j
 " nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -270,10 +271,18 @@ nnoremap <C-l> <C-w>l
 
 
 " Intelligent windows resizing using ctrl + arrow keys
-nnoremap <silent> <C-Right> :call utils#intelligentVerticalResize('right')<CR>
-nnoremap <silent> <C-Left> :call utils#intelligentVerticalResize('left')<CR>
-nnoremap <silent> <C-Up> :resize +1<CR>
-nnoremap <silent> <C-Down> :resize -1<CR>
+" Easier for Poker 3.
+nnoremap <silent> <Right> :call utils#intelligentVerticalResize('right')<CR>
+nnoremap <silent> <Left> :call utils#intelligentVerticalResize('left')<CR>
+nnoremap <silent> <Up> :resize +1<CR>
+nnoremap <silent> <Down> :resize -1<CR>
+
+" nnoremap <silent> <C-Right> :call utils#intelligentVerticalResize('right')<CR>
+" nnoremap <silent> <C-Left> :call utils#intelligentVerticalResize('left')<CR>
+" nnoremap <silent> <C-Up> :resize +1<CR>
+" nnoremap <silent> <C-Down> :resize -1<CR>
+
+nnoremap <silent> ,r zR
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -473,6 +482,8 @@ nnoremap <silent> <C-k> :TmuxNavigateRight<cr>
 " -----------------------------------------------------
 "Disable/Enable
 " let g:loaded_ctrlp = 1
+let g:ctrlp_dont_split = 'nerdtree'
+let g:ctrlp_dont_split = 'startify'
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
@@ -626,6 +637,12 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 " other highlight to work with it
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+
+" nnoremap <silent> <Leader>h :call utils#nerdWrapper()<CR>
+nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
+
+" map <Leader>n :NERDTreeToggle<CR>
+
 "}}}
 
 " -----------------------------------------------------
@@ -853,6 +870,7 @@ nnoremap <leader>gpl :Git! pull<CR>
 
 " -----------------------------------------------------
 " Ctrl-SF {{{
+"
 " -----------------------------------------------------
 let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_mapping = {
@@ -867,9 +885,10 @@ let g:ctrlsf_mapping = {
       \ "tabb"    : "",
       \ "loclist" : "",
       \ }
+
 let g:ctrlsf_auto_close = 1
 let g:ctrlsf_case_sensitive = 'no'
-let g:ctrlsf_default_root = 'project'
+let g:ctrlsf_default_root = 'cwd'
 let g:ctrlsf_confirm_save = 1
 let g:ctrlsf_ignore_dir = ['bower_components', 'npm_modules', 'doc', 'log', 'public']
 let g:ctrlsf_selected_line_hl = 'op'
@@ -936,7 +955,7 @@ let g:vim_markdown_folding_disabled=1
 " Custom commands and functions {{{
 " ======================================================================================================================
 
-"Delete currenty file
+"Delete current file
 command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'Succeeded.' : 'Failed.')
 
 " Open Rails consoles in dedicated tab
