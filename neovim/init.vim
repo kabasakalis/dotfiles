@@ -865,7 +865,7 @@ nnoremap <leader>gra :Git! remote add origin master<CR>
 nnoremap <leader>gpf :Git! push --set-upstream origin master<CR>
 nnoremap <leader>gps :Git! push<CR>
 nnoremap <leader>gpl :Git! pull<CR>
-
+nnoremap <leader>gbl :Gblame<CR>
 "}}}
 
 " -----------------------------------------------------
