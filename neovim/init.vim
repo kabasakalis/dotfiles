@@ -5,6 +5,8 @@
 " ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
 " ######################################################################################################################
 
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+
 "Plugins managed with vim-plug {{{
 if filereadable(expand("~/.config/nvim/plugins.vim"))
   source ~/.config/nvim/plugins.vim
@@ -865,7 +867,7 @@ nnoremap <leader>gra :Git! remote add origin master<CR>
 nnoremap <leader>gpf :Git! push --set-upstream origin master<CR>
 nnoremap <leader>gps :Git! push<CR>
 nnoremap <leader>gpl :Git! pull<CR>
-nnoremap <leader>gbl :Gblame<CR>
+nnoremap <leader>gbl :Gread<CR>
 "}}}
 
 " -----------------------------------------------------
