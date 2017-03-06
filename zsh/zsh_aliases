@@ -108,8 +108,7 @@ alias gpoapi='git push origin bookings_api'
 alias ds="DISABLE_SPRING=1"
 alias fc="ds foreman run rails console"
 alias bl="bundle --gemfile Gemfile.rb"
-
-
+alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9"
 
 #Quick nav
 alias labs="cd ~/Labs/ && ls"
