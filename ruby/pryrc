@@ -11,8 +11,8 @@ AwesomePrint.pry!
 # Pry.commands.alias_command 'n', 'next' rescue nil
 
 # == Pry-History  ==
-Pry.config.history.should_save = false
-Pry.config.history.should_load = false
+Pry.config.history.should_save = true
+Pry.config.history.should_load = true
 
 # === CUSTOM PROMPT ===
 # This prompt shows the ruby version (useful for RVM)

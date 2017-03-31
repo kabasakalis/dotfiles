@@ -1,7 +1,8 @@
-
-require 'irbtools'
+require 'irb/completion'
+require 'irb/ext/save-history'
+# require 'irbtools'
 require 'awesome_print'
-AwesomePrint.irb!
+# AwesomePrint.irb!
 
 if ENV['RAILS_ENV']
   rails_env = ENV['RAILS_ENV'].downcase
@@ -43,9 +44,8 @@ if rails_env
   }
 
   IRB.conf[:PROMPT_MODE] = :RAILS_ENV
+
+  IRB.conf[:SAVE_HISTORY] = 100
+  IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 end
 
-require 'irb/completion'
-require 'irb/ext/save-history'
-IRB.conf[:SAVE_HISTORY] = 100
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
