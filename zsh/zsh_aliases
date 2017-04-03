@@ -110,10 +110,14 @@ alias fc="ds foreman run rails console"
 alias bl="bundle --gemfile Gemfile.rb"
 alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9"
 
+#cpp
+alias cgcc='sudo update-alternatives --config gcc'
+
 #Quick nav
 alias labs="cd ~/Labs/ && ls"
 alias demo="cd ~/projects/DEMOS"
 alias pr="cd ~/projects"
+alias cpppr="cd ~/cpp"
 alias epr="cd ~/eprojects"
 alias vyra="cd ~/projects/vyra"
 alias vb="cd ~/projects/vyra_bookings"
