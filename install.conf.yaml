@@ -45,6 +45,9 @@
     ~/ackrc: vim/ackrc
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim
+    ~/cpp/.cpp_init.vim:
+      create: true,
+      path: neovim/local_inits/.cpp_init.vim
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
     ~/.config/nvim/colors: neovim/colors
     ~/.config/nvim/sessions: neovim/sessions

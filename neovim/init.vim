@@ -953,6 +953,22 @@ let g:vim_markdown_no_default_key_mappings=1
 let g:vim_markdown_folding_disabled=1
 "}}}
 
+
+" -----------------------------------------------------
+" Localvimrc per project type configuration {{{
+" -----------------------------------------------------
+let g:localvimrc_name=[ ".cpp_init.vim" ]
+
+"}}}
+
+" -----------------------------------------------------
+" Vim Markdown settings {{{
+" -----------------------------------------------------
+let g:vim_markdown_no_default_key_mappings=1
+let g:vim_markdown_folding_disabled=1
+"}}}
+
+
 " -----------------------------------------------------
 " Custom commands and functions {{{
 " ======================================================================================================================

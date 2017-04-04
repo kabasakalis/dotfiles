@@ -106,6 +106,7 @@ endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/vimproc.vim'
 Plug 'osyo-manga/vim-monster'
+Plug 'Valloric/YouCompleteMe'
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------
 " vim-tmux-navigator {{{
@@ -116,13 +117,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Miscellaneous {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'hwartig/vim-seeing-is-believing'
-
-
-
-
-
+Plug 'embear/vim-localvimrc'
 "}}}
-" ---------------------------------------------------------------------------------------------------------------------
+"r/vim-localvimrc ---------------------------------------------------------------------------------------------------------------------
 "  Asynchronous maker and linter (needs linters to work) {{{
 " ---------------------------------------------------------------------------------------------------------------------
 "Plug 'benekastah/neomake', { 'on': ['Neomake'] }
