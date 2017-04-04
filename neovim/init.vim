@@ -313,8 +313,6 @@ nnoremap <silent> <leader>ev :vs ~/.config/nvim/init.vim<CR>
 " H to beginning of line, L to the end
 noremap H ^
 noremap L $
-noremap <c-a> ^
-noremap <c-e> $
 
 " D deletes to the end of the line, and Y yanks to end of line
 nnoremap D d$
@@ -935,10 +933,10 @@ nnoremap <leader>pc :PlugClean<CR>
 " Disable built-in <C-x><C-k> to be able to go backward
 inoremap <C-x><C-k> <NOP>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<C-j>'
+let g:UltiSnipsExpandTrigger='<C-A>'
 let g:UltiSnipsListSnippets='<C-l>'
-let g:UltiSnipsJumpForwardTrigger='<C-k>'
-let g:UltiSnipsJumpBackwardTrigger='<C-j>'
+" let g:UltiSnipsJumpForwardTrigger='<C-k>'
+" let g:UltiSnipsJumpBackwardTrigger='<C-j>'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
 "user defined snippets
@@ -951,8 +949,8 @@ let g:UltiSnipsUsePythonVersion=3
 " YouCompleteMe {{{
 " -----------------------------------------------------
 let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
 "}}}
 
 " -----------------------------------------------------
