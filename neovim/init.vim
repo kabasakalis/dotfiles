@@ -935,8 +935,8 @@ inoremap <C-x><C-k> <NOP>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger='<C-A>'
 let g:UltiSnipsListSnippets='<C-l>'
-" let g:UltiSnipsJumpForwardTrigger='<C-k>'
-" let g:UltiSnipsJumpBackwardTrigger='<C-j>'
+let g:UltiSnipsJumpForwardTrigger='<C-k>'
+let g:UltiSnipsJumpBackwardTrigger='<C-j>'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
 "user defined snippets

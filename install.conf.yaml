@@ -45,9 +45,6 @@
     ~/ackrc: vim/ackrc
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim
-    ~/cpp/.cpp_init.vim:
-      create: true,
-      path: neovim/local_inits/.cpp_init.vim
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
     ~/.config/nvim/colors: neovim/colors
     ~/.config/nvim/sessions: neovim/sessions
@@ -55,6 +52,10 @@
     ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
     ~/.vimsnippets: neovim/vimsnippets
     ~/.config/nvim/dictionary.utf-8.add: neovim/spell/dictionary.utf-8.add
+    ~/.config/nvim/ftplugin: neovim/ftplugin
+    ~/.config/nvim/plugins/c-support/c-support/templates/Templates:
+      create: true,
+      path: neovim/c-support/Templates
     #home_assets
     ~/home_assets: home_assets
     #Atom

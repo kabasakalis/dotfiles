@@ -26,7 +26,9 @@ export MYNVIMRC='~/.config/nvim/init.vim'
 export ALTERNATE_EDITOR=""
 export TERM="xterm-256color"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
-
+export VIMRUNTIME="/usr/share/nvim/runtime"
+export NVIMRUNTIME="/usr/share/nvim/runtime"
+export PYTHONPATH='/usr/lib/llvm-3.8/lib/python2.7/site-packages'
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh

@@ -117,7 +117,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Miscellaneous {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'hwartig/vim-seeing-is-believing'
-Plug 'embear/vim-localvimrc'
+" Plug 'embear/vim-localvimrc'
 "}}}
 "r/vim-localvimrc ---------------------------------------------------------------------------------------------------------------------
 "  Asynchronous maker and linter (needs linters to work) {{{
@@ -139,6 +139,24 @@ Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-json'
 Plug 'kchmck/vim-coffee-script'
 "}}}
+"
+
+" ---------------------------------------------------------------------------------------------------------------------
+" C++
+" ---------------------------t-----------------------------------------------------------------------------------------
+"  c-supportWolfgangMehner/c-support
+Plug 'WolfgangMehner/c-support'
+"  Documentation
+Plug 'DoxygenToolkit.vim'
+" Additional syntax highlighting that I use for C++11/14/17
+Plug 'octol/vim-cpp-enhanced-highlight'
+" This Vim plugin will help switching between companion files (e.g. .h and .cpp files)
+Plug 'derekwyatt/vim-fswitch'
+" debugger
+Plug 'critiqjo/lldb.nvim'
+"}}}
+"
+
 " ---------------------------------------------------------------------------------------------------------------------
 " Languages {{{
 " ---------------------------------------------------------------------------------------------------------------------
