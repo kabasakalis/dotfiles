@@ -61,18 +61,30 @@ let c_no_curly_error=1
 "}}}
 
 
-"F7  switch between header/source
-nnoremap <silent> <F7> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+highlight LLBreakpointSign ctermfg=cyan guifg=cyan
+nmap <M-b> <Plug>LLBreakSwitch
+vmap <F2> <Plug>LLStdInSelected
+nnoremap <F4> :LLstdin<CR>
+nnoremap <F5> :LLmode debug<CR>
+nnoremap <S-F5> :LLmode code<CR>
+nnoremap <F8> :LL continue<CR>
+nnoremap <S-F8> :LL process interrupt<CR>
+nnoremap <F9> :LL print <C-R>=expand('<cword>')<CR> vnoremap <F9> :<C-U>LL print <C-R>=lldb#util#get_selection()<CR><CR>
 
-"F8 recreate tags file with
-" nnoremap <silent> <F8> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
 
-"F9 create doxygen comment
-nnoremap <silent> <F9> <C-]>
 
-"F10 goto definition with
-nnoremap <silent> <F10> :dox<cr>
-
-"F11 build using makeprg
-nnoremap <silent> <F11> :make<CR>
-nnoremap <silent> <S-F11> :make clean all<CR>
+" "F7  switch between header/source
+" nnoremap <silent> <F7> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+"
+" "F8 recreate tags file with
+" " nnoremap <silent> <F8> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
+"
+" "F9 create doxygen comment
+" nnoremap <silent> <F9> <C-]>
+"
+" "F10 goto definition with
+" nnoremap <silent> <F10> :dox<cr>
+"
+" "F11 build using makeprg
+" nnoremap <silent> <F11> :make<CR>
+" nnoremap <silent> <S-F11> :make clean all<CR>

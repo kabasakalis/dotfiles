@@ -38,5 +38,5 @@ windows:
     - nvim
   - build:
     - cd ~/cpp/cpp-tutorial/build
-    - cmake && make
+    - cmake .. && make
     - ./unit_tests.x
