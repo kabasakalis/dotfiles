@@ -430,9 +430,9 @@ vnoremap N Nzz
 
 " Center screen when moving up and down
 nnoremap <C-u> <C-u>zz
-nnoremap <C-d> <C-d>zz
+nnoremap <C-o> <C-o>zz
 vnoremap <C-u> <C-u>zz
-vnoremap <C-d> <C-d>zz
+vnoremap <C-o> <C-o>zz
 
 " Use CamelCaseMotion instead of default motions
 map <silent> w <Plug>CamelCaseMotion_w
@@ -834,7 +834,7 @@ autocmd FileType ruby set omnifunc=monster#omnifunc
 "noremap <silent> <c-key> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 "noremap <silent> <c-key> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-o> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 "}}}
 
 " -----------------------------------------------------
