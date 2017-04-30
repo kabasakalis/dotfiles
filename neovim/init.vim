@@ -85,7 +85,7 @@ set tags=./tags;                  " Set the tag file search order
 " Tomorrow-Night
 " seoul256
 " tropikos
-" gotham256
+" gruvbox
 " gotham256
 " Color scheme based on time
 " Turn syntax highlighting on
@@ -107,6 +107,12 @@ hi Normal  ctermfg=252 ctermbg=none
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+"" Error highlight
+highlight	Error ctermfg=red ctermbg=blue guifg=red ctermbg=NONE
+
+"" Spell highligh"" Spell highlightt
+highlight SpellBad ctermfg=red ctermbg=black guifg=red ctermbg=NONE
 
 " Highlight term cursor differently
 highlight TermCursor ctermfg=green guifg=green
@@ -827,6 +833,11 @@ inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
+" With deoplete.nvim
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+\}
 set omnifunc=syntaxcomplete#Complete
 autocmd FileType ruby set omnifunc=monster#omnifunc
 "}}}
@@ -1106,4 +1117,3 @@ nnoremap <silent> <F10> :TREPLSendFile<cr>
 
 "F12 Echo out toggles legend
 nnoremap <F12> :call utils#showToggles()<CR>
-"}}}

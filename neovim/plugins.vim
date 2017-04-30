@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/plugins')
 Plug 'whatyouhide/vim-gotham'
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
@@ -144,15 +145,15 @@ Plug 'kchmck/vim-coffee-script'
 
 " ---------------------------------------------------------------------------------------------------------------------
 " C++
-" ---------------------------t-----------------------------------------------------------------------------------------
+" ---------------------------------------------------------------------------------------------------------------------
 "  c-supportWolfgangMehner/c-support
-Plug 'WolfgangMehner/c-support'
+Plug 'WolfgangMehner/c-support', { 'for': 'cpp' }
 "  Documentation
-Plug 'DoxygenToolkit.vim'
+Plug 'DoxygenToolkit.vim', { 'for': 'cpp' }
 " Additional syntax highlighting that I use for C++11/14/17
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 " This Vim plugin will help switching between companion files (e.g. .h and .cpp files)
-Plug 'derekwyatt/vim-fswitch'
+Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }
 " debugger
 Plug 'critiqjo/lldb.nvim'
 "}}}
@@ -183,10 +184,7 @@ Plug 'tejr/vim-tmux'
 " Dockerfile
 Plug 'honza/dockerfile.vim'
 Plug 'digitaltoad/vim-pug'
-
 Plug 'slim-template/vim-slim'
-
-
 
 "}}}
 
