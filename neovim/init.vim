@@ -83,6 +83,7 @@ set tags=./tags;                  " Set the tag file search order
 " lucid
 " railscasts
 " Tomorrow-Night
+" seoul256
 " tropikos
 " gotham256
 " gotham256
@@ -98,34 +99,30 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax sync minlines=256
 endif
 
-if strftime("%H") < 15
-  let g:rehash256=1
-  colorscheme Tomorrow-Night
-  "transparency
-  hi Normal  ctermfg=252 ctermbg=none
-else
-  let g:rehash256=1
-  colorscheme Tomorrow-Night
-  "transparency
-  hi Normal  ctermfg=252 ctermbg=none
-endif
+let g:rehash256=1
+" Theme
+colorscheme Tomorrow-Night
+"transparency
+hi Normal  ctermfg=252 ctermbg=none
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
-
 " Highlight term cursor differently
 highlight TermCursor ctermfg=green guifg=green
-
 
 " Listchars highlighting
 highlight NonText ctermfg=235 guifg=gray
 highlight SpecialKey ctermfg=235 guifg=gray
 
-
 " Remove underline in folded lines
 hi! Folded term=NONE cterm=NONE gui=NONE ctermbg=NONE
 
+" LineNumber Gutter background color
+highlight LineNr ctermfg=NONE ctermbg=NONE
+
+" SignColumn (Git Gutter)
+highlight SignColumn ctermfg=NONE ctermbg=NONE
 
 " Link highlight groups to improve buftabline colors
 hi! link BufTabLineCurrent Identifier
@@ -750,6 +747,12 @@ let g:gitgutter_sign_removed='-'
 let g:gitgutter_sign_modified_removed='~'
 let g:gitgutter_sign_removed_first_line='-'
 let g:gitgutter_sign_column_always=1
+let g:gitgutter_override_sign_column_highlight = 0
+
+highlight GitGutterAdd ctermfg=green ctermbg=NONE
+highlight GitGutterChange ctermfg=yellow ctermbg=NONE
+highlight GitGutterDelete ctermfg=red ctermbg=NONE
+highlight GitGutterChangeDelete ctermfg=magenta ctermbg=NONE
 "}}}
 
 " -----------------------------------------------------
