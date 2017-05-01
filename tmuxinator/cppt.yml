@@ -30,11 +30,15 @@ root: ~/cpp/cpp-tutorial
 
 windows:
   - cpp_vim:
+    - cd ~/cpp/cpp-tutorial
     - nvim
   - console_root:
     - cd ~/cpp/cpp-tutorial
   - dotfiles:
     - cd ~/dotfiles
+    - nvim
+  - drinks:
+    - cd ~/projects/drinks
     - nvim
   - build:
     - cd ~/cpp/cpp-tutorial/build

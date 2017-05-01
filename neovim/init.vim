@@ -472,7 +472,7 @@ endif
 " vim-tmux-navigator {{{
 " -----------------------------------------------------
 "" also see settings in tmux.conf Alternatives for next/previous windows.
-"" tmux left right window navifation
+"" tmux left right window navigation
 
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <C-j> :TmuxNavigateLeft<cr>
@@ -834,12 +834,18 @@ inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
 " With deoplete.nvim
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
 let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
 set omnifunc=syntaxcomplete#Complete
 autocmd FileType ruby set omnifunc=monster#omnifunc
+
+" deoplete-clang
+" Set default paths [REQURIED]
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
+let g:deoplete#sources#clang#clang_header  = '/usr/lib/clang'
+" Some CFLAGS/CPPFLAGS [OPTIONAL]
+let g:deoplete#souces#clang#std            = {'c': 'c11', 'cpp': 'c++11', 'objc': 'c11', 'objcpp': 'c++1z'}
 "}}}
 
 " -----------------------------------------------------
@@ -947,10 +953,8 @@ nnoremap <leader>pc :PlugClean<CR>
 " Disable built-in <C-x><C-k> to be able to go backward
 inoremap <C-x><C-k> <NOP>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<C-A>'
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets='<C-l>'
-let g:UltiSnipsJumpForwardTrigger='<C-k>'
-let g:UltiSnipsJumpBackwardTrigger='<C-j>'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
 "user defined snippets

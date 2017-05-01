@@ -102,13 +102,11 @@ Plug 'tpope/vim-endwise'
 " ---------------------------------------------------------------------------------------------------------------------
 " deoplete autocomplete {{{
 " ---------------------------------------------------------------------------------------------------------------------
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ervandew/supertab'
 Plug 'Shougo/vimproc.vim'
 Plug 'osyo-manga/vim-monster'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------
 " vim-tmux-navigator {{{
@@ -156,6 +154,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }
 " debugger
 Plug 'critiqjo/lldb.nvim'
+Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
 "}}}
 "
 
