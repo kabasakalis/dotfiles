@@ -814,39 +814,55 @@ let g:pasta_paste_after_mapping = ',o'
 " Deoplete autocomplete {{{
 " -----------------------------------------------------
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_completion_start_length=2
-let g:deoplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
-let g:deoplete#sources={}
-let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
-let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
-let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
-" Insert <TAB> or select next match
-inoremap <silent> <expr> <Tab> utils#tabComplete()
-" Manually trigger tag autocomplete
+" let g:deoplete#auto_completion_start_length=2
+" let g:deoplete#sources#omni#input_patterns = {
+" \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+" \}
+" let g:deoplete#sources={}
+" let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
+" let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
+" let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
+" let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
+" let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
+" let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
+" Insert <TAB> or select next match inoremap <silent> <expr> <Tab> utils#tabComplete() Manually trigger tag autocomplete
 inoremap <silent> <expr> <C-]> utils#manualTagComplete()
 " <C-h>, <BS>: close popup and delete backword char
 inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-" With deoplete.nvim
-let g:deoplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
+
 set omnifunc=syntaxcomplete#Complete
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
 autocmd FileType ruby set omnifunc=monster#omnifunc
+autocmd FileType cpp set omnifunc=clang_complete#ClangComplete
+
+" use settings from deoplete docs
+let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang.so.1'
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+let g:clang_omnicppcomplete_compliance = 0
+let g:clang_make_default_keymappings = 0
+let g:clang_debug = 1
 
 " deoplete-clang
 " Set default paths [REQURIED]
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
-let g:deoplete#sources#clang#clang_header  = '/usr/lib/clang'
-" Some CFLAGS/CPPFLAGS [OPTIONAL]
-let g:deoplete#souces#clang#std            = {'c': 'c11', 'cpp': 'c++11', 'objc': 'c11', 'objcpp': 'c++1z'}
+" let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
+" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang'
+
+" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#libclang_path= expand("/usr/lib/llvm-3.8/lib/libclang.so.1")
+" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#clang_header = expand("/usr/lib/llvm-3.8/lib/clang")
+" let g:deoplete#sources#clang#std#cpp = 'c++14'
+
+
+
+" let g:deoplete#omni_patterns = {}
+" let g:deoplete#omni_patterns.cpp = '[^. *\t]\.\w*|[^. *\t]\::\w*|[^. *\t]\->\w*|#include\s*[<"][^>"]*'
+let g:deoplete#omni#input_patterns={}
+let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
+
 "}}}
+"
 
 " -----------------------------------------------------
 " Smooth scroll vim-smooth-scroll {{{

@@ -30,6 +30,7 @@ alias ec='emacsclient -c'
 
 #neovim
 alias v='nvim'
+alias vim='nvim'
 alias python=python3
 
 #tmux
