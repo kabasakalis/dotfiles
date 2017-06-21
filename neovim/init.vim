@@ -197,14 +197,14 @@ set nospell                       " Disable checking by default (use <F4> to tog
 " ---------------------------------------------------------------------------------------------------------------------
 " Omni completion settings {{{
 " ---------------------------------------------------------------------------------------------------------------------
-set completeopt-=preview          " Don't show preview scratch buffers
-set wildignore=*.o,*.obj,*~
-" set wildignore+=*.png,*.jpg,*.jpeg
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=*.gem
-set wildignore+=tmp/**
+" set completeopt-=preview          " Don't show preview scratch buffers
+" set wildignore=*.o,*.obj,*~
+" " set wildignore+=*.png,*.jpg,*.jpeg
+" set wildignore+=*vim/backups*
+" set wildignore+=*sass-cache*
+" set wildignore+=*DS_Store*
+" set wildignore+=*.gem
+" set wildignore+=tmp/**
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
@@ -814,17 +814,25 @@ let g:pasta_paste_after_mapping = ',o'
 " Deoplete autocomplete {{{
 " -----------------------------------------------------
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_completion_start_length = 1
 " let g:deoplete#auto_completion_start_length=2
+let g:deoplete#enable_smart_case = 1
+
+set completeopt+=noinsert
+set completeopt-=preview
+
+let g:deoplete#omni#input_patterns={}
+let g:deoplete#sources={}
 " let g:deoplete#sources#omni#input_patterns = {
 " \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 " \}
-" let g:deoplete#sources={}
+
 " let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
 " let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
 " let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
 " let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
 " let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
-" let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
+
 " Insert <TAB> or select next match inoremap <silent> <expr> <Tab> utils#tabComplete() Manually trigger tag autocomplete
 inoremap <silent> <expr> <C-]> utils#manualTagComplete()
 " <C-h>, <BS>: close popup and delete backword char
@@ -833,33 +841,49 @@ inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
 
 set omnifunc=syntaxcomplete#Complete
+
+"ruby complete
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
 autocmd FileType ruby set omnifunc=monster#omnifunc
-autocmd FileType cpp set omnifunc=clang_complete#ClangComplete
 
-" use settings from deoplete docs
-let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang.so.1'
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
-let g:clang_omnicppcomplete_compliance = 0
-let g:clang_make_default_keymappings = 0
-let g:clang_debug = 1
+
+"C++ clang_complete#ClangComplete
+
+" set environmental variable for cmake to create .clang_complete file in build directory
+" move somehow the file to project root. (automate with CMake TODO)
+"CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake ..
+"make
+
+au FileType c,cpp,objc,objcpp setl omnifunc=clang_complete#ClangComplete
+let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
+let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
+let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+let g:clang_use_library=1
+let g:clang_complete_copen=1
+let g:clang_snippets=1
+" let g:clang_snippets_engine='clang_complete'
+let g:clang_snippets_engine = 'ultisnips'
+let g:clang_complete_optional_args_in_snippets=1
+let g:clang_close_preview=1
+let g:clang_trailing_placeholder=1
+let g:clang_complete_macros=1
+" let g:clang_complete_auto = 0
+" let g:clang_auto_select = 0
+" let g:clang_omnicppcomplete_compliance = 0
+" let g:clang_make_default_keymappings = 0
+" let g:clang_use_library=1
+" let g:clang_debug = 1
+" let g:clang_snippets = 1
 
 " deoplete-clang
 " Set default paths [REQURIED]
 " let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
 " let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang'
+" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang/3.8.0/include'
 
 " autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#libclang_path= expand("/usr/lib/llvm-3.8/lib/libclang.so.1")
 " autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#clang_header = expand("/usr/lib/llvm-3.8/lib/clang")
 " let g:deoplete#sources#clang#std#cpp = 'c++14'
-
-
-
-" let g:deoplete#omni_patterns = {}
-" let g:deoplete#omni_patterns.cpp = '[^. *\t]\.\w*|[^. *\t]\::\w*|[^. *\t]\->\w*|#include\s*[<"][^>"]*'
-let g:deoplete#omni#input_patterns={}
-let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
 
 "}}}
 "
@@ -982,7 +1006,7 @@ let g:UltiSnipsUsePythonVersion=3
 " -----------------------------------------------------
 " YouCompleteMe {{{
 " -----------------------------------------------------
-let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
 " let g:ycm_key_list_select_completion=[]
 " let g:ycm_key_list_previous_completion=[]
 "}}}
