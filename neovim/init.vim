@@ -857,23 +857,20 @@ autocmd FileType ruby set omnifunc=monster#omnifunc
 au FileType c,cpp,objc,objcpp setl omnifunc=clang_complete#ClangComplete
 let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
 let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
+
 let g:clang_library_path='/usr/lib/llvm-3.8/lib'
 let g:clang_use_library=1
 let g:clang_complete_copen=1
 let g:clang_snippets=1
-" let g:clang_snippets_engine='clang_complete'
 let g:clang_snippets_engine = 'ultisnips'
 let g:clang_complete_optional_args_in_snippets=1
 let g:clang_close_preview=1
 let g:clang_trailing_placeholder=1
 let g:clang_complete_macros=1
-" let g:clang_complete_auto = 0
-" let g:clang_auto_select = 0
-" let g:clang_omnicppcomplete_compliance = 0
-" let g:clang_make_default_keymappings = 0
-" let g:clang_use_library=1
-" let g:clang_debug = 1
-" let g:clang_snippets = 1
+let g:clang_auto_select = 0
+let g:clang_complete_auto = 1
+let g:clang_snippets = 1
+let g:clang_complete_patterns = 1
 
 " deoplete-clang
 " Set default paths [REQURIED]
