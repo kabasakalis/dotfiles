@@ -810,12 +810,12 @@ let g:pasta_paste_before_mapping = ',O'
 let g:pasta_paste_after_mapping = ',o'
 "}}}
 
+
 " -----------------------------------------------------
 " Deoplete autocomplete {{{
 " -----------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_completion_start_length = 1
-" let g:deoplete#auto_completion_start_length=2
 let g:deoplete#enable_smart_case = 1
 
 set completeopt+=noinsert
@@ -839,8 +839,8 @@ inoremap <silent> <expr> <C-]> utils#manualTagComplete()
 inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
-
 set omnifunc=syntaxcomplete#Complete
+
 
 "ruby complete
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
@@ -856,8 +856,7 @@ autocmd FileType ruby set omnifunc=monster#omnifunc
 
 au FileType c,cpp,objc,objcpp setl omnifunc=clang_complete#ClangComplete
 let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
-let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
-
+" let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
 let g:clang_library_path='/usr/lib/llvm-3.8/lib'
 let g:clang_use_library=1
 let g:clang_complete_copen=1
@@ -867,23 +866,13 @@ let g:clang_complete_optional_args_in_snippets=1
 let g:clang_close_preview=1
 let g:clang_trailing_placeholder=1
 let g:clang_complete_macros=1
+let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
-let g:clang_complete_auto = 1
-let g:clang_snippets = 1
-let g:clang_complete_patterns = 1
-
-" deoplete-clang
-" Set default paths [REQURIED]
-" let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
-" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang'
-" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang/3.8.0/include'
-
-" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#libclang_path= expand("/usr/lib/llvm-3.8/lib/libclang.so.1")
-" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#clang_header = expand("/usr/lib/llvm-3.8/lib/clang")
-" let g:deoplete#sources#clang#std#cpp = 'c++14'
+let g:clang_omnicppcomplete_compliance = 0
+let g:clang_make_default_keymappings = 0
+let g:clang_debug = 1
 
 "}}}
-"
 
 " -----------------------------------------------------
 " Smooth scroll vim-smooth-scroll {{{

@@ -33,6 +33,10 @@ alias v='nvim'
 alias vim='nvim'
 alias python=python3
 
+
+#cmake
+alias cm='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
+
 #tmux
 alias tt='tmux'
 alias tl='tmux list-sessions'
