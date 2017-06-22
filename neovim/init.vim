@@ -839,8 +839,8 @@ inoremap <silent> <expr> <C-]> utils#manualTagComplete()
 inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
-set omnifunc=syntaxcomplete#Complete
 
+set omnifunc=syntaxcomplete#Complete
 
 "ruby complete
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
@@ -848,11 +848,14 @@ autocmd FileType ruby set omnifunc=monster#omnifunc
 
 
 "C++ clang_complete#ClangComplete
-
+"Integration with CMake
 " set environmental variable for cmake to create .clang_complete file in build directory
 " move somehow the file to project root. (automate with CMake TODO)
-"CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake ..
-"make
+"CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake ..  && make
+"
+" or using compilation_database (compile_commands.json) best option
+"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make
+
 
 au FileType c,cpp,objc,objcpp setl omnifunc=clang_complete#ClangComplete
 let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
@@ -862,6 +865,7 @@ let g:clang_use_library=1
 let g:clang_complete_copen=1
 let g:clang_snippets=1
 let g:clang_snippets_engine = 'ultisnips'
+" let g:clang_snippets_engine = 'clang_complete'
 let g:clang_complete_optional_args_in_snippets=1
 let g:clang_close_preview=1
 let g:clang_trailing_placeholder=1
@@ -871,6 +875,19 @@ let g:clang_auto_select = 0
 let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_debug = 1
+" let g:clang_user_options=' .clang_complete, path'
+let g:clang_auto_user_options = 'compile_commands.json'
+let g:clang_compilation_database = './build'
+
+" deoplete-clang
+" Set default paths [REQURIED]
+" let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
+" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang'
+" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang/3.8.0/include'
+"
+" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#libclang_path= expand("/usr/lib/llvm-3.8/lib/libclang.so.1")
+" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#clang_header = expand("/usr/lib/llvm-3.8/lib/clang")
+" let g:deoplete#sources#clang#std#cpp = 'c++14'
 
 "}}}
 

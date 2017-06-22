@@ -35,7 +35,8 @@ alias python=python3
 
 
 #cmake
-alias cm='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
+alias cmm='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make'
+alias cmc='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
 
 #tmux
 alias tt='tmux'
@@ -117,6 +118,7 @@ alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs 
 
 #cpp
 alias cgcc='sudo update-alternatives --config gcc'
+alias ccpp='sudo update-alternatives --config c++'
 
 #Quick nav
 alias labs="cd ~/Labs/ && ls"
