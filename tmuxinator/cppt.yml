@@ -33,7 +33,7 @@ windows:
     - cd ~/cpp/cpp-tutorial
     - nvim
   - console_root:
-    - cd ~/cpp/cpp-tutorial
+    - cd ~/projects/drinks
     - nvim
   - dotfiles:
     - cd ~/dotfiles

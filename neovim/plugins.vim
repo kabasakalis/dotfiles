@@ -104,8 +104,8 @@ Plug 'tpope/vim-endwise'
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
-Plug 'Shougo/vimproc.vim'
-Plug 'osyo-manga/vim-monster'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'osyo-manga/vim-monster', { 'do': ':UpdateRemotePlugins' }
 " Plug 'Valloric/YouCompleteMe'
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------

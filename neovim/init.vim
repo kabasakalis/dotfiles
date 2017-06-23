@@ -823,12 +823,8 @@ set completeopt-=preview
 
 let g:deoplete#omni#input_patterns={}
 let g:deoplete#sources={}
-" let g:deoplete#sources#omni#input_patterns = {
-" \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-" \}
 
 " let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
-" let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
 " let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
 " let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
 " let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
@@ -839,15 +835,20 @@ inoremap <silent> <expr> <C-]> utils#manualTagComplete()
 inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
+" set omnifunc=syntaxcomplete#Complete
 
-set omnifunc=syntaxcomplete#Complete
+"ruby complete -------------------------------------------------------------
+" au FileType ruby setl omnifunc=monster#omnifunc
+" autocmd FileType ruby set omnifunc=monster#omnifunc
+let g:deoplete#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
+" stupid monster plugin DOES NOT WORK
+" let g:monster#completion#rcodetools#backend = "async_rct_complete"
+" let g:deoplete#sources#omni#input_patterns = {
+" \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+" \}
 
-"ruby complete
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-autocmd FileType ruby set omnifunc=monster#omnifunc
-
-
-"C++ clang_complete#ClangComplete
+"C++ clang_complete#ClangComplete   ---------------------------------------
 "Integration with CMake
 " set environmental variable for cmake to create .clang_complete file in build directory
 " move somehow the file to project root. (automate with CMake TODO)
@@ -878,16 +879,6 @@ let g:clang_debug = 1
 " let g:clang_user_options=' .clang_complete, path'
 let g:clang_auto_user_options = 'compile_commands.json'
 let g:clang_compilation_database = './build'
-
-" deoplete-clang
-" Set default paths [REQURIED]
-" let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
-" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang'
-" let g:deoplete#sources#clang#clang_header  = '/usr/lib/llvm-3.8/lib/clang/3.8.0/include'
-"
-" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#libclang_path= expand("/usr/lib/llvm-3.8/lib/libclang.so.1")
-" autocmd FileType c,cpp,clang,hpp let g:deoplete#sources#clang#clang_header = expand("/usr/lib/llvm-3.8/lib/clang")
-" let g:deoplete#sources#clang#std#cpp = 'c++14'
 
 "}}}
 
