@@ -842,11 +842,10 @@ inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " autocmd FileType ruby set omnifunc=monster#omnifunc
 let g:deoplete#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
-" stupid monster plugin DOES NOT WORK
-" let g:monster#completion#rcodetools#backend = "async_rct_complete"
-" let g:deoplete#sources#omni#input_patterns = {
-" \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-" \}
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+\}
 
 "C++ clang_complete#ClangComplete   ---------------------------------------
 "Integration with CMake
@@ -878,7 +877,8 @@ let g:clang_make_default_keymappings = 0
 let g:clang_debug = 1
 " let g:clang_user_options=' .clang_complete, path'
 let g:clang_auto_user_options = 'compile_commands.json'
-let g:clang_compilation_database = './build'
+" let g:clang_compilation_database = './build'
+
 
 "}}}
 

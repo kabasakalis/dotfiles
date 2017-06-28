@@ -35,8 +35,16 @@ alias python=python3
 
 
 #cmake
-alias cmm='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make'
-alias cmc='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
+# alias cmm='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make'
+# alias cmc='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
+#
+#These aliases work with https://github.com/cginternals/cmake-init template
+alias cmc='./configure' #run 2 times for release configuration
+alias cmcd='./configure debug' #run after cmc for debug configuration
+alias cmb='cmake --build build' #run after cmc for debug configuration
+alias cmbd='cmake --build build-debug' #run after cmc for debug configuration
+
+
 
 #tmux
 alias tt='tmux'

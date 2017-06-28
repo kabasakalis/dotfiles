@@ -29,16 +29,17 @@ root: ~/cpp/cpp-tutorial
 
 
 windows:
-  - cpp_vim:
+  - cppt:
+    - cd ~/cpp/cppt
+    - nvim
+  - cpp_turorial:
     - cd ~/cpp/cpp-tutorial
     - nvim
-  - console_root:
-    - cd ~/projects/drinks
+  - cmake-init:
+    - cd ~/cpp/cmake-init
     - nvim
   - dotfiles:
     - cd ~/dotfiles
     - nvim
-  - build:
-    - cd ~/cpp/cpp-tutorial/build
-    - cmake .. && make
-    - ./unit_tests.x
+  - cmake-init-root:
+    - cd ~/cpp/cmake-init
