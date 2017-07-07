@@ -43,7 +43,8 @@ alias cmc='./configure' #run 2 times for release configuration
 alias cmcd='./configure debug' #run after cmc for debug configuration
 alias cmb='cmake --build build' #run after cmc for debug configuration
 alias cmbd='cmake --build build-debug' #run after cmc for debug configuration
-
+alias cem='build-debug/maind'
+alias bd='build-debug'
 
 
 #tmux
@@ -114,9 +115,6 @@ alias gdi='git diff'
 
 #git project specific aliases
 
-alias gpoapi='git push origin bookings_api'
-
-
 
 #ruby
 alias ds="DISABLE_SPRING=1"
@@ -133,9 +131,7 @@ alias labs="cd ~/Labs/ && ls"
 alias demo="cd ~/projects/DEMOS"
 alias pr="cd ~/projects"
 alias cpppr="cd ~/cpp"
-alias epr="cd ~/eprojects"
-alias vyra="cd ~/projects/vyra"
-alias vb="cd ~/projects/vyra_bookings"
+alias ur="cd ~/upstream_repos"
 
 
 #edit common config files

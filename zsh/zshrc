@@ -80,7 +80,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby bundler copydir copyfile vi-mode)
+plugins=(git rails ruby bundler copydir copyfile)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 #plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
@@ -282,14 +282,14 @@ olh() {
  	cd "$target"
  	git clone "$@"
  	cd "$pwd"
-  nvim .
+  subl .
  }
 
  function get_repo {
      url=$1;
      reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
-     git clone $url "/home/spiros/projects/DEMOS/$reponame";
-     cd "/home/spiros/projects/DEMOS/$reponame"
+     git clone $url "/home/spiros/upstream_repos/$reponame";
+     cd "/home/spiros/upstream_repos/$reponame"
  }
 
 # download any youtube or vimeo video to ~/Videos
