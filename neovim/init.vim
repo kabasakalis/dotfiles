@@ -847,39 +847,6 @@ let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
 
-"C++ clang_complete#ClangComplete   ---------------------------------------
-"Integration with CMake
-" set environmental variable for cmake to create .clang_complete file in build directory
-" move somehow the file to project root. (automate with CMake TODO)
-"CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake ..  && make
-"
-" or using compilation_database (compile_commands.json) best option
-"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make
-
-
-au FileType c,cpp,objc,objcpp setl omnifunc=clang_complete#ClangComplete
-let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
-" let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
-let g:clang_library_path='/usr/lib/llvm-3.8/lib'
-let g:clang_use_library=1
-let g:clang_complete_copen=1
-let g:clang_snippets=1
-let g:clang_snippets_engine = 'ultisnips'
-" let g:clang_snippets_engine = 'clang_complete'
-let g:clang_complete_optional_args_in_snippets=1
-let g:clang_close_preview=1
-let g:clang_trailing_placeholder=1
-let g:clang_complete_macros=1
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
-let g:clang_omnicppcomplete_compliance = 0
-let g:clang_make_default_keymappings = 0
-let g:clang_debug = 1
-" let g:clang_user_options=' .clang_complete, path'
-let g:clang_auto_user_options = 'compile_commands.json'
-" let g:clang_compilation_database = './build'
-
-
 "}}}
 
 " -----------------------------------------------------
@@ -1120,38 +1087,20 @@ augroup END
 
 " -----------------------------------------------------
 " F-key actions {{{
-" ======================================================================================================================
+" =====================================================
 
 "F1 Cannot be assigned for some reason in Ubuntu 16.04
 
-"F2 NERDTree wrapper
-nnoremap <silent> <F2> :call utils#nerdWrapper()<CR>
+"F2 Source (reload configuration)
+nnoremap <silent> <F2> :so ~/.config/nvim/init.vim<CR>
 
-"F3 Paste mode toggling
-nnoremap <silent> <F3> :set paste!<CR> :set paste?<CR>
+"F3 NeoTerm Toggle
+nnoremap <silent> <F3> :Ttoggle<cr>
 
-"F4 Toggle spelling on and off
-nnoremap <silent> <F4> :set spell!<CR> :set spell?<CR>
+"F4 Toggle white characters visibility
+nnoremap <silent> <F4> :set list!<CR> :set list?<CR>
 
-"F5 Source (reload configuration)
-nnoremap <silent> <F5> :so ~/.config/nvim/init.vim<CR>
 
-"F6 Toggle search highlight
-nnoremap <silent> <F6> :set nohlsearch!<CR> :set nohlsearch?<CR>
 
-"F7 Toggle white characters visibility
-nnoremap <silent> <F7> :set list!<CR> :set list?<CR>
-
-"F8 NeoTerm Toggle
-nnoremap <silent> <F8> :Ttoggle<cr>
-
-"F9 Send line To NeoTerm
-nnoremap <silent> <F9> :TREPLSend<cr>
-
-"F10 Send File To NeoTErm
-nnoremap <silent> <F10> :TREPLSendFile<cr>
-
-"F11 Free
-
-"F12 Echo out toggles legend
+"F12 Show F keys toggles
 nnoremap <F12> :call utils#showToggles()<CR>

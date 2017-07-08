@@ -146,7 +146,8 @@ Plug 'kchmck/vim-coffee-script'
 " ---------------------------------------------------------------------------------------------------------------------
 "  c-supportWolfgangMehner/c-support
 " Plug 'WolfgangMehner/c-support', { 'for': 'cpp' }
-"  Documentation
+"
+"  Doxygen
 Plug 'DoxygenToolkit.vim', { 'for': 'cpp' }
 " Additional syntax highlighting that I use for C++11/14/17
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
@@ -155,9 +156,13 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }
 " debugger
 Plug 'critiqjo/lldb.nvim'
 " Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
-
-" plug install
+"
+" C++ autocomplete
 Plug 'Rip-Rip/clang_complete', {'for': 'cpp' }
+
+" Style format with clang-format
+Plug 'rhysd/vim-clang-format', {'for': 'cpp' }
+
 "}}}
 "
 

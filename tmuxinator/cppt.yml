@@ -2,7 +2,7 @@
 # ~/.tmuxinator/testpr.yml
 
 name: cppt
-root: ~/cpp/cpp-tutorial
+root: ~/cpp/cpp-template-simple
 
 # Optional tmux socket
 # socket_name: foo
@@ -29,19 +29,20 @@ root: ~/cpp/cpp-tutorial
 
 
 windows:
-  - cpp_template:
-    - cd ~/cpp/cpp-template
+  - cpp_template-master:
+    - cd ~/cpp/cpp-template-master
+    - git checkout master
     - nvim
-  - cpp_template-root:
-    - cd ~/cpp/cpp-template
-  - cmake-init:
-    - cd ~/cpp/cmake-init
+  - cpp_template-master-root:
+    - cd ~/cpp/cpp-template-master
+    - git checkout master
+  - cpp_template-simple:
+    - cd ~/cpp/cpp-template-simple
+    - git checkout simple
     - nvim
-  - cmake-init-root:
-    - cd ~/cpp/cmake-init
-  - cpp_turorial:
-    - cd ~/cpp/cpp-tutorial
-    - nvim
+  - cpp_template-simple-root:
+    - cd ~/cpp/cpp-template-simple
+    - git checkout simple
   - dotfiles:
     - cd ~/dotfiles
     - nvim

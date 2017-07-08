@@ -33,11 +33,9 @@ windows:
     - nvim
   - cpp_maze-root:
     - cd ~/cpp/cpp-maze
-  - cpp-template:
-    - cd ~/cpp/cpp-template
+  - ruby-maze:
+    - cd ~/projects/maze
     - nvim
-  - cpp-template-root:
-    - cd ~/cpp/cpp-template
   - dotfiles:
     - cd ~/dotfiles
     - nvim

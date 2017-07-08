@@ -1,7 +1,7 @@
 " Informative echo line
 function! g:utils#showToggles() abort
-  echom '<F1> NERDTree | <F2> Free | <F3> Paste mode | <F4> Spellcheck | <F5> Reload rc | <F6> Search HL |' .
-        \' <F7> Whitechars | <F8> NeoTerm Toggle | <F9> Send line To NeoTerm| <F10> Send File To NeoTerm | <F11> Free |' .
+  echom '<F1> NOT WORKING | <F2> Reload rc | <F3> NeoTerm Toggle | <F4> Whitechars | <F5> Void | <F6> Void |' .
+        \' <F7> Void | <F8> Void | <F9> Void | <F10> Void  | <F11> Void |' .
         \' <F12> This message'
 endfunction
 
