@@ -159,8 +159,8 @@ let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_debug = 1
 " let g:clang_user_options=' .clang_complete, path'
-let g:clang_auto_user_options = 'compile_commands.json'
-let g:clang_compilation_database = './build-debug'
+" let g:clang_auto_user_options = 'compile_commands.json'
+" let g:clang_compilation_database = './build-debug'
 
 "}}}
 

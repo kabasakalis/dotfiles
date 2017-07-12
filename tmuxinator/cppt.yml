@@ -29,20 +29,11 @@ root: ~/cpp/cpp-template-simple
 
 
 windows:
-  - cpp_template-master:
-    - cd ~/cpp/cpp-template-master
-    - git checkout master
+  - cpp_template:
+    - cd ~/cpp/cpp-template
     - nvim
-  - cpp_template-master-root:
-    - cd ~/cpp/cpp-template-master
-    - git checkout master
-  - cpp_template-simple:
-    - cd ~/cpp/cpp-template-simple
-    - git checkout simple
-    - nvim
-  - cpp_template-simple-root:
-    - cd ~/cpp/cpp-template-simple
-    - git checkout simple
+  - cpp_template:
+    - cd ~/cpp/cpp-template
   - dotfiles:
     - cd ~/dotfiles
     - nvim

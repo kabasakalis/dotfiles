@@ -34,6 +34,10 @@ alias vim='nvim'
 alias python=python3
 
 
+#cpp
+alias cgcc='sudo update-alternatives --config gcc'
+alias ccpp='sudo update-alternatives --config c++'
+
 #cmake
 # alias cmm='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make'
 # alias cmc='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
@@ -123,9 +127,6 @@ alias fc="ds foreman run rails console"
 alias bl="bundle --gemfile Gemfile.rb"
 alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9"
 
-#cpp
-alias cgcc='sudo update-alternatives --config gcc'
-alias ccpp='sudo update-alternatives --config c++'
 
 #Quick nav
 alias labs="cd ~/Labs/ && ls"
