@@ -961,6 +961,8 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
 "user defined snippets
 let g:UltiSnipsSnippetsDir= "~/.vimsnippets"
 let g:UltiSnipsUsePythonVersion=3
+let g:UltiSnipsJumpForwardTrigger='<leader>n'
+" let g:UltiSnipsJumpBackwardTrigger='<leader>='
 "}}}
 
 
