@@ -100,30 +100,48 @@ nmap ,cf :ClangFormatAutoToggle<CR>
 
 highlight LLBreakpointSign ctermfg=cyan guifg=clang_make_default_keymappings
 
-" nmap     <M-b><Plug>LLBreakSwitch
-" vmap     ,lis <Plug>LLStdInSelected
 nnoremap ,lin :LLstdin<CR>
+nnoremap ,lsn :LLsession new<CR>
+nnoremap ,lss :LLsession show<CR>
+nnoremap ,lsr :LLsession reload<CR>
 nnoremap ,lmd :LLmode debug<CR>
 nnoremap ,lmc :LLmode code<CR>
 
-nnoremap ,lbd :LL breakpoint delete 1<CR>
 nnoremap ,lpc :LL process launch<CR>
+nnoremap ,lpk :LL process kill<CR>
+nnoremap ,lpi :LL process interrupt<CR>
+
+nnoremap ,lbd :LL breakpoint delete
+nnoremap ,lb <Plug>LLBreakSwitch
+nnoremap ,lbl :LL breakpoint list
+nnoremap ,lc :LL continue<CR>
 
 " key mapping like debugging shortcut from Intellij
 nnoremap ,lso :LL next<CR> " step over
 nnoremap ,lsi :LL thread step-in<CR> " step into
-nnoremap ,lf :LL finish<CR> " step out
+nnoremap ,lf :LL finish<CR> " step out of frame
+
+" watchpoints
+nnoremap ,lwv :LL watchpoint set variable " set watchpoint to variable
+nnoremap ,lwe :LL watchpoint set expession -- " set watchpoint to expession
+nnoremap ,lwl :LL watchpoint list<CR> " list watchpoints
+nnoremap ,lwd :LL watchpoint delete " delete watchpoint
+
+"frame
+nnoremap ,lfv :LL frame variable<CR> " list frame variables
+nnoremap ,lv :LL frame variable" show variable
+nnoremap ,ltt :LL target variable<CR> " Show the global/static variables defined in the current source file.
+nnoremap ,ltv :LL target variable" Show the global/static variable
+
+
+nnoremap ,lil :LL image list  "Show executable and shared libraries
 
 " step in/out in current thread level
 nnoremap ,ltsi :LL thread step-inst<CR>
 nnoremap ,ltso :LL thread step-inst-over<CR>
 
-nnoremap ,lc :LL continue<CR>
-nnoremap ,lpi :LL process interrupt<CR>
-
 nnoremap ,lp :LL print <C-R>=expand('<cword>')<CR>
 vnoremap ,lps :<C-U>LL print <C-R>=lldb#util#get_selection()<CR><CR>
-
 
 "}}}
 
@@ -159,8 +177,8 @@ let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_debug = 1
 " let g:clang_user_options=' .clang_complete, path'
-" let g:clang_auto_user_options = 'compile_commands.json'
-" let g:clang_compilation_database = './build-debug'
+let g:clang_auto_user_options = 'compile_commands.json'
+let g:clang_compilation_database = './build-debug'
 
 "}}}
 
