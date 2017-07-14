@@ -1,0 +1,488 @@
+extends c
+
+##
+## Preprocessor
+# #include <...>
+snippet incc
+	#include <${1:iostream}>
+snippet binc
+	#include <boost/${1:shared_ptr}.hpp>
+endsnippet
+##
+## STL Collections
+# std::array
+snippet array
+	std::array<${1:T}, ${2:N}> ${3};
+endsnippet
+# std::vector
+snippet vector
+	std::vector<${1:T}> ${2};
+endsnippet
+# std::deque
+snippet deque
+	std::deque<${1:T}> ${2};
+endsnippet
+# std::forward_list
+snippet flist
+	std::forward_list<${1:T}> ${2};
+endsnippet
+# std::list
+snippet list
+	std::list<${1:T}> ${2};
+endsnippet
+# std::set
+snippet set
+	std::set<${1:T}> ${2};
+endsnippet
+# std::map
+snippet map
+	std::map<${1:Key}, ${2:T}> ${3};
+endsnippet
+# std::multiset
+snippet mset
+	std::multiset<${1:T}> ${2};
+endsnippet
+# std::multimap
+snippet mmap
+	std::multimap<${1:Key}, ${2:T}> ${3};
+endsnippet
+# std::unordered_set
+snippet uset
+	std::unordered_set<${1:T}> ${2};
+endsnippet
+# std::unordered_map
+snippet umap
+	std::unordered_map<${1:Key}, ${2:T}> ${3};
+endsnippet
+# std::unordered_multiset
+snippet umset
+	std::unordered_multiset<${1:T}> ${2};
+endsnippet
+# std::unordered_multimap
+snippet ummap
+	std::unordered_multimap<${1:Key}, ${2:T}> ${3};
+endsnippet
+# std::stack
+snippet stack
+	std::stack<${1:T}> ${2};
+endsnippet
+# std::queue
+snippet queue
+	std::queue<${1:T}> ${2};
+endsnippet
+# std::priority_queue
+snippet pqueue
+	std::priority_queue<${1:T}> ${2};
+endsnippet
+##
+## Access Modifiers
+# private
+snippet pri
+	private
+endsnippet
+# protected
+snippet pro
+	protected
+endsnippet
+# public
+snippet pub
+	public
+endsnippet
+# friend
+snippet fr
+	friend
+endsnippet
+# mutable
+snippet mu
+	mutable
+endsnippet
+##
+## Class
+# class
+snippet cl
+	/** class $1
+	 *  @brief ${3:Brief class description}
+	 *
+	 *  ${4:Detailed description}
+	 */
+	class ${1:`vim_snippets#Filename('$1', 'name')`}
+	{
+	public:
+		$1(${2});
+		virtual ~$1();
+
+	private:
+		m_${5}; /*!< ${6:Member description} */
+	};
+endsnippet
+# member function implementation
+snippet mfun
+	${4:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3}) {
+		${0}
+	}
+endsnippet
+# member function implementation without parameters
+snippet dmfun0
+	/** @brief ${4:Brief function description here}
+	 *
+	 *  ${5:Detailed description}
+	 *
+	 * @return ${6:Return parameter description}
+	 */
+	${3:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}() {
+		${0}
+	}
+endsnippet
+# member function implementation with one parameter
+snippet dmfun1
+	/** @brief ${6:Brief function description here}
+	 *
+	 *  ${7:Detailed description}
+	 *
+	 * @param $4 ${8:Parameter description}
+	 *
+	 * @return ${9:Return parameter description}
+	 */
+	${5:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3:Type} ${4:Parameter}) {
+		${0}
+	}
+endsnippet
+# member function implementation with two parameter
+snippet dmfun2
+	/** @brief ${8:Brief function description here}
+	 *
+	 *  ${9:Detailed description}
+	 *
+	 * @param $4 ${10:Parameter description}
+	 * @param $6 ${11:Parameter description}
+	 * @return ${12:Return parameter description}
+	 */
+	${7:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3:Type} ${4:Parameter},${5:Type} ${6:Parameter}) {
+		${0}
+	}
+endsnippet
+
+
+snippet fncdx "Basic c++ doxygen function template" b
+/**
+* @brief: ${4:brief}
+*
+* @param: `!p write_docstring_args(t[3],snip)`
+*
+* @return: `!p snip.rv = t[1]`
+*/
+${1:ReturnType} ${2:FunctionName}(${3:param})
+{
+  ${0:FunctionBody}
+}
+endsnippet
+
+
+# namespace
+snippet ns
+	namespace ${1:`vim_snippets#Filename('', 'my')`} {
+		${0}
+	} /* namespace $1 */
+endsnippet
+##
+## Input/Output
+# std::cout
+snippet cout
+	std::cout << ${1} << std::endl;
+endsnippet
+# std::cin
+snippet cin
+	std::cin >> ${1};
+endsnippet
+##
+## Casts
+# static
+snippet sca
+	static_cast<${1:unsigned}>(${2:expr})${3}
+endsnippet
+# dynamic
+snippet dca
+	dynamic_cast<${1:unsigned}>(${2:expr})${3}
+endsnippet
+# reinterpret
+snippet rca
+	reinterpret_cast<${1:unsigned}>(${2:expr})${3}
+endsnippet
+# const
+snippet cca
+	const_cast<${1:unsigned}>(${2:expr})${3}
+endsnippet
+## Iteration
+# for i
+snippet fori
+	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+		${4}
+	}
+endsnippet
+
+# foreach
+snippet fore
+	for (${1:auto} ${2:i} : ${3:container}) {
+		${4}
+	}
+endsnippet
+# iterator
+snippet iter
+	for (${1:std::vector}<${2:type}>::${3:const_iterator} ${4:i} = ${5:container}.begin(); $4 != $5.end(); ++$4) {
+		${6}
+	}
+endsnippet
+# auto iterator
+snippet itera
+	for (auto ${1:i} = ${2:container}.begin(); $1 != $2.end(); ++$1) {
+		${3:std::cout << *$1 << std::endl;}
+	}
+endsnippet
+##
+## Lambdas
+# lambda (one line)
+snippet ld
+	[${1}](${2}){${3}};
+endsnippet
+# lambda (multi-line)
+snippet lld
+	[${1}](${2}){
+		${3}
+	};
+endsnippet
+# snippets exception
+snippet try
+	try {
+
+	}catch(${1}) {
+
+	}
+endsnippet
+
+
+
+##  Casts
+snippet cast "Static Cast"
+static_cast<${1}>(${2})${0}
+endsnippet
+
+snippet cast "Reinterpret Cast"
+reinterpret_cast<${1}>(${2})${0}
+endsnippet
+
+snippet cast "Dynamic Cast"
+dynamic_cast<${1}>(${2})${0}
+endsnippet
+
+snippet cast "Const Cast"
+const_cast<${1}>(${2})${0}
+endsnippet
+
+snippet ifhack "Run-time debug option"
+static bool hack = false;
+if (hack)
+{
+	${1}
+}${0}
+endsnippet
+
+# Pragmas for MSVC
+snippet opt "Unoptimize region start"
+#pragma optimize( "", off )${0}
+endsnippet
+
+snippet opt "Unoptimize region end"
+#pragma optimize( "", on )${0}
+endsnippet
+
+snippet readfilevector "read file into vector"
+std::vector<char> v;
+if (FILE *${2:fp} = fopen(${1:"filename"}, "r")) {
+	char buf[1024];
+	while (size_t len = fread(buf, 1, sizeof(buf), $2))
+		v.insert(v.end(), buf, buf + len);
+	fclose($2);
+}${0}
+endsnippet
+
+
+snippet dtor "destructor" b
+`!p
+if fn.endswith('.cpp'):
+	snip.rv = t[2] +'::'
+else:
+	snip.rv = 'virtual '
+`~${2:`!p snip.rv = snip.basename`}()`!p
+if fn.endswith('.cpp'):
+	# TODO: How can I end the snippet with the cursor between these braces?
+	snip.rv = '\n{'+ t[0] +'\n}'
+else:
+	snip.rv = ';'+ t[0]
+`
+endsnippet
+
+snippet ruleof3 "Copy ctor and copy assignment for Rule of three"
+private:
+	// Private and unimplemented to forbid use.
+	${1:`!p snip.rv = snip.basename`}(const $1&);${2: // = delete;}$0
+	$1& operator=(const $1&);$2
+endsnippet
+
+snippet new "Construction of an object" b
+${1:Type}* ${2:variable} = new $1(${3:args});
+endsnippet
+
+snippet forit "std::iterator for-each loop"
+for (${1:vector<T>}::iterator i = ${2:items.}begin(); i != ${2}end(); ++i) ${0}
+endsnippet
+
+snippet itera "C++-11 auto iterator"
+for (auto ${1:i} = $1.begin(); $1 != $1.end(); ++$1) {
+	${2:std::cout << *$1 << std::endl;}${0}
+}
+endsnippet
+
+snippet cout "cout"
+${1:std::}cout << ${1} << $1endl;${0}
+endsnippet
+
+snippet scin "scin"
+${1:std::}cin >> ${1};${0}
+endsnippet
+
+snippet readfile "read file (readF)"
+std::vector<char> v;
+if (FILE *fp = fopen(${1:"filename"}, "r"))
+{
+	char buf[1024];
+	while(size_t len = fread(buf, 1, sizeof(buf), fp))
+		v.insert(v.end(), buf, buf + len);
+	fclose(fp);
+}
+endsnippet
+
+
+
+###########################################################################
+#                            CodeDelish Snippets                          #
+###########################################################################
+# $0 is the last tabstop
+# ${1:default} tabstop 1 with default value
+# '!p' is python completion
+# '!v' is vimScript completion
+
+
+
+###########################################################################
+snippet cdh "CD header file"
+//
+//  File: `!p snip.rv = fn`
+//  Description: ${0:Enter description of code}
+//  Created: `!v strftime("%c")`
+//  Copyright CodeDelish.com
+//
+//==================================================================
+
+#ifndef ${1:`!p
+if not snip.c:
+	import string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	snip.rv = ('%s' % (name,)).upper()
+else:
+    snip.rv = snip.c`}
+#define $1
+
+#include <memory>  // unique_ptr
+
+//==================================================================
+class ${2:`!p snip.rv = snip.basename`}
+{
+public:
+	explicit $2(int param);
+	explicit $2(): $2( 0 ){}      	// delegating ctor
+
+	// copy ctor, copy assignment operator,
+	// move ctor, move assignment operator, and
+	// destructor are not declared
+	// If you declare one or more, default the rest
+
+	// dtor
+	//virtual ~$2() = default;
+	// copy ctor
+	//$2(const $2&) = default;
+	// assignment operator
+	//$2& operator=(const $2&) = default;
+	// move ctor
+	//$2($2&& ) = default;
+	// move assignment op
+	//$2& operator=($2&& ) = default;
+
+	virtual auto getValue1() const -> int;
+
+private:
+	int value1 {0};
+	std::unique_ptr<int> value2;
+};
+
+#endif /* $1 */
+endsnippet
+
+
+###########################################################################
+snippet cdc "CD cpp file"
+//
+//  File: `!p snip.rv = fn`
+//  Description: ${0:Enter description of code}
+//  Created: `!v strftime("%c")`
+//  Copyright CodeDelish.com
+//
+//==================================================================
+
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+
+namespace
+{
+
+}
+
+
+//==================================================================
+${2:`!p snip.rv = snip.basename`}::$2(int param = 0)
+    :value1{param},
+	value2{std::make_unique<int>(0)}
+{
+
+}
+
+//==================================================================
+auto $2::getValue1() const -> int
+{
+    return value1;
+}
+
+endsnippet
+
+
+###########################################################################
+snippet enumc "c++11 enum class"
+// #include <cstdint> for uint8_t
+// access with Enum_name::enum1
+enum class ${1:Enum_name} : ${2:uint8_t}
+{
+    ${0:enum1},
+
+};
+endsnippet
+
+
+###########################################################################
+snippet funct "trailing return type fcn"
+auto ${1:funcName}(double a, double b) -> decltype(a + b);
+endsnippet
+
+###########################################################################
+snippet templatefunc "trailing return type fcn template"
+template <typename ${1:type1}, typename ${2:type2}>
+auto addNumbers($1 a, $2 b) -> decltype(a + b);
+endsnippet
+

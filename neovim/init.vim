@@ -957,9 +957,14 @@ inoremap <C-x><C-k> <NOP>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets='<C-l>'
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", ".vimsnippets"]
+set runtimepath+=~/.vimsnippets
+" the following directories reside in .vimsnippets,
+" note that there's also a snipmate folder which is not compatible with
+" ultisnips, but some snippets work if a suffix is added with a  missing endsnippet.
+" you have to manually do that and move them to the folders below.
+let g:UltiSnipsSnippetDirectories=["custom", "ultisnips"]
 "user defined snippets
-let g:UltiSnipsSnippetsDir= "~/.vimsnippets"
+let g:UltiSnipsSnippetsDir= "~/.vimsnippets/custom"
 let g:UltiSnipsUsePythonVersion=3
 let g:UltiSnipsJumpForwardTrigger='<leader>n'
 " let g:UltiSnipsJumpBackwardTrigger='<leader>='
