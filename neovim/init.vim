@@ -962,11 +962,12 @@ set runtimepath+=~/.vimsnippets
 " note that there's also a snipmate folder which is not compatible with
 " ultisnips, but some snippets work if a suffix is added with a  missing endsnippet.
 " you have to manually do that and move them to the folders below.
-let g:UltiSnipsSnippetDirectories=["custom", "ultisnips"]
+let g:UltiSnipsSnippetDirectories=[ "ultisnips", "custom" ]
 "user defined snippets
 let g:UltiSnipsSnippetsDir= "~/.vimsnippets/custom"
-let g:UltiSnipsUsePythonVersion=3
+let g:UltiSnipsUsePythonVersion=2
 let g:UltiSnipsJumpForwardTrigger='<leader>n'
+
 " let g:UltiSnipsJumpBackwardTrigger='<leader>='
 "}}}
 

@@ -1,5 +1,9 @@
 extends c
 
+global !p
+from snippet_helpers import *
+endglobal
+
 ##
 ## Preprocessor
 # #include <...>
@@ -167,7 +171,7 @@ snippet fncdx "Basic c++ doxygen function template" b
 /**
 * @brief: ${4:brief}
 *
-* @param: `!p write_docstring_args(t[3],snip)`
+* @param: `!p snip.rv = t[3]`
 *
 * @return: `!p snip.rv = t[1]`
 */
@@ -485,4 +489,122 @@ snippet templatefunc "trailing return type fcn template"
 template <typename ${1:type1}, typename ${2:type2}>
 auto addNumbers($1 a, $2 b) -> decltype(a + b);
 endsnippet
+
+
+
+
+###########################################################################
+snippet pimplh "CD header with ptr to implementation (pimpl)"
+//
+//  File: `!p snip.rv = fn`
+//  Description: ${0:Enter description of code}
+//  Created: `!v strftime("%c")`
+//
+//  Copyright CodeDelish.com
+//
+//==================================================================
+
+#ifndef ${1:`!p
+if not snip.c:
+	import string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	snip.rv = ('%s' % (name,)).upper()
+else:
+    snip.rv = snip.c`}
+#define $1
+
+#include <memory>  // unique_ptr
+
+//==================================================================
+class ${2:`!p snip.rv = snip.basename`}
+{
+public:
+	explicit $2(int sz);
+	explicit $2(): $2( 512 ){}      	// delegating ctor
+
+	// copy ctor, copy assignment operator,
+	// move ctor, move assignment operator, and
+	// destructor are not declared
+	// If you declare one or more, default the rest
+
+	// dtor
+	//virtual ~$2() = default;
+	// copy ctor
+	//$2(const $2&) = default;
+	// assignment operator
+	//$2& operator=(const $2&) = default;
+	// move ctor
+	//$2($2&& ) = default;
+	// move assignment op
+	//$2& operator=($2&& ) = default;
+
+	virtual auto getSize_buf() const -> size_t;
+
+
+private:
+	class Impl; 			// forward decl of implementation
+
+	std::unique_ptr<Impl, void (*)(Impl*)> pImpl;
+	// custom deleter is a function that takes a pointer to Impl, returns void
+
+};
+
+#endif /* $1 */
+endsnippet
+
+
+###########################################################################
+snippet pimpli "CD cpp with ptr to implementation (pimpl)"
+//
+//  File: `!p snip.rv = fn`
+//  Description: ${0:Enter description of code}
+//  Created: `!v strftime("%c")`
+//
+//  Copyright CodeDelish.com
+//
+//==================================================================
+
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+
+namespace
+{
+
+}
+
+//==================================================================
+class $2::Impl
+{
+public:
+	size_t size_buf = 512;
+	Impl( size_t sb ) :size_buf{ sb }
+	{
+
+	}
+
+	auto getSize_b() -> size_t
+	{
+		return size_buf;
+	}
+
+};
+
+//==================================================================
+${2:`!p snip.rv = snip.basename`}::$2(int sz=512)
+	:pImpl{
+			new Impl{ sz },
+			[](Impl* impl){ delete impl; }	// custom deleter lambda
+		}
+{
+
+}
+
+//==================================================================
+auto $2::getSize_buf() const -> size_t
+{
+	return pImpl->getSize_b();
+}
+
+endsnippet
+
+
 
