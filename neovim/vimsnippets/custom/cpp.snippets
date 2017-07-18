@@ -397,32 +397,24 @@ namespace `!p snip.rv = snip.basename` {
 
 class ${2:`!p snip.rv = snip.basename.title()`} final {
 	public:
-		explicit $2() = default;  // default constructor, not compiler generated if user provides a constructor, as below
-		explicit $2( const std:string&, OwnedResource, SharedResource ); // constructor
+		explicit $2();                                                      // default constructor
+		explicit $2( const std::string&, OwnedResource&, SharedResource& ); // constructor
 
 		// Special member functions, consider cases.
-		// 1. Rule Of Zero for
-		// Don't declare/ default any special member member function
-
+		// 1. Rule Of Zero (If applies)
+		// Don't declare or default any special member member function.
 	  // 2. Base class to inherit from.
 		// Uncomment dtor for virtual destructor, default the rest special members below,
 		// remove final from class declaration.
-		//virtual ~$2() = default; // dtor
-		//$2(const $2&) = default; // copy constructor
-		//$2& operator=(const $2&) = default; // copy assignment
-		//$2($2&& ) = default; // move constructor
-		//$2& operator=($2&& ) = default; // move assignment
 
-    // 3. unique_ptr  members
-			// a. Delete copy member functions, default move members functions.
-				//$2(const $2&) =  delete;           // delete copy constructor
-				//$2& operator=(const $2&) = delete; // delete copy assignment
-				//$2($2&& ) = default;               // move constructor
-				//$2& operator=($2&& ) = default; // move assignment
+    //virtual ~$2();                               // dtor
+		//$2(const $2& rhs);                         // copy constructor
+		//$2& operator=(const $2& rhs);              // copy assignment
+		//$2($2&& rhs);                              // move constructor
+		//$2& operator=($2&& rhs );                  // move assignment
 
 
-
-
+    //Member functions
 
 		const $3& get_$3() const;
 	  $4& get_$4();
@@ -460,39 +452,35 @@ namespace `!p snip.rv = snip.basename` {
 
 	// Special Member functions
 
-  // Default destructor, don't uncomment unless you are doing manual resource management
-	// or you want to use this as a base class for polymorphism.
-  // virtual ${2:`!p snip.rv = snip.basename.title()`}::~$2() {}
+	//virtual $2()::~$2() = default {}                // dtor
+	//$2(const $2& rhs) = default; //                 // copy constructor
+	//$2& operator=(const $2& rhs) = default;         // copy assignment
+	//$2($2&& rhs) = default;                         // move constructor
+	//$2& operator=($2&& rhs ) = default;             // move assignment
 
 
-  // Custom Copy Constructor for copying unique_ptr member, trivial for other members
-  // $2::$2(const $2& o)
-  // : m_$3{std::unique_ptr<$3>(o.m_$3 ? new $3(*o.m_$3) : nullptr)}
-  // , m_$4{o.m_$4}
-  // , mString{o.mString}{}
-
- // Member functions
+	// Member functions
 	const $3& $2::get_$3(){
-	  return m_$3*;
+		return m_$3*;
 	}
 
 	$4& $2::get_$4(){
-     return m_$4*;
+	  return m_$4*;
 	}
 
 	const std::string& $2::get_string(){
-     return mString;
+	  return mString;
 	}
 
-  //new function declaration syntax.
+	//new function declaration syntax.
 	virtual auto $2::get_$3() const -> const $3& {
-	  return m_$3*;
+		return m_$3*;
 	}
 	virtual auto $2::get_$4() -> $4& {
-     return m_$4*;
-  }
+	  return m_$4*;
+	}
 	virtual auto $2::get_string() const -> const std::string& {
-   return mString;
+	 return mString;
 	}
 
 }
