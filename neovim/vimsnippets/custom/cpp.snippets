@@ -376,8 +376,6 @@ endsnippet
 # '!v' is vimScript completion
 
 
-
-###########################################################################
 snippet cl0h "Header file for zero rule class"
 
 #pragma once
@@ -487,6 +485,79 @@ namespace `!p snip.rv = snip.basename` {
 endsnippet
 
 
+
+snippet pimplh "PIMP idiom by Scott Meyers"
+
+#pragma once
+//#ifndef ${1:`!p
+if not snip.c:
+	import string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	snip.rv = ('%s' % (name,)).upper()
+else:
+    snip.rv = snip.c`}
+//#define $1
+
+//#include <memory>  // unique_ptr
+//#include <`!p snip.rv = snip.basename`/`!p snip.rv = snip.basename`_api.h>
+
+namespace `!p snip.rv = snip.basename` {
+
+class ${2:`!p snip.rv = snip.basename.title()`} {
+	public:
+		explicit $2();                               // default constructor
+
+    ~$2();                                       // dtor
+		$2(const $2& rhs);                         // copy constructor
+		$2& operator=(const $2& rhs);              // copy assignment
+		$2($2&& rhs);                              // move constructor
+		$2& operator=($2&& rhs );                  // move assignment
+
+	private:
+		struct Impl;
+		std::unique_ptr<Impl> pImpl;
+}
+//#endif /* $1 */
+
+}  // namespace `!p snip.rv = snip.basename`
+endsnippet
+
+
+snippet pimpld "PIMPL idiom by Scott Meyers, definition file"
+
+//#include <memory>  // unique_ptr
+#include <vector>
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+
+namespace `!p snip.rv = snip.basename` {
+
+  // Implementation
+  struct $2:Impl {
+		const std::string& $2::get_string() const { return mString;}
+		std::string mString;
+		std::vector<int> data;
+	}
+
+  // Constructor
+	${2:`!p snip.rv = snip.basename.title()`}::$2()
+	  : pImpl(std::make_unique<Impl>()){}
+
+	// Special Member functions
+	$2()::~$2() = default                           // dtor
+	$2($2&& rhs) = default;                         // move constructor
+	$2& operator=($2&& rhs ) = default;             // move assignment
+	$2::$2(const $2& rhs)                         // copy constructor
+	: pImpl(std::make_unique<Impl>(*rhs.pImpl))
+	{}
+	$2& $2::operator=(const $2& rhs){             // copy assignment
+		*pImpl = *rhs.pImpl;
+		return *this;
+	}
+}
+endsnippet
+
+
+
 ###########################################################################
 snippet enumc "c++11 enum class"
 // #include <cstdint> for uint8_t
@@ -509,122 +580,4 @@ snippet templatefunc "trailing return type fcn template"
 template <typename ${1:type1}, typename ${2:type2}>
 auto addNumbers($1 a, $2 b) -> decltype(a + b);
 endsnippet
-
-
-
-
-###########################################################################
-snippet pimplh "CD header with ptr to implementation (pimpl)"
-//
-//  File: `!p snip.rv = fn`
-//  Description: ${0:Enter description of code}
-//  Created: `!v strftime("%c")`
-//
-//  Copyright CodeDelish.com
-//
-//==================================================================
-
-#ifndef ${1:`!p
-if not snip.c:
-	import string
-	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
-	snip.rv = ('%s' % (name,)).upper()
-else:
-    snip.rv = snip.c`}
-#define $1
-
-#include <memory>  // unique_ptr
-
-//==================================================================
-class ${2:`!p snip.rv = snip.basename`}
-{
-public:
-	explicit $2(int sz);
-	explicit $2(): $2( 512 ){}      	// delegating ctor
-
-	// copy ctor, copy assignment operator,
-	// move ctor, move assignment operator, and
-	// destructor are not declared
-	// If you declare one or more, default the rest
-
-	// dtor
-	//virtual ~$2() = default;
-	// copy ctor
-	//$2(const $2&) = default;
-	// assignment operator
-	//$2& operator=(const $2&) = default;
-	// move ctor
-	//$2($2&& ) = default;
-	// move assignment op
-	//$2& operator=($2&& ) = default;
-
-	virtual auto getSize_buf() const -> size_t;
-
-
-private:
-	class Impl; 			// forward decl of implementation
-
-	std::unique_ptr<Impl, void (*)(Impl*)> pImpl;
-	// custom deleter is a function that takes a pointer to Impl, returns void
-
-};
-
-#endif /* $1 */
-endsnippet
-
-
-###########################################################################
-snippet pimpli "CD cpp with ptr to implementation (pimpl)"
-//
-//  File: `!p snip.rv = fn`
-//  Description: ${0:Enter description of code}
-//  Created: `!v strftime("%c")`
-//
-//  Copyright CodeDelish.com
-//
-//==================================================================
-
-#include "${1:`!p snip.rv = snip.basename + '.h'`}"
-
-namespace
-{
-
-}
-
-//==================================================================
-class $2::Impl
-{
-public:
-	size_t size_buf = 512;
-	Impl( size_t sb ) :size_buf{ sb }
-	{
-
-	}
-
-	auto getSize_b() -> size_t
-	{
-		return size_buf;
-	}
-
-};
-
-//==================================================================
-${2:`!p snip.rv = snip.basename`}::$2(int sz=512)
-	:pImpl{
-			new Impl{ sz },
-			[](Impl* impl){ delete impl; }	// custom deleter lambda
-		}
-{
-
-}
-
-//==================================================================
-auto $2::getSize_buf() const -> size_t
-{
-	return pImpl->getSize_b();
-}
-
-endsnippet
-
-
 
