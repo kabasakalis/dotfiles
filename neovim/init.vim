@@ -1,7 +1,7 @@
 " ######################################################################################################################
 " ### Author : Spiros Kabasakalis <Kabasakalis@gmail.com>                                                            ###
 " ######################################################################################################################
-" ### Neovim Configuration focused on Web development                                                                ###
+" ### Neovim Configuration                                                                                           ###
 " ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
 " ######################################################################################################################
 
@@ -1039,6 +1039,9 @@ command! Retab :call utils#retabToFourSpaces()
 " -----------------------------------------------------
 " Autocommands {{{
 " ======================================================================================================================
+
+" Recognize python
+au BufNewFile,BufRead *.py set filetype=python
 
 " Turn spellcheck on for markdown files
 autocmd BufNewFile,BufRead *.md setlocal spell

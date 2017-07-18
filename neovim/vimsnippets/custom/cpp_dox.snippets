@@ -1,20 +1,52 @@
-# extends c
-# snippet dx "Basic2 c++ doxygen function template" b
-#
-# /**
-# * @brief: ${4:brief}
-# *
-# * @param: `!p write_docstring_args(t[3],snip)`
-# *
-# * @return: `!p snip.rv = t[1]`
-# */
-# ${1:ReturnType} ${2:FunctionName}(${3:param})
-# {
-#   ${0:FunctionBody}
-# }
-# endsnippet
-#
+##########   Doxygen snippets for c++  ##########################
+global !p
+from snippet_helpers import *
+endglobal
 
-snippet test "test"
-`!p snip.rv = "hello"`
+snippet dxf "doxygen c++ function block" b
+/**
+* @brief: ${1:brief}
+* @param: ${2:param}
+* @return: ${0:type}
+*/
 endsnippet
+
+snippet dxc "doxygen c++ class block" b
+/**
+* @brief      ${1:`!p snip.rv = snip.basename.title()`}
+* @details    ${2:class details}
+* @author     Spiros Kabasakalis <kabasakalis@gmail.com>
+* @version    ${3:version}
+* @date       `!v strftime("%B %d, %Y")`
+* @bug        ${4:bug}
+* @warning    ${5:warning}
+* @copyright  ${0:Copyright (C) `!v strftime("%Y")` Spiros Kabasakalis, MIT Licence.}
+*/
+endsnippet
+
+
+snippet dxh "doxygen c++ header block" b
+/**
+* @file       `!p snip.rv = fn`
+* @brief      ${1:`!p snip.rv = snip.basename`}
+* @details    ${2:class details}
+*   details continue here
+* @author     Spiros Kabasakalis <kabasakalis@gmail.com>
+* @date       `!v strftime("%B %d, %Y")`
+* @copyright  ${0:Copyright (C) `!v strftime("%Y")` Spiros Kabasakalis, MIT Licence.}
+}
+*/
+endsnippet
+
+snippet dxi "doxygen c++ inline" b
+/**< ${0:inline}*/
+endsnippet
+
+
+snippet dxv "doxygen c++ variable" b
+/**
+* @var: ${1:type name}
+* @brief: ${0:brief}
+*/
+endsnippet
+

@@ -208,5 +208,3 @@ def write_function_docstring(t, snip):
 
 def get_dir_and_file_name(snip):
 	return os.getcwd().split(os.sep)[-1] + '.' + snip.basename
-
-
