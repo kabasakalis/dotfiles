@@ -116,12 +116,6 @@ class ${1:`vim_snippets#Filename('$1', 'name')`}	{
 	};
 endsnippet
 
-snippet mfun
-	${4:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3}) {
-		${0}
-	}
-endsnippet
-
 snippet dmfun0
 	${3:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}() {
 		${0}
@@ -386,8 +380,6 @@ snippet mad "Move Assignment definition"
 ${1:`!p snip.rv = snip.basename.title()`}& $1::operator=(const $1&& rhs) = default	// move assignment
 endsnippet
 
-
-
 snippet cl0h "Header file for zero rule class"
 
 #pragma once
@@ -405,14 +397,14 @@ else:
 
 namespace `!p snip.rv = snip.basename` {
 
-class ${2:`!p snip.rv = snip.basename.title()`} final {
+class `!p snip.rv = snip.basename.upper()`_API ${2:`!p snip.rv = snip.basename.title()`} final {
 	public:
 		explicit $2();                                                      // default constructor
 		explicit $2( const std::string&, OwnedResource&, SharedResource& ); // constructor
 
 		// Special member functions, consider cases.
 		// 1. Rule Of Zero (If applies)
-		// Don't declare or default any special member member function.
+		// Don't declare or default any special member function.
 	  // 2. Base class to inherit from.
 		// Uncomment dtor for virtual destructor, default the rest special members below,
 		// remove final from class declaration.
@@ -426,9 +418,9 @@ class ${2:`!p snip.rv = snip.basename.title()`} final {
 
     //Member functions
 
-		const $3& get_$3() const;
-	  $4& get_$4();
-	  const std:string& get_string() const;
+		`!p snip.rv = snip.basename.upper()`_API const $3& get_$3() const;
+	  `!p snip.rv = snip.basename.upper()`_API $4& get_$4();
+	  `!p snip.rv = snip.basename.upper()`_API const std:string& get_string() const;
 
 	private:
 		std::string mString;
@@ -436,16 +428,15 @@ class ${2:`!p snip.rv = snip.basename.title()`} final {
 		std::shared_ptr<${4:SharedResource}> m_$4
 };
 
-//#endif /* $1 */
-
-
 }  // namespace `!p snip.rv = snip.basename`
+
+//#endif /* $1 */
 endsnippet
 
 snippet cl0d "Definition file for zero rule class"
 
 //#include <memory>  // unique_ptr
-#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+#include "`!p snip.rv = snip.basename`/${1:`!p snip.rv = snip.basename + '.h'`}"
 
 namespace `!p snip.rv = snip.basename` {
 
@@ -453,7 +444,7 @@ namespace `!p snip.rv = snip.basename` {
   ${2:`!p snip.rv = snip.basename.title()`}::$2() {}
 
   // Constructor
-	$2::$2(std::string string_ = "")
+	$2::$2(std::string string_)
 		: mString{string_}
 		, m_${3:OwnedResource}{std::make_unique<$3>}
 		, m_${4:SharedResource}{std::make_unique<$4>}{}
@@ -480,7 +471,7 @@ namespace `!p snip.rv = snip.basename` {
 	  return mString;
 	}
 
-}
+}  // namespace `!p snip.rv = snip.basename`
 endsnippet
 
 
