@@ -14,6 +14,8 @@ endglobal
 
 snippet incc
 	#include <${1:iostream}>
+endsnippet
+
 snippet binc
 	#include <boost/${1:shared_ptr}.hpp>
 endsnippet
@@ -117,19 +119,19 @@ class ${1:`vim_snippets#Filename('$1', 'name')`}	{
 endsnippet
 
 snippet dmfun0
-	${3:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}() {
+	${3:void} ${1:`!p snip.rv = snip.basename.title()`}::${2:memberFunction}() {
 		${0}
 	}
 endsnippet
 
 snippet dmfun1
-	${5:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3:Type} ${4:Parameter}) {
+	${5:void} ${1:`!p snip.rv = snip.basename.title()`}::${2:memberFunction}(${3:Type} ${4:Parameter}) {
 		${0}
 	}
 endsnippet
 
 snippet dmfun2
-	${7:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3:Type} ${4:Parameter},${5:Type} ${6:Parameter}) {
+	${7:void} ${1:`!p snip.rv = snip.basename.title()`}::${2:memberFunction}(${3:Type} ${4:Parameter},${5:Type} ${6:Parameter}) {
 		${0}
 	}
 endsnippet

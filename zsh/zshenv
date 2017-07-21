@@ -29,6 +29,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 export VIMRUNTIME="/usr/share/nvim/runtime"
 export NVIMRUNTIME="/usr/share/nvim/runtime"
 export PYTHONPATH='/usr/lib/llvm-3.8/lib/python2.7/site-packages'
+export HUNTER_ROOT='/home/spiros/.hunter'
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
