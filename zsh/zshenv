@@ -6,6 +6,7 @@ $HOME/.gem/ruby/2.4.0/bin
 $HOME/.rubies/ruby-2.4.0/bin
 $HOME/chruby-0.3.9/bin
 $HOME/dotfiles/scripts
+$HOME/.local/bin
 /usr/share/elasticsearch/bin
 /usr/local/heroku/bin
 /usr/local/sbin

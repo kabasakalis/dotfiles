@@ -71,6 +71,8 @@
     ~/.bundle: ruby/.bundle
     ~/.pryrc: ruby/pryrc
     ~/.rdebugrc: ruby/rdebugrc
+    #c++
+    ~/.lldbinit: cpp/.lldbinit
     #linters
     ~/dev/.eslintrc:
       create: true

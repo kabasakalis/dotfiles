@@ -85,7 +85,6 @@ set tags=./tags;                  " Set the tag file search order
 " Tomorrow-Night
 " seoul256
 " tropikos
-" gruvbox
 " gotham256
 " Color scheme based on time
 " Turn syntax highlighting on
@@ -101,7 +100,7 @@ endif
 
 let g:rehash256=1
 " Theme
-colorscheme Tomorrow-Night
+colorscheme  Tomorrow-Night
 "transparency
 hi Normal  ctermfg=252 ctermbg=none
 
@@ -814,9 +813,11 @@ let g:pasta_paste_after_mapping = ',o'
 " -----------------------------------------------------
 " Deoplete autocomplete {{{
 " -----------------------------------------------------
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0 "stupid deoplete is super buggy, lags like crazy in INSERT MODE. Stupid Jap.
 let g:deoplete#auto_completion_start_length = 1
 let g:deoplete#enable_smart_case = 1
+
+" g:deoplete#disable_auto_complete = 1
 
 set completeopt+=noinsert
 set completeopt-=preview

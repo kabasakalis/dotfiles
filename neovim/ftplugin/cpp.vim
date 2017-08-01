@@ -99,7 +99,7 @@ nnoremap ,lpk :LL process kill<CR>
 nnoremap ,lpi :LL process interrupt<CR>
 
 nnoremap ,lbd :LL breakpoint delete
-nnoremap ,lb <Plug>LLBreakSwitch
+nnoremap ,laa <Plug>LLBreakSwitch
 nnoremap ,lbl :LL breakpoint list
 nnoremap ,lc :LL continue<CR>
 
@@ -149,6 +149,7 @@ au FileType c,cpp,objc,objcpp setl omnifunc=clang_complete#ClangComplete
 let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
 " let g:deoplete#sources.cpp = ['buffer', 'member', 'file' , 'ultisnips']
 let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+let g:clang_complete_auto=0
 let g:clang_use_library=1
 let g:clang_complete_copen=1
 let g:clang_snippets=1
@@ -168,6 +169,7 @@ if filereadable(expand("./build-debug/compile_commands.json"))
   let g:clang_auto_user_options = 'compile_commands.json'
   let g:clang_compilation_database = './build-debug'
 endif
+
 
 "}}}
 
