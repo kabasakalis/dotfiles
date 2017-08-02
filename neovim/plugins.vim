@@ -152,8 +152,6 @@ Plug 'DoxygenToolkit.vim', { 'for': 'cpp' }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 " This Vim plugin will help switching between companion files (e.g. .h and .cpp files)
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }
-" debugger
-Plug 'critiqjo/lldb.nvim'
 " Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
 "
 " C++ autocomplete
