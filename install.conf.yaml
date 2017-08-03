@@ -73,6 +73,7 @@
     ~/.rdebugrc: ruby/rdebugrc
     #c++
     ~/.lldbinit: cpp/.lldbinit
+    ~/.lldb: cpp/.lldb
     #linters
     ~/dev/.eslintrc:
       create: true

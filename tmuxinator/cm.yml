@@ -55,7 +55,7 @@ windows:
         - voltron view command 'source list -a $rip -c 25' --lexer c
         - deb:
           - tmux select-pane -t 5
-          - lldb build-debug/maind
+          # - lldb build-debug/maind
   - lldb-secondary:
       layout: b57e,274x57,0,0[274x28,0,0{157x28,0,0,36,116x28,158,0,46},274x28,0,29,39]
       panes:

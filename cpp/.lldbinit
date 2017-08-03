@@ -1,1 +1,29 @@
 command script import /home/spiros/.local/lib/python2.7/site-packages/voltron/entry.py
+
+
+# breakpoint shortcuts
+# break on function/method/selector: b -n name
+# break on C/C++ method: b -M method
+# break on selector: b -S selector:here:
+
+command alias b breakpoint set
+command alias bfl breakpoint set -f %1 -l %2
+command alias bd breakpoint disable
+command alias be breakpoint enable
+command alias bdel breakpoint delete
+command alias bcommand breakpoint command add
+command alias bcommands breakpoint command list
+
+# jump aliases
+# jump 0xfeedface
+command alias jump register write pc
+command alias jmp register write pc
+command alias j register write pc
+
+
+# fix p/s
+# p/s rsi
+command alias p/s register read
+
+
+command alias return thread return
