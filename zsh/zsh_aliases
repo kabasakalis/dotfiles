@@ -47,10 +47,15 @@ alias cmc='./configure' #run 2 times for release configuration
 alias cmcd='./configure debug' #run after cmc for debug configuration
 alias cmb='cmake --build build' #run after cmc for debug configuration
 alias cmbd='cmake --build build-debug' #run after cmc for debug configuration
-alias cmm='build-debug/maind'
+# alias cmm='build-debug/maind'
+alias cmm='build-debug/cppmazed'
 alias bd='build-debug'
 alias cmtg='cmake --build build-debug --target' #specific target
 alias cmt='cmake --build build-debug --target test' #specific target
+
+#qt
+alias qb='cd /home/spiros/qt/circular_membrane/build &&  /home/spiros/Qt/5.9.1/gcc_64/bin/qmake -o Makefile  /home/spiros/qt/circular_membrane/circular_membrane.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make'
+alias qr='cd /home/spiros/qt/circular_membrane/ && ./build/circular_membrane'
 
 #tmux
 alias tt='tmux'
