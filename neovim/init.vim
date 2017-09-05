@@ -789,6 +789,34 @@ let g:pasta_paste_after_mapping = ',o'
 
 
 " -----------------------------------------------------
+" Completion  roxma/nvim-completion-manager {{{
+" -----------------------------------------------------
+let g:cm_auto_popup = 0
+
+" nnoremap <leader>pi :PlugInstall<CR>
+" <Plug>(cm_force_refresh)
+
+ nnoremap  <C->co Plug(cm_force_refresh)
+  " autocmd FileType ruby xmap <buffer> ,b <Plug>(seeing-is-believing-mark-and-run)
+  "
+  " autocmd FileType ruby nmap <buffer> ,m <Plug>(seeing-is-believing-mark)
+  " autocmd FileType ruby xmap <buffer> ,m <Plug>(seeing-is-believing-mark)
+  " autocmd FileType ruby imap <buffer> ,m <Plug>(seeing-is-believing-mark)
+  "
+  " autocmd FileType ruby nmap <buffer> ,b <Plug>(seeing-is-believing-run)
+  " autocmd FileType ruby imap <buffer> ,b <Plug>(seeing-is-believing-run)
+
+
+
+
+
+"}}}
+"
+
+
+
+
+" -----------------------------------------------------
 " Deoplete autocomplete {{{
 " -----------------------------------------------------
 let g:deoplete#enable_at_startup = 0 "stupid deoplete is super buggy, lags like crazy in INSERT MODE. Stupid Jap.
