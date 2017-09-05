@@ -71,6 +71,11 @@
     ~/.bundle: ruby/.bundle
     ~/.pryrc: ruby/pryrc
     ~/.rdebugrc: ruby/rdebugrc
+    #Python
+    ~/.config/yapf/style:
+      create: true
+      path: python/yapf_style
+    ~/.config/flake8: python/flake8
     #c++
     ~/.lldbinit: cpp/.lldbinit
     ~/.lldb: cpp/.lldb

@@ -1,6 +1,6 @@
 
-name: dr
-root: ~/qt/circular_membrane
+name: dot
+root: ~/dotfiles
 
 # Optional tmux socket
 # socket_name: foo
@@ -27,14 +27,10 @@ root: ~/qt/circular_membrane
 
 
 windows:
-  - drum:
-    - cd ~/qt/circular_membrane
-    - nvim
-  - drum_root:
-    - cd ~/qt/circular_membrane
-  - surfrace:
-    - cd ~/qt/surface
-    - nvim
   - dotfiles:
     - cd ~/dotfiles
     - nvim
+  - shell:
+    - cd ~/qt/circular_membrane
+  - python_test:
+    - cd ~/upstream_repos/python-patterns

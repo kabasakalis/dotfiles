@@ -146,3 +146,6 @@ function coreout() {
 . /usr/share/autojump/autojump.sh
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by Miniconda3 4.3.21 installer
+export PATH="/home/spiros/miniconda3/bin:$PATH"

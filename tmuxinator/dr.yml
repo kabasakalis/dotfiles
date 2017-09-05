@@ -1,8 +1,6 @@
 
-# ~/.tmuxinator/testpr.yml
-
-name: vyraup
-root: ~/projects/vyra_upstream
+name: dr
+root: ~/qt/circular_membrane
 
 # Optional tmux socket
 # socket_name: foo
@@ -29,19 +27,17 @@ root: ~/projects/vyra_upstream
 
 
 windows:
-  #- spacemacs:  emacsclient -t -e '(spacemacs/home)'
-  - vyra_upstream_vim:
+  - drum:
+    - cd ~/qt/circular_membrane
     - nvim
-  - vyra_upstream_console:
-    -  bundle exec rails console
-  - vyra_upstream_server:
-    - bundle exec rails s -p 5000
-  - vyra_logs:
-    - tail -f log/development.log
+  - drum_root:
+    - cd ~/qt/circular_membrane
+  - surfrace:
+    - cd ~/qt/surface
+    - nvim
+  - oscilloscope:
+    - cd ~/qt/qmloscilloscope
+    - nvim
   - dotfiles:
     - cd ~/dotfiles
     - nvim
-  - test_examples:
-    - cd ~/projects/DEMOS/rspec-rails-examples
-    - nvim
-

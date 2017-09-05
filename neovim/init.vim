@@ -647,53 +647,31 @@ nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
 
 "}}}
 
-" -----------------------------------------------------
-" Neomake {{{
-" -----------------------------------------------------
-let g:neomake_verbose=0
-let g:neomake_warning_sign = {
-      \ 'text': '❯',
-      \ 'texthl': 'rubyConstant',
-      \ }
-let g:neomake_error_sign = {
-      \ 'text': '❯',
-      \ 'texthl': 'Identifier',
-      \ }
-let g:neomake_javascript_enabled_makers = ['mri','rubocop','reek']
-let g:neomake_ruby_mri_buffer_output = 1
-"let g:neomake_ruby_rubocop_maker = { 'args': ['-c.rubocop.yml', '-n'], 'cwd': getcwd() }
+
+"  -------------------------------------------
+"  w0rp/ale, Asynchronous maker and linter {{{
+" https://github.com/w0rp/ale/blob/master/doc/ale.txt
+" ----------------------------------------------------
+let g:ale_enabled = 1
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+" highlight clear ALEErrorSign
+" highlight clear ALEWarningSign
+let g:airline#extensions#ale#enabled = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" Write this in your vimrc file
+" let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 1
+let g:ale_completion_enabled = 0
+" let g:ale_set_loclist = 0
+" let g:ale_set_quickfix = 1
 "}}}
 
-" -----------------------------------------------------
-" Run linters after save {{{
-" -----------------------------------------------------
-
-" npm install -g eslint
-"autocmd BufWritePost *.js Neomake eslint
-" npm install -g jsonlint
-"autocmd BufWritePost *.json Neomake jsonlint
-" npm install -g typescript
-"autocmd BufWritePost *.ts Neomake tsc
-" gem install rubocop
-"autocmd BufWritePost *.rb Neomake rubocop
-" ruby
-"autocmd BufWritePost *.rb Neomake mri
-" sudo apt-get install elixir
-"autocmd BufWritePost *.ex Neomake elixir
-" apt-get install tidy
-"autocmd BufWritePost *.html Neomake tidy
-" gem install haml_lint
-"autocmd BufWritePost *.haml Neomake hamllint
-" gem install scsslint
-"autocmd BufWritePost *.scss Neomake scsslint
-" gem install mdl
-" autocmd BufWritePost *.md Neomake mdl
-" apt-get install shellcheck
-"autocmd BufWritePost *.sh Neomake shellcheck
-" pip3 install vim-vint
-"autocmd BufWritePost *.vim Neomake vint
-autocmd BufNewFile,BufRead *.slim set ft=slim
-"}}}
 
 " -----------------------------------------------------
 " Sneak, s f https://github.com/justinmk/vim-sneak {{{

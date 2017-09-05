@@ -174,6 +174,7 @@ alias rspeccs2='google-chrome  ~/home_assets/cheatsheets/rspec2.pdf'
 alias rspeccs3='google-chrome  ~/home_assets/cheatsheets/rspec3.pdf'
 alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
 alias ccs='google-chrome  ~/home_assets/cheatsheets/c-hotkeys.pdf'
+alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
 
 #Unity Launcher position
 alias launcherb='gsettings set com.canonical.Unity.Launcher launcher-position Bottom'

@@ -116,27 +116,18 @@ Plug 'christoomey/vim-tmux-navigator'
 " Miscellaneous {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'hwartig/vim-seeing-is-believing'
-" Plug 'embear/vim-localvimrc'
 "}}}
-"r/vim-localvimrc ---------------------------------------------------------------------------------------------------------------------
-"  Asynchronous maker and linter (needs linters to work) {{{
+"
+" w0rp/ale ---------------------------------------------------------------------------------------------------------------------
+"  Asynchronous maker and linter {{{
 " ---------------------------------------------------------------------------------------------------------------------
-"Plug 'benekastah/neomake', { 'on': ['Neomake'] }
+Plug 'w0rp/ale'
 
-" ---------------------------------------------------------------------------------------------------------------------
-" JS (ES6, React)
-" ---------------------------------------------------------------------------------------------------------------------
-" JS syntax
-Plug 'jelera/vim-javascript-syntax'
-" JS libs syntax (React, Angular)
-Plug 'othree/javascript-libraries-syntax.vim'
-" JSX syntax (needs vim-javascript for indentation)
-Plug 'mxw/vim-jsx' | Plug 'pangloss/vim-javascript'
-" Typescript syntax
-Plug 'leafgarland/typescript-vim'
-" JSON syntax
-Plug 'sheerun/vim-json'
-Plug 'kchmck/vim-coffee-script'
+
+
+
+
+
 "}}}
 "
 
