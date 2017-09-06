@@ -97,14 +97,14 @@ Plug 'janko-m/vim-test'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'tpope/vim-endwise'
+Plug 'osyo-manga/vim-monster'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------
 " deoplete autocomplete {{{
 " ---------------------------------------------------------------------------------------------------------------------
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ervandew/supertab'
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-" Plug 'osyo-manga/vim-monster', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'ervandew/supertab'
 " Plug 'Valloric/YouCompleteMe'
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------
@@ -129,6 +129,8 @@ Plug 'w0rp/ale'
 "  AutoCompletion roxma/nvim-completion-manager {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/ncm-rct-complete'
+
 "}}}
 "
 
@@ -147,7 +149,10 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }
 " Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
 "
 " C++ autocomplete
-Plug 'Rip-Rip/clang_complete', {'for': 'cpp' }
+" Plug 'Rip-Rip/clang_complete', {'for': 'cpp' }
+
+" C++ autocomplete with roxma/nvim-completion-manager
+Plug 'roxma/clang_complete'
 
 " Style format with clang-format
 Plug 'rhysd/vim-clang-format', {'for': 'cpp' }

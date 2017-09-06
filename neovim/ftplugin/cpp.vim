@@ -119,6 +119,19 @@ if filereadable(expand("./build-debug/compile_commands.json"))
 endif
 
 
+
+
+" Settings for roxma/nvim-completion-manager
+
+
+let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+
+" <Plug>(clang_complete_goto_declaration_preview)
+nmap gd <Plug>(clang_complete_goto_declaration)
+
+
+
+
 "}}}
 
 

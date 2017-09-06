@@ -356,3 +356,20 @@ function! g:utils#ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+
+" Completion  roxma/nvim-completion-manager
+function! ManualCompletionTab()
+	if pumvisible()
+		return "\<C-n>"
+	endif
+	let l:ctx = cm#context()
+	let l:typed = l:ctx['typed']
+	let l:kw = matchstr(l:typed,'\v\S+$')
+	if len(l:kw)
+		return cm#_force_refresh()
+	endif
+	return "\<Tab>"
+endfunction
+
+

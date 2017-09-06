@@ -763,22 +763,6 @@ if exists("g:loaded_webdevicons")
 endif
 "}}}
 
-" -----------------------------------------------------
-" Ctrlspace {{{
-" -----------------------------------------------------
-" if executable("ag")
-"   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-" endif
-" let g:CtrlSpaceUseTabline = 1
-" let g:CtrlSpaceSaveWorkspaceOnExit = 1
-" let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
-" let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
-" let g:ctrlspace_max_files = 100
-" let g:ctrlspace_max_search_results = 100
-" let g:ctrlspace_use_ruby_bindings = 1
-" nnoremap <silent><C-p> :CtrlSpace O<CR>
-" nnoremap <silent><C-o> :CtrlSpace h<CR>
-"}}}
 
 " -----------------------------------------------------
 " Pasta  Pasting in Vim with indentation adjusted to destination context.{{{
@@ -791,24 +775,47 @@ let g:pasta_paste_after_mapping = ',o'
 " -----------------------------------------------------
 " Completion  roxma/nvim-completion-manager {{{
 " -----------------------------------------------------
-let g:cm_auto_popup = 0
+" let g:cm_smart_enable=1  "disable ncm
+let g:cm_auto_popup = 0 "disable automatic popup
 
-" nnoremap <leader>pi :PlugInstall<CR>
-" <Plug>(cm_force_refresh)
+"manually trigger autocompletion
+imap <silent> <Tab> <Plug>(cm_force_refresh)
+" imap <silent> <Tab> <c-r>=ManualCompletionTab()<cr>
 
- nnoremap  <C->co Plug(cm_force_refresh)
-  " autocmd FileType ruby xmap <buffer> ,b <Plug>(seeing-is-believing-mark-and-run)
-  "
-  " autocmd FileType ruby nmap <buffer> ,m <Plug>(seeing-is-believing-mark)
-  " autocmd FileType ruby xmap <buffer> ,m <Plug>(seeing-is-believing-mark)
-  " autocmd FileType ruby imap <buffer> ,m <Plug>(seeing-is-believing-mark)
-  "
-  " autocmd FileType ruby nmap <buffer> ,b <Plug>(seeing-is-believing-run)
-  " autocmd FileType ruby imap <buffer> ,b <Plug>(seeing-is-believing-run)
+" Next two lines make it possible to expand a snippet (See Ultisnips config) from the pop up menu using ENTER
+imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
+imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>":"\<CR>")
+
+" override builtin completions
+" let g:cm_sources_enable = 1
+" let g:cm_sources_override = {
+" \ 'cm-tags': {'enable':0}
+" \ }
 
 
 
+"ruby
+au User CmSetup call cm#register_source({'name' : 'monster',
+\ 'priority': 9,
+\ 'scoping': 1,
+\ 'scopes': ['ruby'],
+\ 'abbreviation': 'rb',
+\ 'cm_refresh_patterns':['[^. \t].\w', '[a-zA-Z_]\w*::'],
+\ 'cm_refresh': {'omnifunc': 'monster#omnifunc'},
+\ })
 
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+
+" override builtin completions
+" let g:cm_sources_enable = 0
+" let g:cm_sources_override = {
+" \ 'cm-tags': {'enable':0}
+" \ }
+"
+" increase for fast typing performance
+" let g:cm_complete_start_delay = 0
+" increase to minimize flickering of pop up menu
+" let g:cm_complete_popup_delay = 50
 
 "}}}
 "
@@ -837,10 +844,10 @@ let g:deoplete#sources={}
 " let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
 
 " Insert <TAB> or select next match inoremap <silent> <expr> <Tab> utils#tabComplete() Manually trigger tag autocomplete
-inoremap <silent> <expr> <C-]> utils#manualTagComplete()
-" <C-h>, <BS>: close popup and delete backword char
-inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
+" inoremap <silent> <expr> <C-]> utils#manualTagComplete()
+" " <C-h>, <BS>: close popup and delete backword char
+" inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 " Set async completion.
 " set omnifunc=syntaxcomplete#Complete
 
@@ -961,7 +968,8 @@ nnoremap <leader>pc :PlugClean<CR>
 " Disable built-in <C-x><C-k> to be able to go backward
 inoremap <C-x><C-k> <NOP>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<C-t>" " used to be tab, but reserved tab for completion manager
 let g:UltiSnipsListSnippets='<C-l>'
 let g:UltiSnipsEditSplit="vertical"
 set runtimepath+=~/.vimsnippets
