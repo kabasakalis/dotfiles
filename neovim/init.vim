@@ -5,7 +5,8 @@
 " ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
 " ######################################################################################################################
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+
+let home_path = $HOME
 
 "Plugins managed with vim-plug {{{
 if filereadable(expand("~/.config/nvim/plugins.vim"))
@@ -16,6 +17,20 @@ endif
 " ---------------------------------------------------------------------------------------------------------------------
 " Basic settings (Neovim defaults: https://neovim.io/doc/user/vim_diff.html#nvim-option-defaults) {{{
 " ======================================================================================================================
+"https://neovim.io/doc/user/provider.html#provider-python
+let g:python_host_prog  = '/usr/bin/python2'
+let g:python3_host_prog = expand("$HOME/.pyenv/shims/python3")
+
+" Virtual Python Environments
+"https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
+" let g:python_host_prog  = expand("SHOME/.pyenv/versions/neovim2/bin/python")
+" let g:python3_host_prog = expand("$HOME/.pyenv/versions/neovim3/bin/python")
+
+" let g:loaded_python_provider = 1 "To disable Python 2 support:
+" let g:loaded_python3_provider = 1 " To disable Python 3 support:
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
@@ -90,6 +105,10 @@ set tags=./tags;                  " Set the tag file search order
 " Turn syntax highlighting on
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
+
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   " Turn syntax highlighting on
@@ -652,7 +671,7 @@ nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
 "  w0rp/ale, Asynchronous maker and linter {{{
 " https://github.com/w0rp/ale/blob/master/doc/ale.txt
 " ----------------------------------------------------
-let g:ale_enabled = 1
+let g:ale_enabled = 0
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
@@ -775,7 +794,7 @@ let g:pasta_paste_after_mapping = ',o'
 " -----------------------------------------------------
 " Completion  roxma/nvim-completion-manager {{{
 " -----------------------------------------------------
-" let g:cm_smart_enable=1  "disable ncm
+let g:cm_smart_enable=1  "disable ncm
 let g:cm_auto_popup = 0 "disable automatic popup
 
 "manually trigger autocompletion
@@ -783,28 +802,8 @@ imap <silent> <Tab> <Plug>(cm_force_refresh)
 " imap <silent> <Tab> <c-r>=ManualCompletionTab()<cr>
 
 " Next two lines make it possible to expand a snippet (See Ultisnips config) from the pop up menu using ENTER
-imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
-imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>":"\<CR>")
-
-" override builtin completions
-" let g:cm_sources_enable = 1
-" let g:cm_sources_override = {
-" \ 'cm-tags': {'enable':0}
-" \ }
-
-
-
-"ruby
-au User CmSetup call cm#register_source({'name' : 'monster',
-\ 'priority': 9,
-\ 'scoping': 1,
-\ 'scopes': ['ruby'],
-\ 'abbreviation': 'rb',
-\ 'cm_refresh_patterns':['[^. \t].\w', '[a-zA-Z_]\w*::'],
-\ 'cm_refresh': {'omnifunc': 'monster#omnifunc'},
-\ })
-
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
+inoremap <silent> <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
+inoremap <silent> <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>" : "\<CR>")
 
 " override builtin completions
 " let g:cm_sources_enable = 0

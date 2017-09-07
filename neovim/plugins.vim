@@ -23,6 +23,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
@@ -96,7 +97,7 @@ Plug 'tpope/vim-haml'
 Plug 'janko-m/vim-test'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'tpope/vim-endwise'
+" Plug 'tpope/vim-endwise' " bug with ENTER, conflict with completion manager
 Plug 'osyo-manga/vim-monster'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 "}}}

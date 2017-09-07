@@ -21,7 +21,7 @@ let g:python_highlight_all=1
 " https://github.com/w0rp/ale/blob/master/doc/ale.txt
 " ----------------------------------------------------
 let g:ale_enabled = 1
-let g:ale_python_flake8_executable = '/home/spiros/.pyenv/shims/flake8'
+let g:ale_python_flake8_executable = expand("SHOME/.pyenv/shims/flake8")
 let g:ale_python_flake8_use_global = 1
 let g:ale_linters = {
 \   'python': ['flake8'],
