@@ -283,6 +283,8 @@ nnoremap <Leader>s :w<CR>
 " Quiting and saving all
 cnoremap ww wqall
 cnoremap qq qall
+cnoremap <ESC><ESC> qall!<CR>
+
 
 " Quicker window movement
 nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
@@ -321,7 +323,6 @@ map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 
 "Close all buffers
 "map <C-c> :bufdo bd<cr>
-
 
 "Delete Current File
 nnoremap <leader>rm :call delete(expand('%')) \| bdelete!<CR>
@@ -427,12 +428,6 @@ nnoremap <silent> ,r zR
 " above the cursor
 nmap <CR> o<Esc>
 nnoremap <S-Enter> O<Esc>
-
-" j and k don't skip over wrapped lines in following FileTypes, unless given a
-" count (helpful since I display relative line numbers in these file types)
-" (https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/cliuz1o)
-autocmd FileType ruby nnoremap <expr> j v:count ? 'j' : 'gj'
-autocmd FileType ruby nnoremap <expr> k v:count ? 'k' : 'gk'
 
 " Have the indent commands re-highlight the last visual selection to make
 " multiple indentations easier
@@ -671,7 +666,7 @@ nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
 "  w0rp/ale, Asynchronous maker and linter {{{
 " https://github.com/w0rp/ale/blob/master/doc/ale.txt
 " ----------------------------------------------------
-let g:ale_enabled = 0
+let g:ale_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
@@ -681,12 +676,13 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-" Write this in your vimrc file
-" let g:ale_lint_on_text_changed = 'never'
-" You can disable this option too
-" if you don't want linters to run on opening a file
-let g:ale_lint_on_enter = 1
-let g:ale_completion_enabled = 0
+
+" Don't run linters on changing text or opening a file.
+" So effectively linters run only on file saved.
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
+" let g:ale_completion_enabled = 0
 " let g:ale_set_loclist = 0
 " let g:ale_set_quickfix = 1
 "}}}
@@ -819,9 +815,6 @@ inoremap <silent> <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-
 "}}}
 "
 
-
-
-
 " -----------------------------------------------------
 " Deoplete autocomplete {{{
 " -----------------------------------------------------
@@ -885,6 +878,7 @@ nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gpu :Git push --set-upstream origin<Space>
 nnoremap <leader>gsu :Git branch<Space>--set-upstrea<Space>
+
 nnoremap <leader>gbr :Git checkout<Space>-b<Space>
 
 nnoremap <leader>gw :Gwrite<CR><CR>
@@ -1092,23 +1086,6 @@ augroup line_return
 augroup END
 "}}}
 
-" -----------------------------------------------------
-" Enable seeing-is-believing mappings only for Ruby {{{
-" ======================================================================================================================
-augroup seeingIsBelievingSettings
-  autocmd!
-
-  autocmd FileType ruby nmap <buffer> ,b <Plug>(seeing-is-believing-mark-and-run)
-  autocmd FileType ruby xmap <buffer> ,b <Plug>(seeing-is-believing-mark-and-run)
-
-  autocmd FileType ruby nmap <buffer> ,m <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby xmap <buffer> ,m <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby imap <buffer> ,m <Plug>(seeing-is-believing-mark)
-
-  autocmd FileType ruby nmap <buffer> ,b <Plug>(seeing-is-believing-run)
-  autocmd FileType ruby imap <buffer> ,b <Plug>(seeing-is-believing-run)
-augroup END
-"}}}
 
 " -----------------------------------------------------
 " F-key actions {{{
@@ -1124,8 +1101,6 @@ nnoremap <silent> <F3> :Ttoggle<cr>
 
 "F4 Toggle white characters visibility
 nnoremap <silent> <F4> :set list!<CR> :set list?<CR>
-
-
 
 "F12 Show F keys toggles
 nnoremap <F12> :call utils#showToggles()<CR>
