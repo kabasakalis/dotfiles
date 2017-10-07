@@ -71,7 +71,7 @@ Plug 'kassio/neoterm'
 " Git {{{
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ Plug 'w0rp/ale'
 " ---------------------------------------------------------------------------------------------------------------------
 Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/ncm-rct-complete'
-
+Plug 'sassanh/nvim-cm-eclim'
 "}}}
 "
 

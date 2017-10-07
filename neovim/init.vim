@@ -18,13 +18,16 @@ endif
 " Basic settings (Neovim defaults: https://neovim.io/doc/user/vim_diff.html#nvim-option-defaults) {{{
 " ======================================================================================================================
 "https://neovim.io/doc/user/provider.html#provider-python
-let g:python_host_prog  = '/usr/bin/python2'
-let g:python3_host_prog = expand("$HOME/.pyenv/shims/python3")
+" let g:python_host_prog  = '/usr/bin/python2'
+" let g:python3_host_prog = expand("$HOME/.pyenv/shims/python3")
 
 " Virtual Python Environments
 "https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 " let g:python_host_prog  = expand("SHOME/.pyenv/versions/neovim2/bin/python")
 " let g:python3_host_prog = expand("$HOME/.pyenv/versions/neovim3/bin/python")
+
+let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
 
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:
@@ -798,8 +801,12 @@ imap <silent> <Tab> <Plug>(cm_force_refresh)
 " imap <silent> <Tab> <c-r>=ManualCompletionTab()<cr>
 
 " Next two lines make it possible to expand a snippet (See Ultisnips config) from the pop up menu using ENTER
-inoremap <silent> <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
-inoremap <silent> <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>" : "\<CR>")
+" inoremap <silent> <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
+" inoremap <silent> <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>" : "\<CR>")
+
+imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
+imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>":"\<CR>")
+
 
 " override builtin completions
 " let g:cm_sources_enable = 0
@@ -862,38 +869,6 @@ let g:deoplete#sources#omni#input_patterns = {
 "noremap <silent> <c-key> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-o> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-"}}}
-
-" -----------------------------------------------------
-" Fugitive git {{{
-" -----------------------------------------------------
-"
-nnoremap <leader>gi :Git! init<CR>
-nnoremap <leader>ga :Git! add %:p<CR><CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gpu :Git push --set-upstream origin<Space>
-nnoremap <leader>gsu :Git branch<Space>--set-upstrea<Space>
-
-nnoremap <leader>gbr :Git checkout<Space>-b<Space>
-
-nnoremap <leader>gw :Gwrite<CR><CR>
-nnoremap <leader>gwq :Gwq<CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gp :Ggrep<Space>
-nnoremap <leader>gm :Gmove<Space>
-nnoremap <leader>gb :Git! branch<Space>
-nnoremap <leader>go :Git! checkout<Space>
-
-nnoremap <leader>gra :Git! remote add origin master<CR>
-nnoremap <leader>gpf :Git! push --set-upstream origin master<CR>
-nnoremap <leader>gps :Git! push<CR>
-nnoremap <leader>gpl :Git! pull<CR>
-nnoremap <leader>gbl :Gread<CR>
 "}}}
 
 " -----------------------------------------------------
