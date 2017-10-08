@@ -24,6 +24,8 @@ Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
+
+
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------

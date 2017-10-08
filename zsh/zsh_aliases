@@ -31,9 +31,10 @@ alias ec='emacsclient -c'
 #neovim
 alias v='nvim'
 alias vim='nvim'
+#debug neovim
+alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
 alias python=python3
-
-
+alias eclim_start='$ECLIPSE_HOME/eclimd'
 #cpp
 alias cgcc='sudo update-alternatives --config gcc'
 alias ccpp='sudo update-alternatives --config c++'
@@ -138,6 +139,7 @@ alias labs="cd ~/Labs/ && ls"
 alias demo="cd ~/projects/DEMOS"
 alias pr="cd ~/projects"
 alias cpppr="cd ~/cpp"
+alias jvpr="cd ~/java"
 alias ur="cd ~/upstream_repos"
 
 

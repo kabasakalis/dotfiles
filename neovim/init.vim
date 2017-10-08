@@ -801,8 +801,6 @@ imap <silent> <Tab> <Plug>(cm_force_refresh)
 " imap <silent> <Tab> <c-r>=ManualCompletionTab()<cr>
 
 " Next two lines make it possible to expand a snippet (See Ultisnips config) from the pop up menu using ENTER
-" inoremap <silent> <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
-" inoremap <silent> <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>" : "\<CR>")
 
 imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
 imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-t>":"\<CR>")

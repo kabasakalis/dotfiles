@@ -15,6 +15,7 @@ export NVIMRUNTIME="/usr/share/nvim/runtime"
 export HUNTER_ROOT="$HOME/.hunter"
 export PYENV_ROOT="$HOME/.pyenv"
 export MINICONDA3="$HOME/miniconda3"
+export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
 
 # PATH
 PATH=$(paste -d ":" -s << EOF
