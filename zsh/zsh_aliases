@@ -35,9 +35,19 @@ alias vim='nvim'
 alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
 alias python=python3
 alias eclim_start='$ECLIPSE_HOME/eclimd'
+
+# Jetbrains apps
+alias idea='cd /opt/idea-IU-172.4343.14/bin && ./idea.sh'
+alias clion='cd /opt/clion-2017.2.3/bin && ./clion.sh'
+alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
+alias idea_cfg='cd /home/spiros/.IntelliJIdea2017.2'
+alias clion_cfg='cd /home/spiros/.CLion2017.2'
+
 #cpp
 alias cgcc='sudo update-alternatives --config gcc'
 alias ccpp='sudo update-alternatives --config c++'
+
+
 
 #cmake
 # alias cmm='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make'
