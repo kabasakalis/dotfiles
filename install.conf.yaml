@@ -45,6 +45,7 @@
     ~/ackrc: vim/ackrc
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim
+    ~/.ideavimrc: neovim/.ideavimrc
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
     ~/.config/nvim/colors: neovim/colors
     ~/.config/nvim/sessions: neovim/sessions
@@ -76,6 +77,7 @@
       create: true
       path: python/yapf_style
     ~/.config/flake8: python/flake8
+    ~/.flake8: python/flake8
     #c++
     ~/.lldbinit: cpp/.lldbinit
     ~/.lldb: cpp/.lldb
