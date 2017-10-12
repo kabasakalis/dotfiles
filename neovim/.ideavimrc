@@ -10,7 +10,6 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 
-let mapleader=" "                 " leader
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
 set runtimepath+=~/
@@ -91,14 +90,9 @@ set ttimeoutlen=10
 " ======================================================================================================================
 
 " Save file
-nnoremap <Leader><Leader> :w<CR>
+" Ctrl+S, IDE mapping.
 
-" Quiting and saving all
-cnoremap ww wqall
-cnoremap qq qall
-cnoremap <ESC><ESC> qall!<CR>
-
-
+let mapleader=" " " leader
 " Quicker window movement
 nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
 " up and down have been  mapped to tmux window navigation
@@ -108,43 +102,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 
-" Intelligent windows resizing using ctrl + arrow keys
-" Easier for Poker 3.
-nnoremap <silent> <Right> :call utils#intelligentVerticalResize('right')<CR>
-nnoremap <silent> <Left> :call utils#intelligentVerticalResize('left')<CR>
-nnoremap <silent> <Up> :resize +1<CR>
-nnoremap <silent> <Down> :resize -1<CR>
-
-" nnoremap <silent> <C-Right> :call utils#intelligentVerticalResize('right')<CR>
-" nnoremap <silent> <C-Left> :call utils#intelligentVerticalResize('left')<CR>
-" nnoremap <silent> <C-Up> :resize +1<CR>
-" nnoremap <silent> <C-Down> :resize -1<CR>
-
-nnoremap <silent> ,r zR
-
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-
-" Toggle between normal and relative numbering.
-nnoremap <leader>\ :call utils#NumberToggle()<cr>
-
-" Buffers navigation and management
-nnoremap <leader>] :bn<CR>
-nnoremap <leader>[  :bp<CR>
-"Close buffer workaround
-map <C-x> :bn<cr>:bd #<cr>:bp<cr>
-
-"Close all buffers
-"map <C-c> :bufdo bd<cr>
-
-"Delete Current File
-nnoremap <leader>rm :call delete(expand('%')) \| bdelete!<CR>
-
-" Quickly open a vertical split of my init.vim and source my init.vim
-nnoremap <silent> <leader>ev :vs ~/.config/nvim/init.vim<CR>
-" Reload init.vim
-"nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
-
 " H to beginning of line, L to the end
 noremap H ^
 noremap L $
@@ -152,12 +109,6 @@ noremap L $
 " D deletes to the end of the line, and Y yanks to end of line
 nnoremap D d$
 nnoremap Y y$
-
-" place whole file on the system clipboard (and return cursor to where it was)
-nmap <Leader>a maggVG"*y`a
-
-" Select all contents of file
-nmap <Leader>v <esc>ggVG<CR>
 
 " After block yank and paste, move cursor to the end of operated text and don't override register
 vnoremap y y`]
