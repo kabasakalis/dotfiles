@@ -3,7 +3,7 @@
 " ### Author : Spiros Kabasakalis <Kabasakalis@gmail.com>                                                            ###
 " ######################################################################################################################
 " ### Vim Configuration for Intellij IDEA                                                                            ###
-" ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
+" ### Intellij IDEAr since : Fri Oct 13 2017                                                                         ###
 " ######################################################################################################################
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
@@ -13,8 +13,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
 set runtimepath+=~/
-set tabstop=2
-set shiftwidth=2
+" set tabstop=2
+" set shiftwidth=2
 set expandtab
 set smartindent
 set autoindent
@@ -42,8 +42,6 @@ set nostartofline                 " Prevent cursor from moving to beginning of l
 set virtualedit=block             " To be able to select past EOL in visual block mode
 set updatetime=1000               " Update time used to create swap file or other things
 set nojoinspaces                  " No extra space when joining a line which ends with . ? !
-set splitbelow                    " Open new split panes to right and bottom, which feels more natural
-set splitright
 set mouse-=a                      " disable mouse support, what am I a vimposer?
 set complete+=kspell              " Autocomplete with dictionary words when spell check is on
 set diffopt+=vertical             " Always use vertical diffs
@@ -53,14 +51,7 @@ set formatoptions+=j              " Delete comment charalter when joining commen
 set sc                            " show commands as you type them
 set lazyredraw                    " make vim a little speedier
 set ttyfast
-" Save temporary/backup files not in the local directory, but in your ~/.vim
-" directory, to keep them out of git repos.
-" Pretty sure you need to mkdir backup, swap, and undo first to make this work
-set backupdir=~/.config/nvim/backup//
-set directory=~/.config/nvim/swap//
-set undodir=~/.config/nvim/undo//
 
-set tags=./tags;                  " Set the tag file search order
 "}}}
 
 
@@ -70,7 +61,7 @@ set tags=./tags;                  " Set the tag file search order
 set ignorecase                    " Ignore case by default
 set smartcase                     " Make search case sensitive only if it contains uppercase letters
 set wrapscan                      " Search again from top when reached the bottom
-set nohlsearch                    " Don't highlight after search
+" set nohlsearch                    " Don't highlight after search
 set incsearch                     " incremental searching
 "}}}
 
@@ -93,11 +84,8 @@ set ttimeoutlen=10
 " Ctrl+S, IDE mapping.
 
 let mapleader=" " " leader
+
 " Quicker window movement
-nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
-" up and down have been  mapped to tmux window navigation
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
@@ -136,67 +124,17 @@ xnoremap c "xc
 " Reselect last-pasted text
 nnoremap gp `[v`]
 
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+" Have the indent commands re-highlight the last visual selection to make
+" multiple indentations easier
+vnoremap > >gv
+vnoremap < <gv
 
-" Fix the cw at the end of line bug default Vim has special treatment (:help cw)
-nmap cw ce
-nmap dw de
-
-" Quick-fix window navigation
-nnoremap ]q :cnext<CR>
-nnoremap [q :cprevious<CR>
-
-" Location list navigation
-nnoremap ]l :lnext<CR>
-nnoremap [l :lprevious<CR>
-
-" Error mnemonic (Neomake uses location list)
-nnoremap ]e :lnext<CR>
-nnoremap [e :lprevious<CR>
-
-" CTags generation / navigation (:tselect to select from menu)
-nnoremap ]t :tn<CR>
-nnoremap [t :tp<CR>
-nnoremap ,ts :ts<CR>
-"nnoremap ,tg :GenerateTags<CR>
-
-" Keep the cursor in place while joining lines
-nnoremap J mzJ`z
-" [S]plit line (sister to [J]oin lines) S is covered by cc.
-nnoremap <leader>c mzi<CR><ESC>`z
-
-
-" Start substitute,replace on current word under the cursor
-nnoremap ,s :%s///gc<Left><Left><Left>
-
-" Start search on current word under the cursor
-nnoremap ,/ /<CR>
-
-" Start reverse search on current word under the cursor
-nnoremap ,? ?<CR>
-
-" Faster sort
-vnoremap ,s :!sort<CR>
-
-" Easier fold toggling
-" Toggle
-nnoremap <silent> ,n za
-" Close all
-nnoremap <silent> ,m zM
-" Open  all
-nnoremap <silent> ,r zR
 
 " Enter gives a new line when in command mode without entering insert mode. Likewise, shift+enter gives a new line
 " above the cursor
 nmap <CR> o<Esc>
 nnoremap <S-Enter> O<Esc>
 
-" Have the indent commands re-highlight the last visual selection to make
-" multiple indentations easier
-vnoremap > >gv
-vnoremap < <gv
 
 " Make the dot command work as expected in visual mode (via
 " https://www.reddit.com/r/vim/comments/3y2mgt/do_you_have_any_minor_customizationsmappings_that/cya0x04)
@@ -210,31 +148,9 @@ vnoremap N Nzz
 
 " Center screen when moving up and down
 nnoremap <C-u> <C-u>zz
-nnoremap <C-o> <C-o>zz
+nnoremap <C-d> <C-o>zz
 vnoremap <C-u> <C-u>zz
-vnoremap <C-o> <C-o>zz
-
-" Use CamelCaseMotion instead of default motions
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
-
-
-" vim-test mappings
-map <silent> <leader>f :TestFile<CR>
-map <silent> <leader>T :TestSuite<CR>
-map <silent> <leader>t :TestNearest<CR>
-map <silent> <leader>. :TestLast<CR>
-"map <silent> <leader>g :TestVisit<CR>
-
-" allows you to visually select a section and then hit @ to run a macro on all lines
-" https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.3dcn9prw6
-xnoremap @ :<C-u>call utils#ExecuteMacroOverVisualRange()<CR>
+vnoremap <C-d> <C-o>zz
 
 "" Turn off recording
 map q <Nop>
