@@ -6,6 +6,7 @@
 " ### Intellij IDEAr since : Fri Oct 13 2017                                                                         ###
 " ######################################################################################################################
 
+
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
@@ -19,7 +20,6 @@ set expandtab
 set smartindent
 set autoindent
 set linebreak                     " And when Vim does wrap lines, have it break the lines on spaces and punctuation only (http://vim.wikia.com/wiki/Word_wrap_without_line_breaks)
-set textwidth=120                 " Make it obvious where 120(80) characters is
 set colorcolumn=+1
 set number
 set numberwidth=2
@@ -28,7 +28,6 @@ set sidescrolloff=3
 set backspace=2                   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
-set noswapfile                    "New buffers will be loaded without creating a swapfile  http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=1000
 set ruler                         " show the cursor position all the time
 set showcmd                       " display incomplete commands
@@ -61,10 +60,10 @@ set ttyfast
 set ignorecase                    " Ignore case by default
 set smartcase                     " Make search case sensitive only if it contains uppercase letters
 set wrapscan                      " Search again from top when reached the bottom
+set hlsearch
 " set nohlsearch                    " Don't highlight after search
 set incsearch                     " incremental searching
 "}}}
-
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Timeout settings {{{
@@ -76,7 +75,7 @@ set ttimeoutlen=10
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
-" Plugins {{{
+" Native Plugins {{{
 " ======================================================================================================================
 set surround
 
@@ -89,11 +88,18 @@ set surround
 " Save file
 " Ctrl+S, IDE mapping.
 
-let mapleader=" " " leader
+" let mapleader = "," " leader
+" let mapleader=" " " Leader
 
 " Quicker window movement
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+" Tab navigation
+nnoremap ,l gt
+nnoremap ,h gT
 
 
 " H to beginning of line, L to the end
@@ -110,10 +116,10 @@ vnoremap p "_dP`]
 nnoremap p p`]
 
 " Yank and paste from clipboard
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
-nnoremap <leader>yy "+yy
-nnoremap <leader>p "+p
+nnoremap ,y "+y
+vnoremap ,y "+y
+nnoremap ,yy "+yy
+nnoremap ,p "+p
 
 " have x (removes single character) not go into the default registry
 nnoremap x "_x
@@ -166,3 +172,112 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 "}}}
+
+
+" ---------------------------------------------------------------------------------------------------------------------
+" IDEA Actions {{{
+" ======================================================================================================================
+
+"Find / Replace
+map / :action Find<CR>
+
+" Preserve  ideavim search
+map g/ /
+
+"Replace
+map ,/ :action Replace<CR>
+
+
+" Reformat Code
+map ,f :action ReformatCode<CR>
+
+" Insert Live Template
+map ,ilt :action InsertLiveTemplate<CR>
+
+
+" Rename Element
+map ,re :action RenameElement<CR>
+
+" Navigation
+" Back Forward
+map gf :action Forward<CR>
+map gb :action Back<CR>
+map ,gt :action GotoTest<CR>
+
+map ,se :action SearchEverywhere<CR>
+
+
+
+map ,, :action VimFilePrevious<CR>
+map ,q :action CloseContent<CR>
+map ,fs :action FileStructurePopup<CR>
+map ,sy :action GotoSymbol<CR>
+map ,ga :action GotoAction<CR>
+map ,b :action ToggleLineBreakpoint<CR>
+
+
+
+" code navigation
+map gi :action GotoImplementation<CR>
+map gs :action GotoSuperMethod<CR>
+map fu :action FindUsages<CR>
+map ,hu :action HighlightUsagesInFile<CR>
+map mu :action MethodUp<CR>
+map md :action MethodDown<CR>
+
+" Run / Debug
+map ,rc :action ChooseRunConfiguration<CR>
+map ,r :action Run<CR>
+map ,dc :action ChooseDebugConfiguration<CR>
+map ,d :action Debug<CR>
+map ,rcl :action RunClass<CR>
+map ,dcl :action DebugClass<CR>
+"}}}
+
+"===============================
+""Windows Action
+"=================================
+map ,l :action NextTab<CR>
+map ,h :action PreviousTab<CR>
+map ,xt :action ReopenClosedTab<CR>
+
+map ,cs :action CheckStyleCurrentFileAction<CR>
+
+map ,q :action CloseContent<cr>
+map ,ww <C-W>w " Toggle Window
+map ,wd <C-W>c " Close Window
+map ,wh SplitHorizontally
+map ,wv SplitVertically
+map ,wh :action HideAllWindows<CR>
+map ,cle :action CloseEditor<CR>
+
+"Code Navigation
+"================================
+map ,a :action GotoAction<cr>
+map ,jd :action QuickJavaDoc<CR>
+map <C-s> :action SurroundWith<cr>
+map gc :action GotoClass<CR>
+
+" BreakPoint
+map ,vb :action ViewBreakpoints<CR>
+
+
+
+
+" ---------------------------------
+" AceJump
+" ---------------------------------
+" Press `f` to activate AceJump
+map ff :action AceAction<CR>
+" Press `F` to activate Target Mode
+map ft :action AceTargetAction<CR>
+" Press `g` to activate Line Mode
+map fl :action AceLineAction<CR>
+
+
+
+
+
+
+
+
