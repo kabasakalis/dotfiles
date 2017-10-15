@@ -178,52 +178,46 @@ endif
 " IDEA Actions {{{
 " ======================================================================================================================
 
-"Find / Replace
-map / :action Find<CR>
+" Generic IDE
+map <Space>a :action GotoAction<CR>
+map <Space>f :action Forward<CR>
+map <Space>b :action Back<CR>
 
-" Preserve  ideavim search
-map g/ /
 
-"Replace
+" File Operations
+map / :action Find<CR> " Find
+map g/ /   " Preserve  ideavim search
 map ,/ :action Replace<CR>
+map <Space>s :action SaveAll<CR>
+map <Space><Space> :action VimFilePrevious<CR>
+map <Space>l :action NextTab<CR>
+map <Space>h :action PreviousTab<CR>
+map <Space>q :action CloseContent<cr>
+map <Space>x :action CloseEditor<CR>
+map <Space>ot :action ReopenClosedTab<CR>
 
 
-" Reformat Code
-map ,f :action ReformatCode<CR>
-
-" Insert Live Template
-map ,ilt :action InsertLiveTemplate<CR>
-
-
-" Rename Element
-map ,re :action RenameElement<CR>
-
-" Navigation
-" Back Forward
-map gf :action Forward<CR>
-map gb :action Back<CR>
-map ,gt :action GotoTest<CR>
-
-map ,se :action SearchEverywhere<CR>
-
-
-
-map ,, :action VimFilePrevious<CR>
-map ,q :action CloseContent<CR>
-map ,fs :action FileStructurePopup<CR>
-map ,sy :action GotoSymbol<CR>
-map ,ga :action GotoAction<CR>
-map ,b :action ToggleLineBreakpoint<CR>
-
-
-
-" code navigation
+" Code navigation
 map gi :action GotoImplementation<CR>
 map gs :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
 map ,hu :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
+map ,jd :action QuickJavaDoc<CR>
+map <C-s> :action SurroundWith<cr>
+map gc :action GotoClass<CR>
+map ,gt :action GotoTest<CR>
+map ,se :action SearchEverywhere<CR>
+
+
+" Code
+map ,f :action ReformatCode<CR>
+map ,re :action RenameElement<CR>
+map ,ilt :action InsertLiveTemplate<CR>
+map ,fs :action FileStructurePopup<CR>
+map ,sy :action GotoSymbol<CR>
+
 
 " Run / Debug
 map ,rc :action ChooseRunConfiguration<CR>
@@ -232,35 +226,61 @@ map ,dc :action ChooseDebugConfiguration<CR>
 map ,d :action Debug<CR>
 map ,rcl :action RunClass<CR>
 map ,dcl :action DebugClass<CR>
+map ,vb :action ViewBreakpoints<CR>
+map ,b :action ToggleLineBreakpoint<CR>
 "}}}
 
 "===============================
 ""Windows Action
 "=================================
-map ,l :action NextTab<CR>
-map ,h :action PreviousTab<CR>
-map ,xt :action ReopenClosedTab<CR>
 
-map ,cs :action CheckStyleCurrentFileAction<CR>
+map <Space>ww <C-W>w<CR> "Rotate Windows
+map <Space>wd <C-W>c<CR> "Close Window
+map <Space>wh :action SplitHorizontally<CR>
+map <Space>wv :action SplitVertically<CR>
+map <Space>wh :action HideAllWindows<CR>
+map <Space>wsh :action HideSideWindows<CR>
+map <Space>wx :action HideActiveWindow<CR>
+map <Space>db :action ActivateDatabaseToolWindow<CR>
+map <Space>p :action ActivateProjectToolWindow<CR>
+map <Space>we :action ActivateEventLogToolWindow<CR>
+map <Space>wf :action ActivateFavoritesToolWindow<CR>
+map <Space>wl :action JumpToLastWindow<CR>
+map <Space>ws :action ActivateStructureToolWindow<CR>
+map <Space>t :action ActivateTerminalToolWindow<CR>
+map <Space>g :action ActivateVersionControlToolWindow<CR>
+map ,j :action DecrementWindowHeight<CR>
+map ,k :action IncerementWindowHeight<CR>
+map ,h :action DecrementWindowWidth<CR>
+map ,l :action IncrementWindowWidth<CR>
+map <Space>wmin :action MinimizeCurrentWindow<CR>
+map <Space>wmax :action MaximizeToolWindow<CR>
+map <Space>wserv :action ServersToolWindowToolbar<CR>
+map <Space>wz :action ZoomCurrentWindow<CR>
+map <Space>mu :action WindowMenu<CR>
 
-map ,q :action CloseContent<cr>
-map ,ww <C-W>w " Toggle Window
-map ,wd <C-W>c " Close Window
-map ,wh SplitHorizontally
-map ,wv SplitVertically
-map ,wh :action HideAllWindows<CR>
-map ,cle :action CloseEditor<CR>
+map <Space>mpr :action ActivateMavenProjectsToolWindow<CR>
 
-"Code Navigation
-"================================
-map ,a :action GotoAction<cr>
-map ,jd :action QuickJavaDoc<CR>
-map <C-s> :action SurroundWith<cr>
-map gc :action GotoClass<CR>
-
-" BreakPoint
-map ,vb :action ViewBreakpoints<CR>
-
+" Unmapped
+"
+" EditSourceInNewWindow
+" OpenElementInNewWindow
+" SpringBootRun.ToolWindow.LeftToolbar
+" ToggleWindowedMode
+" ToolWindowsGroup
+" Vcs.Show.Toolwindow.Tab
+" VimWindowClose
+" VimWindowDown
+" VimWindowLeft
+" VimWindowNext
+" VimWindowOnly
+" VimWindowPrev
+" VimWindowRight
+" VimWindowSplitHorizontal
+" VimWindowSplitVertical
+" VimWindowUp
+" XDebugger.ToolWindow.LeftToolbar
+" XDebugger.ToolWindow.TopToolbar
 
 
 
