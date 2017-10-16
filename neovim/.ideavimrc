@@ -234,55 +234,13 @@ map ,b :action ToggleLineBreakpoint<CR>
 ""Windows Action
 "=================================
 
-map <Space>ww <C-W>w<CR> "Rotate Windows
-map <Space>wd <C-W>c<CR> "Close Window
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
-map <Space>wh :action HideAllWindows<CR>
-map <Space>wsh :action HideSideWindows<CR>
+map <Space>h :action HideAllWindows<CR>
+map <Space>sh :action HideSideWindows<CR>
 map <Space>wx :action HideActiveWindow<CR>
-map <Space>db :action ActivateDatabaseToolWindow<CR>
-map <Space>p :action ActivateProjectToolWindow<CR>
-map <Space>we :action ActivateEventLogToolWindow<CR>
-map <Space>wf :action ActivateFavoritesToolWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
 map <Space>ws :action ActivateStructureToolWindow<CR>
-map <Space>t :action ActivateTerminalToolWindow<CR>
-map <Space>g :action ActivateVersionControlToolWindow<CR>
-map ,j :action DecrementWindowHeight<CR>
-map ,k :action IncerementWindowHeight<CR>
-map ,h :action DecrementWindowWidth<CR>
-map ,l :action IncrementWindowWidth<CR>
-map <Space>wmin :action MinimizeCurrentWindow<CR>
-map <Space>wmax :action MaximizeToolWindow<CR>
-map <Space>wserv :action ServersToolWindowToolbar<CR>
-map <Space>wz :action ZoomCurrentWindow<CR>
-map <Space>mu :action WindowMenu<CR>
-
-map <Space>mpr :action ActivateMavenProjectsToolWindow<CR>
-
-" Unmapped
-"
-" EditSourceInNewWindow
-" OpenElementInNewWindow
-" SpringBootRun.ToolWindow.LeftToolbar
-" ToggleWindowedMode
-" ToolWindowsGroup
-" Vcs.Show.Toolwindow.Tab
-" VimWindowClose
-" VimWindowDown
-" VimWindowLeft
-" VimWindowNext
-" VimWindowOnly
-" VimWindowPrev
-" VimWindowRight
-" VimWindowSplitHorizontal
-" VimWindowSplitVertical
-" VimWindowUp
-" XDebugger.ToolWindow.LeftToolbar
-" XDebugger.ToolWindow.TopToolbar
-
-
 
 " ---------------------------------
 " AceJump
