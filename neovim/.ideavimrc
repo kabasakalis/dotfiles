@@ -179,7 +179,7 @@ endif
 " ======================================================================================================================
 
 " Generic IDE
-map <Space>a :action GotoAction<CR>
+" map <Space>a :action GotoAction<CR>
 map <Space>f :action Forward<CR>
 map <Space>b :action Back<CR>
 
@@ -188,6 +188,9 @@ map <Space>b :action Back<CR>
 map / :action Find<CR> " Find
 map g/ /   " Preserve  ideavim search
 map ,/ :action Replace<CR>
+map ,se :action SearchEverywhere<CR>
+map fn :action NextOccurence<CR>
+map fp :action PreviousOccurence<CR>
 map <Space>s :action SaveAll<CR>
 map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
@@ -195,20 +198,38 @@ map <Space>h :action PreviousTab<CR>
 map <Space>q :action CloseContent<cr>
 map <Space>x :action CloseEditor<CR>
 map <Space>ot :action ReopenClosedTab<CR>
-
+map <Space>a :action SelectAll<CR>
+map sfp :action ShowFilePath<CR>
 
 " Code navigation
 map gi :action GotoImplementation<CR>
+map gd :action GotoDeclaration<CR>
 map gs :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
-map ,hu :action HighlightUsagesInFile<CR>
+map fuf :action FindUsagesInFile<CR>
+map ,hu :action HighlightUsages<CR>
+map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
 map ,jd :action QuickJavaDoc<CR>
 map <C-s> :action SurroundWith<cr>
 map gc :action GotoClass<CR>
+map gf :action GoToFile<CR>
+map gs :action GoToSymbol<CR>
 map ,gt :action GotoTest<CR>
-map ,se :action SearchEverywhere<CR>
+map tb :action ToggleBookmark<CR>
+map tbm :action ToggleBookmarkWithMnemonic<CR>
+map ,0 :action ToggleBookmark0<CR>
+map ,1 :action ToggleBookmark1<CR>
+map ,2 :action ToggleBookmark2<CR>
+map ,3 :action ToggleBookmark3<CR>
+map ,4 :action ToggleBookmark4<CR>
+map ,5 :action ToggleBookmark5<CR>
+map ,6 :action ToggleBookmark6<CR>
+map ,7 :action ToggleBookmark7<CR>
+map ,8 :action ToggleBookmark8<CR>
+map ,9 :action ToggleBookmark9<CR>
+
 
 
 " Code
@@ -216,7 +237,6 @@ map ,f :action ReformatCode<CR>
 map ,re :action RenameElement<CR>
 map ,ilt :action InsertLiveTemplate<CR>
 map ,fs :action FileStructurePopup<CR>
-map ,sy :action GotoSymbol<CR>
 
 
 " Run / Debug
@@ -228,6 +248,13 @@ map ,rcl :action RunClass<CR>
 map ,dcl :action DebugClass<CR>
 map ,vb :action ViewBreakpoints<CR>
 map ,b :action ToggleLineBreakpoint<CR>
+
+" View
+map tdm :action ToggleDistractionFreeMode<CR>
+map tfs :action ToggleFullScreen<CR>
+map tpm :action TogglePresentationMode<CR>
+
+
 "}}}
 
 "===============================
