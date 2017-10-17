@@ -189,22 +189,25 @@ map / :action Find<CR> " Find
 map g/ /   " Preserve  ideavim search
 map ,/ :action Replace<CR>
 map ,se :action SearchEverywhere<CR>
-map fn :action NextOccurence<CR>
-map fp :action PreviousOccurence<CR>
+map <Space>n :action NextOccurence<CR>
+map <Space>p :action PreviousOccurence<CR>
 map <Space>s :action SaveAll<CR>
 map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
 map <Space>h :action PreviousTab<CR>
-map <Space>q :action CloseContent<cr>
-map <Space>x :action CloseEditor<CR>
+map <Space>cc :action CloseContent<CR>
+map <Space>c :action CloseEditor<CR>
 map <Space>ot :action ReopenClosedTab<CR>
-map <Space>a :action SelectAll<CR>
+map <Space>a :action $SelectAll<CR>
 map sfp :action ShowFilePath<CR>
 
 " Code navigation
+map gc :action GotoClass<CR>
+map gf :action GotoFile<CR>
+map gs :action GotoSymbol<CR>
 map gi :action GotoImplementation<CR>
 map gd :action GotoDeclaration<CR>
-map gs :action GotoSuperMethod<CR>
+map gsm :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
 map fuf :action FindUsagesInFile<CR>
 map ,hu :action HighlightUsages<CR>
@@ -212,10 +215,6 @@ map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
 map ,jd :action QuickJavaDoc<CR>
-map <C-s> :action SurroundWith<cr>
-map gc :action GotoClass<CR>
-map gf :action GoToFile<CR>
-map gs :action GoToSymbol<CR>
 map ,gt :action GotoTest<CR>
 map tb :action ToggleBookmark<CR>
 map tbm :action ToggleBookmarkWithMnemonic<CR>
@@ -253,6 +252,8 @@ map ,b :action ToggleLineBreakpoint<CR>
 map tdm :action ToggleDistractionFreeMode<CR>
 map tfs :action ToggleFullScreen<CR>
 map tpm :action TogglePresentationMode<CR>
+map ,rcf :action RecentChangedFiles<CR>
+map ,qcs :action QuickChangeScheme<CR>
 
 
 "}}}
@@ -263,9 +264,9 @@ map tpm :action TogglePresentationMode<CR>
 
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
-map <Space>h :action HideAllWindows<CR>
-map <Space>sh :action HideSideWindows<CR>
-map <Space>wx :action HideActiveWindow<CR>
+map <Space>q  :action HideAllWindows<CR>
+map <Space>sq :action HideSideWindows<CR>
+map <Space>x :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
 map <Space>ws :action ActivateStructureToolWindow<CR>
 
