@@ -188,15 +188,14 @@ map <Space>b :action Back<CR>
 map / :action Find<CR> " Find
 map g/ /   " Preserve  ideavim search
 map ,/ :action Replace<CR>
-map ,se :action SearchEverywhere<CR>
 map <Space>n :action NextOccurence<CR>
 map <Space>p :action PreviousOccurence<CR>
 map <Space>s :action SaveAll<CR>
 map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
 map <Space>h :action PreviousTab<CR>
-map <Space>cc :action CloseContent<CR>
-map <Space>c :action CloseEditor<CR>
+map <Space>c :action CloseContent<CR>
+" map <Space>c :action CloseEditor<CR>
 map <Space>ot :action ReopenClosedTab<CR>
 map <Space>a :action $SelectAll<CR>
 map sfp :action ShowFilePath<CR>
@@ -215,7 +214,6 @@ map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
 map ,jd :action QuickJavaDoc<CR>
-map ,gt :action GotoTest<CR>
 map tb :action ToggleBookmark<CR>
 map tbm :action ToggleBookmarkWithMnemonic<CR>
 map ,0 :action ToggleBookmark0<CR>
@@ -228,14 +226,34 @@ map ,6 :action ToggleBookmark6<CR>
 map ,7 :action ToggleBookmark7<CR>
 map ,8 :action ToggleBookmark8<CR>
 map ,9 :action ToggleBookmark9<CR>
+map ,gt :action GotoTest<CR>
+
+
+
+
 
 
 
 " Code
 map ,f :action ReformatCode<CR>
+map ,fd :action ShowReformatFileDialog<CR>
 map ,re :action RenameElement<CR>
 map ,ilt :action InsertLiveTemplate<CR>
 map ,fs :action FileStructurePopup<CR>
+map <Space>g :action Generate<CR>
+map ,sw :action SurroundWith<CR>
+map ,sl :action SurroundWithLiveTemplate<CR>
+
+
+map <A-j> :action MoveLineDown<CR>
+map <A-k> :action MoveLineUp<CR>
+
+
+
+
+
+
+
 
 
 " Run / Debug
@@ -269,6 +287,8 @@ map <Space>sq :action HideSideWindows<CR>
 map <Space>x :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
 map <Space>ws :action ActivateStructureToolWindow<CR>
+
+
 
 " ---------------------------------
 " AceJump
