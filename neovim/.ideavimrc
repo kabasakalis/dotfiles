@@ -136,6 +136,9 @@ xnoremap c "xc
 " Reselect last-pasted text
 nnoremap gp `[v`]
 
+" Move visual block
+" Delegated to IDE
+
 " Have the indent commands re-highlight the last visual selection to make
 " multiple indentations easier
 vnoremap > >gv
@@ -179,7 +182,7 @@ endif
 " ======================================================================================================================
 
 " Generic IDE
-" map <Space>a :action GotoAction<CR>
+map <A-a>    :action GotoAction<CR>
 map <Space>f :action Forward<CR>
 map <Space>b :action Back<CR>
 
@@ -195,12 +198,19 @@ map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
 map <Space>h :action PreviousTab<CR>
 map <Space>c :action CloseContent<CR>
-" map <Space>c :action CloseEditor<CR>
 map <Space>ot :action ReopenClosedTab<CR>
 map <Space>a :action $SelectAll<CR>
 map sfp :action ShowFilePath<CR>
+map <Space>ncl :action NewClass<CR>
+map <Space>ndi :action NewDialog<CR>
+map <Space>nfo :action NewDir<CR>
+map <Space>nfi :action NewFile<CR>
+map <Space>np  :action NewProject<CR>
+map <Space>nsb :action NewScratchBuffer<CR>
+map <Space>nw  :action OpenElementInNewWindow<CR>
 
 " Code navigation
+"
 map gc :action GotoClass<CR>
 map gf :action GotoFile<CR>
 map gs :action GotoSymbol<CR>
@@ -228,13 +238,8 @@ map ,8 :action ToggleBookmark8<CR>
 map ,9 :action ToggleBookmark9<CR>
 map ,gt :action GotoTest<CR>
 
-
-
-
-
-
-
 " Code
+
 map ,f :action ReformatCode<CR>
 map ,fd :action ShowReformatFileDialog<CR>
 map ,re :action RenameElement<CR>
@@ -244,55 +249,50 @@ map <Space>g :action Generate<CR>
 map ,sw :action SurroundWith<CR>
 map ,sl :action SurroundWithLiveTemplate<CR>
 
+" Refactor
 
-map <A-j> :action MoveLineDown<CR>
-map <A-k> :action MoveLineUp<CR>
-
-
-
-
-
-
-
-
+map ,rr :action Refactorings.QuickListPopupAction<CR>
+map ,re :action RenameElement<CR>
+map ,rf :action RenameFile<CR>
+map ,ce :action CopyElement<CR>
+map ,rm :action Move<CR>
+map ,cs :action ChangeSignatureCR>
+map ,cc :action Compile<CR>
+map ,cp :action CompileProject<CR>
 
 " Run / Debug
-map ,rc :action ChooseRunConfiguration<CR>
+
 map ,r :action Run<CR>
-map ,dc :action ChooseDebugConfiguration<CR>
+map ,cr :action ChooseRunConfiguration<CR>
 map ,d :action Debug<CR>
+map ,cd :action ChooseDebugConfiguration<CR>
 map ,rcl :action RunClass<CR>
 map ,dcl :action DebugClass<CR>
-map ,vb :action ViewBreakpoints<CR>
 map ,b :action ToggleLineBreakpoint<CR>
+map ,vb :action ViewBreakpoints<CR>
 
 " View
+
 map tdm :action ToggleDistractionFreeMode<CR>
 map tfs :action ToggleFullScreen<CR>
 map tpm :action TogglePresentationMode<CR>
 map ,rcf :action RecentChangedFiles<CR>
 map ,qcs :action QuickChangeScheme<CR>
 
-
-"}}}
-
-"===============================
-""Windows Action
-"=================================
+""Windows Actions
 
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
 map <Space>q  :action HideAllWindows<CR>
 map <Space>sq :action HideSideWindows<CR>
-map <Space>x :action HideActiveWindow<CR>
+map <Space>x  :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
 map <Space>ws :action ActivateStructureToolWindow<CR>
+map <Space>wc :action VimWindowClose<CR>
+map <Space>cp :action CloseProject<CR>
 
-
-
-" ---------------------------------
 " AceJump
-" ---------------------------------
+
 " Press `f` to activate AceJump
 map ff :action AceAction<CR>
 " Press `F` to activate Target Mode
@@ -300,10 +300,4 @@ map ft :action AceTargetAction<CR>
 " Press `g` to activate Line Mode
 map fl :action AceLineAction<CR>
 
-
-
-
-
-
-
-
+"}}}
