@@ -179,7 +179,7 @@ endif
 
 " ---------------------------------------------------------------------------------------------------------------------
 " IDEA Actions {{{
-" ======================================================================================================================
+" =====================================================================================================================
 
 " Generic IDE
 map <A-a>    :action GotoAction<CR>
@@ -194,19 +194,19 @@ map ,/ :action Replace<CR>
 map <Space>n :action NextOccurence<CR>
 map <Space>p :action PreviousOccurence<CR>
 map <Space>s :action SaveAll<CR>
+map <Space>cc :action CloseContent<CR>
 map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
 map <Space>h :action PreviousTab<CR>
-map <Space>c :action CloseContent<CR>
 map <Space>ot :action ReopenClosedTab<CR>
 map <Space>a :action $SelectAll<CR>
-map sfp :action ShowFilePath<CR>
+map  ,sfp :action ShowFilePath<CR>
 map <Space>ncl :action NewClass<CR>
 map <Space>ndi :action NewDialog<CR>
 map <Space>nfo :action NewDir<CR>
 map <Space>nfi :action NewFile<CR>
 map <Space>np  :action NewProject<CR>
-map <Space>nsb :action NewScratchBuffer<CR>
+map <Space>sb :action NewScratchBuffer<CR>
 map <Space>nw  :action OpenElementInNewWindow<CR>
 
 " Code navigation
@@ -279,7 +279,7 @@ map tpm :action TogglePresentationMode<CR>
 map ,rcf :action RecentChangedFiles<CR>
 map ,qcs :action QuickChangeScheme<CR>
 
-""Windows Actions
+" Windows Actions
 
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
@@ -289,7 +289,34 @@ map <Space>x  :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
 map <Space>ws :action ActivateStructureToolWindow<CR>
 map <Space>wc :action VimWindowClose<CR>
-map <Space>cp :action CloseProject<CR>
+map <Space>pc :action CloseProject<CR>
+
+" Git
+
+map ,gad :action Git.Add<CR>
+map ,gcl :action Git.Clone<CR>
+map ,gcr :action Git.Configure.Remotes<CR>
+map ,gnb :action Git.CreateNewBranch<CR>
+map ,gnt :action Git.CreateNewTag<CR>
+map ,gfe :action Git.Fetch<CR>
+map ,gin :action Git.Init<CR>
+map ,glo :action Git.Log<CR>
+map ,gme :action Git.Merge<CR>
+map ,gpl :action Git.Pull<CR>
+map ,grb :action Git.Rebase<CR>
+map ,gre :action Git.Reset<CR>
+map ,grc :action Git.ResolveConflicts<CR>
+map ,gst :action Git.Stash<CR>
+map ,gta :action Git.Tag<CR>
+map ,guc :action Git.Uncommit<CR>
+map ,gus :action Git.UnStash<CR>
+
+" Github
+
+map ,ghcg :action Github.Create.Gist<CR>
+map ,ghpr :action Github.Create.Pull.Request<CR>
+map ,ghbr :action Github.Open.In.Browser<CR>
+
 
 " AceJump
 
