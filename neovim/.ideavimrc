@@ -60,8 +60,8 @@ set ttyfast
 set ignorecase                    " Ignore case by default
 set smartcase                     " Make search case sensitive only if it contains uppercase letters
 set wrapscan                      " Search again from top when reached the bottom
-set hlsearch
-" set nohlsearch                    " Don't highlight after search
+" set hlsearch
+set nohlsearch                    " Don't highlight after search
 set incsearch                     " incremental searching
 "}}}
 
@@ -289,6 +289,7 @@ map <Space>x  :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
 map <Space>ws :action ActivateStructureToolWindow<CR>
 map <Space>wc :action VimWindowClose<CR>
+" map  mm :action MaximizeToolWindow<CR>
 map <Space>pc :action CloseProject<CR>
 
 " Git
