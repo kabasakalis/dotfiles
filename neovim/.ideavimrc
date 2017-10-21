@@ -218,7 +218,7 @@ map gi :action GotoImplementation<CR>
 map gd :action GotoDeclaration<CR>
 map gsm :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
-map fuf :action FindUsagesInFile<CR>
+" map fuf :action FindUsagesInFile<CR>
 map ,hu :action HighlightUsages<CR>
 map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
@@ -291,6 +291,7 @@ map <Space>ws :action ActivateStructureToolWindow<CR>
 map <Space>wc :action VimWindowClose<CR>
 " map  mm :action MaximizeToolWindow<CR>
 map <Space>pc :action CloseProject<CR>
+map <Space>si :action SelectIn<CR>
 
 " Git
 
