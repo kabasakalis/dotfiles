@@ -207,7 +207,17 @@ map <Space>nfo :action NewDir<CR>
 map <Space>nfi :action NewFile<CR>
 map <Space>np  :action NewProject<CR>
 map <Space>sb :action NewScratchBuffer<CR>
-map <Space>nw  :action OpenElementInNewWindow<CR>
+map <Space>nw :action OpenElementInNewWindow<CR>
+map <Space>ca :action CloseAllEditors<CR>
+map <Space>co :action CloseAllEditorsButActive<CR>
+map <Space>kk :action EditorAddOrRemoveCaret<CR>
+map <Space>ku :action EditorCloneCaretAbove<CR>
+map <Space>kd :action EditorCloneCaretBelow<CR>
+map <Space>fw :action FindWordAtCaret<CR>
+map <Space>tc :action EditorToggleCase<CR>
+map <Space>ml :action MoveElementLeft<CR>
+map <Space>mr :action MoveElementRight<CR>
+
 
 " Code navigation
 "
