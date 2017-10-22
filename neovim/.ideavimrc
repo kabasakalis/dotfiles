@@ -185,6 +185,7 @@ endif
 map <A-a>    :action GotoAction<CR>
 map <Space>f :action Forward<CR>
 map <Space>b :action Back<CR>
+map <Space>tt :action ShowSettings<CR>
 
 
 " File Operations
@@ -229,7 +230,7 @@ map gd :action GotoDeclaration<CR>
 map gsm :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
 " map fuf :action FindUsagesInFile<CR>
-map ,huu :action HighlightUsages<CR>
+" map ,huu :action HighlightUsages<CR>
 map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
@@ -246,6 +247,7 @@ map ,6 :action ToggleBookmark6<CR>
 map ,7 :action ToggleBookmark7<CR>
 map ,8 :action ToggleBookmark8<CR>
 map ,9 :action ToggleBookmark9<CR>
+map ,sb :action ShowBookmarks<CR>
 map ,gt :action GotoTest<CR>
 
 " Code
