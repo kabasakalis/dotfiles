@@ -229,7 +229,7 @@ map gd :action GotoDeclaration<CR>
 map gsm :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
 " map fuf :action FindUsagesInFile<CR>
-map ,hu :action HighlightUsages<CR>
+map ,huu :action HighlightUsages<CR>
 map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
@@ -251,35 +251,37 @@ map ,gt :action GotoTest<CR>
 " Code
 
 map ,f :action ReformatCode<CR>
+map ,ac :action RearrangeCode<CR>
 map ,fd :action ShowReformatFileDialog<CR>
 map ,re :action RenameElement<CR>
-map ,ilt :action InsertLiveTemplate<CR>
+map ,lt :action InsertLiveTemplate<CR>
 map ,fs :action FileStructurePopup<CR>
 map <Space>g :action Generate<CR>
 map ,sw :action SurroundWith<CR>
 map ,sl :action SurroundWithLiveTemplate<CR>
+map ,oi :action OptimizeImports<CR>
 
 " Refactor
 
-map ,rr :action Refactorings.QuickListPopupAction<CR>
+map ,rc :action Refactorings.QuickListPopupAction<CR>
 map ,re :action RenameElement<CR>
 map ,rf :action RenameFile<CR>
 map ,ce :action CopyElement<CR>
 map ,rm :action Move<CR>
 map ,cs :action ChangeSignatureCR>
-map ,cc :action Compile<CR>
-map ,cp :action CompileProject<CR>
 
 " Run / Debug
 
-map ,r :action Run<CR>
+map ,rr :action Run<CR>
 map ,cr :action ChooseRunConfiguration<CR>
-map ,d :action Debug<CR>
+map ,dd :action Debug<CR>
 map ,cd :action ChooseDebugConfiguration<CR>
 map ,rcl :action RunClass<CR>
 map ,dcl :action DebugClass<CR>
 map ,b :action ToggleLineBreakpoint<CR>
 map ,vb :action ViewBreakpoints<CR>
+map ,cc :action Compile<CR>
+map ,cp :action CompileProject<CR>
 
 " View
 
