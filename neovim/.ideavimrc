@@ -262,8 +262,11 @@ map <Space>g :action Generate<CR>
 map ,sw :action SurroundWith<CR>
 map ,sl :action SurroundWithLiveTemplate<CR>
 map ,oi :action OptimizeImports<CR>
+map ,tm :action GenerateTestMethod <CR>
+
 
 " Refactor
+"
 
 map ,rc :action Refactorings.QuickListPopupAction<CR>
 map ,re :action RenameElement<CR>
