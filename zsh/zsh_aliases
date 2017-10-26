@@ -136,6 +136,11 @@ alias gdi='git diff'
 
 #git project specific aliases
 
+# Java
+
+# Glassfish
+alias gfstart='sudo /opt/glassfish5/glassfish/bin/asadmin start-domain'
+alias gfstop='sudo /opt/glassfish5/glassfish/bin/asadmin stop-domain'
 
 #ruby
 alias ds="DISABLE_SPRING=1"

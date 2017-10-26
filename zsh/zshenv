@@ -16,6 +16,7 @@ export HUNTER_ROOT="$HOME/.hunter"
 export PYENV_ROOT="$HOME/.pyenv"
 export MINICONDA3="$HOME/miniconda3"
 export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
+export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 
 # PATH
 PATH=$(paste -d ":" -s << EOF
@@ -27,6 +28,7 @@ $HOME/dotfiles/scripts
 $HOME/.local/bin
 $PYENV_ROOT/bin
 $MINICONDA3/bin
+/opt/apache-maven-3.5.2/bin
 /usr/share/elasticsearch/bin
 /usr/local/heroku/bin
 /usr/local/sbin
