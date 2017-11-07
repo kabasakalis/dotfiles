@@ -304,11 +304,28 @@ map <Space>q  :action HideAllWindows<CR>
 map <Space>sq :action HideSideWindows<CR>
 map <Space>x  :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
-map <Space>ws :action ActivateStructureToolWindow<CR>
 map <Space>wc :action VimWindowClose<CR>
 " map  mm :action MaximizeToolWindow<CR>
 map <Space>pc :action CloseProject<CR>
 map <Space>si :action SelectIn<CR>
+
+map <Space>ws :action ActivateStructureToolWindow<CR>
+map <Space>was :action ActivateApplicationServersToolWindow<CR>
+map <Space>wbv :action ActivateBeanValidationToolWindow<CR>
+map <Space>wdi :action ActivateCDIToolWindow<CR>
+map <Space>wcs :action ActivateCheckStyleToolWindow<CR>
+map <Space>wdb :action ActivateDatabaseToolWindow<CR>
+map <Space>wbg :action ActivateDebugToolWindow<CR>
+map <Space>wel :action ActivateEventLogToolWindow<CR>
+map <Space>wil :action ActivateImageLayersToolWindow<CR>
+map <Space>wje :action ActivateJavaEnterpriseToolWindow<CR>
+map <Space>wsf :action ActivateJSFToolWindow<CR>
+map <Space>wmv :action ActivateMavenProjectsToolWindow<CR>
+map <Space>wte :action ActivateTerminalToolWindow<CR>
+map <Space>wvc :action ActivateVersionControlToolWindow<CR>
+map <Space>wwt :action ActivateWebToolWindow<CR>
+map <Space>www :action MaximizeToolWindow<CR>
+
 
 " Git
 
