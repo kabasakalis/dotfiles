@@ -163,9 +163,9 @@ vnoremap N Nzz
 
 " Center screen when moving up and down
 nnoremap <C-u> <C-u>zz
-nnoremap <C-d> <C-o>zz
+nnoremap <C-o> <C-d>zz
 vnoremap <C-u> <C-u>zz
-vnoremap <C-d> <C-o>zz
+vnoremap <C-o> <C-d>zz
 
 "" Turn off recording
 map q <Nop>
