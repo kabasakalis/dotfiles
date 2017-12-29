@@ -91,6 +91,7 @@ set surround
 " let mapleader = "," " leader
 " let mapleader=" " " Leader
 
+"
 " Quicker window movement
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
@@ -98,8 +99,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
 " Tab navigation
-nnoremap ,l gt
-nnoremap ,h gT
+" nnoremap ,l gt
+" nnoremap ,h gT
 
 
 " H to beginning of line, L to the end
@@ -218,6 +219,7 @@ map <Space>fw :action FindWordAtCaret<CR>
 map <Space>tc :action EditorToggleCase<CR>
 map <Space>ml :action MoveElementLeft<CR>
 map <Space>mr :action MoveElementRight<CR>
+map <Space>mo :action MoveEditorToOppositeTabGroup<CR>
 
 
 " Code navigation
@@ -234,7 +236,7 @@ map fu :action FindUsages<CR>
 map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
-map ,jd :action QuickJavaDoc<CR>
+map ,qd :action QuickJavaDoc<CR>
 map tb :action ToggleBookmark<CR>
 map tbm :action ToggleBookmarkWithMnemonic<CR>
 map ,0 :action ToggleBookmark0<CR>
@@ -362,5 +364,24 @@ map ff :action AceAction<CR>
 map ft :action AceTargetAction<CR>
 " Press `g` to activate Line Mode
 map fl :action AceLineAction<CR>
+
+
+" TabShift
+"
+map ,h :action TabShiftActions.StretchLeft<CR>
+map ,l :action TabShiftActions.StretchRight<CR>
+map ,j :action TabShiftActions.StretchDown<CR>
+map ,k :action TabShiftActions.StretchUp<CR>
+
+map ,mh :action TabShiftActions.MoveFocusLeft<CR>
+map ,ml :action TabShiftActions.MoveFocusRight<CR>
+map ,mj :action TabShiftActions.MoveFocusDown<CR>
+map ,mk :action TabShiftActions.MoveFocusUp<CR>
+
+map ,sh :action TabShiftActions.ShiftLeft<CR>
+map ,sl :action TabShiftActions.ShiftRight<CR>
+map ,sj :action TabShiftActions.ShiftDown<CR>
+map ,sk :action TabShiftActions.ShiftUp<CR>
+
 
 "}}}

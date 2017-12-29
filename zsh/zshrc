@@ -292,6 +292,15 @@ olh() {
      cd "/home/spiros/upstream_repos/$reponame"
  }
 
+ function dl_repo_to {
+     url=$1;
+     folder=$2;
+     reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+     git clone $url "/home/spiros/$folder/$reponame";
+     cd "/home/spiros/$folder/$reponame";
+     nvim;
+ }
+
 # download any youtube or vimeo video to ~/Videos
 # Very simple,bare wrapper.See gazillions of options at
 # https://github.com/rg3/youtube-dl/blob/master/README.md#output-template-examples
@@ -357,3 +366,7 @@ function commit() {
   echo 'Commiting...'
   git commit -m "$1";
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/spiros/.sdkman"
+[[ -s "/home/spiros/.sdkman/bin/sdkman-init.sh" ]] && source "/home/spiros/.sdkman/bin/sdkman-init.sh"

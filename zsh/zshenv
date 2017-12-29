@@ -28,6 +28,7 @@ $HOME/dotfiles/scripts
 $HOME/.local/bin
 $PYENV_ROOT/bin
 $MINICONDA3/bin
+$HOME/jasypt-1.9.2/bin
 /opt/apache-maven-3.5.2/bin
 /usr/share/elasticsearch/bin
 /usr/local/heroku/bin

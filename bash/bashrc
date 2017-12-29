@@ -149,3 +149,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # added by Miniconda3 4.3.21 installer
 export PATH="/home/spiros/miniconda3/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/spiros/.sdkman"
+[[ -s "/home/spiros/.sdkman/bin/sdkman-init.sh" ]] && source "/home/spiros/.sdkman/bin/sdkman-init.sh"

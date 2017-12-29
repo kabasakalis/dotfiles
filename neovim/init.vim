@@ -482,6 +482,10 @@ map q <Nop>
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+"" Split line (opposite of J)
+nnoremap <CR> i<CR><Esc>
+
 "}}}
 
 " -----------------------------------------------------
@@ -788,7 +792,6 @@ endif
 let g:pasta_paste_before_mapping = ',O'
 let g:pasta_paste_after_mapping = ',o'
 "}}}
-
 
 " -----------------------------------------------------
 " Completion  roxma/nvim-completion-manager {{{
