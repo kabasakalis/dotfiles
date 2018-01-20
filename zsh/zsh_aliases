@@ -43,6 +43,9 @@ alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
 alias idea_cfg='cd /home/spiros/.IntelliJIdea2017.2'
 alias clion_cfg='cd /home/spiros/.CLion2017.2'
 
+# Postman
+alias pman='cd /opt/Postman && ./Postman'
+
 #cpp
 alias cgcc='sudo update-alternatives --config gcc'
 alias ccpp='sudo update-alternatives --config c++'

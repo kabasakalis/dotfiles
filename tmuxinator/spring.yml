@@ -31,8 +31,11 @@ windows:
   - springify:
     - cd ~/java/springify-api
     - nvim
-  - springify:
+  - springify_cli:
     - cd ~/java/springify-api
+  - swagger-demo:
+    - cd ~/java/tutorials/spring-security-rest
+    - nvim
   # - profiles-blog:
   #   - cd ~/java/Profiles-Blog
   #   - nvim
@@ -43,15 +46,18 @@ windows:
   #   - cd ~/java/gs-rest-hateoas
   #   - nvim
   #   wanderlust-open-travel-api
-  - sping-hateoas-examples:
-    - cd ~/java/spring-hateoas-examples
-    - nvim
-  - sping-hateoas-examples:
-    - cd ~/java/the-spring-rest-stack
-    - nvim
-  - wanderlust-open-travel-api:
-    - cd ~/java/wanderlust-open-travel-api
-    - nvim
+  # - sping-hateoas-examples:
+  #   - cd ~/java/spring-hateoas-examples
+  #   - nvim
+  # - sping-hateoas-examples:
+  #   - cd ~/java/the-spring-rest-stack
+  #   - nvim
+  # - wanderlust-open-travel-api:
+  #   - cd ~/java/wanderlust-open-travel-api
+  #   - nvim
+  - idea:
+    - idea
+
   # - sping-rest-ecommerce:
   #   - cd ~/java/spring-rest-ecommerce
   #   - nvim
