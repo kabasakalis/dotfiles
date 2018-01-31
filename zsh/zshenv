@@ -17,6 +17,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export MINICONDA3="$HOME/miniconda3"
 export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+export PATH="$PATH:`yarn global bin`"
 
 # PATH
 PATH=$(paste -d ":" -s << EOF
