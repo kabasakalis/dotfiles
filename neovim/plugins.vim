@@ -1,3 +1,4 @@
+
 " ======================================================================================================================
 "
 " Plugin manager (Plug) settings.
@@ -189,6 +190,13 @@ Plug 'tejr/vim-tmux'
 Plug 'honza/dockerfile.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'slim-template/vim-slim'
+
+" Typescript completion
+Plug 'Quramy/tsuquyomi'
+" Typescrtipt syntax
+Plug 'leafgarland/typescript-vim'
+" Angualar syntax
+Plug 'burnettk/vim-angular'
 
 "}}}
 

@@ -89,6 +89,9 @@
     ~/dev/.rubocop.yml:
       create: true
       path: linters/rubocop.yml
+    ~/.zsh/completion/_docker-compose:
+      create: true
+      path: docker/_docker-compose
     ~/dev/.haml-lint.yml:
       create: true
       path: linters/haml-lint.yml
