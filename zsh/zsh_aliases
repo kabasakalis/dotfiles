@@ -195,6 +195,7 @@ alias rspeccs3='google-chrome  ~/home_assets/cheatsheets/rspec3.pdf'
 alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
 alias ccs='google-chrome  ~/home_assets/cheatsheets/c-hotkeys.pdf'
 alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
+alias doccs='google-chrome  ~/home_assets/cheatsheets/docker.pdf'
 
 #Unity Launcher position
 alias launcherb='gsettings set com.canonical.Unity.Launcher launcher-position Bottom'
@@ -208,3 +209,9 @@ alias xpaste='xclip -o'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 alias pgfix='sudo ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432'
 alias pgrestart='sudo service postgresql restart'
+
+# docker
+# Delete all containers
+alias dac="docker rm $(docker ps -a -q)"
+# Delete all images
+alias dai="docker rmi $(docker images -q)"
