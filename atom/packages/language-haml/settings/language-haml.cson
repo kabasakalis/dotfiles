@@ -1,4 +1,0 @@
-'.text.haml':
-  'editor':
-    'autoIndentOnPaste': false
-    'commentStart': '-# '
