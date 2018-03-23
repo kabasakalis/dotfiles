@@ -8,24 +8,13 @@
 if &compatible
   set nocompatible
 end
-" if empty(glob('~/.config/nvim/autoload/plug.vim'))
-"   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-"     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"   autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
-" endif
-"
-" call plug#begin('~/.config/nvim/plugins')
-if empty(glob((g:plug_path)))
- exec "silent !curl -fLo " . g:plug_path . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  " autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
-
- exec  "autocmd VimEnter * PlugInstall |  source ". g:init_path
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
 endif
- PlugInstall
- exec  "autocmd VimEnter * PlugInstall |  source ". g:init_path
-echom g:plugin_folder
-" call plug#begin(g:plugin_folder)
-" call plug#begin("C:\\tools\\neovim\\Neovim\\share\\nvim\\runtime\\plugin")
+
+call plug#begin('~/.config/nvim/plugins')
 
 
 " ---------------------------------------------------------------------------------------------------------------------
@@ -156,7 +145,7 @@ Plug 'sassanh/nvim-cm-eclim'
 " Plug 'WolfgangMehner/c-support', { 'for': 'cpp' }
 "
 "  Doxygen
-" Plug 'DoxygenToolkit.vim', { 'for': 'cpp' }
+Plug 'DoxygenToolkit.vim', { 'for': 'cpp' }
 " Additional syntax highlighting that I use for C++11/14/17
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 " This Vim plugin will help switching between companion files (e.g. .h and .cpp files)
