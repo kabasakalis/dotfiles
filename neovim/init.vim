@@ -5,14 +5,44 @@
 " ### Neovimmer since : Thu Apr 14 2016                                                                              ###                                                                             ###
 " ######################################################################################################################
 
+" let home_path = $HOME
 
-let home_path = $HOME
+if has("win32")
+  " Windows options here
+  echom "Windows OS configuration."
+  let g:neovim_folder = "C:\\Users\\spiros\\AppData\\Local\\nvim\\"
+  let g:autoload_folder = g:neovim_folder . "autoload\\"
+  " let g:init_path  = g:neovim_folder . "init.vim"
+  " let g:plugins_path  = g:neovim_folder . "plugins.vim"
+
+  " let g:plugins_path  = "C:\\Users\\spiros\\AppData\\Local\\nvim\\plugins.vim"
+elseif has("unix")
+  echom "Ubuntu configuration"
+
+  let g:neovim_folder = "~/.config/nvim/"
+  let g:autoload_folder = g:neovim_folder . "autoload/"
+  " let g:init_path  = g:neovim_folder . "init.vim"
+  " let g:plugins_path  = g:neovim_folder . "plugins.vim"
+
+  " let g:plugins_path  = "~/.config/nvim/plugins.vim"
+endif
+
+
+  let g:init_path  = g:neovim_folder . "init.vim"
+  let g:plugins_path  = g:neovim_folder . "plugins.vim"
+  let g:plug_path  = g:autoload_folder . "plug.vim"
+  let g:plugin_folder  = g:neovim_folder . "plugins"
+  " let g:plugin_folder  = "C:\\tools\\neovim\\Neovim\\share\\nvim\\
 
 "Plugins managed with vim-plug {{{
-if filereadable(expand("~/.config/nvim/plugins.vim"))
-  source ~/.config/nvim/plugins.vim
+if filereadable(expand(g:plugins_path))
+  echom "Sourcing " . g:plugins_path
+  exec "source ". g:plugins_path
 endif
 "}}}
+
+
+
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Basic settings (Neovim defaults: https://neovim.io/doc/user/vim_diff.html#nvim-option-defaults) {{{
