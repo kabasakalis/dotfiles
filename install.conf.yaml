@@ -60,10 +60,6 @@
       path: neovim/c-support/Templates
     #home_assets
     ~/home_assets: home_assets
-    #Atom
-    ~/.atom/config.cson: atom/config.cson
-    ~/.atom/project-viewer.json: atom/project-viewer.json
-    ~/.atom/packages: atom/packages
     #Sublime
     ~/.config/sublime-text-3/Packages/User: sublime/
     #Ruby
