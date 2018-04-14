@@ -37,11 +37,22 @@ alias python=python3
 alias eclim_start='$ECLIPSE_HOME/eclimd'
 
 # Jetbrains apps
-alias idea='cd /opt/idea-IU-172.4343.14/bin && ./idea.sh'
+alias idea='cd /opt/idea-IU-181.4445.78/bin && ./idea.sh'
+alias idea_cfg='cd /home/spiros/.IntelliJIdea2018.1'
 alias clion='cd /opt/clion-2017.2.3/bin && ./clion.sh'
 alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
-alias idea_cfg='cd /home/spiros/.IntelliJIdea2017.2'
 alias clion_cfg='cd /home/spiros/.CLion2017.2'
+
+# Jetbrains plugins
+# IdeaVim
+# AceJump
+# CheckStyle-IDEA
+# Codota
+# google-java-format
+# MavenRunHelper
+# S2CIntelliJPlugin
+# backgroundImagePlus.jar
+# tab-shifter.jar
 
 # Postman
 alias pman='cd /opt/Postman && ./Postman'
