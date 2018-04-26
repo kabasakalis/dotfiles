@@ -30,7 +30,7 @@ alias ec='emacsclient -c'
 
 #neovim
 alias v='nvim'
-alias vim='nvim'
+# alias vim='nvim'
 #debug neovim
 alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
 alias python=python3
@@ -223,6 +223,6 @@ alias pgrestart='sudo service postgresql restart'
 
 # docker
 # Delete all containers
-alias dac="docker rm $(docker ps -a -q)"
+# alias dac="docker rm $(docker ps -a -q)"
 # Delete all images
-alias dai="docker rmi $(docker images -q)"
+# alias dai="docker rmi $(docker images -q)"

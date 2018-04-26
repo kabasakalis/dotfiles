@@ -41,7 +41,12 @@
     #Spacemacs
     ~/.spacemacs: spacemacs/.spacemacs.lisp
     #vim
-    ~/.vimrc: vim/vimrc
+    ~/.vimrc: neovim/init.vim
+    ~/.vim/colors: neovim/colors
+    ~/.vim/plugins.vim: neovim/plugins.vim
+    ~/.vim/autoload/utils.vim: neovim/autoload/utils.vim
+    ~/.vim/pythonx: neovim/pythonx
+    ~/.vim/ftplugin: neovim/ftplugin
     ~/ackrc: vim/ackrc
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim

@@ -752,7 +752,7 @@ let g:gitgutter_sign_removed='-'
 let g:gitgutter_sign_modified_removed='~'
 let g:gitgutter_sign_removed_first_line='-'
 let g:gitgutter_override_sign_column_highlight = 0
-set signcolumn=yes
+"set signcolumn=yes
 
 highlight GitGutterAdd ctermfg=green ctermbg=NONE
 highlight GitGutterChange ctermfg=yellow ctermbg=NONE
