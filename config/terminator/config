@@ -113,6 +113,7 @@
     background_darkness = 0.74
     background_image = /home/spiros/home_assets/wallpapers/milky_way_eclipse.jpg
     background_type = image
+    backspace_binding = automatic
     cursor_color = "#326bdc"
     font = Liberation Mono for Powerline 11
     icon_bell = False

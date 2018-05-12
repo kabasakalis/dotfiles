@@ -31,13 +31,14 @@ let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
 
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:
-
+" let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+"let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 
+set guicursor=
 let mapleader=" "                 " leader
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
@@ -85,9 +86,9 @@ set ttyfast
 " Save temporary/backup files not in the local directory, but in your ~/.vim
 " directory, to keep them out of git repos.
 " Pretty sure you need to mkdir backup, swap, and undo first to make this work
-set backupdir=~/.config/nvim/backup//
-set directory=~/.config/nvim/swap//
-set undodir=~/.config/nvim/undo//
+set backupdir=~/.config/nvim/backup/
+set directory=~/.config/nvim/swap
+set undodir=~/.config/nvim/undo
 
 set tags=./tags;                  " Set the tag file search order
 "}}}
@@ -203,7 +204,7 @@ set fillchars="fold: "            " Characters to fill the statuslines and verti
 " White characters settings {{{
 " ---------------------------------------------------------------------------------------------------------------------
 "set list                         " Show listchars by default
-set listchars=tab:?\ ,eol:¬,extends:?,precedes:?,trail:·,nbsp:·
+set listchars=tab:?\ ,eol:Â¬,extends:?,precedes:?,trail:Â·,nbsp:Â·
 "set showbreak=?
 "}}}
 
@@ -233,8 +234,10 @@ set nospell                       " Disable checking by default (use <F4> to tog
 " ======================================================================================================================
 if has("nvim")
   " change cursor to bar in insert mode
+  " let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
   "let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   " run tests with :T
+
   let test#strategy = "neoterm"
   " ======================================================================================================================
   " Neoterm
@@ -408,13 +411,13 @@ nnoremap <leader>c mzi<CR><ESC>`z
 
 
 " Start substitute,replace on current word under the cursor
-nnoremap ,s :%s///gc<Left><Left><Left>
+nnoremap ,s :%s///gc<Left><Left><Left>
 
 " Start search on current word under the cursor
-nnoremap ,/ /<CR>
+nnoremap ,/ /<CR>
 
 " Start reverse search on current word under the cursor
-nnoremap ,? ?<CR>
+nnoremap ,? ?<CR>
 
 " Faster sort
 vnoremap ,s :!sort<CR>
