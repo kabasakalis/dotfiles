@@ -31,9 +31,6 @@ let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
 
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:
-" let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
-"let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
@@ -97,23 +94,12 @@ set tags=./tags;                  " Set the tag file search order
 " Color and highlighting settings {{{
 " ======================================================================================================================
 
-" Available themes:
-" jellybeans
-" lucid
-" railscasts
-" Tomorrow-Night
-" seoul256
-" tropikos
-" gotham256
-" Color scheme based on time
-" Turn syntax highlighting on
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
 
 " if (has("termguicolors"))
 "   set termguicolors
 " endif
 
+" Switch syntax highlighting on, when the terminal has colors
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   " Turn syntax highlighting on
   syntax on
@@ -122,8 +108,18 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 
 let g:rehash256=1
-" Theme
+
+"" Available themes:
+" jellybeans
+" lucid
+" railscasts
+" Tomorrow-Night
+" seoul256
+" tropikos
+" gotham256
+" Color scheme based on time
 colorscheme  Tomorrow-Night
+
 "transparency
 hi Normal  ctermfg=252 ctermbg=none
 
@@ -233,10 +229,6 @@ set nospell                       " Disable checking by default (use <F4> to tog
 " Neovim specific configuration {{{
 " ======================================================================================================================
 if has("nvim")
-  " change cursor to bar in insert mode
-  " let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-  "let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-  " run tests with :T
 
   let test#strategy = "neoterm"
   " ======================================================================================================================
@@ -288,6 +280,7 @@ nnoremap <Leader>s :w<CR>
 
 " Quiting and saving all
 cnoremap ww wqall
+" Quiting and not saving all
 cnoremap qq qall
 cnoremap <ESC><ESC> qall!<CR>
 
@@ -714,13 +707,14 @@ omap F <Plug>Sneak_S
 " -----------------------------------------------------
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+" Overwins disabled due to buggy cursor, still works though.
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `m{char}{label}`
-"nmap m <Plug>(tion-overwin-f)
+" nmap m <Plug>(easymotion-overwin-f)
 " or
 " `m{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-overwin-f2)
+" nmap s <Plug>(easymotion-overwin-f2)
 
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
