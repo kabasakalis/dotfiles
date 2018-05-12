@@ -43,6 +43,7 @@
     #vim
     ~/.vimrc: neovim/init.vim
     ~/.vim/colors: neovim/colors
+    ~/.vim/colors: neovim/colors
     ~/.vim/plugins.vim: neovim/plugins.vim
     ~/.vim/autoload/utils.vim: neovim/autoload/utils.vim
     ~/.vim/pythonx: neovim/pythonx
@@ -53,6 +54,7 @@
     ~/.ideavimrc: neovim/.ideavimrc
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
     ~/.config/nvim/colors: neovim/colors
+    ~/.config/nvim/syntax: neovim/syntax
     ~/.config/nvim/sessions: neovim/sessions
     ~/.config/nvim/autoload/utils.vim: neovim/autoload/utils.vim
     ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py

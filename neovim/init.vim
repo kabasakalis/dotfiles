@@ -119,6 +119,9 @@ let g:rehash256=1
 " gotham256
 " Color scheme based on time
 colorscheme  Tomorrow-Night
+" colorscheme seoul256
+" colorscheme tropikos
+" colorscheme jellybeans
 
 "transparency
 hi Normal  ctermfg=252 ctermbg=none
@@ -650,12 +653,12 @@ call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('zshrc', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 
-autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
+" autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
 " if you are using another syn highlight for a given line (e.g.
 " NERDTreeHighlightFile) need to give that name in the 'containedin' for this
 " other highlight to work with it
-autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
-autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
+" autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
+" autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
 
 " nnoremap <silent> <Leader>h :call utils#nerdWrapper()<CR>
 nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
@@ -1028,6 +1031,8 @@ command! Retab :call utils#retabToFourSpaces()
 " Recognize python
 au BufNewFile,BufRead *.py set filetype=python
 
+au BufNewFile,BufRead *.java set filetype=java
+
 " Turn spellcheck on for markdown files
 autocmd BufNewFile,BufRead *.md setlocal spell
 
@@ -1036,6 +1041,11 @@ autocmd BufWritePre * call utils#stripTrailingWhitespaces()
 
 " Resize splits when the window is resized
 autocmd VimResized * :wincmd =
+
+augroup filetype
+   au BufRead,BufNewFile *.java   set filetype=java
+ augroup END
+au Syntax java    so ~/.config/nvim/syntax/java.vim
 
 augroup vimrcEx
   autocmd!
