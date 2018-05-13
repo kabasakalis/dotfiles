@@ -3,14 +3,15 @@
 
 # Features
 ## Neovim
-- NerdTree, Start up Screen
+- NerdTree (Project file tree manager)
 - Startify (start up screen)
 - CtrlP (Fuzzy File Searcher)
 - CtrlSF (Searcher)
-- Snippets
+- Ultisnips (Snippets)
 - Easy Motion (Move around your buffer at lightning speed)
-- Linter
-- Themes
+- Ale (Asynchronus Linter)
+- Color Themes
+- Airline (Status bar eye candy )
 - .ideavimrc (Import  my awesome Vim configuration into JetBrain's Intellij IDEA and CLion)
 - Several tweaks of core features and mappings
 
