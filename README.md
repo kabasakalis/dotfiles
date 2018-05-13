@@ -3,10 +3,17 @@
 
 # Features
 ## Neovim
-#### C++ Toolkit
-- Code Completion with CLangComplete
-- LLDB debugger
-- Snippets ( rule of zero, rule of 5, Scott Meyer's PIMPL, etc.)
+- NerdTree, Start up Screen
+- Startify (start up screen)
+- CtrlP (Fuzzy File Searcher)
+- CtrlSF (Searcher)
+- Snippets
+- Easy Motion (Move around your buffer at lightning speed)
+- Linter
+- Themes
+- .ideavimrc (Import  my awesome Vim configuration into JetBrain's Intellij IDEA and CLion)
+- Several tweaks of core features and mappings
+
 ###### Screenshot from Neovim running in terminal mode with tmux:
 ![Neovim screenshot](https://github.com/drumaddict/dotfiles/blob/master/neovim.jpg)
 ### Managed with Dotbot
