@@ -31,8 +31,14 @@ windows:
     - nvim
   - atm-cli:
     - cd ~/interview/atm
-  - atmold:
-    - cd ~/interview/atmold
+  - atm2:
+    - cd ~/interview/atm2
+    - nvim
+  - atm3:
+    - cd ~/interview/atm3
+    - nvim
+  - atm4:
+    - cd ~/interview/atm4
     - nvim
   - dotfiles:
     - cd ~/dotfiles

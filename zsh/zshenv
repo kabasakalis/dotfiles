@@ -16,7 +16,9 @@ export HUNTER_ROOT="$HOME/.hunter"
 export PYENV_ROOT="$HOME/.pyenv"
 export MINICONDA3="$HOME/miniconda3"
 export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+# export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+# export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
 # export PATH="$PATH:`yarn global bin`"
 
 # PATH
@@ -46,7 +48,7 @@ typeset -U PATH
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.5.1
+chruby 2.4.0
 
 #REMAP CAPS LOCK to CTRL
 #gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
