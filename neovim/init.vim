@@ -653,12 +653,12 @@ call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('zshrc', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 
-" autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
+autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
 " if you are using another syn highlight for a given line (e.g.
 " NERDTreeHighlightFile) need to give that name in the 'containedin' for this
 " other highlight to work with it
 " autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
-" autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
+autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
 
 " nnoremap <silent> <Leader>h :call utils#nerdWrapper()<CR>
 nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
@@ -666,7 +666,6 @@ nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
 " map <Leader>n :NERDTreeToggle<CR>
 
 "}}}
-
 
 "  -------------------------------------------
 "  w0rp/ale, Asynchronous maker and linter {{{

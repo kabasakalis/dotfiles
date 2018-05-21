@@ -77,7 +77,7 @@ set ttimeoutlen=10
 " ---------------------------------------------------------------------------------------------------------------------
 " Native Plugins {{{
 " ======================================================================================================================
-set surround
+set surround " doesn't work though.
 
 "}}}
 
@@ -134,6 +134,9 @@ vmap x "_d
 nnoremap c "xc
 xnoremap c "xc
 
+" Change line
+nmap cc 1S
+
 " Reselect last-pasted text
 nnoremap gp `[v`]
 
@@ -161,6 +164,7 @@ nnoremap n nzz
 nnoremap N Nzz
 vnoremap n nzz
 vnoremap N Nzz
+
 
 " Center screen when moving up and down
 nnoremap <C-u> <C-u>zz
