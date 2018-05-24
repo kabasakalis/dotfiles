@@ -67,8 +67,6 @@
       path: neovim/c-support/Templates
     #home_assets
     ~/home_assets: home_assets
-    #Sublime
-    ~/.config/sublime-text-3/Packages/User: sublime/
     #Ruby
     ~/.irbrc: ruby/.irbrc
     ~/.gemrc: ruby/.gemrc

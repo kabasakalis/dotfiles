@@ -1,5 +1,0 @@
-[
-  { "keys": ["ctrl+alt+y"], "command": "rubocop_check_single_file" },
-  { "keys": ["ctrl+shift+r"], "command": "rubocop_check_project" },
-  { "keys": ["ctrl+shift+t"], "command": "rubocop_check_file_folder" }
-]
