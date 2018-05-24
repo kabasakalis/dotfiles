@@ -212,7 +212,7 @@ map <Space>ndi :action NewDialog<CR>
 map <Space>nfo :action NewDir<CR>
 map <Space>nfi :action NewFile<CR>
 map <Space>np  :action NewProject<CR>
-map <Space>sb :action NewScratchBuffer<CR>
+map <Space>nsb :action NewScratchBuffer<CR>
 map <Space>nw :action OpenElementInNewWindow<CR>
 map <Space>ca :action CloseAllEditors<CR>
 map <Space>co :action CloseAllEditorsButActive<CR>
@@ -241,8 +241,8 @@ map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
 map ,qd :action QuickJavaDoc<CR>
-map tb :action ToggleBookmark<CR>
-map tbm :action ToggleBookmarkWithMnemonic<CR>
+map ,tb :action ToggleBookmark<CR>
+map ,tbm :action ToggleBookmarkWithMnemonic<CR>
 map ,0 :action ToggleBookmark0<CR>
 map ,1 :action ToggleBookmark1<CR>
 map ,2 :action ToggleBookmark2<CR>
@@ -258,13 +258,13 @@ map ,gt :action GotoTest<CR>
 
 " Code
 
-map ,f :action ReformatCode<CR>
+map ,ff :action ReformatCode<CR>
 map ,ac :action RearrangeCode<CR>
 map ,fd :action ShowReformatFileDialog<CR>
 map ,re :action RenameElement<CR>
 map ,lt :action InsertLiveTemplate<CR>
 map ,fs :action FileStructurePopup<CR>
-map <Space>g :action Generate<CR>
+map ,gg :action Generate<CR>
 map ,sw :action SurroundWith<CR>
 map ,sl :action SurroundWithLiveTemplate<CR>
 map ,oi :action OptimizeImports<CR>
@@ -274,12 +274,12 @@ map ,tm :action GenerateTestMethod <CR>
 " Refactor
 "
 
-map ,rc :action Refactorings.QuickListPopupAction<CR>
+map ,rq :action Refactorings.QuickListPopupAction<CR>
 map ,re :action RenameElement<CR>
 map ,rf :action RenameFile<CR>
 map ,ce :action CopyElement<CR>
 map ,rm :action Move<CR>
-map ,cs :action ChangeSignatureCR>
+map ,cs :action ChangeSignature<CR>
 
 " Run / Debug
 
@@ -301,21 +301,21 @@ map tfs :action ToggleFullScreen<CR>
 map tpm :action TogglePresentationMode<CR>
 map ,rcf :action RecentChangedFiles<CR>
 map ,qcs :action QuickChangeScheme<CR>
+map ,si :action SelectIn<CR>
 
 " Windows Actions
 
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
 map <Space>q  :action HideAllWindows<CR>
-map <Space>sq :action HideSideWindows<CR>
-map <Space>x  :action HideActiveWindow<CR>
+map <Space>whs :action HideSideWindows<CR>
+map <Space>wha  :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
-map <Space>wc :action VimWindowClose<CR>
+map <Space>x :action VimWindowClose<CR>
 " map  mm :action MaximizeToolWindow<CR>
 map <Space>pc :action CloseProject<CR>
-map <Space>si :action SelectIn<CR>
 
-map <Space>ws :action ActivateStructureToolWindow<CR>
+map <Space>wst :action ActivateStructureToolWindow<CR>
 map <Space>was :action ActivateApplicationServersToolWindow<CR>
 map <Space>wbv :action ActivateBeanValidationToolWindow<CR>
 map <Space>wdi :action ActivateCDIToolWindow<CR>
@@ -327,9 +327,8 @@ map <Space>wil :action ActivateImageLayersToolWindow<CR>
 map <Space>wje :action ActivateJavaEnterpriseToolWindow<CR>
 map <Space>wsf :action ActivateJSFToolWindow<CR>
 map <Space>wmv :action ActivateMavenProjectsToolWindow<CR>
-map <Space>wte :action ActivateTerminalToolWindow<CR>
-map <Space>wvc :action ActivateVersionControlToolWindow<CR>
-map <Space>wwt :action ActivateWebToolWindow<CR>
+map <Space>wtt :action ActivateTerminalToolWindow<CR>
+map <Space>git :action ActivateVersionControlToolWindow<CR>
 map <Space>www :action MaximizeToolWindow<CR>
 
 
