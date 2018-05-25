@@ -191,15 +191,17 @@ map <A-a>    :action GotoAction<CR>
 map <Space>f :action Forward<CR>
 map <Space>b :action Back<CR>
 map <Space>tt :action ShowSettings<CR>
-
-
-" File Operations
-map / :action Find<CR> " Find
-map g/ /   " Preserve  ideavim search
+"
+"
+" " File Operations
+map <Space>s :action SaveAll<CR>
+" Find
+map / :action Find<CR>
+" Preserve  ideavim search
+map g/ /
 map ,/ :action Replace<CR>
 map <Space>n :action NextOccurence<CR>
 map <Space>p :action PreviousOccurence<CR>
-map <Space>s :action SaveAll<CR>
 map <Space>cc :action CloseContent<CR>
 map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
@@ -208,9 +210,8 @@ map <Space>ot :action ReopenClosedTab<CR>
 map <Space>a :action $SelectAll<CR>
 map  ,sfp :action ShowFilePath<CR>
 map <Space>ncl :action NewClass<CR>
-map <Space>ndi :action NewDialog<CR>
-map <Space>nfo :action NewDir<CR>
-map <Space>nfi :action NewFile<CR>
+" map <Space>nfo :action NewDir<CR>
+" map <Space>nfi :action NewFile<CR>
 map <Space>np  :action NewProject<CR>
 map <Space>nsb :action NewScratchBuffer<CR>
 map <Space>nw :action OpenElementInNewWindow<CR>
@@ -221,13 +222,10 @@ map <Space>ku :action EditorCloneCaretAbove<CR>
 map <Space>kd :action EditorCloneCaretBelow<CR>
 map <Space>fw :action FindWordAtCaret<CR>
 map <Space>tc :action EditorToggleCase<CR>
-map <Space>ml :action MoveElementLeft<CR>
-map <Space>mr :action MoveElementRight<CR>
 map <Space>mo :action MoveEditorToOppositeTabGroup<CR>
 
+" " Code navigation
 
-" Code navigation
-"
 map gc :action GotoClass<CR>
 map gf :action GotoFile<CR>
 map gs :action GotoSymbol<CR>
@@ -271,8 +269,7 @@ map ,oi :action OptimizeImports<CR>
 map ,tm :action GenerateTestMethod <CR>
 
 
-" Refactor
-"
+"  Refactor
 
 map ,rq :action Refactorings.QuickListPopupAction<CR>
 map ,re :action RenameElement<CR>
@@ -303,7 +300,7 @@ map ,rcf :action RecentChangedFiles<CR>
 map ,qcs :action QuickChangeScheme<CR>
 map ,si :action SelectIn<CR>
 
-" Windows Actions
+"  Windows Actions
 
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
@@ -352,7 +349,7 @@ map ,gta :action Git.Tag<CR>
 map ,guc :action Git.Uncommit<CR>
 map ,gus :action Git.UnStash<CR>
 
-" Github
+"  Github
 
 map ,ghcg :action Github.Create.Gist<CR>
 map ,ghpr :action Github.Create.Pull.Request<CR>
@@ -369,8 +366,8 @@ map ft :action AceTargetAction<CR>
 map fl :action AceLineAction<CR>
 
 
-" TabShift
-"
+"  TabShift
+
 map ,h :action TabShiftActions.StretchLeft<CR>
 map ,l :action TabShiftActions.StretchRight<CR>
 map ,j :action TabShiftActions.StretchDown<CR>
