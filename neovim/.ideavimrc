@@ -137,6 +137,9 @@ xnoremap c "xc
 " Change line
 nmap cc 1S
 
+" Copy Word
+nmap ,c yiw
+
 " Reselect last-pasted text
 nnoremap gp `[v`]
 

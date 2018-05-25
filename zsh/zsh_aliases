@@ -23,14 +23,9 @@ alias sselastic='sudo service elasticsearch start'
 alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
 alias dotfiles='nvim ~/dotfiles'
 
-#emacs
-alias et='emacsclient -t'
-alias eh="emacsclient -t -e '(spacemacs/home)'"
-alias ec='emacsclient -c'
-
 #neovim
 alias v='nvim'
-# alias vim='nvim'
+
 #debug neovim
 alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
 alias python=python3

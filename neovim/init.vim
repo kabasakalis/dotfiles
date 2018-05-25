@@ -353,6 +353,9 @@ vnoremap y y`]
 vnoremap p "_dP`]
 nnoremap p p`]
 
+" Copy Word
+nmap ,c yiw
+
 " Yank and paste from clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y

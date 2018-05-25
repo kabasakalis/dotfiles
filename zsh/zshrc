@@ -50,12 +50,12 @@ DISABLE_AUTO_UPDATE="true"
 #DISABLE_LS_COLORS="true"
 #LOAD set LS_COLORS from .dircolors
 if [ -f ~/.dircolors ]; then
-   eval $(dircolors -b $HOME/.dircolors)
+  eval $(dircolors -b $HOME/.dircolors)
 fi
 
 
 # Uncomment the following line to disable auto-setting terminal title.
- DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -85,7 +85,7 @@ plugins=(git, rails, ruby, bundler, copydir, copyfile, docker, docker-compose, j
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 #plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
-         #npm rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting zsh-autosuggestions)
+#npm rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
@@ -113,147 +113,100 @@ source $ZSH/oh-my-zsh.sh
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.zsh_aliases ]; then
-   . ~/.zsh_aliases
+  . ~/.zsh_aliases
 fi
-
-
 
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
- ZSH_THEME="bullet-train"
+ZSH_THEME="bullet-train"
 #BULLETRAIN CUSTOMIZATION
-  # PROMPT
-  BULLETTRAIN_PROMPT_CHAR='>'
-  BULLETTRAIN_PROMPT_ROOT=true
-  BULLETTRAIN_PROMPT_SEPARATE_LINE=false
-  BULLETTRAIN_PROMPT_ADD_NEWLINE=true
-  #STATUS
-  BULLETTRAIN_STATUS_SHOW=true
-  BULLETTRAIN_STATUS_EXIT_SHOW=false
-  BULLETTRAIN_STATUS_BG='green'
-  BULLETTRAIN_STATUS_ERROR_BG='red'
-  BULLETTRAIN_STATUS_FG='black'
-  #TIME
-  BULLETTRAIN_TIME_SHOW=true
-  BULLETTRAIN_TIME_12HR=false
-  BULLETTRAIN_TIME_BG='black'
-  BULLETTRAIN_TIME_FG='cyan'
-  #CUSTOM
-  BULLETTRAIN_CUSTOM_MSG='drumaddict'
-  BULLETTRAIN_CUSTOM_BG='black'
-  BULLETTRAIN_CUSTOM_FG='white'
-  #CONTEXT
-  BULLETTRAIN_CONTEXT_SHOW=true
-  BULLETTRAIN_CONTEXT_BG='black'
-  BULLETTRAIN_CONTEXT_FG='default'
-  BULLETTRAIN_CONTEXT_DEFAULT_USER='none'
-  BULLETTRAIN_IS_SSH_CLIENT='none'
-  #Ruby RVM/Rbenv
-  BULLETTRAIN_RUBY_SHOW=true
-  BULLETTRAIN_RUBY_BG='magenta'
-  BULLETTRAIN_RUBY_FG='white'
-  BULLETTRAIN_RUBY_PREFIX="♦"
-  #DIR
-  BULLETTRAIN_DIR_SHOW=true
-  BULLETTRAIN_DIR_BG='blue'
-  BULLETTRAIN_DIR_FG='white'
-  BULLETTRAIN_DIR_CONTEXT_SHOW=false
-  BULLETTRAIN_DIR_EXTENDED=1
-  #COMMAND EXECUTION TIME
-  BULLETTRAIN_EXEC_TIME_SHOW=false
-  BULLETTRAIN_EXEC_TIME_ELAPSED=5
-  BULLETTRAIN_EXEC_TIME_BG='yellow'
-  BULLETTRAIN_EXEC_TIME_FG='black'
+# PROMPT
+BULLETTRAIN_PROMPT_CHAR='>'
+BULLETTRAIN_PROMPT_ROOT=true
+BULLETTRAIN_PROMPT_SEPARATE_LINE=false
+BULLETTRAIN_PROMPT_ADD_NEWLINE=true
+#STATUS
+BULLETTRAIN_STATUS_SHOW=true
+BULLETTRAIN_STATUS_EXIT_SHOW=false
+BULLETTRAIN_STATUS_BG='green'
+BULLETTRAIN_STATUS_ERROR_BG='red'
+BULLETTRAIN_STATUS_FG='black'
+#TIME
+BULLETTRAIN_TIME_SHOW=true
+BULLETTRAIN_TIME_12HR=false
+BULLETTRAIN_TIME_BG='black'
+BULLETTRAIN_TIME_FG='cyan'
+#CUSTOM
+BULLETTRAIN_CUSTOM_MSG='drumaddict'
+BULLETTRAIN_CUSTOM_BG='black'
+BULLETTRAIN_CUSTOM_FG='white'
+#CONTEXT
+BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_CONTEXT_BG='black'
+BULLETTRAIN_CONTEXT_FG='default'
+BULLETTRAIN_CONTEXT_DEFAULT_USER='none'
+BULLETTRAIN_IS_SSH_CLIENT='none'
+#Ruby RVM/Rbenv
+BULLETTRAIN_RUBY_SHOW=true
+BULLETTRAIN_RUBY_BG='magenta'
+BULLETTRAIN_RUBY_FG='white'
+BULLETTRAIN_RUBY_PREFIX="♦"
+#DIR
+BULLETTRAIN_DIR_SHOW=true
+BULLETTRAIN_DIR_BG='blue'
+BULLETTRAIN_DIR_FG='white'
+BULLETTRAIN_DIR_CONTEXT_SHOW=false
+BULLETTRAIN_DIR_EXTENDED=1
+#COMMAND EXECUTION TIME
+BULLETTRAIN_EXEC_TIME_SHOW=false
+BULLETTRAIN_EXEC_TIME_ELAPSED=5
+BULLETTRAIN_EXEC_TIME_BG='yellow'
+BULLETTRAIN_EXEC_TIME_FG='black'
 
-  ###
-  # ssh host completion
-  ###
-  zstyle -e ':completion:*:(ssh|scp):*' hosts 'reply=(
-    ${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) \
-         /dev/null)"}%%[# ]*}//,/ }
-    ${=${(f)"$(cat /etc/hosts(|)(N) <<(ypcat hosts 2>/dev/null))"}%%\#*}
+
+
+# ensure correct PATH zshenv
+source $HOME/.zshenv
+
+#tmuxinator
+source ~/.bin/tmuxinator.zsh
+
+
+###
+# ssh host completion
+###
+zstyle -e ':completion:*:(ssh|scp):*' hosts 'reply=(
+${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) \
+  /dev/null)"}%%[# ]*}//,/ }
+${=${(f)"$(cat /etc/hosts(|)(N) <<(ypcat hosts 2>/dev/null))"}%%\#*}
   )'
 
-  #git helpers
-  function gdt() {
-    git tag -d $1;
-    git push origin :refs/tags/$1
-  }
-
-  #system helpers
-
-  # FIND PROCESS
-  #usage e.g: "p csp_build" , "p python" etc
-  function p(){
-    ps aux | grep -i $1 | grep -v grep
-    pgrep -fl "$1"
-  }
-  # KILL ALL
-  #usage e.g: "ka csp_build" , "ka python" etc
-  function ka(){
-    echo "Killing all Processes $1"
-    if [ ! -z "$1" ]; then
-      pgrep -fl "$1"
-      pkill -f "$1"
-      echo "They are dead."
-    else
-      echo 'Aborted.Must provide pattern to match for processes names.'
-    fi
-  }
-  #ruby/rails helpers
-  # function rake() {
-  #   if [ -f bin/spring ]; then
-  #       bin/spring rake --trace $1
-  #   elif [ -f bin/rake ]; then
-  #       bin/rake --trace $1
-  #   else
-  #       bundle exec rake --trace $1
-  #   fi
-  # }
-
-  # Bundle exec commands
-# bundle_commands=( rake spec rspec cucumber cap watchr rails rackup )
-# function run_bundler_cmd () {
-#     if [ -e ./Gemfile ]; then
-#         echo "bundle exec $@"
-#         bundle exec $@
-#     else
-#         echo "$@"
-#         $@
-#     fi
-# }
-#
-# for cmd in $bundle_commands
-# do
-#     alias $cmd="run_bundler_cmd $cmd"
-# done
-
-#emacs
-#!/bin/bash
-
-# simple script to shutdown the running Emacs daemon
-
-# emacsclient options for reference
-# -a Alternate editor, runs bin/false in this case
-# -e eval the script
-
-# If the server-process is bound and the server is in a good state, then kill
-# the server
-
-emacs_server_ok() {
-  emacsclient -a "false" -e "(boundp 'server-process)"
+#git helpers
+function gdt() {
+  git tag -d $1;
+  git push origin :refs/tags/$1
 }
 
-function kemacs(){
-  if [ "t" = "$(emacs_server_ok)" ]; then
-    echo "Shutting down Emacs server"
-    # wasn't removing emacs from ALT-TAB on mac
-    # emacsclient -e "(server-force-delete)"
-    emacsclient -e '(kill-emacs)'
+#system helpers
+
+# FIND PROCESS
+#usage e.g: "p csp_build" , "p python" etc
+function p(){
+  ps aux | grep -i $1 | grep -v grep
+  pgrep -fl "$1"
+}
+# KILL ALL
+#usage e.g: "ka csp_build" , "ka python" etc
+function ka(){
+  echo "Killing all Processes $1"
+  if [ ! -z "$1" ]; then
+    pgrep -fl "$1"
+    pkill -f "$1"
+    echo "They are dead."
   else
-    echo "Emacs server not running"
+    echo 'Aborted.Must provide pattern to match for processes names.'
   fi
 }
 
@@ -264,60 +217,36 @@ function tka(){
   echo "Done"
 }
 
-# ensure correct PATH
-source $HOME/.zshenv
-
-
 #general
 olh() {
-	local port=${1:-3000}
-	open  "Google Chrome" http://localhost:$port;
- }
+  local port=${1:-3000}
+  open  "GoogleChrome" http://localhost:$port;
+}
 
- # pull down repo for reading
- lookup-repo() {
- 	local pwd=`pwd`
- 	local target=~/projects/DEMOS
-
- 	cd "$target"
- 	git clone "$@"
- 	cd "$pwd"
-  subl .
- }
-
- function get_repo {
-     url=$1;
-     reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
-     git clone $url "/home/spiros/upstream_repos/$reponame";
-     cd "/home/spiros/upstream_repos/$reponame"
- }
-
- function dl_repo_to {
-     url=$1;
-     folder=$2;
-     reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
-     git clone $url "/home/spiros/$folder/$reponame";
-     cd "/home/spiros/$folder/$reponame";
-     nvim;
- }
+function dl_repo_to {
+  url=$1;
+  folder=$2;
+  reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+  git clone $url "$HOME/$folder/$reponame";
+  cd "$HOME/$folder/$reponame";
+  nvim;
+}
 
 # download any youtube or vimeo video to ~/Videos
 # Very simple,bare wrapper.See gazillions of options at
 # https://github.com/rg3/youtube-dl/blob/master/README.md#output-template-examples
 download-video() {
-	local folder=~/Videos
-	mkdir -p "$folder"
-	cd "$folder"
+  local folder=~/Videos
+  mkdir -p "$folder"
+  cd "$folder"
   youtube-dl -o '%(title)s.%(ext)s' "$@"
-	cd -
+  cd -
 }
 
 chrome_localhost_tab(){
   /usr/bin/google-chrome "http://localhost:$1"
 }
 
-#tmuxinator
-source ~/.bin/tmuxinator.zsh
 
 # ex - archive extractor
 # usage: ex <file>
@@ -368,8 +297,8 @@ function commit() {
 }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/spiros/.sdkman"
-[[ -s "/home/spiros/.sdkman/bin/sdkman-init.sh" ]] && source "/home/spiros/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
 
 # tabtab source for jhipster package
 # uninstall by removing these lines or running `tabtab uninstall jhipster`
