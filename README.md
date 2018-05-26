@@ -15,6 +15,9 @@
 - .ideavimrc (Import  my awesome Vim configuration into JetBrain's Intellij IDEA and CLion)
 - Several tweaks of core features and mappings
 
+You may find useful [this](https://gist.github.com/kabasakalis/7dfa092aca9d360dd6505966f4634332) gist on setting up a fresh system (Ubuntu).
+I am still not 100% satisfied with it but it is better than nothing.
+
 ###### Screenshot from Neovim running in terminal mode with tmux:
 ![Neovim screenshot](https://github.com/drumaddict/dotfiles/blob/master/neovim.jpg)
 ### Managed with Dotbot
