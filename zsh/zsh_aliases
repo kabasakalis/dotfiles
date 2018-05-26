@@ -2,7 +2,7 @@
 alias rl=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 
-#apt-get
+#apt-get, ubuntu
 alias install='sudo apt-get install'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
@@ -21,6 +21,7 @@ alias sselastic='sudo service elasticsearch start'
 
 #Dotfiles Regenerate symbolic links
 alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
+alias dotmac='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yaml'
 alias dotfiles='nvim ~/dotfiles'
 
 #neovim
@@ -29,7 +30,6 @@ alias v='nvim'
 #debug neovim
 alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
 alias python=python3
-alias eclim_start='$ECLIPSE_HOME/eclimd'
 
 # Jetbrains apps
 alias idea='cd /opt/idea-IU-181.4445.78/bin && ./idea.sh'
@@ -56,8 +56,6 @@ alias pman='cd /opt/Postman && ./Postman'
 alias cgcc='sudo update-alternatives --config gcc'
 alias ccpp='sudo update-alternatives --config c++'
 
-
-
 #cmake
 # alias cmm='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE .. && make'
 # alias cmc='CXX="$HOME/.config/nvim/plugins/clang_complete/bin/cc_args.py clang++" cmake .. && make'
@@ -68,14 +66,13 @@ alias cmcd='./configure debug' #run after cmc for debug configuration
 alias cmb='cmake --build build' #run after cmc for debug configuration
 alias cmbd='cmake --build build-debug' #run after cmc for debug configuration
 # alias cmm='build-debug/maind'
-alias cmm='build-debug/cppmazed'
 alias bd='build-debug'
 alias cmtg='cmake --build build-debug --target' #specific target
 alias cmt='cmake --build build-debug --target test' #specific target
 
 #qt
-alias qb='cd /home/spiros/qt/circular_membrane/build &&  /home/spiros/Qt/5.9.1/gcc_64/bin/qmake -o Makefile  /home/spiros/qt/circular_membrane/circular_membrane.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make'
-alias qr='cd /home/spiros/qt/circular_membrane/ && ./build/circular_membrane'
+# alias qb='cd /home/spiros/qt/circular_membrane/build &&  /home/spiros/Qt/5.9.1/gcc_64/bin/qmake -o Makefile  /home/spiros/qt/circular_membrane/circular_membrane.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make'
+# alias qr='cd /home/spiros/qt/circular_membrane/ && ./build/circular_membrane'
 
 #tmux
 alias tt='tmux'
@@ -148,37 +145,21 @@ alias gdi='git diff'
 # Java
 
 # Glassfish
-alias gfstart='sudo /opt/glassfish5/glassfish/bin/asadmin start-domain'
-alias gfstop='sudo /opt/glassfish5/glassfish/bin/asadmin stop-domain'
+# alias gfstart='sudo /opt/glassfish5/glassfish/bin/asadmin start-domain'
+# alias gfstop='sudo /opt/glassfish5/glassfish/bin/asadmin stop-domain'
 
 #ruby
-alias ds="DISABLE_SPRING=1"
-alias fc="ds foreman run rails console"
-alias bl="bundle --gemfile Gemfile.rb"
-alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9"
+# alias ds="DISABLE_SPRING=1"
+# alias fc="ds foreman run rails console"
+# alias bl="bundle --gemfile Gemfile.rb"
+# alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9"
 
 
 #Quick nav
 alias labs="cd ~/Labs/ && ls"
-alias demo="cd ~/projects/DEMOS"
-alias pr="cd ~/projects"
-alias cpppr="cd ~/cpp"
-alias jvpr="cd ~/java"
-alias ur="cd ~/upstream_repos"
-
-
-#edit common config files
-alias ezshrc='nvim ~/.zshrc'
-alias eohmyzsh="nvim ~/.oh-my-zsh"
-alias ebashrc='nvim ~/.bashrc'
-alias ebash_aliases='nvim ~/.bash_aliases'
-alias ezsh_aliases='nvim ~/.zsh_aliases'
-alias egitconfig='nvim ~/.gitconfig'
-alias epryrc='nvim ~/pryrc'
-alias egemrc='nvim ~/.gemrc'
-alias eprofile='nvim ~/.profile'
-alias sub="nohup subl . >/dev/null 2>&1 &"
-
+alias demo="cd ~/projects/DEMOS && ls"
+alias jv="cd ~/java && ls"
+alias ur="cd ~/upstream_repos && ls"
 
 #Add extra protection against mistakes
 alias rm='rm -i'
@@ -191,16 +172,12 @@ alias tre='trash-empty' #empty the trashcan(s).
 alias trl='trash-list' #list trashed file.
 alias rt='restore-trash' #restore a trashed file.
 
-
 #cheatsheets
 alias vcs1='google-chrome  ~/home_assets/cheatsheets/vim1.png'
 alias vcs2='google-chrome  ~/home_assets/cheatsheets/vim2.pdf'
-alias rspeccs1='google-chrome  ~/home_assets/cheatsheets/rspec1.pdf'
-alias rspeccs2='google-chrome  ~/home_assets/cheatsheets/rspec2.pdf'
-alias rspeccs3='google-chrome  ~/home_assets/cheatsheets/rspec3.pdf'
-alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
+# alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
 alias ccs='google-chrome  ~/home_assets/cheatsheets/c-hotkeys.pdf'
-alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
+# alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
 alias doccs='google-chrome  ~/home_assets/cheatsheets/docker.pdf'
 
 #Unity Launcher position
