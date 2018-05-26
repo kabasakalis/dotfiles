@@ -1,3 +1,4 @@
+
 - defaults:
     link:
       relink: true
@@ -37,10 +38,6 @@
     #git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
-    #Terminator
-    ~/.config/terminator:
-      create: true
-      path: config/terminator
     #Spacemacs
     ~/.spacemacs: spacemacs/.spacemacs.lisp
     #vim

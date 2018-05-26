@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 ###
 #Frequently used directories
 setopt AUTO_CD
-cdpath=($HOME/projects $HOME/projects/DEMOS $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/.dotfiles $HOME/Documents)
+cdpath=($HOME/projects $HOME/projects/DEMOS $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/dotfiles $HOME/Documents)
 # use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
 setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
 setopt CHECK_JOBS             # check bg jobs on exit
@@ -17,7 +17,7 @@ setopt EXTENDED_HISTORY       # saves timestamps on history
 setopt GLOB_DOTS              # find dotfiles easier
 setopt HASH_CMDS              # save cmd location to skip PATH lookup
 setopt HIST_EXPIRE_DUPS_FIRST # expire duped history first
-setopt HIST_NO_STORE          # don't save 'history' cmd in history
+setopt HIST_NO_STORE          # dont save history cmd in history
 setopt INC_APPEND_HISTORY     # append history as command are entered
 setopt LIST_ROWS_FIRST        # completion options left-to-right, top-to-bottom
 setopt LIST_TYPES             # show file types in list
@@ -32,6 +32,7 @@ setopt SHARE_HISTORY          # share history between open shells
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
+# ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -81,7 +82,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git rails ruby bundler copydir copyfile docker docker-compose jhipster)
-plugins=(git, copydir, copyfile, docker, docker-compose)
+plugins=(git, bower, brew, git-hubflow, git-flow, mvn, osx, postgres, common-aliases, httpie, zsh-syntax-highlighting,   docker, docker-compose)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 #plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
@@ -120,7 +121,6 @@ fi
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
-ZSH_THEME="bullet-train"
 #BULLETRAIN CUSTOMIZATION
 # PROMPT
 BULLETTRAIN_PROMPT_CHAR='>'
@@ -302,7 +302,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # tabtab source for jhipster package
 # uninstall by removing these lines or running `tabtab uninstall jhipster`
-[[ -f /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh
+# [[ -f /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
