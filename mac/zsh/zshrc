@@ -1,0 +1,308 @@
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+###
+# setup options
+###
+#Frequently used directories
+setopt AUTO_CD
+cdpath=($HOME/projects $HOME/projects/DEMOS $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/dotfiles $HOME/Documents)
+# use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
+setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
+setopt CHECK_JOBS             # check bg jobs on exit
+#setopt CORRECT                # corrects spelling
+#setopt CORRECT_ALL            # corrects spelling
+setopt EXTENDED_GLOB          # globs #, ~ and ^
+setopt EXTENDED_HISTORY       # saves timestamps on history
+setopt GLOB_DOTS              # find dotfiles easier
+setopt HASH_CMDS              # save cmd location to skip PATH lookup
+setopt HIST_EXPIRE_DUPS_FIRST # expire duped history first
+setopt HIST_NO_STORE          # dont save history cmd in history
+setopt INC_APPEND_HISTORY     # append history as command are entered
+setopt LIST_ROWS_FIRST        # completion options left-to-right, top-to-bottom
+setopt LIST_TYPES             # show file types in list
+setopt MARK_DIRS              # adds slash to end of completed dirs
+setopt NUMERIC_GLOB_SORT      # sort numerically first, before alpha
+setopt PROMPT_SUBST           # sub values in prompt (though it seems to work anyway haha)
+setopt RM_STAR_WAIT           # pause before confirming rm *
+setopt SHARE_HISTORY          # share history between open shells
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="bullet-train"
+# ZSH_THEME="random"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+#DISABLE_LS_COLORS="true"
+#LOAD set LS_COLORS from .dircolors
+if [ -f ~/.dircolors ]; then
+  eval $(dircolors -b $HOME/.dircolors)
+fi
+
+
+# Uncomment the following line to disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+# plugins=(git rails ruby bundler copydir copyfile docker docker-compose jhipster)
+plugins=(git, bower, brew, git-hubflow, git-flow, mvn, osx, postgres, common-aliases, httpie, zsh-syntax-highlighting,   docker, docker-compose)
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+#plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
+#npm rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting zsh-autosuggestions)
+
+# User configuration
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
+
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+#BULLETRAIN CUSTOMIZATION
+# PROMPT
+BULLETTRAIN_PROMPT_CHAR='>'
+BULLETTRAIN_PROMPT_ROOT=true
+BULLETTRAIN_PROMPT_SEPARATE_LINE=false
+BULLETTRAIN_PROMPT_ADD_NEWLINE=true
+#STATUS
+BULLETTRAIN_STATUS_SHOW=true
+BULLETTRAIN_STATUS_EXIT_SHOW=false
+BULLETTRAIN_STATUS_BG='green'
+BULLETTRAIN_STATUS_ERROR_BG='red'
+BULLETTRAIN_STATUS_FG='black'
+#TIME
+BULLETTRAIN_TIME_SHOW=true
+BULLETTRAIN_TIME_12HR=false
+BULLETTRAIN_TIME_BG='black'
+BULLETTRAIN_TIME_FG='cyan'
+#CUSTOM
+BULLETTRAIN_CUSTOM_MSG='drumaddict'
+BULLETTRAIN_CUSTOM_BG='black'
+BULLETTRAIN_CUSTOM_FG='white'
+#CONTEXT
+BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_CONTEXT_BG='black'
+BULLETTRAIN_CONTEXT_FG='default'
+BULLETTRAIN_CONTEXT_DEFAULT_USER='none'
+BULLETTRAIN_IS_SSH_CLIENT='none'
+#Ruby RVM/Rbenv
+BULLETTRAIN_RUBY_SHOW=true
+BULLETTRAIN_RUBY_BG='magenta'
+BULLETTRAIN_RUBY_FG='white'
+BULLETTRAIN_RUBY_PREFIX="♦"
+#DIR
+BULLETTRAIN_DIR_SHOW=true
+BULLETTRAIN_DIR_BG='blue'
+BULLETTRAIN_DIR_FG='white'
+BULLETTRAIN_DIR_CONTEXT_SHOW=false
+BULLETTRAIN_DIR_EXTENDED=1
+#COMMAND EXECUTION TIME
+BULLETTRAIN_EXEC_TIME_SHOW=false
+BULLETTRAIN_EXEC_TIME_ELAPSED=5
+BULLETTRAIN_EXEC_TIME_BG='yellow'
+BULLETTRAIN_EXEC_TIME_FG='black'
+
+
+
+# ensure correct PATH zshenv
+source $HOME/.zshenv
+
+#tmuxinator
+source ~/.bin/tmuxinator.zsh
+
+
+###
+# ssh host completion
+###
+zstyle -e ':completion:*:(ssh|scp):*' hosts 'reply=(
+${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) \
+  /dev/null)"}%%[# ]*}//,/ }
+${=${(f)"$(cat /etc/hosts(|)(N) <<(ypcat hosts 2>/dev/null))"}%%\#*}
+  )'
+
+#git helpers
+function gdt() {
+  git tag -d $1;
+  git push origin :refs/tags/$1
+}
+
+#system helpers
+
+# FIND PROCESS
+#usage e.g: "p csp_build" , "p python" etc
+function p(){
+  ps aux | grep -i $1 | grep -v grep
+  pgrep -fl "$1"
+}
+# KILL ALL
+#usage e.g: "ka csp_build" , "ka python" etc
+function ka(){
+  echo "Killing all Processes $1"
+  if [ ! -z "$1" ]; then
+    pgrep -fl "$1"
+    pkill -f "$1"
+    echo "They are dead."
+  else
+    echo 'Aborted.Must provide pattern to match for processes names.'
+  fi
+}
+
+#tmux
+function tka(){
+  echo "Killing all tmux sessions"
+  for i in $(tmux ls | grep : | cut -d: -f1); do tmux kill-session -t $i; done
+  echo "Done"
+}
+
+#general
+olh() {
+  local port=${1:-3000}
+  open  "GoogleChrome" http://localhost:$port;
+}
+
+function dl_repo_to {
+  url=$1;
+  folder=$2;
+  reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+  git clone $url "$HOME/$folder/$reponame";
+  cd "$HOME/$folder/$reponame";
+  nvim;
+}
+
+# download any youtube or vimeo video to ~/Videos
+# Very simple,bare wrapper.See gazillions of options at
+# https://github.com/rg3/youtube-dl/blob/master/README.md#output-template-examples
+download-video() {
+  local folder=~/Videos
+  mkdir -p "$folder"
+  cd "$folder"
+  youtube-dl -o '%(title)s.%(ext)s' "$@"
+  cd -
+}
+
+chrome_localhost_tab(){
+  /usr/bin/google-chrome "http://localhost:$1"
+}
+
+
+# ex - archive extractor
+# usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# get ruby version
+function get_ruby_version {
+  echo -n $(ruby -v | cut -d ' ' -f 2)
+}
+
+
+#generate dummy files
+function gfiles() {
+  basename=$1
+  num=$2
+  echo "Creating $2 files with a basename of $basename"
+  for i in {1..$num}; do
+    yes  "File $basename $i Content " | head -1 > "$basename-$i.txt";
+  done
+}
+#dummy commit
+function commit() {
+  gfiles $1 $2 ;
+  echo 'Adding files in index.'
+  gaa;
+  echo 'Commiting...'
+  git commit -m "$1";
+}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
+
+# tabtab source for jhipster package
+# uninstall by removing these lines or running `tabtab uninstall jhipster`
+# [[ -f /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

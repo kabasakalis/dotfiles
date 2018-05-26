@@ -10,10 +10,10 @@
     #zsh
     ~/.zshrc:
       force: true
-      path: zsh/zshrc
-    ~/.dircolors: zsh/.dircolors
-    ~/.zshenv: zsh/zshenv
-    ~/.zsh_aliases: zsh/zsh_aliases
+      path: mac/zsh/zshrc
+    ~/.dircolors: mac/zsh/.dircolors
+    ~/.zshenv: mac/zsh/zshenv
+    ~/.zsh_aliases: mac/zsh/zsh_aliases
 
     #oh-my-zsh
     ~/.oh-my-zsh/oh-my-zsh.sh:
@@ -38,8 +38,6 @@
     #git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
-    #Spacemacs
-    ~/.spacemacs: spacemacs/.spacemacs.lisp
     #vim
     ~/.vimrc: neovim/init.vim
     ~/.vim/colors: neovim/colors
@@ -83,19 +81,9 @@
     #c++
     ~/.lldbinit: cpp/.lldbinit
     ~/.lldb: cpp/.lldb
-    #linters
-    ~/dev/.eslintrc:
-      create: true
-      path: linters/eslintrc
-    ~/dev/.rubocop.yml:
-      create: true
-      path: linters/rubocop.yml
     ~/.zsh/completion/_docker-compose:
       create: true
       path: docker/_docker-compose
-    ~/dev/.haml-lint.yml:
-      create: true
-      path: linters/haml-lint.yml
     #powerline fonts
     ~/.fonts: fonts/
     #ag
