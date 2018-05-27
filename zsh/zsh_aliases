@@ -22,7 +22,7 @@ alias sselastic='sudo service elasticsearch start'
 #Dotfiles Regenerate symbolic links
 alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
 alias dotmac='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yaml'
-alias dotfiles='nvim ~/dotfiles'
+alias dotfiles='cd ~/dotfiles && nvim'
 
 #neovim
 alias v='nvim'
@@ -175,10 +175,15 @@ alias rt='restore-trash' #restore a trashed file.
 #cheatsheets
 alias vcs1='google-chrome  ~/home_assets/cheatsheets/vim1.png'
 alias vcs2='google-chrome  ~/home_assets/cheatsheets/vim2.pdf'
+alias ideavimcs='google-chrome  http://ideavim.sourceforge.net/vim/index.html'
 # alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
 alias ccs='google-chrome  ~/home_assets/cheatsheets/c-hotkeys.pdf'
 # alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
 alias doccs='google-chrome  ~/home_assets/cheatsheets/docker.pdf'
+alias ngformcs='google-chrome  ~/home_assets/cheatsheets/ngform.pdf'
+alias ng4cs='google-chrome  ~/home_assets/cheatsheets/ng4.pdf'
+alias sbacs='google-chrome  ~/home_assets/cheatsheets/sbacs.pdf'
+alias sbacs2='google-chrome  ~/home_assets/cheatsheets/sbacs2.pdf'
 
 #Unity Launcher position
 alias launcherb='gsettings set com.canonical.Unity.Launcher launcher-position Bottom'
