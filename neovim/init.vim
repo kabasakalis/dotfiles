@@ -26,8 +26,13 @@ endif
 " let g:python_host_prog  = expand("SHOME/.pyenv/versions/neovim2/bin/python")
 " let g:python3_host_prog = expand("$HOME/.pyenv/versions/neovim3/bin/python")
 
-let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
-let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+" UBUNTU
+" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+" let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+
+" Mac OS
+let g:python_host_prog  = "/usr/local/bin/python2"
+let g:python3_host_prog = "/usr/local/bin/python3"
 
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:

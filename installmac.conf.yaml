@@ -68,7 +68,7 @@
     #Ruby
     ~/.irbrc: ruby/.irbrc
     ~/.gemrc: ruby/.gemrc
-    ~/.bundle: ruby/.bundle
+    #~/.bundle: ruby/.bundle
     ~/.pryrc: ruby/pryrc
     ~/.rdebugrc: ruby/rdebugrc
     ~/.bin/http: ruby/http
@@ -84,8 +84,6 @@
     ~/.zsh/completion/_docker-compose:
       create: true
       path: docker/_docker-compose
-    #powerline fonts
-    ~/.fonts: fonts/
     #ag
     ~/.agignore: misc/agignore
 

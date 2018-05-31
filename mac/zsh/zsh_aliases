@@ -4,22 +4,22 @@ alias rl=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 #Dotfiles Regenerate symbolic links
 alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
-alias dotmac='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yaml'
-alias dotfiles='nvim ~/dotfiles'
+alias dm='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yaml'
+alias dotfiles='cd  ~/dotfiles && nvim'
 
 #neovim
 alias v='nvim'
 
 #debug neovim
 alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
-alias python=python3
+alias python='python3'
 
 # Jetbrains apps
-alias idea='cd /opt/idea-IU-181.4445.78/bin && ./idea.sh'
-alias idea_cfg='cd /home/spiros/.IntelliJIdea2018.1'
-alias clion='cd /opt/clion-2018.1.1/bin && ./clion.sh'
-alias clion_cfg='cd /home/spiros/.CLion2018.1'
-alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
+# alias idea='cd /opt/idea-IU-181.4445.78/bin && ./idea.sh'
+# alias idea_cfg='cd /home/spiros/.IntelliJIdea2018.1'
+# alias clion='cd /opt/clion-2018.1.1/bin && ./clion.sh'
+# alias clion_cfg='cd /home/spiros/.CLion2018.1'
+# alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
 
 # Jetbrains plugins
 # IdeaVim
@@ -127,18 +127,22 @@ alias rt='restore-trash' #restore a trashed file.
 #cheatsheets
 alias vcs1='google-chrome  ~/home_assets/cheatsheets/vim1.png'
 alias vcs2='google-chrome  ~/home_assets/cheatsheets/vim2.pdf'
+alias ideavimcs='google-chrome  http://ideavim.sourceforge.net/vim/index.html'
 # alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
 alias ccs='google-chrome  ~/home_assets/cheatsheets/c-hotkeys.pdf'
 # alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
 alias doccs='google-chrome  ~/home_assets/cheatsheets/docker.pdf'
+alias ngformcs='google-chrome  ~/home_assets/cheatsheets/ngform.pdf'
+alias ng4cs='google-chrome  ~/home_assets/cheatsheets/ng4.pdf'
+alias sbacs='google-chrome  ~/home_assets/cheatsheets/sbacs.pdf'
+alias sbacs2='google-chrome  ~/home_assets/cheatsheets/sbacs2.pdf'
 
 
 #various
 alias q='exit'
 alias xcopy='xclip -selection clipboard'
 alias xpaste='xclip -o'
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-alias pgfix='sudo ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432'
+# alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # docker
 # Delete all containers

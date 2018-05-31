@@ -1,12 +1,14 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/spiros/.oh-my-zsh
 
 ###
 # setup options
 ###
 #Frequently used directories
 setopt AUTO_CD
-cdpath=($HOME/projects $HOME/projects/DEMOS $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/dotfiles $HOME/Documents)
+cdpath=($HOME/logisfera   $HOME/workbench $HOME/Downloads $HOME/dotfiles $HOME/Documents)
 # use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
 setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
 setopt CHECK_JOBS             # check bg jobs on exit
@@ -26,6 +28,22 @@ setopt NUMERIC_GLOB_SORT      # sort numerically first, before alpha
 setopt PROMPT_SUBST           # sub values in prompt (though it seems to work anyway haha)
 setopt RM_STAR_WAIT           # pause before confirming rm *
 setopt SHARE_HISTORY          # share history between open shells
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/spiros/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,7 +69,7 @@ DISABLE_AUTO_UPDATE="true"
 #DISABLE_LS_COLORS="true"
 #LOAD set LS_COLORS from .dircolors
 if [ -f ~/.dircolors ]; then
-  eval $(dircolors -b $HOME/.dircolors)
+  eval $(gdircolors -b $HOME/.dircolors)
 fi
 
 
