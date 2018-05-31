@@ -1,5 +1,4 @@
-
-name: ls
+name: logis
 root: ~/logisfera
 
 # Optional tmux socket
@@ -27,7 +26,7 @@ root: ~/logisfera
 
 
 windows:
-  - ls:
+  - logis:
     - cd ~/logisfera
     - nvim
   - dotfiles:

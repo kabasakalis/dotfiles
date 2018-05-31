@@ -97,8 +97,13 @@ In neovim run :checkheath and make sure there are no errors or warnings
 -- RUBY --
 ** Make appropriate changes in zshenv ** (ruby version, chruby)
 
+-- INSTALL XCLIP ---
+
+brew cask install xquartz
+brew install xclip
 
 --- INSTALL TMUX ---
+
 # Easy option:
 brew install tmux
 
