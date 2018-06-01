@@ -31,6 +31,7 @@
     #scripts
     ~/.scripts: scripts
     #tmux
+    # ~/.tmux.conf: mac/tmux/.tmux.conf
     ~/.tmux.conf: mac/tmux/.tmux.conf
     ~/.tmux.conf.local: mac/tmux/.tmux.conf.local
     ~/.bin/tmuxinator.zsh: mac/tmux/tmuxinator.zsh

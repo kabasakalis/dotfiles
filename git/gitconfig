@@ -59,7 +59,7 @@
   unstage = reset HEAD --
   trust = "!sh -c 'mkdir -p .git/safe && hash -r'"
 [github]
-    user = drumaddict
+    user = kabasakalis
 [color]
   status = auto
   diff = auto
