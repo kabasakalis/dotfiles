@@ -1,21 +1,21 @@
-# Environmental variables
+# JAVA
+# jEnv
+eval "$(jenv init -)"
+java8=`/usr/libexec/java_home -v "1.8*"`
+java10=`/usr/libexec/java_home`
+export JAVA_HOME=$java8
+# For Intellij
+launchctl setenv JAVA_HOME $java8
+
 export EDITOR="nvim"
 export MYNVIMRC="~/.config/nvim/init.vim"
 export ALTERNATE_EDITOR=""
-# export TERM="xterm-256color"
 export TERM="screen-256color"
-# export TERM="tmux-256color"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 export VIMRUNTIME="/usr/local/Cellar/neovim/0.2.2_1/share/nvim/runtime"
 export NVIMRUNTIME="/usr/local/Cellar/neovim/0.2.2_1/share/nvim/runtime"
-# unset PYTHONPATH
-# export PYTHONPATH="/usr/local/lib/python3.6/site-packages"
-# export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
-
 
 PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-export PATH
+PATH=$HOME/.jenv/bin:$PATH
 
-# Base16 Shell
-# BASE16_SHELL="$HOME/.config/base16-shell/base16-material.dark.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+typeset -U PATH
