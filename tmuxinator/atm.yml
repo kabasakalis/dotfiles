@@ -1,5 +1,6 @@
+
 name: atm
-root: ~/interview/atm
+root: ~/logisfera/atm
 
 # Optional tmux socket
 # socket_name: foo
@@ -26,20 +27,11 @@ root: ~/interview/atm
 
 
 windows:
-  - atm:
-    - cd ~/interview/atm
+  - _template:
+    - cd ~/logisfera/atm
     - nvim
-  - atm-cli:
-    - cd ~/interview/atm
-  - atm2:
-    - cd ~/interview/atm2
-    - nvim
-  - atm3:
-    - cd ~/interview/atm3
-    - nvim
-  - atm4:
-    - cd ~/interview/atm4
-    - nvim
+  - project-cli:
+    - cd ~/logisfera/atm && idea
   - dotfiles:
     - cd ~/dotfiles
     - nvim

@@ -100,7 +100,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git rails ruby bundler copydir copyfile docker docker-compose jhipster)
-plugins=(git bower brew git-hubflow git-flow mvn osx postgres common-aliases httpie zsh-syntax-highlighting docker docker-compose)
+plugins=(bower brew git-hubflow  mvn osx postgres common-aliases httpie zsh-syntax-highlighting)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 #plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix

@@ -1,7 +1,5 @@
-# ~/.tmuxinator/testpr.yml
-
-name: vyra
-root: ~/projects/vyra
+name: _template
+root: ~/logisfera/_template
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,26 +26,11 @@ root: ~/projects/vyra
 
 
 windows:
-  #- spacemacs:  emacsclient -t -e '(spacemacs/home)'
-  - vyra_vim:
+  - _template:
+    - cd ~/logisfera/_template
     - nvim
-  - vyra_console:
-    -  bundle exec rails console
-  - vyra_server:
-    - bundle exec rails s -p 3000
-  - vyra_logs:
-    - tail -f log/development.log
+  - project-cli:
+    - cd ~/logisfera/_template && idea
   - dotfiles:
     - cd ~/dotfiles
     - nvim
-  - vyrab:
-    - cd ~/projects/vyrab
-    - nvim
-  - vyraapi:
-    - cd ~/projects/vyra-bookings
-    - nvim
-  - console1:
-    -  bundle exec rails console
-  - console2:
-    -  bundle exec rails console
-
