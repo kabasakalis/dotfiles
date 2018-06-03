@@ -91,6 +91,9 @@ Install node.js from nodejs.org, download pkg file.
 Run in terminal
 npm install -g neovim
 
+-- INSTALL SILVER SEARCHER (ag) -----------
+brew install the_silver_searcher
+
 --- NEOVIM health check
 In neovim run :checkheath and make sure there are no errors or warnings
 
@@ -118,3 +121,64 @@ git clone dotfiles
 cd dotfiles
 git submodule update --init --recursive  (fetches dotbot)
  ./dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yam
+
+
+# JAVA --------------------------------------------------
+
+brew update
+brew tap caskroom/cask
+brew install brew-cask-completion
+
+brew update && brew upgrade brew-cask-completion && brew cleanup && brew cask cleanup
+
+# Check if we already have JDK 6, 7, 8, 9 installed by Homebrew Cask:
+brew tap caskroom/versions
+brew cask info java6
+brew cask info java7
+brew cask info java8
+To check JDK 9 (latest)
+
+brew cask info java
+
+# Install Java 6, 7, 8, 9 (latest):
+brew tap caskroom/versions
+brew cask install java6
+brew cask install java7
+brew cask install java8
+# To install JDK 9 (latest):
+brew cask install java
+
+
+# jEnv
+brew install jenv
+
+# In .zshrc set:
+eval "$(jenv init -)"
+jenv add /Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/
+jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/
+
+jenv versions
+
+# MAVEN ---------------------------------------------------
+brew update && brew install maven
+# Environmental variables
+maven_version=3.5.3
+export M2_HOME=/usr/local/Cellar/maven/$maven_version/libexec
+export M2=$M2_HOME/bin
+PATH=$M2_HOME/bin:$PATH
+
+# GRADLE ---------------------------------------------------
+brew update && brew install gradle
+# Environmental variables
+gradle_version=4.7
+export GRADLE_HOME=/usr/local/Cellar/gradle/$gradle_version/libexec
+export GRADLE=$GRADLE_HOME/bin
+PATH=$GRADLE_HOME/bin:$PATH
+
+# JETBRAINS -----------------------------------------------
+
+Install IntellijIDEA, Webstorm, Datagrip
+
+# Install Codota
+https://www.codota.com/
+

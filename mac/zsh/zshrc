@@ -100,7 +100,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git rails ruby bundler copydir copyfile docker docker-compose jhipster)
-plugins=(git, bower, brew, git-hubflow, git-flow, mvn, osx, postgres, common-aliases, httpie, zsh-syntax-highlighting,   docker, docker-compose)
+plugins=(git bower brew git-hubflow git-flow mvn osx postgres common-aliases httpie zsh-syntax-highlighting docker docker-compose)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 #plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
@@ -157,7 +157,7 @@ BULLETTRAIN_TIME_12HR=false
 BULLETTRAIN_TIME_BG='black'
 BULLETTRAIN_TIME_FG='cyan'
 #CUSTOM
-BULLETTRAIN_CUSTOM_MSG='drumaddict'
+BULLETTRAIN_CUSTOM_MSG='Logisfera Nova'
 BULLETTRAIN_CUSTOM_BG='black'
 BULLETTRAIN_CUSTOM_FG='white'
 #CONTEXT
@@ -241,7 +241,7 @@ olh() {
   open  "GoogleChrome" http://localhost:$port;
 }
 
-function dl_repo_to {
+function repo {
   url=$1;
   folder=$2;
   reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
