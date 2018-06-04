@@ -1,5 +1,5 @@
-name: e5f
-root: ~/logisfera/e5-greece.front
+name: e5
+root: ~/logisfera/e5-greece.backend
 
 # Optional tmux socket
 # socket_name: foo
@@ -26,11 +26,24 @@ root: ~/logisfera/e5-greece.front
 
 
 windows:
+  - e5b-project:
+    - cd ~/logisfera/e5-greece.backend
+    - nvim
+  - e5b-cli:
+    - cd ~/logisfera/e5-greece.backend
   - e5f-project:
     - cd ~/logisfera/e5-greece.front
     - nvim
-  - project-cli:
+  - e5f-cli:
     - cd ~/logisfera/e5-greece.front
+  - run-backend:
+    - cd ~/logisfera/e5-greece.backend
+    - redis-server && mvn spring-boot:run
+    - idea
+  - run-front:
+    - cd ~/logisfera/e5-greece.front
+    - gulp serve:localhost
+    - chromet  http://localhost:3000/#/token/08D41DDF1565FA80FFC641CA41345EA8423A745DBBA349357865ED45AF031361EF6D126E1BB0DFF82825BA7C2D21EF3E8A74E3B666B29DD8BD8C96D99CCD8C6F79CE0809B7A4CCA8
   - dotfiles:
     - cd ~/dotfiles
     - nvim
