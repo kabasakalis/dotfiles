@@ -116,7 +116,6 @@ alias grevert='git checkout HEAD --'
 alias gco='git checkout'
 
 #git project specific aliases
-
 # Java
 
 # Glassfish
