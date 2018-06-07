@@ -32,6 +32,7 @@ alias python='python3'
 # backgroundImagePlus.jar
 # tab-shifter.jar
 
+
 # Postman
 # alias pman='cd /opt/Postman && ./Postman'
 
@@ -39,6 +40,12 @@ alias python='python3'
 alias pgu='brew services start postgresql'
 alias pgd='brew services stop postgresql'
 alias pgctl='pg_ctl -D /usr/local/var/postgres start'
+
+
+# Postgre
+alias reds='brew services start redis'
+alias redr='brew services restart redis'
+alias redx='brew services stop resdis'
 
 #tmux
 alias tt='tmux'
@@ -118,6 +125,8 @@ alias gdi='git diff'
 alias lgn="cd ~/logisfera/ && l"
 alias wb="cd ~/workbench/ && l"
 alias dl="cd ~/Downloads/ && l"
+alias eb="cd ~/logisfera/e5-greece.backend && l"
+alias ef="cd ~/logisfera/e5-greece.front && l"
 
 #Add extra protection against mistakes
 alias rm='rm -i'
@@ -146,7 +155,6 @@ alias sbacs2='chromet  ~/home_assets/cheatsheets/sbacs2.pdf'
 alias ideakcs='v ~/dotfiles/neovim/.ideavimrc'
 alias ideavimcs='chromet http://ideavim.sourceforge.net/vim/index.html'
 alias zshcs='chromet http://www.geekmind.net/2011/01/shortcuts-to-improve-your-bash-zsh.html'
-
 
 #various
 alias q='exit'

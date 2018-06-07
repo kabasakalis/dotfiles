@@ -34,18 +34,12 @@ windows:
   - e5f-project:
     - cd ~/logisfera/e5-greece.front
     - nvim
-  - e5f-cli:
-    - cd ~/logisfera/e5-greece.front
-  - run-idea:
-    - idea && redis-server
-  - run-backend:
-    - cd ~/logisfera/e5-greece.backend
-    - mvn spring-boot:run
   - run-front:
-    - sleep 30s
+    # - sleep 50s
+    # - reds
     - cd ~/logisfera/e5-greece.front
     - gulp serve:localhost
-    - chromet 'http://localhost:3000/#/token/08D41DDF1565FA80FFC641CA41345EA8423A745DBBA349357865ED45AF031361EF6D126E1BB0DFF82825BA7C2D21EF3E8A74E3B666B29DD8BD8C96D99CCD8C6F79CE0809B7A4CCA8'
+    - sleep 50s &&  chromet 'http://localhost:3000/#/token/08D41DDF1565FA80FFC641CA41345EA8423A745DBBA349357865ED45AF031361EF6D126E1BB0DFF82825BA7C2D21EF3E8A74E3B666B29DD8BD8C96D99CCD8C6F79CE0809B7A4CCA8'
   - dotfiles:
     - cd ~/dotfiles
     - nvim

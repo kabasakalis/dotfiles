@@ -314,6 +314,7 @@ map <Space>wl :action JumpToLastWindow<CR>
 map <Space>x :action VimWindowClose<CR>
 " map  mm :action MaximizeToolWindow<CR>
 map <Space>pc :action CloseProject<CR>
+map <Space>wjr :action ActivateJRebelToolWindow<CR>
 
 map <Space>wst :action ActivateStructureToolWindow<CR>
 map <Space>was :action ActivateApplicationServersToolWindow<CR>
@@ -369,8 +370,12 @@ map ft :action AceTargetAction<CR>
 map fl :action AceLineAction<CR>
 
 
+" Maven
+map ,mec :action Maven.EditRunConfiguration<CR>
+
 "  TabShift
 
+map ,r :action TabShiftActions.StretchLeft<CR>
 map ,h :action TabShiftActions.StretchLeft<CR>
 map ,l :action TabShiftActions.StretchRight<CR>
 map ,j :action TabShiftActions.StretchDown<CR>
