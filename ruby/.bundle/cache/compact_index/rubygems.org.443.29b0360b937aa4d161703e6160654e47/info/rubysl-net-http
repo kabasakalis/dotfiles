@@ -1,0 +1,5 @@
+---
+0.0.1 redcard:~> 1.0|checksum:a41c3e4ab7fa6e852701224e1efa6b21e235b1a2208ced4c4d11e51ea2a70d1d
+1.0.0 |checksum:d59d377b4981012aba3b34d026682ec94c5324aa4e3771e176d3b5dc8f118325
+2.0.4 rubysl-cgi:~> 2.0,rubysl-erb:~> 2.0,rubysl-singleton:~> 2.0|checksum:396f10dd851c210f41c1d9b370b4bd3a58ef1084e0d4f0c48a7966ec3b938634
+1.0.1 rubysl-cgi:~> 1.0,rubysl-erb:~> 1.0,rubysl-singleton:~> 1.0|checksum:8716640f152083861330374a0bbaf45a4cf6761a0e096a1bc7a7cce3628edd34,ruby:~> 1.8.7

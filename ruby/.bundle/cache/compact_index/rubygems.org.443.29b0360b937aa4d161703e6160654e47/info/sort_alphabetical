@@ -1,0 +1,8 @@
+---
+0.1.1 activesupport:>= 0|checksum:794f7cbce26a198125100b5d003a2391245d38111da4f1bc8133f6978b093ffc
+0.1.2 activesupport:>= 0|checksum:82950b07d49e6ffcf418fdc579cae6b1a2e3ebf685f7db57c90399054cb0ab95
+0.1.3 activesupport:>= 0|checksum:f45ea90b4485e51d134d6099fdeb660b1d69c598ae89e157649e1c4f0362daa4
+1.0.0 unicode_utils:>= 1.0.0|checksum:fcfccd20a154edaaa89d5e8f56215428401c377890bbd7f7a0dbf9498dbc5dcd
+1.0.1 unicode_utils:>= 1.2.2|checksum:97c7c00837d318a94fa70ee9383958b5718f123194652cc238f642663b7230ff
+1.0.2 unicode_utils:>= 1.2.2|checksum:e79f94e1e8f6281c3bbdd054f5d2a1116367a949b9020eb0857e378b8065828a
+1.1.0 unicode_utils:>= 1.2.2|checksum:aed7ff1575cfa5f37d8162483b8ca5fbfa8a13dbcf1dff54e206bdd83357b3bd,ruby:>= 2.0.0

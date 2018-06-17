@@ -1,0 +1,5 @@
+---
+2.0.1 rubysl-english:~> 2.0|checksum:c7f49186604eec44a1a744e73e0e0d124870208affab05e00d407ebfcf213133
+2.0.2 rubysl-english:~> 2.0|checksum:e2466a7d003537b563388aa9006a4e6a1a3461c4989d19ec7061d35311895fbe
+1.0.0 rubysl-english:~> 2.0|checksum:127d747b10f550bb1870647fa068eddeee8b62c5462e939511173f8a0fa2a416
+1.0.1 rubysl-english:~> 1.0|checksum:6eb60461a832f29ce492a08bbf93e234d32b002ed11941b6de0bc6736b13da86,ruby:~> 1.8.7

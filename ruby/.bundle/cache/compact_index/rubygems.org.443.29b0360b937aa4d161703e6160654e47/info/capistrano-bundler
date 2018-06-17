@@ -1,0 +1,7 @@
+---
+1.0.0 capistrano:>= 3.0.0.pre|checksum:E+sreVSx8lTQJHP+JwkW07bFeTGJK+9x4Q3XfbbU2LQ=
+1.1.0 capistrano:~> 3.0,sshkit:>= 1.2.0|checksum:Z+CAwIfNb9SVx8IE0r8cNEHvzPoq/XXj2qlp/1EXYY4=
+1.1.1 capistrano:~> 3.0,sshkit:>= 1.2.0|checksum:yF7AeJ/zuMfL9q6/WjTpkB07JPilJFHBLLyLrpN+B34=
+1.1.2 capistrano:~> 3.0,sshkit:~> 1.2|checksum:jhXkANUw+6fHicoxXqC3ktVg2yBLLncmJ4PL0tqvM8k=
+1.1.3 capistrano:~> 3.1,sshkit:~> 1.2|checksum:yGRPTkI5LHf1847K2BGnmQVjvSD2tMZ6BVx+5MoGj0U=,ruby:>= 0
+1.1.4 capistrano:~> 3.1,sshkit:~> 1.2|checksum:VxyWVOe1ClSYYembA4Hd+njTAOWjXCOpiBTYe+qMkbg=,ruby:>= 0

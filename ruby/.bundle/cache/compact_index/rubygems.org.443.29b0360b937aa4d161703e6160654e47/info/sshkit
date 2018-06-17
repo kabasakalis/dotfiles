@@ -1,0 +1,49 @@
+---
+0.0.1 net-ssh:>= 0,term-ansicolor:>= 0|checksum:jky+R/xMWoxWOOY1a/KZqXMt5+fqG2spXcHGukUzp6E=
+0.0.2 net-ssh:>= 0,term-ansicolor:>= 0|checksum:2Ky2PzHBrimWCKgC8/ZB6jkJyat9QCo3Qz9bzWLcgFI=
+0.0.3 net-ssh:>= 0,term-ansicolor:>= 0|checksum:1Is5Y0PibJRrMzBEyGXEY5E4T6JKtJLlZgI9/Po9a5g=
+0.0.4 net-ssh:>= 0,term-ansicolor:>= 0|checksum:byxlNl5uV4Q1rZixRiz4Kg7fh0Jnp/w6S2IW9y/rLUU=
+0.0.5 net-ssh:>= 0,term-ansicolor:>= 0|checksum:RUxaD+CFCUNtTdRi01nahUTauAmwEzGfcxE+5kSq9EE=
+0.0.6 net-ssh:>= 0,term-ansicolor:>= 0|checksum:EClJy25PW9Xn/aJRHx8JHpc//Khz/vRWR2O5JIKD2ug=
+0.0.7 net-ssh:>= 0,term-ansicolor:>= 0|checksum:0GA2UySSJnfH30ffGh52QkBKOFTBjMwY2u63mJ0a6pI=
+0.0.8 net-ssh:>= 0,term-ansicolor:>= 0|checksum:LLnj+7s1pel7bL5lcSE1zGzX3BVFARm5U+FGz6xUc3s=
+0.0.9 net-ssh:>= 0,term-ansicolor:>= 0|checksum:iSPZQ1M2e+26piNaidDQGAHgjiCH8RvCoV8njPfrMUU=
+0.0.10 net-ssh:>= 0,term-ansicolor:>= 0|checksum:3kWmIKqOV0i4gYO1bOcV0t3JQm1Qa+HO0hH9CHbhiWI=
+0.0.11 net-ssh:>= 0,term-ansicolor:>= 0|checksum:bDYb5DVSYEtYc4DEw0gv1x5atFOkiEBK3uhioSv1ErY=
+0.0.12 net-ssh:>= 0,term-ansicolor:>= 0|checksum:7PUvzBJVCrNQpML/Wr6KL0BHvvErwuKQAR8P3m8tsds=
+0.0.13 net-ssh:>= 0,term-ansicolor:>= 0|checksum:/8sfdiI9FMV9oIk6JXnGrRIqu12MQD1xMc7XLMKfA84=
+0.0.14 net-ssh:>= 0,term-ansicolor:>= 0|checksum:ul36i51qBS8FIH2IOksRU+8hq5s7k+BkOjTfeXCnKss=
+0.0.15 net-ssh:>= 0,term-ansicolor:>= 0|checksum:28KLj+DAdPsfVZdh8SMOQG8Pa5zbPu4z0iWJVp+f2yg=
+0.0.16 net-ssh:>= 0,term-ansicolor:>= 0|checksum:jC2e6gPluNQ1eI40Aye0o/4GnmhUdaz/IV1twSkBTQI=
+0.0.18 net-ssh:>= 0,term-ansicolor:>= 0|checksum:aE4WMQUOrR5Er2WVfC3uxfi3gZ+IrdAon6e+yVM4iMA=
+0.0.19 net-ssh:>= 0,term-ansicolor:>= 0|checksum:N+mlItheZeCP38XhBe6GTYViD9IpNQE96A4pycHM338=
+0.0.21 net-ssh:>= 0,term-ansicolor:>= 0|checksum:g9/n5K2vlpjEML+DRjBd4CreYy2zYu+3sR4xJlFO47o=
+0.0.22 net-ssh:>= 0,term-ansicolor:>= 0|checksum:GieQk20EA8w3r6BhNKzREjC03E7XXoBXsKlE0BbVk/8=
+0.0.23 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:H0hM3NtQguApFuDhUL5dHlDXY1jBenkXU8rjX37UZuc=
+0.0.24 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:gJXRDX3WqRqGBTLuxPjjemrJehDkmL5Bk1z3T062cxI=
+0.0.25 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:5pPOohIZ83QT21j0fPsWrC1JbYQ7L0HjKZWUl1Qm/7M=
+0.0.26 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:j83388ZkrinokshU3Cv48qbsLgaZFan0HHKVLV71bhk=
+0.0.27 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:GwLo8dab5GnR9kmO7qfKi/GGH9BYc1IZ1boKQ/TJK0I=
+0.0.28 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:JnE2HAm2CyIqn++ylq/kiQHOtyrQoSY4h1mEY0i403M=
+0.0.29 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:e5EnVCTNZLEd7RhnL73wwyh/wKhjeq6R/e0MHre9yw8=
+0.0.31 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:JDKRUppHxTuWcBLkJWmSyhSIPdxMlJ29RjI/b1yXPoQ=
+0.0.32 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:6W5Lq5KewVU1ZTFK1EkRlouNJVqSsosZKrVgefRuYW0=
+0.0.33 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:Bd2qamkQgQOMqAnOyw6uLdlhcd2Z5OJHzMsFxsBB8n0=
+0.0.34 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:nKWqvZMKSvXk/M5ev6gSBJIbc4TH9cCx3YsVbsDR+44=
+1.0.0 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:CCNQHwqiibOCxpkq6myBcxm/U1j0JgNVm6KcuKGoGAk=
+1.1.0 net-scp:>= 0,net-ssh:>= 0,term-ansicolor:>= 0|checksum:JFXgtTb0q6YIlegrowMGOc6nf2Uz7yh7DdxXgj7svBY=
+1.2.0 net-scp:>= 1.1.2,net-ssh:>= 0,term-ansicolor:>= 0|checksum:cbtMEb6LWx4KKveNoPzbOoMsUJwJ0zdASCW4Bgp49a8=
+1.3.0 net-scp:>= 1.1.2,net-ssh:>= 0,term-ansicolor:>= 0|checksum:KYm+jwDFhE4phXYbbXqNKqoHQThgpQ4T5bKukaq7g6Q=
+1.4.0 net-scp:>= 1.1.2,net-ssh:>= 2.8.0,term-ansicolor:>= 0|checksum:o6zykaHBU8lm5zKouGFxukrIIKNf/3WvMYAbtV7ygXI=,ruby:>= 0
+1.5.0 colorize:>= 0,net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:aIvsLraNBt0OYE4cKLcEUnTJ3u9SMexs0dXB+Vaf3Ck=,ruby:>= 0
+1.5.1 colorize:>= 0,net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:vhUQtJNu4jF0pBUqaw44KiuCRKoNR9TpSQi2QdY5zVM=,ruby:>= 0
+1.6.1 colorize:>= 0.7.0,net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:jKZ+RrtOpQ/bBVPNp3VS8+QbF6WqkZh32Th136IsA6c=,ruby:>= 0
+1.7.0 colorize:>= 0.7.0,net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:kO/9GBM2O65zVfSkXryDNajKdKzI0JM7pu5tQPKBos8=,ruby:>= 0
+1.7.1 colorize:>= 0.7.0,net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:adOJB9w14hQS/BQ0Q8Vpw7amAkcWRQft1zBVflg8B4g=,ruby:>= 0
+1.8.0 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:
+1.8.1 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:
+1.9.0.rc1 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:5f4ae099277f7591649c44956b6b764beca8ea4ac3cf9b359c7d00519c2a4e90,ruby:>= 0,rubygems:> 1.3.1
+1.9.0 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:7e3d840aeb81a282075c8c63276c9788b57914ab22281b8ba428a69d54ad8703,ruby:>= 0,rubygems:>= 0
+1.10.0 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:52be5c07361644f7ab461e14ffd2455a3ee5a7df01b03428bfa3716c830344a4,ruby:>= 0,rubygems:>= 0
+1.11.0 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:b3917b9ea28e031652391fd8ec1b95212e1413610bb26f8bba78c44767dea279,ruby:>= 0,rubygems:>= 0
+1.11.1 net-scp:>= 1.1.2,net-ssh:>= 2.8.0|checksum:7fccc5b73dd992ac21c3453e4f9ddc8bbd48f60ae1e9c4478f093f945ab15178,ruby:>= 0,rubygems:>= 0

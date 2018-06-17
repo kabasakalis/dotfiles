@@ -1,0 +1,4 @@
+---
+0.1.3 Platform:>= 0.4.0|checksum:4d7d04b426696b3f52b71793c7fffcc4c1fde7d3eba74bfa011d7af75af2b025
+0.1.4-x86-mswin32 Platform:>= 0.4.0,win32-open3:>= 0|checksum:ca7f321b833a92bc4b295e639bb8d4e53a3c5246a676a0f21ebe3ea0bb596f6c
+0.1.4 open4:>= 0,Platform:>= 0.4.0|checksum:b88be992108297b240299d4a8cd1f25d9bea6871d35d2e0c94edfe0a259e3432

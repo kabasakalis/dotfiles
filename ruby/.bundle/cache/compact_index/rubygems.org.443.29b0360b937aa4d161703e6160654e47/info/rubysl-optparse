@@ -1,0 +1,4 @@
+---
+1.0.0 rubysl-shellwords:~> 2.0|checksum:e3db6919f3747bfb94d96e20cbdf7bc3331e178eefe5f9c5c86e520b896c701d
+2.0.1 rubysl-shellwords:~> 2.0|checksum:4fe37d7d7b0fc8a026007d7d3ef3b59d06dbc9386f4e4ff3d8ec11e583f85b02
+1.0.1 rubysl-shellwords:~> 1.0|checksum:ed46d916105722b7b7a73d7f71ba0910a64745381f35e8dd5bb6dfce1139a395,ruby:~> 1.8.7

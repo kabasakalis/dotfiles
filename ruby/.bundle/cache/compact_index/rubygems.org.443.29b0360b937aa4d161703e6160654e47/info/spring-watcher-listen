@@ -1,0 +1,4 @@
+---
+1.0.0 listen:~> 1.0,spring:~> 1.2|checksum:38b9c59c74844c020e9c2014e7266971a7023d9ba4f7ee6d770dc1a9f0d6bf57
+2.0.0 listen:< 4.0&>= 2.7,spring:~> 1.2|checksum:528f74d97f17a48cea41929ef011dc9f3cc3d725eac7efd4aa6aae21e1c2f299
+2.0.1 listen:< 4.0&>= 2.7,spring:< 3.0&>= 1.2|checksum:df83906f5ec811ec0be4536a7a088618af58667b232ffbb6bee4bb67b54d7ff9

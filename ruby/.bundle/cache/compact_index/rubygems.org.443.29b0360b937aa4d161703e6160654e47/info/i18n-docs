@@ -1,0 +1,7 @@
+---
+0.0.3 bundler:>= 0,rake:>= 0|checksum:0b9aa04c65541b03d6a7aa229339c2410c63a32da570ce43cceec74b2fc0cb4f
+0.0.4 bundler:>= 0,rake:>= 0|checksum:bc869b12b55b3eaa7fd4e79bbdd92d2d44fb6774a65d66dbaca9b6407f5df218
+0.0.7 rake:>= 0|checksum:ece1fc450bba179fabbd301173f705d83e029e596559222b4aad5f3361d84b00
+0.0.9 rake:>= 0|checksum:9bfa7c4c348a942ba3075eb513a36bb91ca387e526d1256a4da5ea3bfdca758d
+0.0.10 rake:>= 0|checksum:df591edf06d80184f8efa265a3839dc8d3097bba3de2ab214d275c38f2872872
+0.1.0 rake:>= 0|checksum:4571fe5cb46745cf7468aee9322d2f042c321f1f00dd18ee10472eb1f4a533c3

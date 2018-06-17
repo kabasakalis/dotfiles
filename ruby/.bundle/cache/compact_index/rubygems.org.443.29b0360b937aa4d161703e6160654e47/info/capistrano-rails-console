@@ -1,0 +1,11 @@
+---
+0.1.0 capistrano:>= 3.0.0,capistrano-rails:>= 1.0.0|checksum:/HIp24MnsBMt89RlXBXGZzuYisFDKFCzNYyDJfyCMm0=
+0.1.1 capistrano:>= 3.0.0|checksum:jg0wCL8qAaU2f7lfe0I0D4orYuntOnZJBf0bl8qM0rc=
+0.2.0 capistrano:>= 3.0.0|checksum:H6+C+BQMpT1wOGCvNW+laRmyoUmrTprekdzhql2WAKs=,ruby:>= 0
+0.3.0 capistrano:>= 3.0.0|checksum:8w+BW7e4KnlWYBReueYjfLRVY+Gvuk20n6qtIbb+xGE=,ruby:>= 0
+0.4.0 capistrano:< 4.0.0&>= 3.0.0|checksum:1q6Tz0olLPsor9lKssMED2T6ru9hel/08TqTdoxT8Tg=,ruby:>= 0
+0.5.0 capistrano:< 4.0.0&>= 3.0.0|checksum:HrmAyvgVPOxzbJRwJ3ZvKGxbdw+4rAVAt5o7IfffV4w=,ruby:>= 0
+0.5.2 capistrano:< 4.0.0&>= 3.0.0|checksum:HVqUS8XueWvs3ZFPMCqSCwlca7dGEYrQAk098lgxJZU=,ruby:>= 0
+1.0.0 capistrano:< 4.0.0&>= 3.1.0|checksum:
+1.0.1 capistrano:< 4.0.0&>= 3.1.0|checksum:
+1.0.2 capistrano:< 4.0.0&>= 3.1.0|checksum:

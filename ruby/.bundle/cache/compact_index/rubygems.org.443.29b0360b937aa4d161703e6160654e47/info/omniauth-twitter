@@ -1,0 +1,26 @@
+---
+0.0.1 omniauth:~> 1.0.0.rc2,omniauth-oauth2:~> 1.0.0.rc2|checksum:06969f3f6abdd6d1635430e18994f28755716efe29ec6ad0c20853910f42efee
+0.0.2 omniauth:~> 1.0,omniauth-oauth2:~> 1.0|checksum:0339e0e9d1c5218f45a3a9578aca5909bf0bc4f2fbabc69b394581726c3fa968
+0.0.3 omniauth-oauth:~> 1.0.0.rc2|checksum:7687c8211d6fc030227cb12be53d5ea03dbcfbc94cf3af1b66a8eeda7f44a9c5
+0.0.4 omniauth-oauth:~> 1.0.0.rc2|checksum:e32b9f85e394af37a06e2987eb717ac035653164c7eeb235c5b2ff7f525522f0
+0.0.5 omniauth-oauth:~> 1.0.0.rc2|checksum:df0be28fca5790719588b57c1ecb493053961180903b90bfc2674e5d30cd0ec7
+0.0.6 omniauth-oauth:~> 1.0|checksum:5fe5e78b13c8930c7eba72cdd1e813befe39aa33862dea9a7d92013d5bf72e60
+0.0.7 omniauth-oauth:~> 1.0|checksum:e7f6346c8082296054d7af4a0ee8133a442bd0a8ef827a4d6752417758c23b8e
+0.0.8 omniauth-oauth:~> 1.0|checksum:5baa14fc99b03c557f4ab81483188e622707a3825bb87887a47d5cf751959a44
+0.0.9 omniauth-oauth:~> 1.0|checksum:2be0114c03b929d1f783bf2afdd5c6e399c33688b0bfc911cb2005e8d2f28665
+0.0.10 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:1c2be90f89381c93b7e74ffe0bce8a9c1973e36b63c6fba2e141dafc25481729
+0.0.11 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:c29d505c064c6b5e67a0e78dc7e707ec47615c40e99fea65f3216958cc9c2ec6
+0.0.12 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:aa5b9b5bf3161a522df177c81461d8102b42e6390129d31cbfd89d29bcb81edc
+0.0.13 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:6e3a5a8f63225647ccbfebe9d9b0b0364b822b7559588c1932d945d61693025b
+0.0.14 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:da5d17d1e23b0a193827b278b1f28a8d9cb48fe394ea17a9f1ea8958b2b27afe
+0.0.15 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:4cf6365f245cd954110cf8e57ee424293808b3a34bb2c083167784ca73448ebc
+0.0.16 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:a496d63a4f16804725723fb6ce29d7f20419a17016329aae083b6d1514d83970
+0.0.17 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:773fe98cd96ab6d1be5a47c83a45a237673c197d8de120e66d990c69a20053d4
+0.0.18 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:54fd77ff619f38c594a415a181c87c469ace4a27d171fb8ca2a29428fd8d841c
+1.0.0 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:50ec16b6aad062994117f1b0a98923d44e52d1c33f027e5312a9f8cdaaad7624
+1.0.1 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:cd110801549953505a6152ae1426956785aca0cb749ff82835e8d49898b30f18
+1.1.0 multi_json:~> 1.3,omniauth-oauth:~> 1.0|checksum:09c86c601fb85e5cfad052453500373c81a95b26b7194b6e35aabd16190aee35
+1.2.0 json:~> 1.3,omniauth-oauth:~> 1.1|checksum:d07f52671df8e9237025ce67de07cf3056adedd4a24464e475cfbf2536c8f24c
+1.2.1 json:~> 1.3,omniauth-oauth:~> 1.1|checksum:63a04601a57c40f031b285c900800ba4cf49e69d772026821ef782fec3ba12c3
+1.3.0 omniauth-oauth:~> 1.1,rack:>= 0|checksum:9f7d432eadb5d1ade598293b711dc9302daba27720438b9656e893d3db7438f0,ruby:>= 1.9.3
+1.4.0 omniauth-oauth:~> 1.1,rack:>= 0|checksum:c5cc6c77cd767745ffa9ebbd5fbd694a3fa99d1d2d82a4d7def0bf3b6131b264,ruby:>= 1.9.3

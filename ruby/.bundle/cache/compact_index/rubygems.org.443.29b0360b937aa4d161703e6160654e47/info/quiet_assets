@@ -1,0 +1,6 @@
+---
+1.0.0 rails:~> 3.1|checksum:B7qbeFbcQNc11dxd2l94MG8ZnJzF7jlbthMgxSr4Uro=
+1.0.1 railties:~> 3.1|checksum:A4Xrs1JhDIwZ+a6FwOqqUXNn50JG1G34SnqrR2dylLo=
+1.0.2 railties:< 5.0&>= 3.1|checksum:P7yHKEYqQtWM2RAbCtiiQNPLkKJI1dQHKvQy+pRqL6g=
+1.0.3 railties:< 5.0&>= 3.1|checksum:YQVAcj8o7CQT/wd5MjyoLtjmKgjhRcbxaU/3IAn/iuA=,ruby:>= 0
+1.1.0 railties:< 5.0&>= 3.1|checksum:V81YNYtdGP5L5Ob5Jnt7MyA/wUWKxNuqUr+NjXUlTWM=,ruby:>= 0

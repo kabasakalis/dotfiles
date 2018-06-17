@@ -1,0 +1,9 @@
+---
+1.0.0.beta.1 haml:>= 3.2.0.beta.1,hpricot:>= 0|checksum:hp9eUzEhc9Zthk49N8h9WKJ9VpgjrhPYH82VybUdNZs=,rubygems:> 1.3.1
+1.0.0.beta.2 erubis:~> 2.7.0,haml:>= 3.2.0.beta.1,hpricot:~> 0.8.6,ruby_parser:~> 3.1.1|checksum:igLVyq+HUHBLYiQr/qKDeMpPEshZEwFG5CsWLeqiS4g=,rubygems:> 1.3.1
+1.0.0.beta.3 erubis:~> 2.7.0,haml:>= 3.2.0.rc.3,hpricot:~> 0.8.6,ruby_parser:~> 3.1.1|checksum:1DMlavtuw2U/arnYKlfQbYQijU9BQgZSadXlejK5ghQ=,rubygems:> 1.3.1
+1.0.0.beta.4 erubis:~> 2.7.0,haml:>= 4.0.0.rc.1,hpricot:~> 0.8.6,ruby_parser:~> 3.1.1|checksum:QCItxcfd/UUugDXd2W2e7CTP7H+RNn2TXzjHJW0Tam4=,rubygems:> 1.3.1
+1.0.0 erubis:~> 2.7.0,haml:>= 4.0.0.rc.1,hpricot:~> 0.8.6,ruby_parser:~> 3.1.1|checksum:MrZ4Th3vSMj2YMXZsW3+QVtYPxEK7HnhVh5Dvvw3CPY=
+1.0.1 erubis:~> 2.7.0,haml:>= 4.0.0.rc.1,hpricot:~> 0.8.6,ruby_parser:~> 3.1.1|checksum:ewlHMLNGpuNqXXNSfah60vIx4GLfvuQsBZR0ykTtsGE=
+2.0.0.beta.1 erubis:~> 2.7.0,haml:~> 4.0.0,nokogiri:~> 1.6.0,ruby_parser:~> 3.2.1|checksum:+BmqsjX74m5sIhyPSYmrMSXRLF22QTR3p/MfjxSzvVk=,rubygems:> 1.3.1
+2.0.0 erubis:~> 2.7.0,haml:~> 4.0.0,nokogiri:~> 1.6.0,ruby_parser:~> 3.5|checksum:kTRUCdVvPYbZJ/0ti2ZeybiWdXkoroqJhSCATJFnPxk=,ruby:>= 1.9.2

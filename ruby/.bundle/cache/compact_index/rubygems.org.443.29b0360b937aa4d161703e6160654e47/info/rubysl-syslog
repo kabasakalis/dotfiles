@@ -1,0 +1,4 @@
+---
+2.0.1 ffi2-generators:~> 0.1|checksum:91effcd90d0f85ecf6989e2c06aebc4935e389e214df08916424389ea014117e
+1.0.0 ffi2-generators:~> 0.1|checksum:36dcffe752e8c2154a42007d9a6111a6c6da35c51cca022d6449b4bf865a16ba
+2.1.0 ffi2-generators:~> 0.1|checksum:7babbd3f013fe03ac0cfd79eb489746fffe380368baf3506f0f878d327cfade3,ruby:~> 2.0

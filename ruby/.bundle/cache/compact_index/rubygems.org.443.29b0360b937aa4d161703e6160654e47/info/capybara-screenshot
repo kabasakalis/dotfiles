@@ -1,0 +1,50 @@
+---
+0.0.1 capybara:>= 1.0,cucumber:>= 1.0|checksum:wRnVUmVp7Cg1xA58RtAnAThsJKbXMYrgIeD8bVtu/3A=
+0.1.0 capybara:>= 1.0,cucumber:>= 1.0|checksum:N767KKnWnrlo6+b7Hphunl/k0JHCAAAwYQgg5KnAASc=
+0.1.1 capybara:>= 1.0,cucumber:>= 1.0|checksum:l8Iqg/TD9ieXITKi01yPP0pxuCdULNx6mYiEYsTFt7g=
+0.1.2 capybara:>= 1.0,cucumber:>= 1.0|checksum:HS38PpAI/YUjMQgw6oDyIBR70MBR7SikyNm8s6wWn98=
+0.1.3 capybara:>= 1.0,cucumber:>= 1.0|checksum:aGiWhN/k+kOpD11EYlhxo5o0ANE4fRr3Vnu7MzIt9JA=
+0.1.4 capybara:>= 1.0,cucumber:>= 1.0|checksum:miSlWsiHcUZUz7rUFtM0IftU5vggIipiepYwDyC/sSc=
+0.1.5 capybara:>= 1.0,cucumber:>= 1.0|checksum:42SX4eLueWQ+IwT6SwPdk/O3Oigs6SoWKxc/xDiFPcs=
+0.1.6 capybara:>= 1.0,cucumber:>= 1.0|checksum:13UdKzFXJYpX3vrlTdIxJZz0drp5kbsa/mesyveh+nc=
+0.1.7 capybara:>= 1.0,cucumber:>= 1.0|checksum:7TZjJl4QcQIeefVkWe7uYwkMmXPoejo0+x8PsVAhA9o=
+0.1.8 capybara:>= 1.0|checksum:cz2DL3AaSqR4JHLmpGAG9B5XFHs4shrMvvsP/8P6mjM=
+0.1.9 capybara:>= 1.0|checksum:PWITE7dVZWiDaSAX8dYJp5c5O8aaOWOCdN7bpE1JYLo=
+0.1.10 capybara:>= 1.0|checksum:OMM8hMqgFRsWuKckha+Xxajqa+rQFOFJb8T+hxgs1l0=
+0.2 capybara:>= 1.0|checksum:g/x2Q63cxxZsvFbg4cDP7U+NlIpg2XT6rD4Yrf9jZnE=
+0.2.1 capybara:>= 1.0|checksum:ZN76y479PRyvAVX1JYUxRdQrzsm+icNiN5cI2ccWTrU=
+0.2.2 capybara:>= 1.0|checksum:vHHldojN4EtUj57bpz73w5OR7obCQZn3x1KCuIazOlo=
+0.2.3 capybara:>= 1.0|checksum:RJJD00Pt2syFztspUe7uSmmiTVz7TjSjGiS951CDrRE=
+0.2.4 capybara:>= 1.0|checksum:3/1l6XvB3wUkmGkuPEJJElxBZJbLan3OA6Ofj/xzwbA=
+0.3 capybara:>= 1.0|checksum:5vgtI1NMcOmu1kPXaxKmC9s0G+8jljA2EeZAhv0a/ZI=
+0.3.1 capybara:< 3&>= 1.0|checksum:ZePeKyleD11fKLHSD04rClQrA9DMMyUGuRd0be/9Gjk=
+0.3.2 capybara:< 3&>= 1.0|checksum:FgZuMLkJFxSi11zLPlGl7GV6wd9kVaTnKjdkyAPKt4s=
+0.3.3 capybara:< 3&>= 1.0|checksum:2TStmUk0A44I6wBMEOpneNMP5yfUa3im0pxzZhDUrCE=
+0.3.4 capybara:< 3&>= 1.0|checksum:aqaJG12taEu+hPJpctKuO+do6pyQ2j1/IkbZsldrMaY=
+0.3.6 capybara:< 3&>= 1.0|checksum:xtKOFLH4H8HXrdXH7YqdXgkQa4IdQNz/Dp7iw1bPOmQ=
+0.3.8 capybara:< 3&>= 1.0|checksum:ch9Wf64NvwXAmCom6+Cq4X2AtppaFEyp+bK+YdI3QiA=
+0.3.10 capybara:< 3&>= 1.0|checksum:Xq/F7s1r2OQ0xTX+NjYvNFs9uzfderuNLioXoYC0Axg=
+0.3.11 capybara:< 3&>= 1.0|checksum:x4SCLibx8B2xphaQQotaVxM46uA/3Ko3WVArLCRDr5U=
+0.3.12 capybara:< 3&>= 1.0|checksum:Kbz/ve6gOFpyQslCxPJ0buK8YK57IVroK0Zx4ZCSl8U=
+0.3.13 capybara:< 3&>= 1.0|checksum:h+bfYBssATXx+oTIXZYnt5iYx4Ot/8JNkdQ6jQ8j2nk=
+0.3.14 capybara:< 3&>= 1.0,launchy:>= 0|checksum:a4+TMwE5/FFadptOBNELDlGogNrfQ18IklAj8k1Iqgs=
+0.3.16 capybara:< 3&>= 1.0,launchy:>= 0|checksum:2y+RXAluNf5IXDUG51iZsjwYfrojnCLDRt78zaRRhtQ=
+0.3.17 capybara:< 3&>= 1.0,launchy:>= 0|checksum:aCuy67gyETPRK857D6lwHx+YQ8CzFk5B9VCS3ZmA1H0=
+0.3.19 capybara:< 3&>= 1.0,launchy:>= 0|checksum:+t2bMgkePltm87oiE5xJrCc3smRz9KL/4wZNAbd7EHo=,ruby:>= 0
+0.3.20 capybara:< 3&>= 1.0,launchy:>= 0|checksum:vZ4xYQJ4ysmWhWE14DZ/V71057hLBuMpiKBdtm+4zBo=,ruby:>= 0
+0.3.21 capybara:< 3&>= 1.0,colorize:>= 0,launchy:>= 0|checksum:UaVmOCDQPa6Lou5dOvYkFM9sZpmqFStbbkeTBegVozQ=,ruby:>= 0
+0.3.22 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:kh2Aw8FDVpH8mCHhtE+2I8AmH44MdIwkid8fAiMzarw=,ruby:>= 0
+1.0.0 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:CD2RJ8gospBUMBW2QSUhwuLoIjK1t/p3RBaGk4De44M=,ruby:>= 0
+1.0.1 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:8iJDXjxpA5n6x9/wAhYHUhqOJGwzT6X0d9Be5mvOKc4=,ruby:>= 0
+1.0.2 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:KW5Eb+Ye0b2xzDg2rrFKLyZkneuyTJ3Cz/T2XzoaoP0=,ruby:>= 0
+1.0.3 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:IwvCV0gPhp01ktd2cX3hV+PVxrNbJA2nB5y6invUgvU=,ruby:>= 0
+1.0.4 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:SBMEhXOQ2D5HXhD285ECMgrqEIChKBSOWguAJQzTUIw=,ruby:>= 0
+1.0.5 capybara:< 3&>= 1.0,colored:>= 0,launchy:>= 0|checksum:SG1dGN8EBYUGB9tfmlaANjJZamlMxiaqrKzXtvtaYXs=,ruby:>= 0
+1.0.6 capybara:< 3&>= 1.0,launchy:>= 0|checksum:5cBIND+8fjcnezimqTxYq3EWAXaZMa0rrSEvhiXFWm4=,ruby:>= 0
+1.0.7 capybara:< 3&>= 1.0,launchy:>= 0|checksum:8Skp0fY2MY/vhdjp4Z8uYDLnLykMToU84NNZDHLo6Bc=,ruby:>= 0
+1.0.8 capybara:< 3&>= 1.0,launchy:>= 0|checksum:MTR39i/ERrkl6rcLDFG6zgLs8fSaN1RyUub9+kNNdpA=,ruby:>= 0
+1.0.9 capybara:< 3&>= 1.0,launchy:>= 0|checksum:w4nk7UWLK3+aXeyFF7Q1eQ8bBgc2Gq8Fv8PMwLQawZY=,ruby:>= 0
+1.0.10 capybara:< 3&>= 1.0,launchy:>= 0|checksum:dR5wnlD4w1BnB7eIEa1LKNT1weF6SjIRnuQvzGLiJjE=,ruby:>= 0
+1.0.11 capybara:< 3&>= 1.0,launchy:>= 0|checksum:
+1.0.12 capybara:< 3&>= 1.0,launchy:>= 0|checksum:4521d729a49cfe2cc8700a9b20ed122a14731959c2f42fa44160b7d4c4f097a5,ruby:>= 0,rubygems:>= 0
+1.0.13 capybara:< 3&>= 1.0,launchy:>= 0|checksum:9e0c2e0098a12e0018e68e82f1000621bd9cbd2dd5fc29f4363a532f406d8cd5,ruby:>= 0,rubygems:>= 0

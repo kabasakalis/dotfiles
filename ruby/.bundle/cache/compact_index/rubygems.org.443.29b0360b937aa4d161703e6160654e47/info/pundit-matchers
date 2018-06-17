@@ -1,0 +1,6 @@
+---
+0.0.0 pundit:>= 1.0.0&~> 1.0,rspec:>= 3.0.0&~> 3.0,rspec-rails:>= 3.0.0&~> 3.0|checksum:0acd287c3d08b4c5646b41d99c8523c87e675e4efab078a80aee552a8f6329a5
+1.0.0 pundit:>= 1.0.0&~> 1.0,rspec:>= 3.0.0&~> 3.0,rspec-rails:>= 3.0.0&~> 3.0|checksum:6c96a59ce6517380ce992a9b1a86f3e0d15398fa1f8ad06bcb61324a5371c7fb
+1.0.1 pundit:>= 1.0.0&~> 1.0,rspec:>= 3.0.0&~> 3.0,rspec-rails:>= 3.0.0&~> 3.0|checksum:83a61cef2f5d52e56b8ce9e210f2f5f16e37ef237b79a6b61a9574849da905a0
+1.0.2 pundit:>= 1.0.0&~> 1.0,rspec-rails:>= 3.0.0|checksum:4f19ef6e0a4fbc8696562552ee1d15cff87be78a3dfb2565b5f1330652f8fee5
+1.1.0 pundit:>= 1.1.0&~> 1.1,rspec-rails:>= 3.0.0|checksum:7f8ef6bd3511fa46392cbf00e1b0c78842d1a501fcb1eda26e8da783e6d1ca2e

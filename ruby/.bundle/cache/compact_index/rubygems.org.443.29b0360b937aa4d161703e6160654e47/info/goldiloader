@@ -1,0 +1,10 @@
+---
+0.0.3 activerecord:<= 4.1&>= 3.2,activesupport:<= 4.1&>= 3.2|checksum:e92e5380a2f3a98c446e3963de6808ebf7425bdb071c3ea5451f85592a83f434
+0.0.4 activerecord:<= 4.1&>= 3.2,activesupport:<= 4.1&>= 3.2|checksum:6a62bd1b531d32ac71801a8094df99f9867b02c26b3df45aebe88c49011027ac
+0.0.5 activerecord:< 4.2&>= 3.2,activesupport:< 4.2&>= 3.2|checksum:47005b4756252a5ecbe611bbe71039cbf1864e70e77d571b340da99dbb4c8f82
+0.0.6 activerecord:< 4.2&>= 3.2,activesupport:< 4.2&>= 3.2|checksum:a3793d467a5a613ab61c7b7e7f1ce3351185123b2ee3befcc96ee087135ca74a
+0.0.7 activerecord:< 4.3&>= 3.2,activesupport:< 4.3&>= 3.2|checksum:1fda31181a115bca9bf7c0b9bb130fa49874ba66eed5a1bd585fb9bccf539efb
+0.0.8 activerecord:< 4.3&>= 3.2,activesupport:< 4.3&>= 3.2|checksum:0d6cd366e01b79027430228569e854b46adcf773a5a1d5e15cc731e503296a54
+0.0.9 activerecord:< 4.3&>= 3.2,activesupport:< 4.3&>= 3.2|checksum:cca578fecdde8a6e3035672f9d5475c5a9479418afffd65307555b75f5bb8b6d
+0.0.10 activerecord:< 5.1&>= 3.2,activesupport:< 5.1&>= 3.2|checksum:f8b12d9f883186eea72bd38ab09ed80e7802d1b3ef4200649f312f0b664d5ead
+0.0.11 activerecord:< 5.1&>= 3.2,activesupport:< 5.1&>= 3.2|checksum:dbed10a06fa7c4980a0c263a78f6b84e6315473598eb790e43432d514d8ab56c

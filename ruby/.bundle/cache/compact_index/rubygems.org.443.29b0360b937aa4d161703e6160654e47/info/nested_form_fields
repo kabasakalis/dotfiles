@@ -1,0 +1,32 @@
+---
+0.0.1 |checksum:R5p7VzSat5KTvyuCRjk8ga7YHpRLbxqij8gDfcImh9M=
+0.0.2 |checksum:H4XLDFzeD0ZL2mstyURk+iAZn4LNbwiW15AdhtrXjVk=
+0.0.3 |checksum:cCcJEhcLh8/T6VBfu3ykVsgVGO8pY90V65PDIneIiWE=
+0.0.4 |checksum:aScmuxN2PTZgUafiax0QnN+cLMdAs/QwQO8g2AdEv3Y=
+0.0.5 |checksum:GxIXB2xKidEIcg6WxSW8N3OD1yDQUXOzk+a+yOllQdU=
+0.0.6 |checksum:VpwFhr5P8DnMpdceOntK62+xHn3pUSAlP8k4qHvgQ24=
+0.0.7 |checksum:G3Y9wkVUj7vQUK7dgMCXbMDek60OSGD4QJHxu0RtUdc=
+0.0.8 |checksum:h9aya3sbg3JA261flVWIXNWbj38J/TdzNXpfD91DUIk=
+0.0.9 |checksum:0tIli0bqUXr9n9gmMsaLD/0yNJO/EdpcOVTjjUcXYHQ=
+0.1.0 rails:>= 3.1.0|checksum:04rFNmT+iPLsZwrDQ6BY3u8tRGNWDPLD8XDVINlkKIM=
+0.2.0 rails:>= 3.2.0|checksum:OBZZxcEsRmfRqCEp8ryacmuZKAN4SnsP+TVdMn7BWIg=
+0.3.0 rails:>= 3.2.0|checksum:XClJBKxRNRf8E3mPkNgubdto1jRau2fUjlTWpo4ccwk=
+0.4.0 rails:>= 3.2.0|checksum:5X6KwRONw/RHMs3ChNm4O7jktPy5G8Qs7NFq2ILPMXQ=
+0.5.0 rails:>= 3.2.0|checksum:Ftl0mb8uKfsnIvP3G1FPHo1SgrywG6Zldjygealty1M=
+0.5.1 rails:>= 3.2.0|checksum:E6kG6acSwo0SLQi7VAc8HRf8VGSZRwzJTBKDMWMXGIs=,ruby:>= 0
+0.5.2 rails:>= 3.2.0|checksum:K9hHCehxlgDcLzTNjji15Ahe00d9j58+7gdnQwQhXdM=,ruby:>= 0
+0.5.3 rails:>= 3.2.0|checksum:s1OA84XbBSjps8N6XnloYEltIG+URbrdwqR/z/tTCGU=,ruby:>= 0
+0.6 rails:>= 3.2.0|checksum:OSJ6DGh2m0C5ueyH+ZxuDZf6NWdRjVgSmBsostFXV8A=,ruby:>= 0
+0.6.1 rails:>= 3.2.0|checksum:UwAxRS7J5+nh1EKsKkaBfa6aLAThrLOuHdkG/GAg9GU=,ruby:>= 0
+0.6.2 rails:>= 3.2.0|checksum:3zSqiU3fk1bDSFddO/bE2l+M3eqgH9cDd0NaIDa6vKY=,ruby:>= 0
+0.6.3 rails:>= 3.2.0|checksum:VSh+IKX73vGA70ZDyBArKa0iScbWypeB/74k26D2cD0=,ruby:>= 0
+0.6.4 rails:>= 3.2.0|checksum:2X1qiYg9rpJ4yjGIxslhG1VPUDypxoyKwG8IzZO328g=,ruby:>= 0
+0.7 rails:>= 3.2.0|checksum:sI4GvaCOeVYabbHJOITGwpt79RE+/304B7dGJKhElOM=,ruby:>= 0
+0.7.1 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:
+0.7.2 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:
+0.7.3 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:
+0.7.4 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:
+0.7.5 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:91bc8b7ce1be39cf07dd0a7c6197eda575c1dec8ab55da5599c4e097e9bcb563,ruby:>= 0,rubygems:>= 0
+0.7.6 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:7aae54860ba1276ba9aed5918af5264e5923128f4ce3169285e88b46fca26190,ruby:>= 0,rubygems:>= 0
+0.7.7 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:c550a716d0123a7807633446828003f52857841ee38dbfd88aa3ba39d7ab5a9a,ruby:>= 0,rubygems:>= 0
+0.7.8 coffee-rails:>= 3.2.1,jquery-rails:>= 0,rails:>= 3.2.0|checksum:391a70b9529d89036195dafc686011eeab2048525fbe4476d22d4e15f01b63f7,ruby:>= 0,rubygems:>= 0

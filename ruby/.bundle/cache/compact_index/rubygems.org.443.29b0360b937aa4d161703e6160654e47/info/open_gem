@@ -1,0 +1,7 @@
+---
+1.2.0 mocha:~> 0.9.5|checksum:9bkqKd/i/uJ817dRvdP7ljmhexbs3Ol+hz2gxchX4ds=
+1.3.0 mocha:~> 0.9.5|checksum:PSSzQDbM8Qx6h34qZ3HWw4GdeQqNVb+KLpHmE9nRoK0=
+1.3.1 mocha:~> 0.9.5|checksum:EqZueporRba5OSsPBTIJnAm3innfUcm02k1+0hQOOMY=
+1.4.0 |checksum:A2ui+ZDTCojsSCv8llAJPkDU1FD7lAW/uuXV6qSkO44=
+1.4.2 launchy:~> 0.3.5|checksum:zh7V8v8cWhUL0vaEHeHR9sV39f62UrWM2q1XMZm1GX4=
+1.5.0 launchy:~> 2.0|checksum:V22IqGDo4qizO365yTge1OVPmXfrx22fov+XoZqUE7Y=,rubygems:>= 1.8.0

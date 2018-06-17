@@ -1,0 +1,38 @@
+---
+0.3 interception:>= 0|checksum:f198776f40f38e6d102c17e2f3cca703691db4f442f72c0be521f8af64d3b1e0
+0.4 interception:>= 0|checksum:9ae876fd5f1fe94bcb8f622cb031447d261288940780291cf601472a3e1b0bed
+0.5 interception:>= 0,pry:>= 0|checksum:8b45ce10ce88f423b3ecc5f6760548f915b23d11be99a6c17a28a16ec934c2cc
+0.6 interception:>= 0,pry:>= 0|checksum:77825295d0d3b228ff3ad8845c3cbb08a13b6f5abb23dcf7d5aaf20f841aaa6c
+0.7 interception:>= 0,pry:>= 0|checksum:0f46cf0705d9c8395ecdcd02efd09fd3bd388d97ac2817f536363e1037444af9
+0.8 interception:>= 0,pry:>= 0|checksum:43c8abce24e1d3a8e47f62c770896141824e681d65577e156b668709da0b158f
+0.9.pre.1 interception:>= 0,pry:>= 0|checksum:f6226c06539e2f65cd5ecd603245b1996964c83bab0258028469a2f3a65d96fc,rubygems:> 1.3.1
+0.9 interception:>= 0.3,pry:>= 0|checksum:0eddfc8bf899db382bce8886058f8e907fba158b2a999de1b2acd4fc204965d8
+0.9.1 interception:>= 0.3,pry:>= 0|checksum:ce969043064a84dacb33c0e5d531c19911ef6370211f115ae929e4370c9c87ba
+0.9.1.martin interception:>= 0.3,pry:>= 0|checksum:9cd142701701d8eca519cc0c03c2e63073bfb33e114d18074067581ffef9306c,rubygems:> 1.3.1
+0.10.pre.1 interception:>= 0.3,pry:>= 0|checksum:643cc31279db4f8e4bcafe86892cdd981cde14a715654f9e8192f409c772527b,rubygems:> 1.3.1
+0.10 interception:>= 0.3,pry:>= 0|checksum:7fa450ed95f3dcc545532258de20ffbb4c0813ae44885813aa969e4a72eb41cc
+0.11.pre.1 interception:>= 0.3,pry:>= 0|checksum:684f866758abd5237f409b292c76ebaf196f1662a10b10b9a738cf637cfd0663,rubygems:> 1.3.1
+0.11 interception:>= 0.3,pry:>= 0|checksum:1ec0579eaa5a0b5213d3222e61993a842687c668f12c2e5cc6955c60ce7fab35
+0.12 interception:>= 0.3,pry:>= 0|checksum:16e6ee5d838240898a6af30a7479bd7fce9211f89b0b0596fa9ef2dd4e5598be
+0.13.pre.1 interception:>= 0.3,pry:>= 0|checksum:a17437b659679ff41b61c71e782fbb5fd4d15d01c26558aa292f83a6947873b4,rubygems:> 1.3.1
+0.13.pre.2 interception:>= 0.3,pry:>= 0|checksum:625c9bcf7b25bf065bc32579f2b97f816d058b7fd2bd22430b0429902441947b,rubygems:> 1.3.1
+0.13.pre.3 interception:>= 0.3,pry:>= 0|checksum:bfcada5a5ac87c1abd3c7862ddb7b23b7e5f2b5b62417323a05266e685309586,rubygems:> 1.3.1
+0.13.pre.4 interception:>= 0.3,pry:>= 0|checksum:96fc74753fd01b3de4e1645659ef42ef59dffbcc88ff8f4c3709102c2c8d1de4,rubygems:> 1.3.1
+0.13 interception:>= 0.3,pry:>= 0|checksum:00ddfc570ce37a7bea22a82b44d8a69befaf4cf173b96ec1fdf613fa5430ac02
+0.14 interception:>= 0.3,pry:>= 0|checksum:8243df6381129330894933ffd05e533bff15470556e26cf0b5b83358bfd4b76d
+0.15 interception:>= 0.3,pry:>= 0|checksum:aa98544c8cb15cb40ae8c06aae5ac7199fe4293b65813da309b483527944daff
+0.16 interception:>= 0.3,pry:>= 0|checksum:9b19e3724d8966e3310d4a11b79b59df87d3cf45fba4e0b8032e3a4088c0dd4a
+0.17 interception:>= 0.3,pry:>= 0|checksum:7e5b5df4fb5648b0832161e99c34455da796496a0ca122d31b36cdfdb141b223
+0.18 interception:>= 0.3,pry:>= 0|checksum:295852f75f5ff86485581a2efc135116025306822b6f553e107448337ebd4f4e
+0.18.1 interception:>= 0.3,pry:>= 0|checksum:b6b7ba53686701547b801a4c954f785bad66b00fbf0f06bdc459da2eeb8e5778
+1.0.0 interception:>= 0.3,pry:>= 0|checksum:0f539d34c9f3fbe795f9b40f9663dccd4a0be98bb0b79e1ee4c343a468f77754
+1.1.0 interception:>= 0.3,pry:>= 0|checksum:b6fdaa8f75d3dbb36db6077e5126c392d3f37051b38ab402d6cf87e2325f8e5b
+1.1.1 interception:>= 0.3,pry:>= 0|checksum:c294b722b7793c47d6e30d36046a65dc742f93f94821da214c1bb9d9199984da
+1.2.0 interception:>= 0.3,pry:>= 0|checksum:fde78537150083c09798b5249f47fc2e1fc67fcb7ebc208b5af0a1dd3e2df121
+1.3.0 interception:>= 0.3,pry:>= 0|checksum:88ab77eb4a7b4c544a8e65662e113118d2f0130b08ffa77f17a73f5f7114e1b1
+1.3.1 interception:>= 0.4,pry:>= 0|checksum:0e566b8814a268288885a4f811a775981cbfaeb3a5c36790c9cf927e11875fcf
+1.4.0 interception:>= 0.4,pry:>= 0|checksum:dc7b92d36cf86fce9a57dee60ebb8ed086434f8b00a5b14fff1704f5a445f64e
+1.4.1 interception:>= 0.5,pry:>= 0|checksum:8c6e0b880ea1caf434252383d113cab4bd00cdfe913d9747e3bceb874307cc2f
+1.4.2 interception:>= 0.5,pry:>= 0|checksum:4571aa75fc2752eef74a3bbf84a0b2e42816b957053c30052bde810f437a9bc7
+1.4.4 interception:>= 0.5,pry:>= 0|checksum:9254fc354e910576cd382d09852da3d9dbdc13a9ab49d4a98584fb3ce4b580a0
+1.4.5 interception:>= 0.5,pry:>= 0|checksum:4dc65eefc0421a15da29e1767f163f24d77e1ae80c768ff3687de95138274fa5
