@@ -21,6 +21,7 @@ Both MacOS and Ubuntu supported.
 Refer to these links:
 
 [Set up a fresh Ubuntu System (or Windows 10 Linux Subsystem) For Development](https://github.com/kabasakalis/dotfiles/wiki/Set-up-a-fresh-Ubuntu-System-(or-Windows-10-Linux-Subsystem)-For-Development)
+
 [Set up a fresh MacOS For Development](https://github.com/kabasakalis/dotfiles/wiki/Set-up-a-fresh-MacOS-For-Development)
 
 #### Important Disclaimer
