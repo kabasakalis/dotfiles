@@ -114,6 +114,7 @@ alias gunstage='git reset HEAD --'
 alias gdi='git diff'
 alias grevert='git checkout HEAD --'
 alias gco='git checkout'
+alias gba='git branch -a'
 
 
 #git project specific aliases
