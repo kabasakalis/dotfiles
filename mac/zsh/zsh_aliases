@@ -115,6 +115,7 @@ alias gdi='git diff'
 alias grevert='git checkout HEAD --'
 alias gco='git checkout'
 
+
 #git project specific aliases
 # Java
 
@@ -126,8 +127,10 @@ alias gco='git checkout'
 alias lgn="cd ~/logisfera/ && l"
 alias wb="cd ~/workbench/ && l"
 alias dl="cd ~/Downloads/ && l"
-alias eb="cd ~/logisfera/e5-greece.backend && l"
-alias ef="cd ~/logisfera/e5-greece.front && l"
+alias eb="cd ~/logisfera/e5-greece.backend && ls"
+alias ef="cd ~/logisfera/e5-greece.front && ls"
+alias pb='cd ~/logisfera/ergo.hellas.portal.backend && ls'
+alias pf='cd ~/logisfera/ergo.hellas.portal.front && ls'
 
 #Add extra protection against mistakes
 alias rm='rm -i'

@@ -90,7 +90,7 @@
   autostash = true
 
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
 
 [push]
   default = tracking

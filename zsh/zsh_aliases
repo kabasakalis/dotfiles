@@ -52,6 +52,11 @@ alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
 # Postman
 alias pman='cd /opt/Postman && ./Postman'
 
+
+alias e5b='cd ~/logisfera/e5-greece.backend'
+alias e5f='cd ~/logisfera/e5-greece.front'
+alias portal='cd ~/logisfera/ergo.hellas.portal.backend'
+
 #cpp
 alias cgcc='sudo update-alternatives --config gcc'
 alias ccpp='sudo update-alternatives --config c++'
@@ -160,6 +165,7 @@ alias labs="cd ~/Labs/ && ls"
 alias demo="cd ~/projects/DEMOS && ls"
 alias jv="cd ~/java && ls"
 alias ur="cd ~/upstream_repos && ls"
+
 
 #Add extra protection against mistakes
 alias rm='rm -i'
