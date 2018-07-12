@@ -133,6 +133,8 @@ alias ef="cd ~/logisfera/e5-greece.front && ls"
 alias pb='cd ~/logisfera/ergo.hellas.portal.backend && ls'
 alias pf='cd ~/logisfera/ergo.hellas.portal.front && ls'
 
+alias mvnportalclean='rm -rf ~/.m2/repository/pl && rm -rf ~/.m2/repository/io/lsn'
+
 #Add extra protection against mistakes
 alias rm='rm -i'
 alias tgz='tar -zxvf'
