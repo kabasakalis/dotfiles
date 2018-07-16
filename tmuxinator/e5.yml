@@ -32,9 +32,9 @@ windows:
   - e5b-LOOKUP:
     - cd ~/logisfera/e5_lookup
     - nvim
-  - e5f-project:
-    - cd ~/logisfera/e5-greece.front
-    - nvim
+  # - e5f-project:
+  #   - cd ~/logisfera/e5-greece.front
+  #   - nvim
   # - run-front:
   #   - sleep 50s
   #   - reds
