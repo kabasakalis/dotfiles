@@ -1,0 +1,100 @@
+
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~']
+
+- link:
+    #zsh
+    ~/.zshrc:
+      force: true
+      path: mac/zsh/zshrc
+    ~/.dircolors: mac/zsh/.dircolors
+    ~/.zshenv: mac/zsh/zshenv
+    ~/.zsh_aliases: mac/zsh/zsh_aliases
+
+    #oh-my-zsh
+    ~/.oh-my-zsh/oh-my-zsh.sh:
+      force: true
+      path: oh-my-zsh/oh-my-zsh.sh
+    ~/.oh-my-zsh/themes/bullet-train.zsh-theme:
+      force: true
+      path: zsh/bullet-train.zsh-theme
+    #bash
+    ~/.profile: bash/profile
+    ~/.bash_profile: bash/bash_profile
+    ~/.bashrc: bash/bashrc
+    ~/.bash_logout: bash/bash_logout
+    ~/.bash_aliases: bash/bash_aliases
+    #scripts
+    ~/.scripts: scripts
+    #tmux
+    # ~/.tmux.conf: mac/tmux/.tmux.conf
+    ~/.tmux.conf: mac/tmux/.tmux.conf
+    ~/.tmux.conf.local: mac/tmux/.tmux.conf.local
+    ~/.bin/tmuxinator.zsh: mac/tmux/tmuxinator.zsh
+    ~/.tmuxinator: tmuxinator/
+    #git
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    #vim
+    ~/.vimrc: neovim/init.vim
+    ~/.vim/colors: neovim/colors
+    ~/.vim/colors: neovim/colors
+    ~/.vim/plugins.vim: neovim/plugins.vim
+    ~/.vim/autoload/utils.vim: neovim/autoload/utils.vim
+    ~/.vim/pythonx: neovim/pythonx
+    ~/.vim/ftplugin: neovim/ftplugin
+    ~/ackrc: vim/ackrc
+    #neovim
+    ~/.config/nvim/init.vim: neovim/init.vim
+    ~/.ideavimrc: neovim/.ideavimrc
+    ~/.config/nvim/plugins.vim: neovim/plugins.vim
+    ~/.config/nvim/colors: neovim/colors
+    ~/.config/nvim/syntax: neovim/syntax
+    ~/.config/nvim/sessions: neovim/sessions
+    ~/.config/nvim/autoload/utils.vim: neovim/autoload/utils.vim
+    ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
+    ~/.vimsnippets: neovim/vimsnippets
+    ~/.config/nvim/dictionary.utf-8.add: neovim/spell/dictionary.utf-8.add
+    ~/.config/nvim/ftplugin: neovim/ftplugin
+    ~/.config/nvim/pythonx: neovim/pythonx
+    ~/.config/nvim/plugins/c-support/c-support/templates/Templates:
+      create: true,
+      path: neovim/c-support/Templates
+    #home_assets
+    ~/home_assets: home_assets
+    #Ruby
+    ~/.irbrc: ruby/.irbrc
+    ~/.gemrc: ruby/.gemrc
+    #~/.bundle: ruby/.bundle
+    ~/.pryrc: ruby/pryrc
+    ~/.rdebugrc: ruby/rdebugrc
+    ~/.bin/http: ruby/http
+    #Python
+    ~/.config/yapf/style:
+      create: true
+      path: python/yapf_style
+    ~/.config/flake8: python/flake8
+    ~/.flake8: python/flake8
+    #c++
+    ~/.lldbinit: cpp/.lldbinit
+    ~/.lldb: cpp/.lldb
+    ~/.zsh/completion/_docker-compose:
+      create: true
+      path: docker/_docker-compose
+    #ag
+    ~/.agignore: misc/agignore
+
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  #- [sudo zsh ~/.dotfiles/scripts/test1, Test1]
+  #- [mkdir -p ~/.tmux, Make .tmux folder]
+  #- ["git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm", Installing tmux plugin manager]
+  #- [sudo zsh ~/.dotfiles/scripts/dotfiles_install.sh, Installing Dotfiles]
+  #- [sudo zsh ~/.dotfiles/scripts/zsh_install.sh, Install zsh]
+  #- [sudo zsh ~/.dotfiles/scripts/tmux_install.sh, Installing Tmux]
+  #- ["wget -O - https://raw.githubusercontent.com/powerline/fonts/master/install.sh | zsh", Installing Powerline fonts]

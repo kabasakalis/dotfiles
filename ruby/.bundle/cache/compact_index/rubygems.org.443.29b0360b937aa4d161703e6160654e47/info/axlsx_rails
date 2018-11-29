@@ -1,0 +1,12 @@
+---
+0.1.0 axlsx:>= 0,rails:~> 3.1|checksum:32024dceaf41dc2ca9cbd4fb9354e6cc16ab80f4900bf9d850551eab1a01e718
+0.1.1 axlsx:>= 0,rails:~> 3.1|checksum:631204f9349601ed48f1cf44c52738e4eb4ba0de0672725881be05b573d2b656
+0.1.2 axlsx:>= 0,rails:~> 3.1|checksum:089440cc9a3a0a7e23ca08c96b498ef6b9970580ecea226884d33ac3e5c88c85
+0.1.3 axlsx:>= 0,rails:~> 3.1|checksum:ce234fac44061cb38b4b193fa05479ca06609f1fe35f6d774371265b731dd065
+0.1.4 axlsx:>= 0,rails:>= 3.1|checksum:19fd7d897c1e1e80c1d2bca3732a6bc56f1bb4fa478b74585b72e983eb6c7dc9
+0.1.5 axlsx:>= 0,rails:>= 3.1|checksum:4517bd6e39b0ef96d03a67fc838316aec0aeadf3684b0b29119a6d0929a9132a
+0.2.0 axlsx:>= 2.0.1,rails:>= 3.1|checksum:fee85bb9fcc07d0c98c66efcbf51df63b741b2c6870fab79186decae56dc9d6c
+0.2.1 axlsx:>= 2.0.1,rails:>= 3.1|checksum:062429b1dac01ecd7363b7430d66115e577fb0635545688610884b4517099572
+0.3.0 axlsx:>= 2.0.1,rails:>= 3.1|checksum:f61d835e91f3485e8e164aec568eb34b7130a94e92bb7d33ee846955780e2726
+0.4.0 axlsx:>= 2.0.1,rails:>= 3.1|checksum:b1cc13b66a0a8feecab5f4ae681bcbf0c768628b12c860e055f332847fba93e9
+0.5.0 actionpack:>= 3.1,axlsx:>= 2.0.1|checksum:a939f9c5be8fb3884570ff4df5706de48b8e5bf4bde4a98c8ab45e35f71840c0

@@ -26,18 +26,21 @@ endif
 " let g:python_host_prog  = expand("SHOME/.pyenv/versions/neovim2/bin/python")
 " let g:python3_host_prog = expand("$HOME/.pyenv/versions/neovim3/bin/python")
 
-let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
-let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+" UBUNTU
+" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+" let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+
+" Mac OS
+let g:python_host_prog  = "/usr/local/bin/python2"
+let g:python3_host_prog = "/usr/local/bin/python3"
 
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 
+set guicursor=
 let mapleader=" "                 " leader
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
@@ -85,9 +88,9 @@ set ttyfast
 " Save temporary/backup files not in the local directory, but in your ~/.vim
 " directory, to keep them out of git repos.
 " Pretty sure you need to mkdir backup, swap, and undo first to make this work
-set backupdir=~/.config/nvim/backup//
-set directory=~/.config/nvim/swap//
-set undodir=~/.config/nvim/undo//
+set backupdir=~/.config/nvim/backup/
+set directory=~/.config/nvim/swap
+set undodir=~/.config/nvim/undo
 
 set tags=./tags;                  " Set the tag file search order
 "}}}
@@ -96,23 +99,12 @@ set tags=./tags;                  " Set the tag file search order
 " Color and highlighting settings {{{
 " ======================================================================================================================
 
-" Available themes:
-" jellybeans
-" lucid
-" railscasts
-" Tomorrow-Night
-" seoul256
-" tropikos
-" gotham256
-" Color scheme based on time
-" Turn syntax highlighting on
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
 
 " if (has("termguicolors"))
 "   set termguicolors
 " endif
 
+" Switch syntax highlighting on, when the terminal has colors
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   " Turn syntax highlighting on
   syntax on
@@ -121,8 +113,21 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 
 let g:rehash256=1
-" Theme
+
+"" Available themes:
+" jellybeans
+" lucid
+" railscasts
+" Tomorrow-Night
+" seoul256
+" tropikos
+" gotham256
+" Color scheme based on time
 colorscheme  Tomorrow-Night
+" colorscheme seoul256
+" colorscheme tropikos
+" colorscheme jellybeans
+
 "transparency
 hi Normal  ctermfg=252 ctermbg=none
 
@@ -203,7 +208,7 @@ set fillchars="fold: "            " Characters to fill the statuslines and verti
 " White characters settings {{{
 " ---------------------------------------------------------------------------------------------------------------------
 "set list                         " Show listchars by default
-set listchars=tab:?\ ,eol:¬,extends:?,precedes:?,trail:·,nbsp:·
+set listchars=tab:?\ ,eol:Â¬,extends:?,precedes:?,trail:Â·,nbsp:Â·
 "set showbreak=?
 "}}}
 
@@ -232,9 +237,7 @@ set nospell                       " Disable checking by default (use <F4> to tog
 " Neovim specific configuration {{{
 " ======================================================================================================================
 if has("nvim")
-  " change cursor to bar in insert mode
-  "let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-  " run tests with :T
+
   let test#strategy = "neoterm"
   " ======================================================================================================================
   " Neoterm
@@ -285,6 +288,7 @@ nnoremap <Leader>s :w<CR>
 
 " Quiting and saving all
 cnoremap ww wqall
+" Quiting and not saving all
 cnoremap qq qall
 cnoremap <ESC><ESC> qall!<CR>
 
@@ -354,6 +358,9 @@ vnoremap y y`]
 vnoremap p "_dP`]
 nnoremap p p`]
 
+" Copy Word
+nmap ,c yiw
+
 " Yank and paste from clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
@@ -408,13 +415,13 @@ nnoremap <leader>c mzi<CR><ESC>`z
 
 
 " Start substitute,replace on current word under the cursor
-nnoremap ,s :%s///gc<Left><Left><Left>
+nnoremap ,s :%s///gc<Left><Left><Left>
 
 " Start search on current word under the cursor
-nnoremap ,/ /<CR>
+nnoremap ,/ /<CR>
 
 " Start reverse search on current word under the cursor
-nnoremap ,? ?<CR>
+nnoremap ,? ?<CR>
 
 " Faster sort
 vnoremap ,s :!sort<CR>
@@ -658,7 +665,7 @@ autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
 " if you are using another syn highlight for a given line (e.g.
 " NERDTreeHighlightFile) need to give that name in the 'containedin' for this
 " other highlight to work with it
-autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
+" autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
 
 " nnoremap <silent> <Leader>h :call utils#nerdWrapper()<CR>
@@ -667,7 +674,6 @@ nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
 " map <Leader>n :NERDTreeToggle<CR>
 
 "}}}
-
 
 "  -------------------------------------------
 "  w0rp/ale, Asynchronous maker and linter {{{
@@ -711,13 +717,14 @@ omap F <Plug>Sneak_S
 " -----------------------------------------------------
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+" Overwins disabled due to buggy cursor, still works though.
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `m{char}{label}`
-"nmap m <Plug>(tion-overwin-f)
+" nmap m <Plug>(easymotion-overwin-f)
 " or
 " `m{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-overwin-f2)
+" nmap s <Plug>(easymotion-overwin-f2)
 
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
@@ -752,7 +759,7 @@ let g:gitgutter_sign_removed='-'
 let g:gitgutter_sign_modified_removed='~'
 let g:gitgutter_sign_removed_first_line='-'
 let g:gitgutter_override_sign_column_highlight = 0
-set signcolumn=yes
+"set signcolumn=yes
 
 highlight GitGutterAdd ctermfg=green ctermbg=NONE
 highlight GitGutterChange ctermfg=yellow ctermbg=NONE
@@ -1031,6 +1038,8 @@ command! Retab :call utils#retabToFourSpaces()
 " Recognize python
 au BufNewFile,BufRead *.py set filetype=python
 
+au BufNewFile,BufRead *.java set filetype=java
+
 " Turn spellcheck on for markdown files
 autocmd BufNewFile,BufRead *.md setlocal spell
 
@@ -1039,6 +1048,11 @@ autocmd BufWritePre * call utils#stripTrailingWhitespaces()
 
 " Resize splits when the window is resized
 autocmd VimResized * :wincmd =
+
+augroup filetype
+   au BufRead,BufNewFile *.java   set filetype=java
+ augroup END
+au Syntax java    so ~/.config/nvim/syntax/java.vim
 
 augroup vimrcEx
   autocmd!

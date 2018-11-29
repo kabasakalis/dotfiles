@@ -1,8 +1,6 @@
 # Environmental variables
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='nvim'
-# export EDITOR='subl'
-# export EDITOR='atom'
 export MYNVIMRC='~/.config/nvim/init.vim'
 export ALTERNATE_EDITOR=""
 # export TERM="xterm-256color"
@@ -16,14 +14,15 @@ export HUNTER_ROOT="$HOME/.hunter"
 export PYENV_ROOT="$HOME/.pyenv"
 export MINICONDA3="$HOME/miniconda3"
 export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-export PATH="$PATH:`yarn global bin`"
+# export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
+# export PATH="$PATH:`yarn global bin`"
 
 # PATH
 PATH=$(paste -d ":" -s << EOF
 $PATH
-$HOME/.gem/ruby/2.4.0/bin
-$HOME/.rubies/ruby-2.4.0/bin
+$HOME/.gem/ruby/2.5.1/bin
+$HOME/.rubies/ruby-2.5.1/bin
 $HOME/chruby-0.3.9/bin
 $HOME/dotfiles/scripts
 $HOME/.local/bin
@@ -49,7 +48,7 @@ source /usr/local/share/chruby/auto.sh
 #chruby 2.4.0
 
 #REMAP CAPS LOCK to CTRL
-gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+#gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 
 # pyenv, disable this line to stop managing python version with penv
 eval "$(pyenv init -)"

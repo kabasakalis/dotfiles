@@ -1,0 +1,10 @@
+---
+0.0.1 cli:>= 0,sidekiq:>= 0|checksum:LP6rCrWrSJJyE/v1kJ11z/GEnkXZxvNeP85FMOQytN4=
+0.1.0 cli:>= 0,sidekiq:>= 0|checksum:l9C0neXfyWsEG/8k8nGMzUpOkhUbPKvvCoKfhWsU2Bc=
+0.1.1 cli:>= 0,sidekiq:>= 0|checksum:dTPY9dyUST+qBmbN+MEC1++wdFFDR/EVQPbUXffZSGI=
+0.1.2 cli:>= 0,sidekiq:>= 0|checksum:GhQJztU0C8kb6ujtzJbR4DsmFkTYfWlzkSkwgQRKPkw=
+0.1.3 cli:>= 0,sidekiq:~> 2.15.0|checksum:frOES08t8ciXjCofIwxZY9aGOZFmHhmk7gKuhuslupA=
+0.1.4 cli:>= 0,sidekiq:~> 2.15.0|checksum:6lDYmfSN7Orc7JGxs+PnTHea4/C4OyufqOeVgd7elTQ=
+0.1.5 cli:>= 0,sidekiq:~> 2.15|checksum:/cdUBdPsnb5cX5ESRC7wmtcOSEpPz2/2D7uSjgLOK/8=
+0.1.6 cli:>= 0,sidekiq:>= 2.15|checksum:OhOB5Xsv5sKGUIQGbRSfH2SXZhd6Q/WpTEaZ0qd56vg=,ruby:>= 0
+0.1.7 cli:>= 0,sidekiq:>= 2.15|checksum:o5f2+ACV7b/EzZ+jGuO/819dsNXpsvToBCgeDtbQhIo=,ruby:>= 0

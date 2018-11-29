@@ -1,0 +1,8 @@
+---
+0.1.0 guard:>= 0.2.1|checksum:Hz0lS5rW9qcaYKnSLkO2MWqlQhwxMA7HLN2E9fWMZRk=,rubygems:>= 1.3.6
+0.1.1 guard:>= 0.2.2|checksum:SCO8yqjGLqrtYKHWVKVUiTqcphbUj+RHwEicAxNri2k=,rubygems:>= 1.3.6
+0.1.2 guard:>= 0.2.2|checksum:u1PPCPYPWH/PnrChGQRlVuSOJZylz1V6uY9OHnAZc/g=,rubygems:>= 1.3.6
+0.1.3 bundler:>= 1.0.0,guard:>= 0.2.2|checksum:NOH939yzMV65nOe+2PsbnLPnIsjeGWqRxK1pSO1KyhM=,rubygems:>= 1.3.6
+1.0.0 bundler:~> 1.0,guard:~> 1.1|checksum:Gs4/Q9JzaLcvQDImgo3W9LEGnLJXlIAOptiv5K0xeGk=,rubygems:>= 1.3.6
+2.0.0 bundler:~> 1.0,guard:~> 2.2|checksum:Uzp04QAupGG4pEwaZvd4O02ZZ7rMLTQ0KXUkYYC969c=
+2.1.0 bundler:~> 1.0,guard:~> 2.2,guard-compat:~> 1.1|checksum:4KH5aJOGZnfs9COPUkyhFgL3BZKv0PuD0C3wmGcHOJg=,ruby:>= 1.9.2

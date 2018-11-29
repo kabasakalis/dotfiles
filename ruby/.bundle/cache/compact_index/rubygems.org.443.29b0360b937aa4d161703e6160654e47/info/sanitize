@@ -1,0 +1,49 @@
+---
+1.0.6 hpricot:~> 0.6|checksum:be0b533cd64ec55bd0825eab182a6abfa86e8be835cbc242a895687323cf83cf
+1.0.7 hpricot:~> 0.8.1|checksum:54757bd76f692748b3296c69d5ea131c68f1d37aec0f69591d394cc53c8b38a7
+1.0.8 hpricot:~> 0.8.1|checksum:6c32552af1dd46fcbca4cf0c57dc21e58728901d322455a35bdd36e84bad3ada
+1.0.0 hpricot:~> 0.6|checksum:1d519004c550fce3b6f98341dcc3cae8aedb07da3900956b5b330e5f9b4a2c59
+1.0.1 hpricot:~> 0.6,htmlentities:~> 4.0.0|checksum:e5201e2012c5e608760c4e770f43f88d936b4c08326391ce6d0e0fc8d57759e9
+1.0.2 hpricot:~> 0.6,htmlentities:~> 4.0.0|checksum:cc60c9a892d034808136606c5cb328ed3149ee1358df5acc17d3b1e4c4f057c8
+1.0.3 hpricot:~> 0.6,htmlentities:~> 4.0.0|checksum:26ab2a72d5f56c3c6e59b52f3090d6173824a1af830cb8694ec54d38c62bde8d
+1.0.4 hpricot:~> 0.6,htmlentities:~> 4.0.0|checksum:b72bf528c9f9d9cc72f87f9ab8bb7089580fae862d58de08a11741e3b7436a70
+1.0.5 hpricot:~> 0.6,htmlentities:~> 4.0.0|checksum:99b84a7e1a5ed8f9c4f2d889930872c165f680c7a26915e0962c90438a561689
+1.1.0 nokogiri:~> 1.3.3|checksum:7183eb40475b4415afd0ccfdcc37df2889d6005561b5fe4d1e2c69760cdfd527
+1.1.1.dev.20091102 nokogiri:~> 1.4.0|checksum:b4161b5c6183b535c228a9b3c3073f97ce68e35ea2b213f69f052e4320ddbe68,rubygems:> 1.3.1
+1.2.0.dev.20091104 nokogiri:~> 1.4.0|checksum:aed8bd1903c5ad5806148cf8435e7f5190f64ec160adbedcdb8df8221ecf48de,rubygems:> 1.3.1
+1.2.0 nokogiri:~> 1.4.1|checksum:8a9c72042b75d55ae853cc8e0419b12bcbff7b6905840770089a8ed341b1f469
+1.2.1.dev.20100122 nokogiri:~> 1.4.1|checksum:a88ec1d0684218dda7aa844b37fcf83fa604742cdd3911eb7cda523e01497e6b,rubygems:> 1.3.1
+1.2.1.dev.20100124 nokogiri:~> 1.4.1|checksum:42257655df6f57935c7291aeadc7c5a6ecee22c08b03619f2733af8cd205c6d3,rubygems:> 1.3.1
+1.2.1.dev.20100329 nokogiri:~> 1.4.1|checksum:5cc43e73f33e9cf47eee9fbbbfa561b1ac96fe0ebe0d009a22e396657b3ecc47,rubygems:> 1.3.1
+1.2.1 nokogiri:~> 1.4.1|checksum:8580cfaa5de4b00950040344dbf6cc0a00beeed6ec8c3c205e8843d22b1468d0
+1.2.2.dev.20100822 nokogiri:~> 1.4.1|checksum:74bfddccccf273f4542e89cb18811256e0d54f599c19173696feab8d3608b6b9,rubygems:> 1.3.1
+1.2.2.dev.20101028 nokogiri:~> 1.4.1|checksum:9ae3ef719584dc4f54243bca916f0617d70b0e2674d7acdf412d6898c6aa1f74,rubygems:> 1.3.1
+1.2.2.dev.20101118 nokogiri:~> 1.4.4|checksum:ea83ada79df3691fac90e47f32f0449253361a5dc09c1f63f56f6faa02903f87,rubygems:> 1.3.1
+1.3.0.dev.20101210 nokogiri:~> 1.4.4|checksum:186a9681ecfef4e896cf3a1930843c039120a9efe1d7a90e2593290fcf1278cf,rubygems:> 1.3.1
+2.0.0.dev.20101211 nokogiri:~> 1.4.4|checksum:80748a62f824a37457453a28ebf583cf28667d372ed705066ce13bc565fd39da,rubygems:> 1.3.1
+2.0.0.dev.20101213 nokogiri:~> 1.4.4|checksum:7d1e15f971a7bc6e67241abf2a4245648061de04af9621d2110e92657465304a,rubygems:> 1.3.1
+2.0.0.dev.20101225 nokogiri:~> 1.4.4|checksum:a7fae6057e1bba95de099206ede3c8e54c9b2f42463f27fcc38ece0d9715c897,rubygems:> 1.3.1
+2.0.0.dev.20110105 nokogiri:~> 1.4.4|checksum:af71ee23f7d9f45a626901e86641109461c0710d9079e86172beae4f5fa2fd84,rubygems:> 1.3.1
+2.0.0 nokogiri:~> 1.4.4|checksum:b3df930c6a94848892bb4c76fe7966365077813392e00bca7782c9f9646a59f4
+2.0.1 nokogiri:~> 1.4.4|checksum:48fb5761e816efed4c90195fdcb81f3701d6967148cfac4fc008c589589180c7
+2.0.2 nokogiri:~> 1.4.4|checksum:f805fe593ca3c2650401c509c120ae9135dc88b353c0ec15b828743d218df205
+2.0.3.dev.20110603 nokogiri:< 1.6&>= 1.4.4|checksum:ebbafaccbd984296ad3e64a380103555a2ec65ca2d57d5007a68ce4d08dd4fa8,rubygems:> 1.3.1
+2.0.3 nokogiri:< 1.6&>= 1.4.4|checksum:be3dc43a42b0057dc2ad945c2e7e4205f33a24030891b8dd7d943fc829cdb098
+2.0.4 nokogiri:~> 1.6.0|checksum:105ddb2c1a7dc239449fa25c498c431e18ca56e8838a5421ad96198ca35252d6,rubygems:>= 1.2.0
+2.0.5 nokogiri:>= 1.4.4|checksum:f379082d6da431fbc86995bb1470eaacef321727f22a5b4bc69f5472e87ef1d8,rubygems:>= 1.2.0
+2.0.6 nokogiri:>= 1.4.4|checksum:204cdaf6f7db12e20da25497a974cae7a891cfb7afb37669a0d31007300004a9,rubygems:>= 1.2.0
+2.1.0 nokogiri:>= 1.4.4|checksum:c3be075f5b38a1b02404be5778b181e50fba9ab253bac851cb217d9a71375b77,rubygems:>= 1.2.0
+3.0.0 crass:~> 0.2.0,nokogiri:>= 1.4.4,nokogumbo:= 1.1.9|checksum:523aa8cbf0f9ba103201eba5559d6d29a369f7127ee0a319e85c3433b9f0824a,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.0.1 crass:~> 0.2.0,nokogiri:>= 1.4.4,nokogumbo:= 1.1.11|checksum:b45f8dc894a12855e365168e19eec169d243d78a7af4f792df6bdec5bd910f54,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.0.2 crass:~> 0.2.0,nokogiri:>= 1.4.4,nokogumbo:= 1.1.12|checksum:95f678ec4fdd370d49c9ba2286601900f21a585f3aa492f1be83fac18aa268bd,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.0.3 crass:~> 0.2.0,nokogiri:>= 1.4.4,nokogumbo:= 1.1.12|checksum:d6a18a65d3eeb662b8fc60863aad23c000dc6ce123f3cea7e126c6829a8eaef3,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.0.4 crass:~> 0.2.0,nokogiri:>= 1.4.4,nokogumbo:= 1.1.12|checksum:179fd7741ce506ce09f365412d5fec615d97af8e9b13b61904c4523e69a0ccc1,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.1.0 crass:~> 1.0.1,nokogiri:>= 1.4.4,nokogumbo:= 1.2.0|checksum:f4795e5fdc7a2a256ec127e4ad75a5f5efff7e665fd5782867d8af99aa60fc86,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.1.1 crass:~> 1.0.1,nokogiri:>= 1.4.4,nokogumbo:= 1.2.0|checksum:fd209f572eba55055a9726bc7135c8f7e5a3ff80610f317c5416b11dcdcf376a,ruby:>= 1.9.2,rubygems:>= 1.2.0
+3.1.2 crass:~> 1.0.1,nokogiri:>= 1.4.4,nokogumbo:= 1.2.0|checksum:1eddb4abcd1cdd4f71ff3fb6e84b885413907bd26ebc0d54d27806d1c1d47e0d,ruby:>= 1.9.2,rubygems:>= 1.2.0
+4.0.0 crass:~> 1.0.2,nokogiri:>= 1.4.4,nokogumbo:= 1.4.1|checksum:56445c9c609e98e855902d0be6c76a687a2987c698f56a983feedd1d8b46676a,ruby:>= 1.9.2,rubygems:>= 1.2.0
+4.0.1 crass:~> 1.0.2,nokogiri:>= 1.4.4,nokogumbo:~> 1.4.1|checksum:7c9d325cd44120f74bb052389d4b464e3fcb9cd46e24b0ff59582c3196e52f1e,ruby:>= 1.9.2,rubygems:>= 1.2.0
+4.1.0 crass:~> 1.0.2,nokogiri:>= 1.4.4,nokogumbo:~> 1.4.1|checksum:7c29a7fe05c780d59558a95ea274575c72220fb2ab7ba0d9076823e6063eb1a2,ruby:>= 1.9.2,rubygems:>= 1.2.0
+4.2.0 crass:~> 1.0.2,nokogiri:>= 1.4.4,nokogumbo:~> 1.4.1|checksum:4a17c27f5018389cb92bf2f258ffbe7cd905d3082382b8387069ddc8fdde8a1c,ruby:>= 1.9.2,rubygems:>= 1.2.0
+4.3.0 crass:~> 1.0.2,nokogiri:>= 1.4.4,nokogumbo:~> 1.4.1|checksum:f73049693ea1d305c3d31867e56f0e87d7dc2ac63e8b67437c8067649006e7d0,ruby:>= 1.9.2,rubygems:>= 1.2.0
+4.4.0 crass:~> 1.0.2,nokogiri:>= 1.4.4,nokogumbo:~> 1.4.1|checksum:9637d81a9da65c235b601afbab05cd0d2eb58b08e7b7f1df213ca263de500bfe,ruby:>= 1.9.2,rubygems:>= 1.2.0

@@ -67,7 +67,6 @@ Plug  'mhinz/vim-startify'
 " ---------------------------------------------------------------------------------------------------------------------
 " Terminal {{{
 " ---------------------------------------------------------------------------------------------------------------------
-Plug 'kassio/neoterm'
 "}}}
 " ---------------------------------------------------------------------------------------------------------------------
 " Git {{{
@@ -143,8 +142,6 @@ Plug 'sassanh/nvim-cm-eclim'
 "  c-supportWolfgangMehner/c-support
 " Plug 'WolfgangMehner/c-support', { 'for': 'cpp' }
 "
-"  Doxygen
-Plug 'DoxygenToolkit.vim', { 'for': 'cpp' }
 " Additional syntax highlighting that I use for C++11/14/17
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 " This Vim plugin will help switching between companion files (e.g. .h and .cpp files)

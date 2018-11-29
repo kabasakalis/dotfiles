@@ -1,0 +1,4 @@
+---
+0.0.1 activerecord:>= 0,activesupport:>= 0|checksum:d1fe626dd4488194f479128f3c5e711042eee178b19b28bd4ed2db89ef760c09
+0.0.2 activerecord:>= 0,activesupport:>= 0|checksum:4da4fa6a0a647f9e693e9194c73b6c7f003ada1a8976b6eb847c78486f19fbee
+2.0.0 |checksum:5bca6e249df7739527ee8a959a29b407320479ab79dd6f0a40386c6e12da5704

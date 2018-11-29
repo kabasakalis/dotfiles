@@ -1,0 +1,4 @@
+---
+1.0.0 |checksum:394617e7e0123f3f554fee8cf55f16b430b091b88a7894eb8688004ec6b840ce
+2.0.1 rubysl-fileutils:~> 2.0,rubysl-shellwords:~> 2.0|checksum:641f0b1f24caa5750128573c31d477d1c8c01fd567fe6a6993825f6cea079fd9
+2.1 rubysl-fileutils:~> 2.0,rubysl-shellwords:~> 2.0|checksum:e1e279f3b26430f29722466eae3cd9c0c0fde6143c66c695b18f13f5c737d2a3,ruby:~> 2.0

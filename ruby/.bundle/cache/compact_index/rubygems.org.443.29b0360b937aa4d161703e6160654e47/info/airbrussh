@@ -1,0 +1,16 @@
+---
+0.0.1 sshkit:>= 1.6.1|checksum:j6rokFnagVKk/k1USdHCWc3cSsVxMtLNseOeUvjprxM=,ruby:>= 0
+0.2.0 sshkit:~> 1.6.1|checksum:zEjp8CGvSVLAMH7Z758ZsqILB/q43Ax8JRCKTs10cE0=,ruby:>= 0
+0.2.1 sshkit:!= 1.7.0&>= 1.6.1|checksum:KoZK2PqRaz+D+Ui1jR2ncFukC9X9CtMcjdXKwmxCgN0=,ruby:>= 0
+0.3.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:WqDuW5VIDEPu4LNXKhUkAJ1y3He3iQfTVrDhaIXNHtM=,ruby:>= 0
+0.4.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:GSrl3fwKCw9vUFfPn7tDAJOHlrVE4NZeshxJd35ts98=,ruby:>= 0
+0.4.1 sshkit:!= 1.7.0&>= 1.6.1|checksum:n27bDruhAKIGsB48k3l6gdg6OQhafeu9t1+qLleEuWA=,ruby:>= 0
+0.5.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:ix1uhLM3B8tnKCeJbqpcUo/HNjPhtM+ssglqy/vjyA0=,ruby:>= 0
+0.5.1 sshkit:!= 1.7.0&>= 1.6.1|checksum:61zDVrrjV9nGHBAbczigJBU77P63LW8kAGr7Ykjd0QU=,ruby:>= 0
+0.6.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:2gge48rzz870vKj5PY6gpEg3hKjygFidXPLQI0AdG9o=,ruby:>= 0
+0.7.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:
+0.8.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:
+1.0.0.beta1 sshkit:!= 1.7.0&>= 1.6.1|checksum:
+1.0.0 sshkit:!= 1.7.0&>= 1.6.1|checksum:07a46c68ec6a3d6875e19c472d562b86a94a403c6c90573bd357877e99bc2697,ruby:>= 0,rubygems:>= 0
+1.0.1 sshkit:!= 1.7.0&>= 1.6.1|checksum:f1d5285d95c2e74e5cf7f95264ca314d941bed0ead60ac2dc10c410af1bf7578,ruby:>= 0,rubygems:>= 0
+1.0.2 sshkit:!= 1.7.0&>= 1.6.1|checksum:c3d542ebaaefa13936566cee00460da65888de2742a60a1db7d88838b07c8843,ruby:>= 0,rubygems:>= 0

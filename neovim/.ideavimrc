@@ -77,7 +77,7 @@ set ttimeoutlen=10
 " ---------------------------------------------------------------------------------------------------------------------
 " Native Plugins {{{
 " ======================================================================================================================
-set surround
+set surround " doesn't work though.
 
 "}}}
 
@@ -134,6 +134,12 @@ vmap x "_d
 nnoremap c "xc
 xnoremap c "xc
 
+" Change line
+nmap cc 1S
+
+" Copy Word
+nmap ,c yiw
+
 " Reselect last-pasted text
 nnoremap gp `[v`]
 
@@ -162,6 +168,7 @@ nnoremap N Nzz
 vnoremap n nzz
 vnoremap N Nzz
 
+
 " Center screen when moving up and down
 nnoremap <C-u> <C-u>zz
 nnoremap <C-o> <C-d>zz
@@ -187,15 +194,17 @@ map <A-a>    :action GotoAction<CR>
 map <Space>f :action Forward<CR>
 map <Space>b :action Back<CR>
 map <Space>tt :action ShowSettings<CR>
-
-
-" File Operations
-map / :action Find<CR> " Find
-map g/ /   " Preserve  ideavim search
+"
+"
+" " File Operations
+map <Space>s :action SaveAll<CR>
+" Find
+map / :action Find<CR>
+" Preserve  ideavim search
+map g/ /
 map ,/ :action Replace<CR>
 map <Space>n :action NextOccurence<CR>
 map <Space>p :action PreviousOccurence<CR>
-map <Space>s :action SaveAll<CR>
 map <Space>cc :action CloseContent<CR>
 map <Space><Space> :action VimFilePrevious<CR>
 map <Space>l :action NextTab<CR>
@@ -204,11 +213,10 @@ map <Space>ot :action ReopenClosedTab<CR>
 map <Space>a :action $SelectAll<CR>
 map  ,sfp :action ShowFilePath<CR>
 map <Space>ncl :action NewClass<CR>
-map <Space>ndi :action NewDialog<CR>
-map <Space>nfo :action NewDir<CR>
-map <Space>nfi :action NewFile<CR>
+" map <Space>nfo :action NewDir<CR>
+" map <Space>nfi :action NewFile<CR>
 map <Space>np  :action NewProject<CR>
-map <Space>sb :action NewScratchBuffer<CR>
+map <Space>nsb :action NewScratchBuffer<CR>
 map <Space>nw :action OpenElementInNewWindow<CR>
 map <Space>ca :action CloseAllEditors<CR>
 map <Space>co :action CloseAllEditorsButActive<CR>
@@ -217,13 +225,10 @@ map <Space>ku :action EditorCloneCaretAbove<CR>
 map <Space>kd :action EditorCloneCaretBelow<CR>
 map <Space>fw :action FindWordAtCaret<CR>
 map <Space>tc :action EditorToggleCase<CR>
-map <Space>ml :action MoveElementLeft<CR>
-map <Space>mr :action MoveElementRight<CR>
 map <Space>mo :action MoveEditorToOppositeTabGroup<CR>
 
+" " Code navigation
 
-" Code navigation
-"
 map gc :action GotoClass<CR>
 map gf :action GotoFile<CR>
 map gs :action GotoSymbol<CR>
@@ -237,8 +242,8 @@ map ,huf :action HighlightUsagesInFile<CR>
 map mu :action MethodUp<CR>
 map md :action MethodDown<CR>
 map ,qd :action QuickJavaDoc<CR>
-map tb :action ToggleBookmark<CR>
-map tbm :action ToggleBookmarkWithMnemonic<CR>
+map ,tb :action ToggleBookmark<CR>
+map ,tbm :action ToggleBookmarkWithMnemonic<CR>
 map ,0 :action ToggleBookmark0<CR>
 map ,1 :action ToggleBookmark1<CR>
 map ,2 :action ToggleBookmark2<CR>
@@ -254,28 +259,27 @@ map ,gt :action GotoTest<CR>
 
 " Code
 
-map ,f :action ReformatCode<CR>
+map ,ff :action ReformatCode<CR>
 map ,ac :action RearrangeCode<CR>
 map ,fd :action ShowReformatFileDialog<CR>
 map ,re :action RenameElement<CR>
 map ,lt :action InsertLiveTemplate<CR>
 map ,fs :action FileStructurePopup<CR>
-map <Space>g :action Generate<CR>
+map ,gg :action Generate<CR>
 map ,sw :action SurroundWith<CR>
 map ,sl :action SurroundWithLiveTemplate<CR>
 map ,oi :action OptimizeImports<CR>
 map ,tm :action GenerateTestMethod <CR>
 
 
-" Refactor
-"
+"  Refactor
 
-map ,rc :action Refactorings.QuickListPopupAction<CR>
+map ,rq :action Refactorings.QuickListPopupAction<CR>
 map ,re :action RenameElement<CR>
 map ,rf :action RenameFile<CR>
 map ,ce :action CopyElement<CR>
 map ,rm :action Move<CR>
-map ,cs :action ChangeSignatureCR>
+map ,cs :action ChangeSignature<CR>
 
 " Run / Debug
 
@@ -297,21 +301,22 @@ map tfs :action ToggleFullScreen<CR>
 map tpm :action TogglePresentationMode<CR>
 map ,rcf :action RecentChangedFiles<CR>
 map ,qcs :action QuickChangeScheme<CR>
+map ,si :action SelectIn<CR>
 
-" Windows Actions
+"  Windows Actions
 
 map <Space>wh :action SplitHorizontally<CR>
 map <Space>wv :action SplitVertically<CR>
 map <Space>q  :action HideAllWindows<CR>
-map <Space>sq :action HideSideWindows<CR>
-map <Space>x  :action HideActiveWindow<CR>
+map <Space>whs :action HideSideWindows<CR>
+map <Space>wha  :action HideActiveWindow<CR>
 map <Space>wl :action JumpToLastWindow<CR>
-map <Space>wc :action VimWindowClose<CR>
+map <Space>x :action VimWindowClose<CR>
 " map  mm :action MaximizeToolWindow<CR>
 map <Space>pc :action CloseProject<CR>
-map <Space>si :action SelectIn<CR>
+map <Space>wjr :action ActivateJRebelToolWindow<CR>
 
-map <Space>ws :action ActivateStructureToolWindow<CR>
+map <Space>wst :action ActivateStructureToolWindow<CR>
 map <Space>was :action ActivateApplicationServersToolWindow<CR>
 map <Space>wbv :action ActivateBeanValidationToolWindow<CR>
 map <Space>wdi :action ActivateCDIToolWindow<CR>
@@ -323,9 +328,8 @@ map <Space>wil :action ActivateImageLayersToolWindow<CR>
 map <Space>wje :action ActivateJavaEnterpriseToolWindow<CR>
 map <Space>wsf :action ActivateJSFToolWindow<CR>
 map <Space>wmv :action ActivateMavenProjectsToolWindow<CR>
-map <Space>wte :action ActivateTerminalToolWindow<CR>
-map <Space>wvc :action ActivateVersionControlToolWindow<CR>
-map <Space>wwt :action ActivateWebToolWindow<CR>
+map <Space>wtt :action ActivateTerminalToolWindow<CR>
+map <Space>git :action ActivateVersionControlToolWindow<CR>
 map <Space>www :action MaximizeToolWindow<CR>
 
 
@@ -349,7 +353,7 @@ map ,gta :action Git.Tag<CR>
 map ,guc :action Git.Uncommit<CR>
 map ,gus :action Git.UnStash<CR>
 
-" Github
+"  Github
 
 map ,ghcg :action Github.Create.Gist<CR>
 map ,ghpr :action Github.Create.Pull.Request<CR>
@@ -366,8 +370,12 @@ map ft :action AceTargetAction<CR>
 map fl :action AceLineAction<CR>
 
 
-" TabShift
-"
+" Maven
+map ,mec :action Maven.EditRunConfiguration<CR>
+
+"  TabShift
+
+map ,r :action TabShiftActions.StretchLeft<CR>
 map ,h :action TabShiftActions.StretchLeft<CR>
 map ,l :action TabShiftActions.StretchRight<CR>
 map ,j :action TabShiftActions.StretchDown<CR>

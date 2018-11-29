@@ -1,0 +1,28 @@
+---
+0.0.7 capistrano:~> 3.0.0|checksum:kL9IR55oySURtD4LnI4XHNXXUB65MM+j7Ys6/0JgjbU=
+0.1.0 capistrano:~> 3.0.0|checksum:9yR7+395qAfAhC9LD3AxeFT2zbQKi6bNk7Hbb4p8jOY=
+0.1.2 capistrano:~> 3.0.0|checksum:K/SEVhNkGszvMt6PivLDpzt+hCsrdnalqzZsWFysQ5s=
+0.1.3 capistrano:~> 3.0|checksum:bZbQu4VOFianH/KFG9qjHQZ2PCdMgH1I9nPi/8U5txA=
+0.2.0 capistrano:~> 3.0|checksum:pxQotOJQ3uUKVGjAJJeGEG0kefgREW2F59kW4BI0S4k=
+0.2.2 capistrano:~> 3.0|checksum:i9akpOlZLGcv1sFCMMpMddjaT7EP5As3vn8QHglQ4yg=
+0.3.3 capistrano:~> 3.0,puma:~> 0|checksum:wex0lD9DEqzzXj71ibdT5QF0Vr4BjUs6GlCFgBEz7OQ=,ruby:>= 0
+0.3.7 capistrano:~> 3.0|checksum:npQFIqgOzP3C4BKXQUiXxrC9tuxgNtgXGshUrPwZWM8=,ruby:>= 0
+0.4.0 capistrano:~> 3.0|checksum:jkSEQ/fBxHSbJsIVG7ND1pKWt7fl8eMNS+g9eOoKY5A=,ruby:>= 1.9.3
+0.4.1 capistrano:~> 3.0|checksum:PpzlfGBF2BVbxXNeU4eUFLM5RgNNm69bXhSULY9nfws=,ruby:>= 1.9.3
+0.4.2 capistrano:~> 3.0|checksum:KasNVNdVk8dZmkRmOzxbs3JoC+y1NQ1ZfUEWudBxhnU=,ruby:>= 1.9.3
+0.5.0 capistrano:~> 3.0,puma:>= 2.6|checksum:cj23l7oqiIy5Hn9FrOgVF3wamM+kjR6vRb7afj2MPqs=,ruby:>= 1.9.3
+0.5.1 capistrano:~> 3.0,puma:>= 2.6|checksum:iV7NFRbrbAJvWNTjWhwdulI7C2dr1DCvKUl/S0CX3NM=,ruby:>= 1.9.3
+0.6.0 capistrano:~> 3.0,puma:>= 2.6|checksum:A8Dvx+CfL6Z+rYsxewzWkKouiFYArqkZoO8BCg9uXzU=,ruby:>= 1.9.3
+0.6.1 capistrano:~> 3.0,puma:>= 2.6|checksum:Iq0f6r/FwW4uoUiaP8nMhZj+XGd7lOYhBIlC+ZM6GuM=,ruby:>= 1.9.3
+0.7.0 capistrano:~> 3.0,puma:>= 2.6|checksum:9Yib5dKrcB/vc9Z8o2/zxNrwUvYhVBvA+bfnu/rrgCY=,ruby:>= 1.9.3
+0.8.0 capistrano:~> 3.0,puma:>= 2.6|checksum:dATS9CohHC135zN8jJw08lccfqYMnLwcFt+sFMLcsuw=,ruby:>= 1.9.3
+0.8.1 capistrano:~> 3.0,puma:>= 2.6|checksum:TOuuZeLnLLm5af+CD6AhKZcikhI8Rd3kGR+TZTSz04A=,ruby:>= 1.9.3
+0.8.2 capistrano:~> 3.0,puma:>= 2.6|checksum:a+nI0iZa3Iyv61F3ns1pbSGk3f3L5gNaxwLx6vDWlCc=,ruby:>= 1.9.3
+0.8.3 capistrano:~> 3.0,puma:>= 2.6|checksum:FlDHo97ladqc7I/oawjj0g2JP4OExlBPkDv4CcjuC6U=,ruby:>= 1.9.3
+0.8.4 capistrano:~> 3.0,puma:>= 2.6|checksum:EZRhsfJsl90Yqaka/rTRyVHkeLXgX3/DkhGmcuXI6Bg=,ruby:>= 1.9.3
+0.8.5 capistrano:~> 3.0,puma:>= 2.6|checksum:5ozi8s8qfujrvoTBC15M9TMYw5uN3BidRo697lSfOLA=,ruby:>= 1.9.3
+0.9.0 capistrano:~> 3.0,puma:>= 2.6|checksum:C+jWEHrsiHxMxl+5HH6EWBRUaywd1XQqbSWvj3qcfpc=,ruby:>= 1.9.3
+1.0.0 capistrano:~> 3.0,puma:>= 2.6|checksum:BMmTkg4CrC+9PqVKQ3orjHEIx3dpIxOn4R05wwSYXBo=,ruby:>= 1.9.3
+1.1.0 capistrano:~> 3.0,puma:>= 2.6|checksum:GouYzqRffRXA4Qtc+JDjc6wq8o2nHI1JomRbAt9Zqtg=,ruby:>= 1.9.3
+1.2.0 capistrano:~> 3.0,puma:>= 2.6|checksum:
+1.2.1 capistrano:~> 3.0,puma:>= 2.6|checksum:

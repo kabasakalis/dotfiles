@@ -1,0 +1,3 @@
+---
+2.0.0 rubysl-socket:~> 2.0,rubysl-thread:~> 2.0|checksum:a5f3179686b58b2e2b9c5a8858e848c87b1fe18058b41edd9bc31606a2ef19d4
+1.0.0 rubysl-socket:~> 1.0,rubysl-thread:~> 1.0|checksum:a4b4ba5b22df31982812b40941bde463307c18be8d3e658bdf8f0fd6cef80b62

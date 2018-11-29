@@ -1,0 +1,21 @@
+---
+0.0.1 rack-contrib:>= 0,rails:>= 0|checksum:8aaab03576a2d7a819addb50fad822c204290e779b9471561d3af6501f1bde62
+0.1.0 rack-contrib:>= 0,rails:>= 0|checksum:9fa9a6be15985a05fef33725f3652b7ba42d5d19e67fbca2d7f5b075171dbe90
+0.1.1 rack-contrib:>= 0,rails:>= 0|checksum:2ec631609bd74693c8dade991b608de1dd921f8756e620aad88e4e2403368255
+0.1.2 rack-contrib:>= 0,rails:>= 0|checksum:47e46e5f343d897959dd7ae142327ac3f583507f2295eb2d5844d16035d2ccfd
+0.1.3 rack-contrib:>= 0,rails:>= 0|checksum:50e44a49b0e1e9b3cbc5c4a829818648c80628894cb4fa8906cbce30b3e718db
+0.1.4 rack-contrib:>= 0,rails:>= 0|checksum:bbf88e1536ec22c43dd54207bdb074045c51cd01ae85b76cb48a739ba22993e9
+0.2.0 rack-contrib:>= 0,rails:>= 0|checksum:de6e2670aeda8b5531e36673b12d2157806270614ec46e4dee93de4db835949d
+0.2.1 rack-contrib:>= 0,rails:>= 0|checksum:a1b08432c576e3c696ed65b517f56fe9510a6d3f6ff9a1d4943757d6802dd9cb
+0.2.2 rack-contrib:>= 0,railties:>= 0|checksum:f952faf728fe84bcdec0c6b5e45bb67af5fac421436973ef263caec9d111d856
+0.2.3 rack-contrib:>= 0,railties:>= 0|checksum:4e4eeb025318270c1f87e71850b518d28f200c0b11b4ead039bd620dd2b1f43b
+0.2.4 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:d31d160ddc6d269cf7a79bcdc656be3779c5daccbaf8ae7803718519facf84fa
+0.2.5 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:af7117a9de77ba43dad15c3c8c4c990d9c986ef0023cd26757f6d258c844f53d
+0.2.6 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:4644ba5e2976e956b82585f488dd58bf151cf178705f9b6e161961adc9b49499
+0.2.7 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:2058417bbe5a265044b6ba414c1996c328ebfde24b6c283d992766e9ac3e6b1f
+0.2.8 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:3671356f7e269852819940baf97c931137559f1972b945b7765407b28e133c4c
+0.2.9 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:1edd2a988c6c2da17e3e6cff1b2e572f6bd4d879b47c7d0ec6c630a564096612
+0.3.0 callsite:>= 0,rack-contrib:>= 0,railties:>= 0|checksum:ed947deedd21396130ab43b1ee70cd78895a16ed7f8c041dea796ce2b78db01d
+0.3.3 callsite:>= 0.0.11&~> 0.0,rack-contrib:~> 1.1,railties:< 5.0.0&>= 3.0.0|checksum:99a9d838c06740b389b046e53a6f118a2c5d01493f85cb7b71da940769ade8a0
+0.3.4 callsite:>= 0.0.11&~> 0.0,rack-contrib:~> 1.1,railties:< 5.0.0&>= 3.0.0|checksum:6e86cd32cf44180493796060767d744fff6b4c9b87521600bbaa05c7ba6b6ade
+0.4.0 callsite:>= 0.0.11&~> 0.0,rack-contrib:~> 1.1,railties:< 5.1.0&>= 3.0.0|checksum:421e6b3e15a782201dc881ef36efd1cd1b594a862af04040f7ca521ebf9b7a0d

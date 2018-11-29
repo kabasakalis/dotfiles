@@ -1,0 +1,176 @@
+#Reload zsh
+alias rl=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+
+#Dotfiles Regenerate symbolic links
+alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
+alias dm='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yaml'
+alias dotfiles='cd  ~/dotfiles && nvim'
+
+#neovim
+alias v='nvim'
+
+#debug neovim
+alias vd='VIM_PYTHON_LOG_FILE="nvim.log" NVIM_NCM_LOG_LEVEL=DEBUG  NVIM_NCM_MULTI_THREAD=0 nvim'
+alias python='python3'
+
+# Jetbrains apps
+# alias idea='cd /opt/idea-IU-181.4445.78/bin && ./idea.sh'
+# alias idea_cfg='cd /home/spiros/.IntelliJIdea2018.1'
+# alias clion='cd /opt/clion-2018.1.1/bin && ./clion.sh'
+# alias clion_cfg='cd /home/spiros/.CLion2018.1'
+# alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
+
+# Jetbrains plugins
+# IdeaVim
+# AceJump
+# CheckStyle-IDEA
+# Codota
+# google-java-format
+# MavenRunHelper
+# S2CIntelliJPlugin
+# backgroundImagePlus.jar
+# tab-shifter.jar
+
+
+# Postman
+# alias pman='cd /opt/Postman && ./Postman'
+
+# Postgre
+alias pgu='brew services start postgresql'
+alias pgd='brew services stop postgresql'
+alias pgctl='pg_ctl -D /usr/local/var/postgres start'
+
+
+# Postgre
+alias reds='brew services start redis'
+alias redr='brew services restart redis'
+alias redx='brew services stop resdis'
+
+#tmux
+alias tt='tmux'
+alias tl='tmux list-sessions'
+#alias ta='tmux attach -t'
+alias ta='tmux attach -t main || tmux new -s main'
+alias tal='tmux attach'
+alias tns='tmux new -s'
+alias tks='tmux kill-session -t'
+alias ti='tmux info'
+alias td='tmux detach'
+alias treset='ka rails && ka nvim && tka'
+
+#tmuxinator
+alias txs='tmuxinator start'
+alias txc='tmuxinator copy'
+alias txl='tmuxinator list'
+alias txd='tmuxinator delete'
+alias txdoc='tmuxinator doctor'
+alias txh='tmuxinator help'
+alias txdeb='tmuxinator debug'
+alias txv='tmuxinator version'
+
+#git aliases
+alias ga='git add'
+alias gaa='git add --all'
+alias gap='git add --patch'
+alias gdi='git diff'
+alias gds='git diff --staged'
+alias gdt='git difftool --no-prompt'
+alias gcm='git commit -m'
+alias gcma='git commit -am'
+alias gci='git commit --verbose'
+alias gcim='git commit --verbose --reedit-message=HEAD --reset-author'
+alias gamend='git commit --amend --verbose'
+alias gcl='git clone'
+alias gf='git fetch'
+alias gsta='git stash'
+alias gstap='git stash pop'
+alias gpl='git pull'
+alias gp='git push origin master'
+alias gpp='git push'
+alias gpsu='git push --set-upstream'
+alias gpsuom='git push --set-upstream origin master'
+alias gpbm='git push backup master'
+alias gpod='git push origin develop'
+alias gpbd='git push backup develop'
+alias gra='git remote add'
+alias grao='git remote add origin'
+alias grr='git remote rm'
+alias grv='git remote -v'
+alias grb='git rebase -i'
+alias grbc='git rebase --continue'
+alias grb10='git rebase -i HEAD~10'
+alias gs='git status'
+alias gss='git status -sb'
+alias gbr='git branch -vv'
+alias gl='git log --oneline --decorate --graph --all'
+alias gl1="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative"
+alias gl2="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit"
+alias gl3='git log --graph --branches --pretty=oneline --decorate'
+alias gl4='git log --pretty=medium --decorate --graph --stat'
+alias guntracked_files='git ls-files -o --exclude-standard'
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gunstage='git reset HEAD --'
+alias gdi='git diff'
+alias grevert='git checkout HEAD --'
+alias gco='git checkout'
+alias gba='git branch -a'
+
+
+#git project specific aliases
+# Java
+
+# Glassfish
+# alias gfstart='sudo /opt/glassfish5/glassfish/bin/asadmin start-domain'
+# alias gfstop='sudo /opt/glassfish5/glassfish/bin/asadmin stop-domain'
+
+#Quick nav
+alias lgn="cd ~/logisfera/ && l"
+alias wb="cd ~/workbench/ && l"
+alias dl="cd ~/Downloads/ && l"
+alias eb="cd ~/logisfera/e5-greece.backend && ls"
+alias ef="cd ~/logisfera/e5-greece.front && ls"
+alias pb='cd ~/logisfera/ergo.hellas.portal.backend && ls'
+alias pf='cd ~/logisfera/ergo.hellas.portal.front && ls'
+
+alias mvnportalclean='rm -rf ~/.m2/repository/pl && rm -rf ~/.m2/repository/io/lsn'
+
+#Add extra protection against mistakes
+alias rm='rm -i'
+alias tgz='tar -zxvf'
+alias tbz='tar -jxvf'
+
+#trash-cli
+alias trp='trash-put' #trashes files and directories.
+alias tre='trash-empty' #empty the trashcan(s).
+alias trl='trash-list' #list trashed file.
+alias rt='restore-trash' #restore a trashed file.
+
+alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
+alias chromet="chrome --pinned-tab-count=1"
+#cheatsheets
+alias vcs1='chromet  ~/home_assets/cheatsheets/vim1.png'
+alias vcs2='chromet  ~/home_assets/cheatsheets/vim2.pdf'
+# alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
+alias ccs='chromet ~/home_assets/cheatsheets/c-hotkeys.pdf'
+# alias anacs='chromet  ~/home_assets/cheatsheets/anacoda.pdf'
+alias doccs='chrome  ~/home_assets/cheatsheets/docker.pdf'
+alias ngformcs='chromet  ~/home_assets/cheatsheets/ngform.pdf'
+alias ng4cs='chromet  ~/home_assets/cheatsheets/ng4.pdf'
+alias sbacs='chromet  ~/home_assets/cheatsheets/sbacs.pdf'
+alias sbacs2='chromet  ~/home_assets/cheatsheets/sbacs2.pdf'
+alias ideakcs='v ~/dotfiles/neovim/.ideavimrc'
+alias ideavimcs='chromet http://ideavim.sourceforge.net/vim/index.html'
+alias zshcs='chromet http://www.geekmind.net/2011/01/shortcuts-to-improve-your-bash-zsh.html'
+
+#various
+alias q='exit'
+alias xcopy='xclip -selection clipboard'
+alias xpaste='xclip -o'
+# alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# docker
+# Delete all containers
+# alias dac="docker rm $(docker ps -a -q)"
+# Delete all images
+# alias dai="docker rmi $(docker images -q)"

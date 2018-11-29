@@ -18,6 +18,9 @@
     ~/.oh-my-zsh/oh-my-zsh.sh:
       force: true
       path: oh-my-zsh/oh-my-zsh.sh
+    ~/.oh-my-zsh/themes/bullet-train.zsh-theme:
+      force: true
+      path: zsh/bullet-train.zsh-theme
     #bash
     ~/.profile: bash/profile
     ~/.bash_profile: bash/bash_profile
@@ -38,10 +41,14 @@
     ~/.config/terminator:
       create: true
       path: config/terminator
-    #Spacemacs
-    ~/.spacemacs: spacemacs/.spacemacs.lisp
     #vim
-    ~/.vimrc: vim/vimrc
+    ~/.vimrc: neovim/init.vim
+    ~/.vim/colors: neovim/colors
+    ~/.vim/colors: neovim/colors
+    ~/.vim/plugins.vim: neovim/plugins.vim
+    ~/.vim/autoload/utils.vim: neovim/autoload/utils.vim
+    ~/.vim/pythonx: neovim/pythonx
+    ~/.vim/ftplugin: neovim/ftplugin
     ~/ackrc: vim/ackrc
     #Spacevim
     ~/.SpaceVim.d: spacevim
@@ -50,6 +57,7 @@
     ~/.ideavimrc: neovim/.ideavimrc
     ~/.config/nvim/plugins.vim: neovim/plugins.vim
     ~/.config/nvim/colors: neovim/colors
+    ~/.config/nvim/syntax: neovim/syntax
     ~/.config/nvim/sessions: neovim/sessions
     ~/.config/nvim/autoload/utils.vim: neovim/autoload/utils.vim
     ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
@@ -62,8 +70,6 @@
       path: neovim/c-support/Templates
     #home_assets
     ~/home_assets: home_assets
-    #Sublime
-    ~/.config/sublime-text-3/Packages/User: sublime/
     #Ruby
     ~/.irbrc: ruby/.irbrc
     ~/.gemrc: ruby/.gemrc
@@ -80,19 +86,10 @@
     #c++
     ~/.lldbinit: cpp/.lldbinit
     ~/.lldb: cpp/.lldb
-    #linters
-    ~/dev/.eslintrc:
-      create: true
-      path: linters/eslintrc
-    ~/dev/.rubocop.yml:
-      create: true
-      path: linters/rubocop.yml
+    #docker
     ~/.zsh/completion/_docker-compose:
       create: true
       path: docker/_docker-compose
-    ~/dev/.haml-lint.yml:
-      create: true
-      path: linters/haml-lint.yml
     #powerline fonts
     ~/.fonts: fonts/
     #ag

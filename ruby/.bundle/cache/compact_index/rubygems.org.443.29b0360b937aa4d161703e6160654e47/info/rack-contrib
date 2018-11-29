@@ -1,0 +1,10 @@
+---
+0.9.2 json:>= 1.1,rack:>= 0.9.1,test-spec:~> 0.9.0,tmail:>= 1.2|checksum:d78b715c05a64291e34a70e6c6a0ad37e46df004a7895fb5180b10399bf6f050
+0.9.0 json:>= 1.1,rack:~> 0.9.1,test-spec:~> 0.9.0,tmail:>= 1.2|checksum:323a87917e8b40bfa2ecf34a3ee53b0c9713e5e4eec6df2f1c40d8570afdfc54
+1.0.0 rack:>= 0.9.1|checksum:a527b563acb6f97b6be173b40fb153284e5ae68b354ad4ab2e8ca859fe4ab01f
+1.0.1 rack:>= 0.9.1|checksum:413a1e98f4d7b0f92551e01cb0b2097de8b135d0cadef85ab7212cc2cdb06b36
+1.1.0 rack:>= 0.9.1|checksum:4639f330d18387ad21457d44079d954686d8cc28982ad80f8e04a2705affa32b
+1.2.0 rack:>= 0.9.1|checksum:38aa803a1801fd0818060c8c6f34f3ffd6a4a45807c27f2121141669ed1ab9d5
+1.2.0.39.g17d21b4 git-version-bump:~> 0.15,rack:~> 1.4|checksum:796c44e8a51ac8ef484223d94cbc201c0ab07ee0b04813f7fe259a55055d2728,rubygems:> 1.3.1
+1.3.0 git-version-bump:~> 0.15,rack:~> 1.4|checksum:1bb12c0666e941c8c69be5ca5321f3d9e82240270f26ff5eaa407c9978d72a49
+1.4.0 git-version-bump:~> 0.15,rack:~> 1.4|checksum:06962bb07f3fb4d10117729a34d3ea2369991fb75184ebbcf6fd571d9ee6f348

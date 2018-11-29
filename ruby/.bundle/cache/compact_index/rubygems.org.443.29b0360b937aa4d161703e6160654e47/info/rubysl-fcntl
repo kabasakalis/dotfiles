@@ -1,0 +1,5 @@
+---
+1.0.0 ffi2-generators:~> 0.0.1,rake:~> 10.0|checksum:b298452d03c768e6928c2855f02870e45f2184d46caf9d7d7475daadc16e0b74
+2.0.4 ffi2-generators:~> 0.1|checksum:d0362cf20c33df05dbecfe9861600f31ac100901b28968e038a5926280d27215
+1.0.1 ffi2-generators:~> 0.1,rake:~> 10.0|checksum:099e6fdcecfabf54ab4b2d8b77cc84b4a4b9a76349ed010effa09268f2579c46,ruby:~> 1.8.7
+1.0.2 ffi2-generators:~> 0.1|checksum:2cf4d45ba9cfbb2ce9f18c8206cc557e7c9ffd69e47fda08cb7188683e8edf7a,ruby:~> 1.8.7

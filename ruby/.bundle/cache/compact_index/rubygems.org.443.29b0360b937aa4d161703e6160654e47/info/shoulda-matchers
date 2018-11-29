@@ -1,0 +1,38 @@
+---
+1.0.0.beta1 |checksum:1272d2ae38f5a19b07346f28e12bd3393e09ffcbc9daf2452c98be96cb173c77
+1.0.0.beta2 |checksum:86ccc62805c042c8d47105587aa9cb316b5cca22d89a225cbcac6c106ef0172b
+1.0.0.beta3 |checksum:eaa7dbbabc3c16d54e722305f62062f7782e720d76608f5310d14423121f0fb3
+1.0.0 |checksum:5b31d2c26fd8c1d623d1d48c507d88a068ab25f0e1c81253a22402cbc1649916
+1.1.0 activesupport:>= 3.0.0|checksum:d0529bee9e6d1abfcbc00b8a9b440a3e94e8ad423eee76dd6a074519ee7fdc98
+1.2.0 activesupport:>= 3.0.0|checksum:5814d479eb158f4b6d1d2754bda6eb28ac166cfebaf869288cd27ec43371a27c
+1.3.0 activesupport:>= 3.0.0|checksum:a7eb33024db0c80652464bc9fec6fc14a8f08998814bee5983a10394393cbc58
+1.4.0 activesupport:>= 3.0.0|checksum:227933ce2f8f394ba57bae56262d9a237cbed29fa7d1f4372081f9545f357dbb
+1.4.1 activesupport:>= 3.0.0|checksum:c35693cbfa84213212dffbc2c87487427ef364927340151329a842f0a06086b9
+1.4.2 activesupport:>= 3.0.0,bourne:~> 1.1.2|checksum:e7523ab7492975c843075497483d391f52d3adbd7056f5aef9a1a11d6bc24cf5
+1.5.0 activesupport:>= 3.0.0,bourne:~> 1.2.0|checksum:49dd715442ec2cb0cbe9455e0407b4496fc7e665b9dc0591775f786ffe8e6f62
+1.5.1 activesupport:>= 3.0.0,bourne:~> 1.3|checksum:95927e7655883e90989e521a20aa9e6e00e2ed8fdd2ceccf071a37e0e1994a3b
+1.5.2 activesupport:>= 3.0.0,bourne:~> 1.3|checksum:f1242d2da185a53ce378df955d51c7310aa0f53293ad6b661ef8741110cef604
+1.5.4 activesupport:>= 3.0.0,bourne:~> 1.3|checksum:9fc5f7baed8f3836a1e8a3e0021d1fa279d783711b7939357ccec96abd5e03f3
+1.5.5 activesupport:>= 3.0.0,bourne:~> 1.3|checksum:60930164db6e26000664796aa48fab032ba228dd89e1ebcc96da9eae0eb7b48e
+1.5.6 activesupport:>= 3.0.0,bourne:~> 1.3|checksum:aa72353c66a3ad8bf3c97f88a265f0583d1a1f88f41bfb37662c255abaef5f1b
+2.0.0 activesupport:>= 3.0.0|checksum:d2d69794ecc0576d722326a27015d4cceae06b4fa934842765c0dcb6012f4f66
+2.1.0 activesupport:>= 3.0.0|checksum:da4ce8e10970a5dfa88d30b7be06dbef87caf2aca4508343b31a59c434449fc6
+2.2.0 activesupport:>= 3.0.0|checksum:cfc99ac7a000d258b3c96820f83a39d4a16218ea6ec56a41f183872cdd58bf67
+2.3.0 activesupport:>= 3.0.0|checksum:90b4419b54b272148f388a90f7f9f29181e3b8b694190491a3a301cab7a67e25
+2.4.0.rc1 activesupport:>= 3.0.0|checksum:7815f4a4a3d5e18948ddd7e5ed4a2974b02bd3d425a2cc28f19c00e164ceba22,rubygems:> 1.3.1
+2.4.0 activesupport:>= 3.0.0|checksum:55ee124f8f3b5164b34479c05280bca9cb8327e2645b640c24948bbb8f7240ae
+2.5.0 activesupport:>= 3.0.0|checksum:0b7e611fa760b4ff63f9c824d12c06594d815145e31b50b3b1d2a3dbd880c183
+2.6.0 activesupport:>= 3.0.0|checksum:227b0549bf6717d1f5c9c60c94d8174633be57a9f5028d8c5a495d91528bdc63,ruby:>= 1.9.2
+2.6.1.rc1 activesupport:>= 3.0.0|checksum:4151a700eb00dda555eed350ef17a10e1db3dfd6ea5f008d38406cf9a920bdc9,ruby:>= 1.9.2,rubygems:> 1.3.1
+2.6.1.rc2 activesupport:>= 3.0.0|checksum:eb174274176998165af733fd6ab91f9edc9c129ce00c35db7a5cf0f76b10a299,ruby:>= 1.9.2,rubygems:> 1.3.1
+2.6.1 activesupport:>= 3.0.0|checksum:81554002d29e612e55daf2c45b40b617ad7a2186d8eebaec6946ea46da8672dc,ruby:>= 1.9.2
+2.6.2 activesupport:>= 3.0.0|checksum:5321c9d268c19c3f30a33be211ababd1057fee89db1ba361c8fd01b97339b1fc,ruby:>= 1.9.2
+2.7.0 activesupport:>= 3.0.0|checksum:a759c5a0d247370622203f5a452c9eb37d658c35150c0a8788c0dae2628cee89,ruby:>= 1.9.2
+2.8.0.rc1 activesupport:>= 3.0.0|checksum:c5653d7ba71174333f8469c30f961eb909bf0ade7b68506349956100ee4446a3,ruby:>= 1.9.2,rubygems:> 1.3.1
+2.8.0.rc2 activesupport:>= 3.0.0|checksum:6875fc7ed9a3a382b2228c5fb7ede1ccda4d1179980e0e64a0fc5a2652934e4a,ruby:>= 1.9.2,rubygems:> 1.3.1
+2.8.0 activesupport:>= 3.0.0|checksum:a089735b66e82d6b65fb4ac774d858a812fe16b69d97becaf0c986a919f67934,ruby:>= 1.9.2
+3.0.0.rc1 activesupport:>= 4.0.0|checksum:3c7b9d6177cdeedf061e21f7c35c2c7df933985f559758e04febbb9588b44786,ruby:>= 2.0.0,rubygems:> 1.3.1
+3.0.0 activesupport:>= 4.0.0|checksum:b70fc76ebf4da4eabe09f8180cb59b273355003fac5f25f2cb18a0f4e3ba418c,ruby:>= 2.0.0
+3.0.1 activesupport:>= 4.0.0|checksum:4b06fb7d92165507246dbc4154440cb30742e1b6e8ac396e96358d88d65eeaa9,ruby:>= 2.0.0
+3.1.0 activesupport:>= 4.0.0|checksum:b503c3c7112d9de1288d03b96d1c03ec4bfd7357d43379d82e9758cf222256ee,ruby:>= 2.0.0
+3.1.1 activesupport:>= 4.0.0|checksum:f8f73357eb6c51b03cb0e76cf425092d3b96a61766dc94a9df02e5959a68c6b1,ruby:>= 2.0.0

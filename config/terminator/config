@@ -1,7 +1,13 @@
 [global_config]
+  always_on_top = True
+  geometry_hinting = False
+  hide_on_lose_focus = True
+  inactive_color_offset = 1.0
+  title_font = Liberation Mono for Powerline 10
   title_receive_fg_color = "#809aa0"
   title_transmit_bg_color = "#140095"
   title_transmit_fg_color = "#97c7c6"
+  title_use_system_font = False
 [keybindings]
   close_term = Disabled
   close_window = Disabled
@@ -103,12 +109,16 @@
 [plugins]
 [profiles]
   [[default]]
+    allow_bold = False
     background_darkness = 0.74
     background_image = /home/spiros/home_assets/wallpapers/milky_way_eclipse.jpg
     background_type = image
+    backspace_binding = automatic
+    copy_on_selection = True
     cursor_color = "#326bdc"
-    font = Source Code Pro for Powerline Medium 10
+    font = Source Code Pro for Powerline 11
     icon_bell = False
     scroll_background = False
     scrollback_infinite = True
     use_system_font = False
+    word_chars = ""

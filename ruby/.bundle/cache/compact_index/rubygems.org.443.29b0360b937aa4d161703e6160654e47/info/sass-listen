@@ -1,0 +1,2 @@
+---
+3.0.7 rb-fsevent:>= 0.9.3,rb-inotify:>= 0.9.7|checksum:a441cb03acc9e9fb7adaa63c27057753d61dcb0432e96aeaa07ef1797aa5dd5d,ruby:>= 1.9.3

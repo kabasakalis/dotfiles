@@ -1,0 +1,5 @@
+---
+0.2 |checksum:/kpW1LoVml1rhRwGW4eKJQdBD1tYQ89HkRqyTIvHVlI=
+0.2.1 |checksum:4xjY4mQV0u0WKTtL9QS+Lb5QjoSDLA4d7M6P93FAeLk=
+0.3 capistrano:>= 3.0.0|checksum:ps7Sco37479pmwvj5C1xQ4a6XnnXbLV2RomSQUyDMuQ=
+0.4 capistrano:>= 3.0.0|checksum:bCI6OBg7j6UvdDyOgeqHFgNegkcYnNewjcn4YLIWdYY=,ruby:>= 0

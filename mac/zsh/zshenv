@@ -1,0 +1,36 @@
+# JAVA
+# jEnv
+eval "$(jenv init -)"
+java8=`/usr/libexec/java_home -v "1.8*"`
+java10=`/usr/libexec/java_home`
+export JAVA_HOME=$java8
+# For Intellij
+launchctl setenv JAVA_HOME $java8
+
+
+# MAVEN
+maven_version=3.5.3
+export M2_HOME=/usr/local/Cellar/maven/$maven_version/libexec
+export M2=$M2_HOME/bin
+
+# GRADLE
+gradle_version=4.7
+export GRADLE_HOME=/usr/local/Cellar/gradle/$gradle_version/libexec
+export GRADLE=$GRADLE_HOME/bin
+
+# EDITORS
+export EDITOR="nvim"
+export MYNVIMRC="~/.config/nvim/init.vim"
+export ALTERNATE_EDITOR=""
+export TERM="screen-256color"
+export VIMRUNTIME="/usr/local/Cellar/neovim/0.2.2_1/share/nvim/runtime"
+export NVIMRUNTIME="/usr/local/Cellar/neovim/0.2.2_1/share/nvim/runtime"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
+
+# PATH
+PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+PATH=$HOME/.jenv/bin:$PATH
+PATH=$M2_HOME/bin:$PATH
+PATH=$GRADLE_HOME/bin:$PATH
+
+typeset -U PATH

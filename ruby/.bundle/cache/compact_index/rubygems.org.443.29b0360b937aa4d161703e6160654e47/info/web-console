@@ -1,0 +1,29 @@
+---
+0.1.0 jquery-rails:~> 3.0.4,rails:~> 4.0.0|checksum:84786d78fa5abd7f183b7fae7a976933fba795ecfdb1b4d7403d278f3a19dc2f
+0.2.0 jquery-rails:~> 3.0.4,rails:~> 4.0.0|checksum:4b25786dc3cc8cbced3f8d1508f44be655959cf2a6078b0d3b56bf2661993a53
+0.3.0 rails:~> 4.0.0|checksum:76f73798388a2d5dbfc79f288c0d6148ee270ceac923cd93ff8f90a9ecf8a87a
+0.4.0 rails:~> 4.0.0|checksum:7c0bbfbcd0cac00ebea86c93385100ea91b138fd256a5fc2c0469048f027a273
+1.0.0 rails:~> 4.0.0|checksum:73581a0a0b0355c09dd402c0997ece1b990a45d813ea98f5081049844f4712e3
+1.0.1 activemodel:~> 4.0.0,railties:~> 4.0.0,sprockets-rails:~> 2.0.0|checksum:309d7e021e0284e253ad3ce899453090bafba8286a49ca72f7d0b12e72a1b394
+1.0.2 activemodel:~> 4.0,railties:~> 4.0,sprockets-rails:~> 2.0|checksum:243d82c73cea3dd48c4cedb1e9c630387a5870dfad4e1ea9f0fac7abf6547029
+1.0.3 activemodel:~> 4.0,railties:~> 4.0,sprockets-rails:~> 2.0|checksum:c7ed917414b419923d4746106e879cd05910c330cf77003804276bdb25991bb5
+1.0.4 activemodel:~> 4.0,railties:~> 4.0,sprockets-rails:~> 2.0|checksum:42382f1e26bb24c79ecf5956da4779442ed2f216b274760fe41c2237877d7f45
+2.0.0.beta1 activemodel:~> 4.0,binding_of_caller:>= 0,railties:~> 4.0,sprockets-rails:~> 2.0|checksum:492a5b7a6da3dd0b8b74a9ea831a857c618e562fef96a7c72e58dc9e58b43f67,rubygems:> 1.3.1
+2.0.0.beta2 activemodel:~> 4.0,binding_of_caller:>= 0,railties:~> 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:92dca8dd41215afd538455bcbdc387e2d63a7ccfd76d386bc4a3a2c153898fed,rubygems:> 1.3.1
+2.0.0.beta3 activemodel:~> 4.0,binding_of_caller:= 0.7.3.pre1,railties:~> 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:dfd614eceb390006313bb9cda2531890571bc5e2f58ceeea8995e67ed6919324,rubygems:> 1.3.1
+2.0.0.beta4 activemodel:~> 4.0,binding_of_caller:= 0.7.3.pre1,railties:~> 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:952fd04b3c395b962979721bdb29a163472421cdfb2e2ac1cc7ecce0697472a4,rubygems:> 1.3.1
+2.0.0 activemodel:~> 4.0,binding_of_caller:>= 0.7.2,railties:~> 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:e30b1ef682eec3c0bb6c63c4f746bc86d15cbd4372917baa6fd4695e155d1ced
+2.1.0 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:d6c57f6fe91727d423d7a1e46f184799485471f9cd17d1a5fd1e647c2717cbd8
+2.1.1 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:383c733d69a95ad820895c83b9a47ad9d43eb3d2e5a080c840dd5588ab6a635e
+2.1.2 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:248b5e31c79e55e2c7717f69b064ddb5d04c4506ac870312960f7d559a88cce6
+2.1.3 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:725c79853281f76cc71439ebfcf26f22089725c84125c74b06e5478fc15a4fc8
+2.2.0 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:5458e9e70c3ca6f15b72b26abaedce87b23cbddd0d8d96d7fe2b1dd03f073ada
+2.2.1 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:8eae52bf9891de5ed59928be8f2d790b45742408a8be07712c449a5391be3c8f
+3.0.0 activemodel:>= 4.2,debug_inspector:>= 0,railties:>= 4.2|checksum:6a1ed5a93828335ae23628102a69475671b4b30ecc3c08e4befe4c4b7124823a,ruby:>= 2.2.2
+2.3.0 activemodel:>= 4.0,binding_of_caller:>= 0.7.2,railties:>= 4.0,sprockets-rails:< 4.0&>= 2.0|checksum:5302518dbcd43f4c9f86541d00fedd9f327151a7168ed36c7d62f169657b1539
+3.1.1 activemodel:>= 4.2,debug_inspector:>= 0,railties:>= 4.2|checksum:efdfeb68d76a15322890246e715f34b94ccff22c94e1447df8c011edc1c63583,ruby:>= 2.2.2
+3.2.0 activemodel:>= 4.2,debug_inspector:>= 0,railties:>= 4.2|checksum:3d3d0bcfbee64851404eeb0b2380d66a5b87f25f8cf5fd7c24b7f4d37d023101,ruby:>= 2.2.2
+3.2.1 activemodel:>= 4.2,debug_inspector:>= 0,railties:>= 4.2|checksum:e85e841dc5d72fb34073e67109f7a897e7c92322d1d7f467cfd67f0bb8ab8f04,ruby:>= 2.2.2
+3.3.0 activemodel:>= 4.2,debug_inspector:>= 0,railties:>= 4.2|checksum:a49dd65abeaf76965791ea550ee7c1f187b99e548c32e6c84bf4ca5c86d54c4c,ruby:>= 2.2.2
+3.3.1 actionview:>= 5.0,activemodel:>= 5.0,debug_inspector:>= 0,railties:>= 5.0|checksum:0772becac5e89bef05c26cf53e5b2e07f5f5da30163039ab45d9c6d8bcd78abd,ruby:>= 2.2.2
+3.4.0 actionview:>= 5.0,activemodel:>= 5.0,debug_inspector:>= 0,railties:>= 5.0|checksum:16527bd9116aecf2c3ac7fcf40e220b06c8ae6122ab45edb4397e2a60437dbf1,ruby:>= 2.2.2

@@ -1,0 +1,9 @@
+---
+0.0.2 nenv:~> 0.1,shellany:~> 0.0|checksum:Deyxjs7ystmpHfi/Gg7JTAv9i94eyY+b0VsfiEew2ZI=,ruby:>= 0
+0.0.3 nenv:~> 0.1,shellany:~> 0.0|checksum:0CZocN2nXkIrPB7YBP4ZGbdtG7Jdf6WoCxKpVCv1izc=,ruby:>= 0
+0.0.4 nenv:~> 0.1,shellany:~> 0.0|checksum:aERfU1MF1ebSeglJLVO0nEC8feue5eCO7CyXrb37PgY=,ruby:>= 0
+0.0.5 nenv:~> 0.1,shellany:~> 0.0|checksum:ULV0pDzlmNtSW8RW2wB/uqkb+Xwwbhlt5gPEeeAlm8I=,ruby:>= 0
+0.0.6 nenv:~> 0.1,shellany:~> 0.0|checksum:Ek404MrVxpc2OGS32dOtjkGMC41lR/MZLSf79yPgHMo=,ruby:>= 0
+0.0.7 nenv:~> 0.1,shellany:~> 0.0|checksum:
+0.0.8 nenv:~> 0.1,shellany:~> 0.0|checksum:
+0.1.0 nenv:~> 0.1,shellany:~> 0.0|checksum:181ea27dcf6cd5edb85876918906d9a28e2afc85ff2d82c9b2fda2605387a69a,ruby:>= 0,rubygems:>= 0

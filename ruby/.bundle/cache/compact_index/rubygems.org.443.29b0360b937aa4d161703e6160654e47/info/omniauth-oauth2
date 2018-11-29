@@ -1,0 +1,17 @@
+---
+1.0.0.pr1 oauth2:~> 0.5.0,omniauth:~> 1.0.0.alpha|checksum:90799b35c7cbd0911cdedca2b3b2f07aea8437e4ed66439eac22c679dd66faba,rubygems:> 1.3.1
+1.0.0.pr2 oauth2:~> 0.5.0,omniauth:~> 1.0.0.pr2|checksum:4c26453613007e09b6b6759af5fffc171991beb792651d18e0e4a4c30256cbb9,rubygems:> 1.3.1
+1.0.0.beta1 hashie:~> 1.2,oauth2:~> 0.5.0,omniauth:~> 1.0.0.beta1|checksum:f4ac989963d90718708768a73e82c8ae42ecf2302d5cbc2b1f06446179f3b324,rubygems:> 1.3.1
+1.0.0.rc1 hashie:~> 1.2,oauth2:~> 0.5.0,omniauth:= 1.0.0.beta1|checksum:06b162b81644556883ad3eef131b09320b95b13ea486c32ad62a5a1edff66cd0,rubygems:> 1.3.1
+1.0.0.rc2 oauth2:~> 0.5.0,omniauth:~> 1.0.0.rc2|checksum:010618f397b8ae3bac3b1b6fe04a933fcd4b2ebb56e46f3d7a9f233a340ebb45,rubygems:> 1.3.1
+1.0.0 oauth2:~> 0.5.0,omniauth:~> 1.0|checksum:5b6f96c65d3f170f68aee3c4278dfaa181d7da6aa0beb93d0b4558d965dcdc1c
+1.0.1 oauth2:~> 0.6.0,omniauth:~> 1.0|checksum:719d77500e896873fc997223e9358166b128fe23415fe39a30b4b4ce0c2e6c14
+1.0.2 oauth2:~> 0.6.0,omniauth:~> 1.0|checksum:778ac5d27bcdfcd542867ffb57910088165b36071d505ab27931c1602c25204e
+1.0.3 oauth2:~> 0.8.0,omniauth:~> 1.0|checksum:e8f81ae87e10cecb4c0ba103140baf8b262f7cb6179e2789167905b57389a0e4
+1.1.0 oauth2:~> 0.8.0,omniauth:~> 1.0|checksum:8c21ba2e49930ae77262482a1fa51370fbae09a355207672228abbdc2934fe73
+1.1.1 oauth2:~> 0.8.0,omniauth:~> 1.0|checksum:72b8ba77b9ead4320e7f4e430aee0f3ef759aed79ae52c3b0e8fb2f41785eb68
+1.1.2 faraday:< 0.10&>= 0.8,multi_json:~> 1.3,oauth2:~> 0.9.3,omniauth:~> 1.2|checksum:98fb39e971671899714d1884f25bc993848ffb4dfc9a4e818a52f348e0e75226
+1.2.0 faraday:< 0.10&>= 0.8,multi_json:~> 1.3,oauth2:~> 1.0,omniauth:~> 1.2|checksum:0f5619cadf38e4826e566af7685b5f6625643803478fca09073113516d24cfb9
+1.3.0 oauth2:~> 1.0,omniauth:~> 1.2|checksum:dac42c4565742f26600bf522fe8e66df1a85e86f43e4bf4692a0954a746e6b4e
+1.3.1 oauth2:~> 1.0,omniauth:~> 1.2|checksum:b5752d8f283e9b07b100ccd9455f3d6e46536a355162eecfafa9af5838e55357
+1.4.0 oauth2:~> 1.0,omniauth:~> 1.2|checksum:c525d06d6c263a71dfd5b78513a7be5c16d5616ebe918133f7675487cb5bd32b

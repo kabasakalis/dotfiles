@@ -1,0 +1,3 @@
+---
+1.0.0.beta2 activerecord:>= 0,kaminari-core:= 1.0.0.beta2|checksum:12b6c14fb391d93071c014d45920a5baa0a356a57d7d3220e3ca504fd5ad41d9,rubygems:> 1.3.1
+1.0.0.rc1 activerecord:>= 0,kaminari-core:= 1.0.0.rc1|checksum:20fb2655546075998db288bfee9fed8402e35982ae27180d675e9de49ed3272f,rubygems:> 1.3.1

@@ -1,0 +1,11 @@
+---
+0.0.1 carrierwave:~> 0.8,image_optimizer:~> 0.0.2|checksum:16aaaca696302309abac9b8b3ea7513a96ea143a9aced315680bdcb37ae8bcaa
+0.0.2 carrierwave:~> 0.8,image_optimizer:~> 0.0.2|checksum:1b6ee88984a9c92d8b6a1748eea77f1ac789ffa7c2f1777ec939464d6079b3fd
+1.0.0 carrierwave:~> 0.8,image_optimizer:~> 1.0.0|checksum:93ce25186e894509ecea790dea747bc2d3e7da51cffa00e2db7a7ecf90393936
+1.0.1 carrierwave:~> 0.8,image_optimizer:~> 1.0.0|checksum:7f00b3171aa821d8880f331ea1faf34ed356b7823a787fe138bef8f0f811073f
+1.1.0 carrierwave:~> 0.8,image_optimizer:~> 1.1|checksum:7b1a0b162e6fb7ff001920eee3769419bf567583dcb047304458894bd0f53d8b
+1.1.1 carrierwave:~> 0.8,image_optimizer:~> 1.2|checksum:4cb8dd83e753a9bc43d7c06d9baf37ecfdcb291d0412fcaa51aabcc227514e8c
+1.2.0 carrierwave:~> 0.8,image_optimizer:~> 1.2|checksum:57a9c3b85616943d1dd5cad70c9a9bbbd8018353c595a4891be9b2ef2fe03a49
+1.2.1 carrierwave:~> 0.8,image_optimizer:~> 1.2|checksum:1df824fa84c7dc432989384d8bde666c6ffaa1652b96141060fec1520cbfb101
+1.3.0 carrierwave:~> 0.8,image_optimizer:~> 1.6|checksum:46d87b2d510c1d083759cdf9c999ff7da2297a27f7dd3f2e264936c74f3b5690
+1.4.0 carrierwave:< 2.0&>= 0.8,image_optimizer:~> 1.6|checksum:c41304a7ec7f865ea2e7e32d9588c9d7d90c1cb9d87569bf4ab3d95e32e59a86

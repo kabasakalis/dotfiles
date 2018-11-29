@@ -1,0 +1,20 @@
+---
+1.7.0 |checksum:1d1b6c4804ae6f478c46dfaffb4dae9abd42ab02a840ace7c2b5476ba5faf3eb,rubygems:>= 1.3.4
+1.7.1 |checksum:9e2950b0e3e353a2700749ec5e5913e2b68e8477184f2f50b96f2eef8e1b9d71,rubygems:>= 1.3.4
+1.8.0 |checksum:6fd7d89986bd5b73b191d21dbb49a41b0b1848652771483773dce17fa02b4e6d,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.8.1 |checksum:7b660fbfb4c3b4d44bb79021ee0c99f631e83971bad943811c5c0421179d8683,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.8.2 |checksum:d37a47a162294f394797bb9fe2326fa33ca449c3b788c7074520ff05fe544f3e,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.8.3 |checksum:f27107766d960935b60a5802d5eb5a9bdd8622c8480b8c0ee0304e1ffc6c7189,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.8.4 |checksum:5058a516a8eb50b2dfc4e7ab625d66d43eccb4a35c32631f37ce27e19035d32d,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.9.0 |checksum:b8cf03aa1e6e578e255d3955f1372e6f3009e39c4dae7607b1623c86ae96aede,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.9.1 |checksum:2c72ffe684ba15e49792e10faa21ff7a9be95fba6bc5d3756635705db28ea4c8,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.9.2 |checksum:baf0e0d5dd855293dcf1cadd3357119b4a3cdb1ab7ec123dd33402ecd600c73a,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.10.0 |checksum:3ebce6bddcadd6cd97f21a6f81caec0efa3435b0c3a8ee756eb1a5d87cfc04aa,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.10.1 |checksum:9a4cdf8022e48fdbe171655f27122cda96aa34f942c6026cdf4737d984362f76,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.11.0 |checksum:32ed1e97321e0f3b090491293e8beec5b95e98a30ab80bd78cb703b5b6047256,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.12.0 |checksum:4db4dde21a3658b47007de6341d38c50bbe7af53542ef63060745e2467e4501b,ruby:>= 1.8.7,rubygems:>= 1.3.4
+1.13.0 |checksum:87217976e0f0060c6a1ad9fbce29cea2ee62021d0683641afdf693731943f38c,ruby:>= 2.0.0
+1.13.1 |checksum:35b8afb8646f50fc4fbcb8bc54a32baea09cbc4cc1f478b8b430ee2069378604,ruby:>= 2.0.0
+1.14.0 |checksum:1f1a490d680a6453fd3c8880bc714ae1e81a45a8004fc70063e13cd0fc873fce,ruby:>= 2.0.0
+1.15.0 |checksum:05f540c62143fde51f7ceaba8584f8dc0e34c93e43ab7a6c1a832b4553216b16,ruby:>= 2.0.0
+1.16.0 |checksum:b05cb009a256529d63ee91537c1692ceafac88f1f932dca0e20b6a4729ad2f64,ruby:>= 2.0.0

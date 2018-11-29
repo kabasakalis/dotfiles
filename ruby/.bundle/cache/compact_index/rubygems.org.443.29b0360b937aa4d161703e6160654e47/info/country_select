@@ -1,0 +1,22 @@
+---
+0.0.1 |checksum:9570bc5a1d1c037a30815f67639e420500fe73bb73bea12c0f340af1f46603d3
+0.0.2 |checksum:cbe288a98cc7634d9c40cc881561952c5c29ff60a7798c92eb2c3a328d6769c0
+1.0.0 |checksum:12b3a3e5b69faaf37a45d1fc5498328a91b5ab406fb9600ad1e73356aa3df5ff
+1.0.1 |checksum:b4f775cf691271e51bebe5180155efbfbe18faa102a0deb168888c6dc59222f3
+1.1.1 |checksum:a6d42d4171de253cca5ae8e8f5b55e4038d243441a31edd66bc328097869489d
+1.1.2 |checksum:9ae38cd403c91914f94c895076b49f7814a91f1113750c5debab70634ae2c031
+1.1.3 |checksum:e3ee705fa5e58a6228bbfbc1ba2558075ea05e9bec30e83983f0f62542479977
+1.2.0 |checksum:976c6e8a21d837584c49a25a9a3b09a15a0010977ae277dded5dc8384db26c1d
+1.3.1 countries:= 0.9.3|checksum:51f67736419ea2b16e4be25e9b70602a6b4c5aa757523c36659b9cf4f43ec7f0
+2.0.0.rc1 countries:>= 0.9.3&~> 0.9|checksum:abf2d5fc9eef557c7bfb334aee751a3a3dedae00c68e431bc3008f9d773aa33a,rubygems:> 1.3.1
+2.0.0 countries:>= 0.9.3&~> 0.9|checksum:d7092c67386d404355538336fd4a6d4a00b4e1c84bf6e8d680b5e38ee59f47a1
+2.0.1 countries:>= 0.9.3&~> 0.9|checksum:791185bb26880edf83621730db8eb68b6dc9b7f15dcdcbe84c57948e307e3d80
+2.1.0 countries:>= 0.9.3&~> 0.9|checksum:61dcef0da5bc66bb5f30cad0a73ffc94c8e015570f72f5a433997e649a96aa3f
+2.1.1 countries:< 0.10.0&>= 0.9.3|checksum:3bbb3f9e6221adcd665f611ab1eb695d0c7e1c801473a216a2793d7639465c4c
+2.2.0 countries:~> 0.11.0,sort_alphabetical:~> 1.0|checksum:fc733b8fe8e5b12fb900302b8d4023fe281bc11bd3bfdd8c280f8317fa10b612
+2.3.0 countries:~> 1.0.0,sort_alphabetical:~> 1.0|checksum:e755de26ad7394c0480000bcf7284d2a35f00d9ff57b99d27cbca60f019cc1e1
+2.4.0 countries:~> 1.1.0,sort_alphabetical:~> 1.0|checksum:c1d4006479366920cf9535997ef36c28ee3a364e05174355196356b97b9dc7ff
+2.5.0 countries:~> 1.2.0,sort_alphabetical:~> 1.0|checksum:2e4ac9e7fdf98cc744838c2a631b78e7b92c5346008b575598ecaa813f5eab5a
+2.5.1 countries:~> 1.2.0,sort_alphabetical:~> 1.0|checksum:33f484f84cf4ff3fa31c2704e7ea7905bac046975e2014ad9d2d8ef14f45315c
+2.5.2 countries:~> 1.2.0,sort_alphabetical:~> 1.0|checksum:030c032d9520cb5b56413731d38b36385858d907aca8f13b9e53d600c037fcd3
+3.0.0 countries:~> 2.0,sort_alphabetical:~> 1.0|checksum:5c2d19a0eae388a1cc3d77b822acb7c7d270db2dc58596a2c2b3539a7ee18270,ruby:>= 2
