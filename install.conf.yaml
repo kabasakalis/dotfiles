@@ -43,6 +43,8 @@
     #vim
     ~/.vimrc: vim/vimrc
     ~/ackrc: vim/ackrc
+    #Spacevim
+    ~/.SpaceVim.d: spacevim
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.ideavimrc: neovim/.ideavimrc
