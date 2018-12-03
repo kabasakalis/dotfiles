@@ -4,8 +4,8 @@
 " ======================================================================================================================
 
 
+      "letsd mapleader=";"                 " leader
+      "letsd mapleader=","
 
-"let mapleader=";"                 " leader
-"let mapleader=","
 
-"let g:mapleader = ';'
+"letsd g:mapleader = ';'

@@ -1,5 +1,5 @@
-function! coremappings#before() abort
-call SpaceVim#logger#info('** Core mappings loaded. **')
+function! customspacevim#before() abort
+call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
 " ======================================================================================================================
 " Core Vim settings, also used in Visual Studio  {{{
 " ======================================================================================================================
@@ -157,6 +157,32 @@ nnoremap <CR> i<CR><Esc>
 
 "}}}
 
+
+"Example for SPC group key binding 
+"call SpaceVim#custom#SPCGroupName(['G'], '+TestGroup')
+"call SpaceVim#custom#SPC('nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
+
+"Example  for SPC key binding with existing group 
+"call SpaceVim#custom#SPC('nnoremap', ['f', 't'], 'echom "hello world"', 'test custom SPC', 1)
+
+" Additional remappings of Space key bindings to leader mappings for less
+" keystrokes
+
+" ---------------------------------------------------------------------------------------------------------------------
+" Additional remappings of Space key bindings to leader mappings for less {{{
+" ======================================================================================================================
+
+" Format
+nmap  ff        <Space>bf
+" Home screen
+nmap  <leader>h <Space>bh
+" Kill buffer
+nmap <leader>c  <Space>bd
+" Next buffer
+nmap <leader>n  <Space>bn
+
+
+"}}}
 endfunction
 
 let s:HI = SpaceVim#api#import('vim#highlight')

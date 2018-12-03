@@ -23,6 +23,7 @@
     statusline_inactive_separator = "arrow"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
+    enable_vimfiler_filetypeicon = true
     enable_statusline_mode = true
     #Use ale for syntax checking, disabled by default.
     enable_ale = true
@@ -34,7 +35,7 @@
     #Enable/Disable relativenumber, by default it is enabled.
     relativenumber = false
     enable_language_specific_leader = 1
- bootstrap_before = "coremappings#before" 
+    bootstrap_before = "customspacevim#before" 
   #vimcompatible = true 
   #snippet_engine
   #snippet_engine = "ultisnips"
