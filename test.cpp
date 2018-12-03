@@ -13,9 +13,9 @@ Maze::~Maze() {}
 int Maze::returnOne() { return 1; }
 
 
-
 int Maze: :returnOne() { return 1; }
 int Maze::returnOne() { return 1; }
+
 int Maze: :returnOne() { return 1; }
 int Maze::returnOne() { return 1; }
 

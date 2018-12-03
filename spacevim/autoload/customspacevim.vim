@@ -167,7 +167,8 @@ nnoremap <CR> i<CR><Esc>
 " keystrokes
 
 " ---------------------------------------------------------------------------------------------------------------------
-" Additional remappings of Space key bindings to leader mappings for less {{{
+" Additional remappings of important Spacevim key bindings to leader mappings for less
+" keystrokes {{{
 " ======================================================================================================================
 
 " Format
@@ -192,7 +193,7 @@ vmap <leader>c <Space>cl
 " Toggle File Tree
 nmap <leader>t  <Space>ft
 
-" Delete current buffer and file. CAUTION.
+" Delete current buffer and file, confirmation, CAUTION.
 nmap <leader>D  <Space>fD
 
 " Edit Spacevim configuration
