@@ -3,7 +3,7 @@ call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
 " ======================================================================================================================
 " Core Vim settings, also used in Visual Studio  {{{
 " ======================================================================================================================
-" Leave SPACE in spacevim.
+"  Custom mapleader. Leave SPACE for  spacevim.
 let g:mapleader = ';'
 set tabstop=2
 set shiftwidth=2
@@ -204,6 +204,13 @@ nmap <leader>j  <Space>fD
 
 " Cycle theme 
 nmap <leader>u  <Space>Tn
+
+" Search symbols with ag
+" ag must be installed and in the path 
+nmap <leader>f  <Space>sa
+
+" Transpose character, word or line. 
+nmap <leader>x  <Space>xt
 
 
 "}}}
