@@ -1,8 +1,10 @@
 #2=============================================================================
-# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Spiros kabasakalis
+# Configuration for SpaceVim
+#
+# Author: Spiros kabasakalis < kabasakalis at gmail.com >
+# URL: https://github.com/kabasakalis 
 # Copyright (c) 2016-2017 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg at 163.com >
-# URL: https://spacevim.org
 # License: GPLv3
 #=============================================================================
 
@@ -68,13 +70,4 @@ name = "colorscheme"
 [[custom_plugins]]
   name = "mhartington/oceanic-next"
   merged = 0
-
-
-
-
-
-
-
-
-
 

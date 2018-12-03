@@ -107,10 +107,8 @@ vnoremap O :m '>+1<CR>gv=gv
 nmap cw ce
 nmap dw de
 
-" Keep the cursor in place while joining lines
+" Keep the cursor in place while joining lines, (Enter at cursor splits lines)
 nnoremap J mzJ`z
-" [S]plit line (sister to [J]oin lines) S is covered by cc.
-nnoremap <leader>c mzi<CR><ESC>`z
 
 " Start substitute,replace on current word under the cursor
 nnoremap ,s :%s///gc<Left><Left><Left>
@@ -177,9 +175,34 @@ nmap  ff        <Space>bf
 " Home screen
 nmap  <leader>h <Space>bh
 " Kill buffer
-nmap <leader>c  <Space>bd
+nmap <leader>k  <Space>bd
+
+" Save all buffers
+nmap <leader>S  <Space>fS
+
 " Next buffer
 nmap <leader>n  <Space>bn
+" Swap buffer
+nmap <leader>m  <Space>wM
+
+" Comment lines or visual blocks
+nmap <leader>c <Space>cl
+vmap <leader>c <Space>cl
+
+" Toggle File Tree
+nmap <leader>t  <Space>ft
+
+" Delete current buffer and file. CAUTION.
+nmap <leader>D  <Space>fD
+
+" Edit Spacevim configuration
+nmap <leader>g  <Space>fD
+
+" Easy Motion Word 
+nmap <leader>j  <Space>fD
+
+" Cycle theme 
+nmap <leader>u  <Space>Tn
 
 
 "}}}
