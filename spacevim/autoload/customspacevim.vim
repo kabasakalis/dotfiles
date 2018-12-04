@@ -1,21 +1,117 @@
 function! customspacevim#before() abort
 call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
 " ======================================================================================================================
-" Core Vim settings, also used in Visual Studio  {{{
+" Core Vim settings  {{{
 " ======================================================================================================================
+" UBUNTU
+" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+ " let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
+
+filetype indent on                " Enable filetype-specific indenting
+filetype plugin on                " Enable filetype-specific plugins
+set guicursor=
 "  Custom mapleader. Leave SPACE for  spacevim.
-let g:mapleader = ';'
+let g:mapleader = ';'             " leader
+set nocompatible                  " choose no compatibility with legacy vi
+set hidden
+set runtimepath+=~/
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set smartindent
 set autoindent
+set linebreak                     " And when Vim does wrap lines, have it break the lines on spaces and punctuation only (http://vim.wikia.com/wiki/Word_wrap_without_line_breaks)
+set textwidth=120                 " Make it obvious where 120(80) characters is
+set colorcolumn=+1
+set number
+set numberwidth=2
 set scrolloff=5                   " Screen scrolls 5 lines in front of the cursor
+set sidescrolloff=3
 set backspace=2                   " Backspace deletes like most programs in insert mode
+set nobackup
+set nowritebackup
+set noswapfile                    "New buffers will be loaded without creating a swapfile  http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=1000
+set ruler                         " show the cursor position all the time
+set showcmd                       " display incomplete commands
 set laststatus=2                  " Always display the status line
+set autowrite                     " Automatically :write before running commands
+"set cursorline                   " Highlight current line
+set clipboard+=unnamed            " Allow to use system clipboard
+set showmatch                     " Show matching brackets when text indicator is over them
+set matchtime=2                   " How many tenths of a second to blink when matching brackets
 set nostartofline                 " Prevent cursor from moving to beginning of line when switching buffers
 set virtualedit=block             " To be able to select past EOL in visual block mode
+set updatetime=1000               " Update time used to create swap file or other things
 set nojoinspaces                  " No extra space when joining a line which ends with . ? !
+set splitbelow                    " Open new split panes to right and bottom, which feels more natural
+set splitright
+set mouse-=a                      " disable mouse support, what am I a vimposer?
+set complete+=kspell              " Autocomplete with dictionary words when spell check is on
+set diffopt+=vertical             " Always use vertical diffs
+set wildmenu                      " turn on the wildmenu cuz everyone says to
+set autoread                      " have vim re-load files when they're changed outside of vim
+set formatoptions+=j              " Delete comment charalter when joining commented lines
+set sc                            " show commands as you type them
+set lazyredraw                    " make vim a little speedier
+set ttyfast
+set tags=./tags;                  " Set the tag file search order
+"}}}
+
+" ---------------------------------------------------------------------------------------------------------------------
+" Color and highlighting settings {{{
+" ======================================================================================================================
+
+
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
+
+" Switch syntax highlighting on, when the terminal has colors
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  " Turn syntax highlighting on
+  syntax on
+  " start highlighting from 256 lines backwards
+  syntax sync minlines=256
+endif
+
+let g:rehash256=1
+
+"transparency
+hi Normal  ctermfg=252 ctermbg=none
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+"" Error highlight
+highlight	Error ctermfg=red ctermbg=blue guifg=red ctermbg=NONE
+
+"" Spell highligh"" Spell highlightt
+highlight SpellBad ctermfg=red ctermbg=black guifg=red ctermbg=NONE
+
+" Highlight term cursor differently
+highlight TermCursor ctermfg=green guifg=green
+
+" Listchars highlighting
+highlight NonText ctermfg=235 guifg=gray
+highlight SpecialKey ctermfg=235 guifg=gray
+
+" Remove underline in folded lines
+hi! Folded term=NONE cterm=NONE gui=NONE ctermbg=NONE
+
+" LineNumber Gutter background color
+highlight LineNr ctermfg=NONE ctermbg=NONE
+
+" SignColumn (Git Gutter)
+highlight SignColumn ctermfg=NONE ctermbg=NONE
+
+" Link highlight groups to improve buftabline colors
+hi! link BufTabLineCurrent Identifier
+hi! link BufTabLineActive Comment
+hi! link BufTabLineHidden Comment
+hi! link BufTabLineFill Comment
+"}}}
+
 
 "}}}
 
@@ -30,7 +126,7 @@ set incsearch                     " incremental searching
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
-" Core key bindings-Remappings {{{
+" Core key bindings-remappings {{{
 " ======================================================================================================================
 
 " Save file
@@ -57,8 +153,8 @@ map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 "Close all buffers
 "map <C-c> :bufdo bd<cr>
 
-" Quickly open a vertical split of my vimrc and source my vimrc
-nnoremap  <leader>ev :vs c:\Users\spiros\_vimrc<CR>
+" Quickly open a vertical split of my custom spacevim settings.
+nnoremap  <leader>ev :vs ~\dotfiles\spacevim\customspacevim.vim<CR>
 
 " H to beginning of line, L to the end
 noremap H ^
@@ -163,9 +259,6 @@ nnoremap <CR> i<CR><Esc>
 "Example  for SPC key binding with existing group 
 "call SpaceVim#custom#SPC('nnoremap', ['f', 't'], 'echom "hello world"', 'test custom SPC', 1)
 
-" Additional remappings of Space key bindings to leader mappings for less
-" keystrokes
-
 " ---------------------------------------------------------------------------------------------------------------------
 " Additional remappings of important Spacevim key bindings to leader mappings for less
 " keystrokes {{{
@@ -197,10 +290,10 @@ nmap <leader>t  <Space>ft
 nmap <leader>D  <Space>fD
 
 " Edit Spacevim configuration
-nmap <leader>g  <Space>fD
+nmap <leader>g  <Space>fvd
 
 " Easy Motion Word 
-nmap <leader>j  <Space>fD
+nmap <leader>j  <Space>jw
 
 " Cycle theme 
 nmap <leader>u  <Space>Tn
@@ -215,11 +308,13 @@ nmap <leader>x  <Space>xt
 
 
 
-
-
-
 "}}}
 
+" ======================================================================================================================
+" Plugin Settings 
+" ======================================================================================================================
+
+call SpaceVim#logger#info('** Custom Spacevim plugin settings loaded. **')
 
 " -----------------------------------------------------
 " Nerdtree Config {{{
@@ -234,15 +329,13 @@ autocmd VimEnter *
             \ |   wincmd w
             \ | endif
 let g:NERDTreeMinimalUI=1
-let g:NERDTreeWinSize=50
+let g:NERDTreeWinSize=40
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeHighlightCursorline=0
 let g:NERDTreeRespectWildIgnore=1
 let g:NERDTreeMapActivateNode='<right>'
 let g:NERDTreeWinPos = "left"
-
-
 
 
 autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
@@ -252,14 +345,6 @@ autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
 " autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
 
-" nnoremap <silent> <Leader>h :call utils#nerdWrapper()<CR>
-" nnoremap <silent> <Leader>h :NERDTreeToggle<CR>
-
-" map <Leader>n :NERDTreeToggle<CR>
-
-"}}}
-
-"Plugins managed with vim-plug {{{
 
 call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('haml', 'green', 'none', 'green', '#151515')
@@ -286,6 +371,76 @@ call NERDTreeHighlightFile('zshrc', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 
 
+" ======================================================================================================================
+" Startify {{{ 
+" ======================================================================================================================
+
+"autocmd User Startified setlocal cursorline
+autocmd User Startified setlocal buftype=
+" let g:startify_disable_at_vimenter    = 0
+let g:startify_enable_special         = 0
+let g:startify_files_number           = 10
+let g:startify_relative_path          = 1
+let g:startify_change_to_dir          = 1
+let g:startify_update_oldfiles        = 1
+let g:startify_session_autoload       = 1
+let g:startify_session_persistence    = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_change_to_vcs_root     = 0
+let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
+let NERDTreeHijackNetrw = 0
+
+let g:startify_skiplist = [
+            \ 'COMMIT_EDITMSG',
+            \ 'bundle/.*/doc',
+            \ '/data/repo/neovim/runtime/doc',
+            \ ]
+
+let g:startify_lists = [
+      \ { 'type': 'files',     'header': ['   Recent']            },
+      \ { 'type': 'dir',       'header': ['   Recent in '. getcwd()] },
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']       },
+      \ { 'type': 'commands',  'header': ['   Commands']       },
+      \ ]
+
+" let g:startify_custom_indices = ['1', '2', '3']
+let g:startify_bookmarks = [
+            \ { '1': '~/dotfiles/neovim/init.vim' },
+            \ { '2': '~/dotfiles/neovim/plugins.vim'},
+            \ { '3': '~/dotfiles/neovim/autoload/utils.vim'},
+            \ { '4': '~/dotfiles/zsh/zshrc'},
+            \ { '5': '~/dotfiles/zsh/zshenv'},
+            \ { '6': '~/dotfiles/zsh/zsh_aliases'},
+            \ { '7': '~/dotfiles/install.conf.yaml'},
+            \ { '8': '~/dotfiles/spacevim/init.toml'},
+            \ { '9': '~/dotfiles/spacevim/autoload/customspacevim.vim'},
+            \ { '10': '~/dotfiles/spacevim/autoload/customspacevim.vim'}
+            \ ]
+
+let g:startify_commands = [
+    \ ['Vim Reference', 'h ref'],
+    \ ['Spacevim Configuration', 'h Spacevim-config']
+    \ ]
+
+
+let g:startify_custom_footer =
+      \ ['', "   Neither the past, the present nor the future mind can be found", '']
+
+hi StartifyBracket ctermfg=240
+hi StartifyFile    ctermfg=147
+hi StartifyFooter  ctermfg=240
+hi StartifyHeader  ctermfg=114
+hi StartifyNumber  ctermfg=215
+hi StartifyPath    ctermfg=245
+hi StartifySlash   ctermfg=240
+hi StartifySpecial ctermfg=240
+"
+let g:startify_session_before_save = [
+        \ 'echo "Cleaning up before saving.."',
+        \ 'silent! NERDTreeTabsClose'
+        \ ]
+
 let g:startify_custom_header = [
         \ '   _____       _                 _  __     _                     _         _ _      ',
         \ '  / ____|     (_)               | |/ /    | |                   | |       | (_)     ',
@@ -298,11 +453,9 @@ let g:startify_custom_header = [
         \ '                            Custom Spacevim Setup                                   ',
         \ ]
 
-
+"}}}
 
 endfunction
-
-let s:HI = SpaceVim#api#import('vim#highlight')
 
 " NERDTree File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -310,7 +463,7 @@ exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' 
 exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-
+let s:HI = SpaceVim#api#import('vim#highlight')
 
 function! s:cursor_highlight() abort
     echo s:HI.syntax_at()

@@ -51,6 +51,9 @@ enable_vimfiler_gitstatus = true
 # the default value is vimfiler
 filemanager = "nerdtree"
 
+[[layers]]
+name = 'denite'
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
