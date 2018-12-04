@@ -48,6 +48,8 @@
   #disabled_plugins = ["", ""]
 
 enable_vimfiler_gitstatus = true
+# the default value is vimfiler
+filemanager = "nerdtree"
 
 # Enable autocomplete layer
 [[layers]]
@@ -71,3 +73,6 @@ name = "colorscheme"
   name = "mhartington/oceanic-next"
   merged = 0
 
+[[custom_plugins]]
+  name = "simeji/winresizer"
+  merged = 0
