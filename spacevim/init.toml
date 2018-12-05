@@ -79,3 +79,10 @@ name = "colorscheme"
 [[custom_plugins]]
   name = "simeji/winresizer"
   merged = 0
+
+
+[[custom_plugins]]
+    name = "lilydjwg/colorizer"
+    on_cmd = ["ColorHighlight", "ColorToggle"]
+    merged = 0
+

@@ -305,7 +305,18 @@ nmap <leader>f  <Space>sa
 " Transpose character, word or line. 
 nmap <leader>x  <Space>xt
 
+call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in buffers (Denite) - *', 1)
 
+" denite content search
+map <leader>b :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
+
+" In the quickfix window, <CR> is used to jump to the error under the
+" cursor, so undefine the mapping there.
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
+" nmap <leader>  <Space>xt
+" let s:file = expand('<sfile>:~')
+" let s:lnum = expand('<slnum>') + 3
 
 
 "}}}
@@ -381,12 +392,12 @@ autocmd User Startified setlocal buftype=
 let g:startify_enable_special         = 0
 let g:startify_files_number           = 10
 let g:startify_relative_path          = 1
-let g:startify_change_to_dir          = 1
+let g:startify_change_to_dir          = 0
+let g:startify_change_to_vcs_root     = 0
 let g:startify_update_oldfiles        = 1
 let g:startify_session_autoload       = 1
 let g:startify_session_persistence    = 1
 let g:startify_session_delete_buffers = 1
-let g:startify_change_to_vcs_root     = 0
 let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
 let NERDTreeHijackNetrw = 0
 
@@ -397,8 +408,7 @@ let g:startify_skiplist = [
             \ ]
 
 let g:startify_lists = [
-      \ { 'type': 'files',     'header': ['   Recent']            },
-      \ { 'type': 'dir',       'header': ['   Recent in '. getcwd()] },
+      \ { 'type': 'files',     'header': ['   Recent']            }, { 'type': 'dir',       'header': ['   Recent in '. getcwd()] },
       \ { 'type': 'sessions',  'header': ['   Sessions']       },
       \ { 'type': 'bookmarks', 'header': ['   Bookmarks']       },
       \ { 'type': 'commands',  'header': ['   Commands']       },
