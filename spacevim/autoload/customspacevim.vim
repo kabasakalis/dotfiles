@@ -298,26 +298,25 @@ nmap <leader>j  <Space>jw
 " Cycle theme 
 nmap <leader>u  <Space>Tn
 
+" Transpose character, word or line. 
+nmap <leader>x  <Space>xt
+
 " Search symbols with ag
 " ag must be installed and in the path 
 nmap <leader>f  <Space>sa
 
-" Transpose character, word or line. 
-nmap <leader>x  <Space>xt
-
-call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in buffers (Denite) - *', 1)
-
-" denite content search
+" Denite content search using ag
 map <leader>b :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
+
+" Denite Search files in current project
+call SpaceVim#custom#SPC('nnoremap', ['f', 'p'], ':DeniteProjectDir file/rec<CR>', 'Find files in project (Denite) - *', 1)
+
+" Denite Search files in open buffers
+call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in open buffers (Denite) - *', 1)
 
 " In the quickfix window, <CR> is used to jump to the error under the
 " cursor, so undefine the mapping there.
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-
-" nmap <leader>  <Space>xt
-" let s:file = expand('<sfile>:~')
-" let s:lnum = expand('<slnum>') + 3
-
 
 "}}}
 
@@ -347,8 +346,7 @@ let g:NERDTreeHighlightCursorline=0
 let g:NERDTreeRespectWildIgnore=1
 let g:NERDTreeMapActivateNode='<right>'
 let g:NERDTreeWinPos = "left"
-
-
+let g:NERDTreeChDirMode = 0
 autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
 " if you are using another syn highlight for a given line (e.g.
 " NERDTreeHighlightFile) need to give that name in the 'containedin' for this
@@ -398,6 +396,7 @@ let g:startify_update_oldfiles        = 1
 let g:startify_session_autoload       = 1
 let g:startify_session_persistence    = 1
 let g:startify_session_delete_buffers = 1
+
 let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
 let NERDTreeHijackNetrw = 0
 
@@ -425,7 +424,7 @@ let g:startify_bookmarks = [
             \ { '7': '~/dotfiles/install.conf.yaml'},
             \ { '8': '~/dotfiles/spacevim/init.toml'},
             \ { '9': '~/dotfiles/spacevim/autoload/customspacevim.vim'},
-            \ { '10': '~/dotfiles/spacevim/autoload/customspacevim.vim'}
+            \ { '10': '~/dotfiles/spacevim/plugin/pluginsettings.vim'}
             \ ]
 
 let g:startify_commands = [

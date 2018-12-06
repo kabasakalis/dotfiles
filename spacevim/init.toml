@@ -38,6 +38,8 @@
     relativenumber = false
     enable_language_specific_leader = 1
     bootstrap_before = "customspacevim#before" 
+
+     project_rooter_automatically = 0
   #vimcompatible = true 
   #snippet_engine
   #snippet_engine = "ultisnips"
