@@ -6,6 +6,9 @@ call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
 " UBUNTU
 " let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
  " let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
+" let g:spacevim_guifont = 'DejaVu\ Sans\ Mono\ for\ Powerline\ 11'
+" let g:spacevim_guifont = 'Arial'
+
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
@@ -274,8 +277,12 @@ nmap <leader>k  <Space>bd
 " Save all buffers
 nmap <leader>S  <Space>fS
 
-" Next buffer
-nmap <leader>n  <Space>bn
+" Next buffer may not work in UBUNTU
+nmap <M-l>  <Space>bn
+
+" Previous buffer may not work in UBUNTU
+nmap <M-h>  <Space>bp
+
 " Swap buffer
 nmap <leader>m  <Space>wM
 
@@ -301,17 +308,17 @@ nmap <leader>u  <Space>Tn
 " Transpose character, word or line. 
 nmap <leader>x  <Space>xt
 
-" Search symbols with ag
+" Content Search  with ag
 " ag must be installed and in the path 
 nmap <leader>f  <Space>sa
 
-" Denite content search using ag
+" Content search with Denite and ag, opend quick fix
 map <leader>b :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
 
-" Denite Search files in current project
+" File search in current project with Denite
 call SpaceVim#custom#SPC('nnoremap', ['f', 'p'], ':DeniteProjectDir file/rec<CR>', 'Find files in project (Denite) - *', 1)
 
-" Denite Search files in open buffers
+" File search in current open buffers with Denite
 call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in open buffers (Denite) - *', 1)
 
 " In the quickfix window, <CR> is used to jump to the error under the
@@ -424,7 +431,7 @@ let g:startify_bookmarks = [
             \ { '7': '~/dotfiles/install.conf.yaml'},
             \ { '8': '~/dotfiles/spacevim/init.toml'},
             \ { '9': '~/dotfiles/spacevim/autoload/customspacevim.vim'},
-            \ { '10': '~/dotfiles/spacevim/plugin/pluginsettings.vim'}
+            \ { '10': '~/dotfiles/spacevim/plugin/pluginssettings.vim'}
             \ ]
 
 let g:startify_commands = [
@@ -464,6 +471,15 @@ let g:startify_custom_header = [
 
 "}}}
 
+
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
+
+
 endfunction
 
 " NERDTree File highlighting
@@ -481,5 +497,7 @@ endfunction
 function! s:defx_my_settings() abort
     " Define mappings
 endfunction
+
+
 
 

@@ -1,4 +1,6 @@
 
+" Denite configuration used in <leader>b mapping for content search
+" See customspacevim.vim for keybinding definiton.
 
 call denite#custom#source( 'grep', 'matchers', ['matcher_regexp'])
 call denite#custom#var('grep', 'command', ['ag'])

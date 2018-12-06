@@ -1,4 +1,4 @@
-#2=============================================================================
+#=============================================================================
 # Spiros kabasakalis
 # Configuration for SpaceVim
 #
@@ -31,8 +31,10 @@
     enable_ale = true
     enable_vimfiler_welcome = 0
     terminal_cursor_shape = 1
-    #Set the guifont of SpaceVim. Default is empty.
-    # guifont = "Source Code Pro for Powerline 13"````
+    # Set the guifont of SpaceVim. Default is DejaVu Sans Mono For Powerline
+    # NOTE: On windows only fixed width fonts are allowed.
+    # NOTE 2: You need Nerd Fonts for devicons plugin to work.
+    guifont = "DejaVu Sans Mono for Powerline:h10"
 
     #Enable/Disable relativenumber, by default it is enabled.
     relativenumber = false
@@ -73,6 +75,16 @@ name = "colorscheme"
 [[layers]]
   name = "tmux"
 
+
+[[layers]]
+  name = "lang#c"
+  clang_executable = "/usr/bin/clang"
+  [layer.clang_std]
+    c = "c11"
+    cpp = "c++1z"
+    objc = "c11"
+    objcpp = "c++1z"
+
 # add custom_plugins: https://github.com/mhartington/oceanic-next
 [[custom_plugins]]
   name = "mhartington/oceanic-next"
@@ -87,4 +99,10 @@ name = "colorscheme"
     name = "lilydjwg/colorizer"
     on_cmd = ["ColorHighlight", "ColorToggle"]
     merged = 0
+
+[[custom_plugins]]
+  name = "ryanoasis/vim-devicons"
+  merged = 0
+
+
 
