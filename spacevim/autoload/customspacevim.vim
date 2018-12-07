@@ -5,7 +5,7 @@ call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
 " ======================================================================================================================
 " UBUNTU
 " let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
- " let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
+ let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
 " let g:spacevim_guifont = 'DejaVu\ Sans\ Mono\ for\ Powerline\ 11'
 " let g:spacevim_guifont = 'Arial'
 
@@ -325,6 +325,11 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find fil
 " cursor, so undefine the mapping there.
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
+" Better help navigation with ENTER and BACKSPACE
+:au filetype help :nnoremap <buffer><CR> <c-]>
+:au filetype help :nnoremap <buffer><BS> <c-T>
+
+
 "}}}
 
 " ======================================================================================================================
@@ -472,11 +477,42 @@ let g:startify_custom_header = [
 "}}}
 
 
+" Neosnippet
 
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~\dotfiles\neovim\vimsnippets\custom'
+let g:clang_snippets_engine = 'ultisnips'
+
+
+
+
+" -----------------------------------------------------
+" Ultisnips for snippets {{{
+" -----------------------------------------------------
+" Disable built-in <C-x><C-k> to be able to go backward
+inoremap <C-x><C-k> <NOP>
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsExpandTrigger="<C-t>" " used to be tab, but reserved tab for completion manager
+" let g:UltiSnipsListSnippets='<C-l>'
+" let g:UltiSnipsEditSplit="vertical"
+" set runtimepath+=~/.vimsnippets
+set runtimepath+=~\vimsnippets
+" the following directories reside in .vimsnippets,
+" note that there's also a snipmate folder which is not compatible with
+" ultisnips, but some snippets work if a suffix is added with a  missing endsnippet.
+" you have to manually do that and move them to the folders below.
+let g:UltiSnipsSnippetDirectories=[ "ultisnips", "custom" ]
+"user defined snippets
+let g:UltiSnipsSnippetsDir= "~\.vimsnippets\custom"
+let g:UltiSnipsUsePythonVersion=3
+" let g:UltiSnipsJumpForwardTrigger='<leader>n'
+
+" let g:UltiSnipsJumpBackwardTrigger='<leader>='
+"}}}
 
 
 

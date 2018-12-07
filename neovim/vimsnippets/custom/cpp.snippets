@@ -137,6 +137,13 @@ snippet dmfun2
 endsnippet
 
 
+snippet dms
+	${7:void} ${1:`!p snip.rv = snip.basename.title()`}::${2:memberFunction}(${3:Type} ${4:Parameter},${5:Type} ${6:Parameter}) {
+		${0}
+	}
+endsnippet
+
+
 snippet doxf "Basic c++ doxygen function template" b
 ${1:ReturnType} ${2:FunctionName}(${3:param})
 {
