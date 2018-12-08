@@ -25,7 +25,8 @@
     # install nerd fonts: arrow, curve, slant, nil, fire
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
-    buffer_index_type = 4
+    # buffer_index_type = 2
+    # windows_index_type = 2
     enable_tabline_filetype_icon = true
     enable_vimfiler_filetypeicon = true
     enable_statusline_mode = true

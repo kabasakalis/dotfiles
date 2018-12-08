@@ -3,18 +3,20 @@ call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
 " ======================================================================================================================
 " Core Vim settings  {{{
 " ======================================================================================================================
-" UBUNTU
-" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+if has("win32")
+  " Windows Options GVim
  let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
-" let g:spacevim_guifont = 'DejaVu\ Sans\ Mono\ for\ Powerline\ 11'
-" let g:spacevim_guifont = 'Arial'
+elseif has("unix")
+  " Linux Options Neovim
+" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+else
+endif
 
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 set guicursor=
-"  Custom mapleader. Leave SPACE for  spacevim.
-let g:mapleader = ';'             " leader
+let g:mapleader = ';'             " leader, leave SPACE for spacvim
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
 set runtimepath+=~/
@@ -313,6 +315,9 @@ nmap <leader>x  <Space>xt
 " ag must be installed and in the path 
 nmap <leader>f  <Space>sa
 
+" Switch to previous window
+nnoremap <silent> [Window]s <C-w><C-p>
+
 " Content search with Denite and ag, opend quick fix
 map <leader>b :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
 
@@ -331,6 +336,8 @@ autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 :au filetype help :nnoremap <buffer><BS> <c-T>
 
 
+
+
 "}}}
 
 " ======================================================================================================================
@@ -338,6 +345,18 @@ autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 " ======================================================================================================================
 
 call SpaceVim#logger#info('** Custom Spacevim plugin settings loaded. **')
+
+let g:spacevim_statusline_right_sections =
+    \ [
+    \ 'fileformat',
+    \ 'cursorpos',
+    \ 'percentage',
+    \ 'time',
+    \ 'date'
+    \ ]
+
+
+
 
 " -----------------------------------------------------
 " Nerdtree Config {{{
@@ -502,14 +521,8 @@ let g:UltiSnipsJumpBackwardTrigger='<C-o>'
 let g:clang_snippets_engine = 'ultisnips'
 
 
-" -----------------------------------------------------
-" Ale 
-" -----------------------------------------------------
-
-" g:ale_completion_enabled = 1
-"  -------------------------------------------
-"  w0rp/ale, Asynchronous maker and linter {{{
-" https://github.com/w0rp/ale/blob/master/doc/ale.txt
+"  ---------------------------------------------------
+"  w0rp/ale, Asynchronous maker and linter 
 " ----------------------------------------------------
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
@@ -525,7 +538,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_set_quickfix = 1
-let g:ale_open_list = 0
+let g:ale_open_list = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_close_preview_on_insert=1
 let g:ale_cursor_detail=1
@@ -543,8 +556,6 @@ elseif has("unix")
   let g:ale_c_gcc_executable = '/usr/bin/gcc'
 else
 endif
-
-"}}}
 
 
 
