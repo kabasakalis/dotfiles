@@ -79,7 +79,6 @@ name = "colorscheme"
 [[layers]]
   name = "tmux"
 
-
 [[layers]]
   name = "lang#c"
   # clang_executable = "/usr/bin/clang"

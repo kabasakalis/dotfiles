@@ -311,14 +311,14 @@ nmap <leader>u  <Space>Tn
 " Transpose character, word or line. 
 nmap <leader>x  <Space>xt
 
+" Switch to previous window
+nnoremap <silent> [Window]s <C-w><C-p>
+
 " Content Search  with ag
 " ag must be installed and in the path 
 nmap <leader>f  <Space>sa
 
-" Switch to previous window
-nnoremap <silent> [Window]s <C-w><C-p>
-
-" Content search with Denite and ag, opend quick fix
+" Content search with Denite and ag, open quick fix
 map <leader>b :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
 
 " File search in current project with Denite
