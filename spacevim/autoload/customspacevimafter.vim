@@ -6,8 +6,8 @@
 " Copyright (c) 2016-2017 Wang Shidong & Contributors
 " License: GPLv3
 "=======================================================================================================================
-function! customspacevimafter#after() abort
 
+function! customspacevimafter#after() abort
 call SpaceVim#logger#info('** Custom bootstrap_after Spacevim settings loaded. **')
 nnoremap <silent> [Window]f :copen<CR>
     let g:_spacevim_mappings_windows.f = [':copen',
@@ -28,4 +28,6 @@ nnoremap <silent> [Window]d :cclose<CR>
           \ 'Definition: ',
           \ ]
           \ ]
+
 endfunction "bootstrap_after function body ends here
+

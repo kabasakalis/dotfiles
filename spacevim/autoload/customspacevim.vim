@@ -168,8 +168,6 @@ nnoremap <C-l> <C-w>l
 
 nnoremap ,r zR
 
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
 
 " Buffers navigation and management, also ALT-<left> and ALT-<right>, see spacevim mappings
 nnoremap <leader>] :bn<CR>
@@ -355,9 +353,9 @@ nmap <leader>r  <Space>Ts
 " Transpose character, word or line. 
 nmap <leader>x  <Space>xt
 
-" Switch to previous window
-nnoremap <silent> [Window]s <C-w><C-p>
-
+" Switch between the last two buffers
+nnoremap <silent> [Window]s <c-^>
+ 
 " Format
 nmap  ff <Space>bf
 
@@ -397,7 +395,10 @@ let g:startify_custom_header = [
         \ ]
 
 
+
+
 endfunction  "bootstrap_before ends here
+
 
 "  ---------------------------------------------------------------------------------------------------------------------
 " Definitions of functions that can be used inside the bootrstrap_before fuction body

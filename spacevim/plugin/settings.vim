@@ -71,3 +71,18 @@ elseif has("unix")
   let g:ale_c_gcc_executable = '/usr/bin/gcc'
 else
 endif
+
+" ----------------------------------------------------------------------------------------------------------------------
+" Dev Icons 
+" ----------------------------------------------------------------------------------------------------------------------
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+" let g:webdevicons_enable_ctrlp = 1
+if exists("g:loaded_webdevicons")
+    call webdevicons#refresh()
+endif
+
+
+

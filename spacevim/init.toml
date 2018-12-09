@@ -10,76 +10,70 @@
 
 # All SpaceVim option below [option] section
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "gruvbox"
-    # colorscheme = "oceanicNext"
-    # colorscheme = "nord"
-    # colorscheme = "Tomorrow-Night"
-    background = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts: arrow, curve, slant, nil, fire
-    statusline_separator = "arrow"
-    statusline_inactive_separator = "arrow"
-    # buffer_index_type = 2
-    # windows_index_type = 2
-    enable_tabline_filetype_icon = true
-    enable_vimfiler_filetypeicon = true
-    enable_statusline_mode = true
-    #Use ale for syntax checking, disabled by default.
-    enable_ale = true
-    enable_vimfiler_welcome = 0
-    terminal_cursor_shape = 1
-    # Set the guifont of SpaceVim. Default is DejaVu Sans Mono For Powerline
-    # NOTE: On windows only fixed width fonts are allowed.
-    # NOTE 2: You need Nerd Fonts for devicons plugin to work.
-    guifont = "DejaVu Sans Mono for Powerline:h10"
+  # set spacevim theme. by default colorscheme layer is not loaded,
+  # if you want to use more colorscheme, please load the colorscheme
+  # layer
+  colorscheme = "oceanicNext"
+  # colorscheme = "gruvbox"
+  # colorscheme = "jellybeans"
+  # colorscheme = "nord"
+  # colorscheme = "material"
+  # colorscheme = "one"
+  background = "dark"
+  # Disable guicolors in basic mode, many terminal do not support 24bit
+  # true colors
+  enable_guicolors = true
+  # Disable statusline separator, if you want to use other value, please
+  # install nerd fonts: arrow, curve, slant, nil, fire
+  statusline_separator = "arrow"
+  statusline_inactive_separator = "arrow"
+  enable_tabline_filetype_icon = true
+  enable_statusline_mode = true
+  #Use ale for syntax checking, disabled by default.
+  enable_ale = true
+  terminal_cursor_shape = 1
+  # Set the guifont of SpaceVim. Default is DejaVu Sans Mono For Powerline
+  # NOTE: On windows only fixed width fonts are allowed.
+  # NOTE 2: You need Nerd Fonts for devicons plugin to work.
+  guifont = "DejaVu Sans Mono for Powerline:h10"
+  #Enable/Disable relativenumber, by default it is enabled.
+  relativenumber = false
+  enable_language_specific_leader = 1
+  bootstrap_before = "customspacevim#before" 
+  bootstrap_after = "customspacevimafter#after" 
+  project_rooter_automatically = 0
+  #vimcompatible = true 
+  #snippet_engine
+  snippet_engine = "ultisnips"
+  #Windows Leader
+  #windows_leader = ","
 
-    #Enable/Disable relativenumber, by default it is enabled.
-    relativenumber = false
-    enable_language_specific_leader = 1
-    bootstrap_before = "customspacevim#before" 
-    bootstrap_after = "customspacevimafter#after" 
+  #disabled_plugins = ["", ""]
 
-    project_rooter_automatically = 0
-    #vimcompatible = true 
-    #snippet_engine
-    snippet_engine = "ultisnips"
+  # enable_vimfiler_filetypeicon = true
+  # enable_vimfiler_welcome = 0
+  # enable_vimfiler_gitstatus = true
 
-    #Windows Leader
-    #windows_leader = ","
-
-    #disabled_plugins = ["", ""]
-
-enable_vimfiler_gitstatus = true
-
-# the default value is vimfiler
-filemanager = "nerdtree"
+  # the default value is vimfiler
+  filemanager = "nerdtree"
 
 [[layers]]
-name = 'denite'
-
+  name = 'denite'
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
-
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "smart"
 [[layers]]
-name = 'shell'
-default_position = 'bottom'
-default_height = 30
-
+  name = 'shell'
+  default_position = 'bottom'
+  default_height = 30
 [[layers]]
-name = "colorscheme"
-
+  name = "colorscheme"
+    # random_theme = true
+    # frequency = '1m'
 [[layers]]
   name = "tmux"
-
 [[layers]]
   name = "lang#c"
   # clang_executable = "/usr/bin/clang"
@@ -99,7 +93,6 @@ name = "colorscheme"
   name = "simeji/winresizer"
   merged = 0
 
-
 [[custom_plugins]]
     name = "lilydjwg/colorizer"
     on_cmd = ["ColorHighlight", "ColorToggle"]
@@ -108,6 +101,3 @@ name = "colorscheme"
 [[custom_plugins]]
   name = "ryanoasis/vim-devicons"
   merged = 0
-
-
-
