@@ -43,6 +43,7 @@
     relativenumber = false
     enable_language_specific_leader = 1
     bootstrap_before = "customspacevim#before" 
+    bootstrap_after = "customspacevimafter#after" 
 
     project_rooter_automatically = 0
     #vimcompatible = true 

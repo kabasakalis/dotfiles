@@ -1,8 +1,19 @@
+"=======================================================================================================================
+" Spiros kabasakalis
+" Custom bootstrap_before Configuration for SpaceVim
+" Author: Spiros kabasakalis < kabasakalis at gmail.com >
+" URL: https://github.com/kabasakalis 
+" Copyright (c) 2016-2017 Wang Shidong & Contributors
+" License: GPLv3
+"=======================================================================================================================
+
 function! customspacevim#before() abort
-call SpaceVim#logger#info('** Custom Spacevim settings loaded. **')
+call SpaceVim#logger#info('** Custom Spacevim settings loaded from bootstrap_before (customspacevim) **')
+
 " ======================================================================================================================
-" Core Vim settings  {{{
-" ======================================================================================================================
+" Core Vim settings 
+
+" Python
 if has("win32")
   " Windows Options GVim
  let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
@@ -12,11 +23,9 @@ elseif has("unix")
 else
 endif
 
-
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 set guicursor=
-let g:mapleader = ';'             " leader, leave SPACE for spacvim
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
 set runtimepath+=~/
@@ -61,13 +70,10 @@ set sc                            " show commands as you type them
 set lazyredraw                    " make vim a little speedier
 set ttyfast
 set tags=./tags;                  " Set the tag file search order
-" au FileType qf wincmd :botright           " Quickfix window always full width
-"}}}
 
-" ---------------------------------------------------------------------------------------------------------------------
-" Color and highlighting settings {{{
+" ----------------------------------------------------------------------------------------------------------------------
+" Color and highlighting settings
 " ======================================================================================================================
-
 
 " if (has("termguicolors"))
 "   set termguicolors
@@ -116,27 +122,42 @@ hi! link BufTabLineCurrent Identifier
 hi! link BufTabLineActive Comment
 hi! link BufTabLineHidden Comment
 hi! link BufTabLineFill Comment
-"}}}
+
+" Startify highlights
+hi StartifyBracket ctermfg=240
+hi StartifyFile    ctermfg=147
+hi StartifyFooter  ctermfg=240
+hi StartifyHeader  ctermfg=114
+hi StartifyNumber  ctermfg=215
+hi StartifyPath    ctermfg=245
+hi StartifySlash   ctermfg=240
+hi StartifySpecial ctermfg=240
 
 
-"}}}
-
-" ---------------------------------------------------------------------------------------------------------------------
-" Search settings {{{
-" ---------------------------------------------------------------------------------------------------------------------
+" ----------------------------------------------------------------------------------------------------------------------
+" Search settings 
+" ----------------------------------------------------------------------------------------------------------------------
 set ignorecase                    " Ignore case by default
 set smartcase                     " Make search case sensitive only if it contains uppercase letters
 set wrapscan                      " Search again from top when reached the bottom
 set nohlsearch                    " Don't highlight after search
 set incsearch                     " incremental searching
-"}}}
 
-" ---------------------------------------------------------------------------------------------------------------------
-" Core key bindings-remappings {{{
+" In the quickfix window, <CR> is used to jump to the error under the
+" cursor, so undefine the mapping there.
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
+" Better help navigation with ENTER and BACKSPACE
+:au filetype help :nnoremap <buffer><CR> <c-]>
+:au filetype help :nnoremap <buffer><BS> <c-T>
+
+" ----------------------------------------------------------------------------------------------------------------------
+" Core key bindings-remappings 
 " ======================================================================================================================
 
-" Save file
-nnoremap <Leader>s :w<CR>
+" leader, leave SPACE for spacevim
+let g:mapleader = ';'
+
 
 " Quicker window movement
 " up and down have been  mapped to tmux window navigation, not used in Windows.
@@ -150,17 +171,25 @@ nnoremap ,r zR
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-" Buffers navigation and management
+" Buffers navigation and management, also ALT-<left> and ALT-<right>, see spacevim mappings
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>[  :bp<CR>
+
 "Close buffer workaround
 map <C-x> :bn<cr>:bd #<cr>:bp<cr>
 
-"Close all buffers
+"Close all buffers, kind of dangerous
 "map <C-c> :bufdo bd<cr>
 
-" Quickly open a vertical split of my custom spacevim settings.
-nnoremap  <leader>ev :vs ~\dotfiles\spacevim\customspacevim.vim<CR>
+" Quickly open a vertical split of my custom spacevim bootstrap_before settings.
+nnoremap  <leader>eb :vs ~\dotfiles\spacevim\autoload\customspacevim.vim<CR>
+
+" Quickly open a vertical split of my custom spacevim bootstrap_after settings.
+nnoremap  <leader>ea :vs ~\dotfiles\spacevim\autoload\customspacevimafter.vim<CR>
+
+" Quickly open a vertical split of my init.toml
+nnoremap  <leader>ei :vs ~\dotfiles\spacevim\init.toml<CR>
+
 
 " H to beginning of line, L to the end
 noremap H ^
@@ -255,9 +284,23 @@ vnoremap <C-o> <C-o>zz
 "" Split line (opposite of J)
 nnoremap <CR> i<CR><Esc>
 
-"}}}
+" ----------------------------------------------------------------------------------------------------------------------
+" Early Spacevim configurations 
+" ======================================================================================================================
+"
+let g:spacevim_statusline_right_sections =
+    \ [
+    \ 'fileformat',
+    \ 'cursorpos',
+    \ 'percentage',
+    \ 'time',
+    \ 'date'
+    \ ]
 
-
+" ----------------------------------------------------------------------------------------------------------------------
+" Additional core remappings of important Spacevim key bindings to leader mappings for less
+" keystrokes. Also see customspacevimafter.vim for spacevim leader custom mappings.
+" ======================================================================================================================
 "Example for SPC group key binding 
 "call SpaceVim#custom#SPCGroupName(['G'], '+TestGroup')
 "call SpaceVim#custom#SPC('nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
@@ -265,17 +308,15 @@ nnoremap <CR> i<CR><Esc>
 "Example  for SPC key binding with existing group 
 "call SpaceVim#custom#SPC('nnoremap', ['f', 't'], 'echom "hello world"', 'test custom SPC', 1)
 
-" ---------------------------------------------------------------------------------------------------------------------
-" Additional remappings of important Spacevim key bindings to leader mappings for less
-" keystrokes {{{
-" ======================================================================================================================
 
-" Format
-nmap  ff        <Space>bf
 " Home screen
-nmap  <leader>h <Space>bh
+nmap  <leader>i <Space>bh
+
 " Kill buffer
 nmap <leader>k  <Space>bd
+
+" Save buffer
+nnoremap <leader>s :w<CR>
 
 " Save all buffers
 nmap <leader>S  <Space>fS
@@ -294,7 +335,7 @@ nmap <leader>c <Space>cl
 vmap <leader>c <Space>cl
 
 " Toggle File Tree
-nmap <leader>t  <Space>ft
+nmap <leader>h  <Space>ft
 
 " Delete current buffer and file, confirmation, CAUTION.
 nmap <leader>D  <Space>fD
@@ -308,11 +349,22 @@ nmap <leader>j  <Space>jw
 " Cycle theme 
 nmap <leader>u  <Space>Tn
 
+" Fuzzy find theme 
+nmap <leader>r  <Space>Ts
+
 " Transpose character, word or line. 
 nmap <leader>x  <Space>xt
 
 " Switch to previous window
 nnoremap <silent> [Window]s <C-w><C-p>
+
+" Format
+nmap  ff <Space>bf
+
+" Content Search with FlyGrep on current buffer <SPC>ss 
+" Content Search with FlyGrep on current Project <SPC>sp
+" Content Search with FlyGrep on current buffer directory <SPC>sd
+" Use capitalized last key on above mappings for word under cursor. 
 
 " Content Search  with ag
 " ag must be installed and in the path 
@@ -327,160 +379,10 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'p'], ':DeniteProjectDir file/rec<CR>
 " File search in current open buffers with Denite
 call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in open buffers (Denite) - *', 1)
 
-" In the quickfix window, <CR> is used to jump to the error under the
-" cursor, so undefine the mapping there.
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-
-" Better help navigation with ENTER and BACKSPACE
-:au filetype help :nnoremap <buffer><CR> <c-]>
-:au filetype help :nnoremap <buffer><BS> <c-T>
-
-
-
-
-"}}}
 
 " ======================================================================================================================
-" Plugin Settings 
+" Plugin Settings early initialized need to be here. The rest are under plugin folder
 " ======================================================================================================================
-
-call SpaceVim#logger#info('** Custom Spacevim plugin settings loaded. **')
-
-let g:spacevim_statusline_right_sections =
-    \ [
-    \ 'fileformat',
-    \ 'cursorpos',
-    \ 'percentage',
-    \ 'time',
-    \ 'date'
-    \ ]
-
-
-
-
-" -----------------------------------------------------
-" Nerdtree Config {{{
-" -----------------------------------------------------
-autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd VimEnter *
-            \   if !argc()
-            \ |   Startify
-            \ |   NERDTree
-            \ |   wincmd w
-            \ | endif
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeWinSize=40
-let g:NERDTreeAutoDeleteBuffer=1
-let g:NERDTreeShowHidden=1
-let g:NERDTreeHighlightCursorline=0
-let g:NERDTreeRespectWildIgnore=1
-let g:NERDTreeMapActivateNode='<right>'
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeChDirMode = 0
-autocmd filetype nerdtree syn match haskell_icon #?# containedin=NERDTreeFile
-" if you are using another syn highlight for a given line (e.g.
-" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
-" other highlight to work with it
-" autocmd filetype nerdtree syn match html_icon #?# containedin=NERDTreeFile,html
-autocmd filetype nerdtree syn match go_icon #?# containedin=NERDTreeFile
-
-
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('haml', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('rb', 'Cyan', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('png', 'Cyan', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('jpg', 'Cyan', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
-call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
-call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
-call NERDTreeHighlightFile('zshrc', 'Gray', 'none', '#686868', '#151515')
-call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
-
-
-" ======================================================================================================================
-" Startify {{{ 
-" ======================================================================================================================
-
-"autocmd User Startified setlocal cursorline
-autocmd User Startified setlocal buftype=
-" let g:startify_disable_at_vimenter    = 0
-let g:startify_enable_special         = 0
-let g:startify_files_number           = 10
-let g:startify_relative_path          = 1
-let g:startify_change_to_dir          = 0
-let g:startify_change_to_vcs_root     = 0
-let g:startify_update_oldfiles        = 1
-let g:startify_session_autoload       = 1
-let g:startify_session_persistence    = 1
-let g:startify_session_delete_buffers = 1
-
-let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
-let NERDTreeHijackNetrw = 0
-
-let g:startify_skiplist = [
-            \ 'COMMIT_EDITMSG',
-            \ 'bundle/.*/doc',
-            \ '/data/repo/neovim/runtime/doc',
-            \ ]
-
-let g:startify_lists = [
-      \ { 'type': 'files',     'header': ['   Recent']            }, { 'type': 'dir',       'header': ['   Recent in '. getcwd()] },
-      \ { 'type': 'sessions',  'header': ['   Sessions']       },
-      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']       },
-      \ { 'type': 'commands',  'header': ['   Commands']       },
-      \ ]
-
-" let g:startify_custom_indices = ['1', '2', '3']
-let g:startify_bookmarks = [
-            \ { '1': '~/dotfiles/neovim/init.vim' },
-            \ { '2': '~/dotfiles/neovim/plugins.vim'},
-            \ { '3': '~/dotfiles/neovim/autoload/utils.vim'},
-            \ { '4': '~/dotfiles/zsh/zshrc'},
-            \ { '5': '~/dotfiles/zsh/zshenv'},
-            \ { '6': '~/dotfiles/zsh/zsh_aliases'},
-            \ { '7': '~/dotfiles/install.conf.yaml'},
-            \ { '8': '~/dotfiles/spacevim/init.toml'},
-            \ { '9': '~/dotfiles/spacevim/autoload/customspacevim.vim'},
-            \ { '10': '~/dotfiles/spacevim/plugin/pluginssettings.vim'}
-            \ ]
-
-let g:startify_commands = [
-    \ ['Vim Reference', 'h ref'],
-    \ ['Spacevim Configuration', 'h Spacevim-config']
-    \ ]
-
-
-let g:startify_custom_footer =
-      \ ['', "   Neither the past, the present nor the future mind can be found", '']
-
-hi StartifyBracket ctermfg=240
-hi StartifyFile    ctermfg=147
-hi StartifyFooter  ctermfg=240
-hi StartifyHeader  ctermfg=114
-hi StartifyNumber  ctermfg=215
-hi StartifyPath    ctermfg=245
-hi StartifySlash   ctermfg=240
-hi StartifySpecial ctermfg=240
-"
-let g:startify_session_before_save = [
-        \ 'echo "Cleaning up before saving.."',
-        \ 'silent! NERDTreeTabsClose'
-        \ ]
 
 let g:startify_custom_header = [
         \ '   _____       _                 _  __     _                     _         _ _      ',
@@ -494,90 +396,9 @@ let g:startify_custom_header = [
         \ '                            Custom Spacevim Setup                                   ',
         \ ]
 
-"}}}
 
+endfunction  "bootstrap_before ends here
 
-
-
-
-
-" -----------------------------------------------------
-" Ultisnips for snippets
-" -----------------------------------------------------
-
-" Disable built-in <C-x><C-k> to be able to go backward
-inoremap <c-x><c-k> <c-x><c-k>
-
-let g:UltiSnipsListSnippets='<C-l>'
-set runtimepath+=~/vimsnippets
-" the following directories reside in vimsnippets,
-let g:UltiSnipsSnippetDirectories=[ "ultisnips", "custom" ]
-"user defined snippets
-let g:UltiSnipsSnippetsDir= "~/vimsnippets/custom"
-let g:UltiSnipsUsePythonVersion=3
-let g:UltiSnipsEditSplit = 'vertical' 
-let g:UltiSnipsJumpForwardTrigger='<C-u>'
-let g:UltiSnipsJumpBackwardTrigger='<C-o>'
-let g:clang_snippets_engine = 'ultisnips'
-
-
-"  ---------------------------------------------------
-"  w0rp/ale, Asynchronous maker and linter 
-" ----------------------------------------------------
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-" highlight clear ALEErrorSign
-" highlight clear ALEWarningSign
-let g:airline#extensions#ale#enabled = 1
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-" Don't run linters on changing text or opening a file.
-" So effectively linters run only on file saved.
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_close_preview_on_insert=1
-let g:ale_cursor_detail=1
-let g:ale_list_vertical=0
-if has("win32")
-  " Windows Options GVim
-  let g:ale_cpp_gcc_executable = 'C:/mingw64/bin/gcc'
-  let g:ale_c_gcc_executable = 'C:/mingw64/bin/gcc'
-  let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}
-  let g:ale_cpp_gcc_options="-Wall -O3"
-  let g:ale_c_gcc_options="-Wall -O2"
-elseif has("unix")
-  " Linux Options Neovim
-  let g:ale_cpp_gcc_executable = '/usr/bin/gcc'
-  let g:ale_c_gcc_executable = '/usr/bin/gcc'
-else
-endif
-
-
-
-
-endfunction
-
-" NERDTree File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
-exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-let s:HI = SpaceVim#api#import('vim#highlight')
-
-function! s:cursor_highlight() abort
-    echo s:HI.syntax_at()
-endfunction
-
-function! s:defx_my_settings() abort
-    " Define mappings
-endfunction
-
-
-
-
+"  ---------------------------------------------------------------------------------------------------------------------
+" Definitions of functions that can be used inside the bootrstrap_before fuction body
+" ----------------------------------------------------------------------------------------------------------------------
