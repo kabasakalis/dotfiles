@@ -80,7 +80,8 @@ name = 'autocomplete'
   clang_executable = "F:\Programs\LLVM\bin\clang.exe"
   [layer.clang_std]
     c = "c11"
-    cpp = "c++1z"
+    # cpp = "c++1z"
+    cpp = "c++17"
     objc = "c11"
     objcpp = "c++1z"
 

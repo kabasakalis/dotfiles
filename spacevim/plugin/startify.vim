@@ -46,7 +46,7 @@ let g:startify_bookmarks = [
             \ { '9': '~/dotfiles/spacevim/autoload/customspacevim.vim'},
             \ { '10': '~/dotfiles/spacevim/autoload/customspacevimafter.vim'},
             \ { '11': '~/dotfiles/spacevim/init.toml'},
-            \ { '12': '~/dotfiles/spacevim/plugin/pluginssettings.vim'}
+            \ { '12': '~/dotfiles/spacevim/plugin/settings.vim'}
             \ ]
 
 let g:startify_commands = [

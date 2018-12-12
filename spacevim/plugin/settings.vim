@@ -58,11 +58,23 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_close_preview_on_insert=1
 " let g:ale_cursor_detail=1
 let g:ale_list_vertical=0
+let g:ale_history_log_output=1
 if has("win32")
   " Windows Options GVim
-  let g:ale_cpp_gcc_executable = 'C:/mingw64/bin/gcc'
-  let g:ale_c_gcc_executable = 'C:/mingw64/bin/gcc'
-  let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}
+  "GNU
+  let g:ale_cpp_gcc_executable = 'F:/msys64/mingw64/bin/g++'
+  let g:ale_c_gcc_executable = 'F:/msys64/mingw64/bin/gcc'
+  "CLANG
+  let g:ale_c_clang_executable = 'F:/msys64/mingw64/bin/clang'
+  " let g:ale_c_ccls_executable = 'ccls'
+  let g:ale_c_build_dir_names = ['build', 'bin', 'shit']
+  " let g:ale_c_build_dir = 'build'
+  " let g:ale_c_parse_makefile = 1
+  let g:ale_set_balloons = 1 
+  ""* C++ (filetype cpp): `clang`, `clangd`, `clangcheck`!!, `clangtidy`!!, `clang-format`, `clazy`!!, `cppcheck`, `cpplint`!!, `cquery`, `flawfinder`, `gcc`, `uncrustify`, `ccls`
+  let g:ale_linters = {'c': ['gcc'], 'cpp': ['ccls']}
+  let g:ale_fixers = { 'cpp': ['clang-format']}
+" g:ale_linters_explicit = 1
   let g:ale_cpp_gcc_options="-Wall -O3"
   let g:ale_c_gcc_options="-Wall -O2"
 elseif has("unix")
