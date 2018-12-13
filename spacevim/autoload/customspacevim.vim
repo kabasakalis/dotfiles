@@ -378,6 +378,63 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'p'], ':DeniteProjectDir file/rec<CR>
 call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in open buffers (Denite) - *', 1)
 
 
+" Quick search - method call under cursor
+" inoremap <Leader>m :Ag \.<cword>\b<CR>
+" nnoremap <Leader>m :Ag \.<cword>\b<CR>
+" vnoremap <Leader>m :<C-U>exec  . GetVisualSelection() ."\b'"<CR>
+" File search in current open buffers with Denite
+" call SpaceVim#custom#SPC('nnoremap', [',', 'o'], ':cexpr system("ls -a") | :copen ','Description', 1)
+
+" call SpaceVim#mapping#space#langSPC('nmap', ['l','o'],
+        " \ ':! ls -a',
+        " \ 'exexute SHELL, list dir', 1)
+
+" File search in current open buffers with Denite
+
+" nmap  ,o :cexpr system('ls -a') | copen |
+
+let g:build_debug_folder = "build"
+let g:build_release_folder = "build_release"
+let g:executable_name_debug = "sfml_project"
+let g:executable_name_release = "sfml_project"
+
+
+let g:run_release_command = 'cd ' . g:build_release_folder . ' && '. g:executable_name_release
+let g:run_debug_command = 'cd ' . g:build_debug_folder . ' && '. g:executable_name_debug
+
+let g:configure_debug_command = 'cd ' . g:build_debug_folder . ' && sh ../tasks/cmake_config_debug.sh'
+let g:configure_release_command = 'cd ' . g:build_release_folder . ' && sh ../tasks/cmake_config_release.sh'
+
+let g:build_debug_command = 'cd ' . g:build_debug_folder . ' && sh ../tasks/cmake_build.sh'
+let g:build_release_command = 'cd ' . g:build_release_folder . ' && sh ../tasks/cmake_build.sh'
+
+
+"CMake configure debug build
+nnoremap <silent>  ,cd :cexpr system(g:configure_debug_command) <bar> :copen<CR> 
+
+"CMake configure release build
+nnoremap <silent>  ,cr :cexpr system(g:configure_release_command) <bar> :copen<CR>
+
+"Build Debug
+nnoremap <silent>  ,bd :cexpr system(g:build_debug_command) <bar> :copen<CR>
+
+"Build Release
+nnoremap <silent>  ,br :cexpr system(g:build_release_command) <bar> :copen<CR>
+
+"Run Debug
+nnoremap <silent>  ,rd :cexpr system(g:run_debug_command) <bar> :copen<CR>
+
+"Run Release
+nnoremap <silent>  ,rr :cexpr system(g:run_release_command) <bar> :copen<CR>
+
+
+"Build and Run Debug
+nnoremap   ,dd  <bar> :cexpr system(g:build_debug_command) <bar> :copen <bar> :cexpr system(g:run_debug_command)<CR>
+
+"Build and Run Release
+nnoremap <silent>  ,rr :cexpr system(g:build_release_command) <bar> :copen <bar> :cexpr system(g:run_release_command)<CR>
+
+
 " ======================================================================================================================
 " Plugin Settings early initialized need to be here. The rest are under plugin folder
 " ======================================================================================================================
