@@ -1,7 +1,7 @@
-
 "=============================================================================
-" runner.vim --- code runner for SpaceVim
+" cpprunner.vim --- code runner for SpaceVim
 " Copyright (c) 2016-2017 Shidong Wang & Contributors
+" Brutal override by Spiros Kabasakalis
 " Author: Shidong Wang < wsdjeg at 163.com >
 " URL: https://spacevim.org
 " License: GPLv3
@@ -187,10 +187,25 @@ function! SpaceVim#plugins#runner#close() abort
 endfunction
 
 
-  " call SpaceVim#plugins#repl#reg('ruby', 'irb')
-" endfunction
+
+
+" CMake configuration, build and run  commands
+call plugin#cpprunner#reg_runner('build1', 'cmake --build .')
+call plugin#cpprunner#reg_runner('build2', 'cmake2 --build .')
+
+
+
+" CMake configuration, build and run mappings
+function! s:language_specified_mappings() abort
+  
+  call SpaceVim#mapping#space#langSPC('nmap', ['l', 'r'], 'call plugin#cpprunner#open("build1")', 'execute build', 1)
+
+  let g:_spacevim_mappings_space.l.b = {'name' : '+Build'}
+  call SpaceVim#mapping#space#langSPC('nmap', ['l','b', 'd'], 'call plugin#cpprunner#open("build2")', 'execute build', 1)
+endfunction
 
 
 
 
+call SpaceVim#mapping#space#regesit_lang_mappings('cpp', function('s:language_specified_mappings'))
 

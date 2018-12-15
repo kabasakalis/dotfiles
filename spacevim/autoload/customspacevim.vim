@@ -393,46 +393,53 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find fil
 
 " nmap  ,o :cexpr system('ls -a') | copen |
 
-let g:build_debug_folder = "build"
-let g:build_release_folder = "build_release"
-let g:executable_name_debug = "sfml_project"
-let g:executable_name_release = "sfml_project"
-
-
-let g:run_release_command = 'cd ' . g:build_release_folder . ' && '. g:executable_name_release
-let g:run_debug_command = 'cd ' . g:build_debug_folder . ' && '. g:executable_name_debug
-
-let g:configure_debug_command = 'cd ' . g:build_debug_folder . ' && sh ../tasks/cmake_config_debug.sh'
-let g:configure_release_command = 'cd ' . g:build_release_folder . ' && sh ../tasks/cmake_config_release.sh'
-
-let g:build_debug_command = 'cd ' . g:build_debug_folder . ' && sh ../tasks/cmake_build.sh'
-let g:build_release_command = 'cd ' . g:build_release_folder . ' && sh ../tasks/cmake_build.sh'
 
 
 "CMake configure debug build
-nnoremap <silent>  ,cd :cexpr system(g:configure_debug_command) <bar> :copen<CR> 
+" nnoremap <silent>  ,cd :cexpr system(g:configure_debug_command) <bar> :copen<CR>
 
 "CMake configure release build
-nnoremap <silent>  ,cr :cexpr system(g:configure_release_command) <bar> :copen<CR>
+" nnoremap <silent>  ,cr :cexpr system(g:configure_release_command) <bar> :copen<CR>
 
 "Build Debug
-nnoremap <silent>  ,bd :cexpr system(g:build_debug_command) <bar> :copen<CR>
+" nnoremap <silent>  ,bd :cexpr system(g:build_debug_command) <bar> :copen<CR>
 
 "Build Release
-nnoremap <silent>  ,br :cexpr system(g:build_release_command) <bar> :copen<CR>
+" nnoremap <silent>  ,br :cexpr system(g:build_release_command) <bar> :copen<CR>
 
 "Run Debug
-nnoremap <silent>  ,rd :cexpr system(g:run_debug_command) <bar> :copen<CR>
+" nnoremap <silent>  ,rd :cexpr system(g:run_debug_command) <bar> :copen<CR>
 
 "Run Release
-nnoremap <silent>  ,rr :cexpr system(g:run_release_command) <bar> :copen<CR>
+" nnoremap <silent>  ,rr :cexpr system(g:run_release_command) <bar> :copen<CR>
 
 
 "Build and Run Debug
-nnoremap   ,dd  <bar> :cexpr system(g:build_debug_command) <bar> :copen <bar> :cexpr system(g:run_debug_command)<CR>
+" nnoremap   ,dd  <bar> :cexpr system(g:build_debug_command) <bar> :copen <bar> :cexpr system(g:run_debug_command)<CR>
 
 "Build and Run Release
-nnoremap <silent>  ,rr :cexpr system(g:build_release_command) <bar> :copen <bar> :cexpr system(g:run_release_command)<CR>
+" nnoremap <silent>  ,rr :cexpr system(g:build_release_command) <bar> :copen <bar> :cexpr system(g:run_release_command)<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 " ======================================================================================================================
