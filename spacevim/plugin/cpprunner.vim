@@ -1,10 +1,15 @@
-
 "=============================================================================
-" runner.vim --- code runner for SpaceVim
+" cpprunner.vim --- cpp cmake code runner for SpaceVim
 " Copyright (c) 2016-2017 Shidong Wang & Contributors
 " Author: Shidong Wang < wsdjeg at 163.com >
+" Adaptation: Spiros Kabasakalis
 " URL: https://spacevim.org
+
 " License: GPLv3
+" This is an ugly (but working) override of native SpaceVim runner plugin 
+" so that a vim user can configure custom cpp run tasks, for example 
+" CMake related tasks (see cpptasks.vim file)  and bind them to language 
+" specific keys.
 "=============================================================================
 
 let s:JOB = SpaceVim#api#import('job')
@@ -185,12 +190,3 @@ function! SpaceVim#plugins#runner#close() abort
   endif
   exe 'bd ' s:bufnr
 endfunction
-
-
-  " call SpaceVim#plugins#repl#reg('ruby', 'irb')
-" endfunction
-
-
-
-
-

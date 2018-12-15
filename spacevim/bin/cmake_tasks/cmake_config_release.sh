@@ -1,6 +1,6 @@
 #!/bin/sh
 echo cmake -G Ninja -DCMAKE_BUILD_TYPE=Release .. 
-# Configure with cmake for Release build
+# cmake configure for release build
 echo Directory: 
 pwd
 cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..

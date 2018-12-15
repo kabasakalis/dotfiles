@@ -3,8 +3,8 @@
 " Custom bootstrap_before Configuration for SpaceVim
 " Author: Spiros kabasakalis < kabasakalis at gmail.com >
 " URL: https://github.com/kabasakalis 
-" Copyright (c) 2016-2017 Wang Shidong & Contributors
-" License: GPLv3
+" Copyright (c) 2018 - 2019  Spiros Kabasakalis
+" License: MIT
 "=======================================================================================================================
 
 function! customspacevim#before() abort
