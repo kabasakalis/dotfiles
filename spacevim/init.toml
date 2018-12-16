@@ -102,3 +102,10 @@ name = 'autocomplete'
 [[custom_plugins]]
   name = "ryanoasis/vim-devicons"
   merged = 0
+
+[[custom_plugins]]
+  name = "octol/vim-cpp-enhanced-highlight"
+  merged = 0
+
+
+

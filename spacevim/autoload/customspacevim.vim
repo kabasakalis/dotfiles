@@ -16,7 +16,8 @@ call SpaceVim#logger#info('** Custom Spacevim settings loaded from bootstrap_bef
 " Python
 if has("win32")
   " Windows Options GVim
- let g:python3_host_prog = "C:\tools\python-3.6.6\python.exe"
+ let g:python3_host_prog = "F:\Programs\python-3.7.1\python.exe"
+ let g:python2_host_prog = "F:\Programs\python-3.7.1\python.exe"
 elseif has("unix")
   " Linux Options Neovim
 " let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
