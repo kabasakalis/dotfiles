@@ -94,3 +94,8 @@ call plugin#cpprunner#reg_runner('build_run_release_command',g:cmd . g:build_run
 
 " Apply mappings
 call SpaceVim#mapping#space#regesit_lang_mappings('cpp', function('s:language_specified_mappings'))
+
+
+
+ au FileType c,cpp nmap <buffer><silent>,re <Plug>(clang_rename-current)
+

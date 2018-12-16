@@ -48,7 +48,7 @@
   #Windows Leader
   #windows_leader = ","
 
-  #disabled_plugins = ["", ""]
+  # disabled_plugins = ["vimproc"]
 
   # enable_vimfiler_filetypeicon = true
   # enable_vimfiler_welcome = 0
@@ -107,5 +107,6 @@ name = 'autocomplete'
   name = "octol/vim-cpp-enhanced-highlight"
   merged = 0
 
-
-
+[[custom_plugins]]
+  name = "uplus/vim-clang-rename"
+  merged = 0
