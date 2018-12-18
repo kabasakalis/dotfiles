@@ -52,6 +52,8 @@
     ~/ackrc: vim/ackrc
     #Spacevim
     ~/.SpaceVim.d: spacevim
+    ~/.config/nvim/coc-settings.json: spacevim/config/coc-settings.json
+    ~/.vim/coc-settings.json: spacevim/config/coc-settings.json
     #neovim
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.ideavimrc: neovim/.ideavimrc
