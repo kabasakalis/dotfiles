@@ -59,6 +59,19 @@ let g:ale_close_preview_on_insert=1
 " let g:ale_cursor_detail=1
 let g:ale_list_vertical=0
 let g:ale_history_log_output=1
+
+"This variable can be changed to customize ccls initialization options.
+let g:ale_c_ccls_init_options =                           
+      \  {
+    \   'cacheDirectory': '/tmp/ccls',
+    \   'cacheFormat': 'binary',
+    \   'diagnostics': {
+    \     'onOpen': -1,
+    \     'onChange': -1,
+    \     'onSave': -1,
+    \   },
+    \ }
+
 if has("win32")
   " Windows Options GVim
   "GNU
@@ -67,12 +80,13 @@ if has("win32")
   "CLANG
   let g:ale_c_clang_executable = 'F:/msys64/mingw64/bin/clang'
   " let g:ale_c_ccls_executable = 'ccls'
-  let g:ale_c_build_dir_names = ['build', 'bin', 'shit']
+  let g:ale_c_build_dir_names = ['build', 'bin']
   " let g:ale_c_build_dir = 'build'
   " let g:ale_c_parse_makefile = 1
   let g:ale_set_balloons = 1 
   ""* C++ (filetype cpp): `clang`, `clangd`, `clangcheck`!!, `clangtidy`!!, `clang-format`, `clazy`!!, `cppcheck`, `cpplint`!!, `cquery`, `flawfinder`, `gcc`, `uncrustify`, `ccls`
-  let g:ale_linters = {'c': ['gcc'], 'cpp': ['ccls', 'cppcheck', 'clangtidy']}
+  " let g:ale_linters = { 'cpp': ['ccls', 'clangtidy']}
+  let g:ale_linters = { 'cpp': [ 'clangtidy']}
   let g:ale_fixers = { 'cpp': ['clang-format']}
 " g:ale_linters_explicit = 1
   let g:ale_cpp_gcc_options="-Wall -O3"

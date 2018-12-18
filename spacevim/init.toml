@@ -110,3 +110,7 @@ name = 'autocomplete'
 [[custom_plugins]]
   name = "uplus/vim-clang-rename"
   merged = 0
+
+[[custom_plugins]]
+  name = "neoclide/coc.nvim"
+  merged = 0
