@@ -107,9 +107,9 @@ name = 'autocomplete'
   name = "octol/vim-cpp-enhanced-highlight"
   merged = 0
 
-[[custom_plugins]]
-  name = "uplus/vim-clang-rename"
-  merged = 0
+# [[custom_plugins]]
+  # name = "uplus/vim-clang-rename"
+  # merged = 0
 
 [[custom_plugins]]
   name = "neoclide/coc.nvim"

@@ -174,5 +174,4 @@ endfunction
 
 
 
- au FileType c,cpp nmap <buffer><silent>,re <Plug>(clang_rename-current)
 
