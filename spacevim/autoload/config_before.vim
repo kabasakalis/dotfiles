@@ -7,7 +7,7 @@
 " License: MIT
 "=======================================================================================================================
 
-function! customspacevim#before() abort
+function! config_before#before() abort
 call SpaceVim#logger#info('** Custom Spacevim settings loaded from bootstrap_before (customspacevim) **')
 
 " ======================================================================================================================

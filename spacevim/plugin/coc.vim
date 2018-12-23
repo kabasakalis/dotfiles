@@ -2,17 +2,22 @@
 " Language Server Protocol mappings with coc.vim client
 " ======================================================================================================================
 
+" let g:coc_filetype_map = {
+				" \ 'html.swig': 'html',
+				" \ 'wxss': 'css',
+				" \ }
+
+
+  "Path to node executable to start coc service. ex: >
+	" let g:coc_node_path = '/usr/local/opt/node@10/bin/node'
+
+
 
 " Rename symbol
 nnoremap <silent> ,,re :call CocAction('rename')<cr>
 " With clang-rename plugin
 " nmap <buffer><silent> ,,re :<Plug>(clang_rename-current)
 " au FileType c,cpp nmap <buffer><silent>,re <Plug>(clang_rename-current)
-
-
-" nmap <silent> <M-j> <Plug>(coc-definition)
-" nmap <silent> <C-,> <Plug>(coc-references)
-" nn <silent> K :call CocActionAsync('doHover')<cr>
 
 " Go to definition
 nmap <silent> ,,gd <Plug>(coc-definition)
@@ -22,6 +27,10 @@ nmap <silent> ,,rf <Plug>(coc-references)
 
 "  Do Hover
 nn <silent> ,,do :call CocActionAsync('doHover')<cr>
+
+nmap <silent> ,,td <Plug>(coc-type-definition)<cr>
+
+nmap <silent> ,,gi <Plug>(coc-implementation)
 
 set updatetime=300
 au CursorHold * sil call CocActionAsync('highlight')
@@ -54,7 +63,6 @@ nn <silent> ,,mf :call CocLocations('ccls','$ccls/member',{'kind':3})<cr>
 " nested classes / types in a namespace
 nn <silent> ,,nc :call CocLocations('ccls','$ccls/member',{'kind':2})<cr>
 
-nmap <silent> ,,td <Plug>(coc-type-definition)<cr>
 nn <silent> ,,vv :call CocLocations('ccls','$ccls/vars')<cr>
 nn <silent> ,,v1 :call CocLocations('ccls','$ccls/vars',{'kind':1})<cr>
 
@@ -67,8 +75,6 @@ nn <silent> ,,b3 :call CocLocations('ccls','$ccls/inheritance',{'levels':3})<cr>
 nn <silent>  ,,dd :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true})<cr>
 " derived of up to 3 levels
 nn <silent> ,d3 :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true,'levels':3})<cr>
-
-
 
 
 " Shortcuts for denite interface
@@ -91,22 +97,3 @@ nnoremap <silent>  ,,ss  :<C-u>Denite coc-service<cr>
 
 "Show links of current buffer
 nnoremap <silent> ,,sl  :<C-u>Denite coc-link<cr>
-
-
-
-
-" Remap keys for got:os
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
-
-
-" nmap <silent> <M-j> <Plug>(coc-definition)
-" nmap <silent> <C-,> <Plug>(coc-references)
-" nn <silent> K :call CocActionAsync('doHover')<cr>
-
-
-" set updatetime=300
-" au CursorHold * sil call CocActionAsync('highlight')
-" au CursorHoldI * sil call CocActionAsync('showSignatureHelp')

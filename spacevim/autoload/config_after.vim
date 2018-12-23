@@ -7,7 +7,7 @@
 " License: GPLv3
 "=======================================================================================================================
 
-function! customspacevimafter#after() abort
+function! config_after#after() abort
 call SpaceVim#logger#info('** Custom bootstrap_after Spacevim settings loaded. **')
 nnoremap <silent> [Window]f :copen<CR>
     let g:_spacevim_mappings_windows.f = [':copen',

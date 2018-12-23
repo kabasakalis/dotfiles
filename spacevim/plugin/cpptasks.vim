@@ -74,8 +74,6 @@ function! s:language_specified_mappings() abort
   call SpaceVim#mapping#space#langSPC('nmap', ['l','l', 'r'], 
        \ 'call plugin#cpprunner#open("build_run_release_command")', 'Build and Run release', 1)
 
-
-
 " Build And Run Spacevim C++ language specific mappings
   let g:_spacevim_mappings_space.l.g = {'name' : '+Language Server Protocol'}
   call SpaceVim#mapping#space#langSPC('nmap', ['l','g', 'd'], 
@@ -102,11 +100,6 @@ call SpaceVim#mapping#space#langSPC('nmap', ['l','g', 'cd'],
 call SpaceVim#mapping#space#langSPC('nmap', ['l','g', 'dh'], 
        \ 'call CocActionAsync("doHover")' , 'Do Hover', 1)
 
-
-
-
-
-
 endfunction
 
 " Register cmake configure jobs
@@ -127,51 +120,3 @@ call plugin#cpprunner#reg_runner('build_run_release_command',g:cmd . g:build_run
 
 " Apply mappings
 call SpaceVim#mapping#space#regesit_lang_mappings('cpp', function('s:language_specified_mappings'))
-
-
-
-
-
-" nnoremap <Plug>(coc-codelens-action)     :<C-u>call CocActionAsync('codeLensAction')<CR>
-" vnoremap <Plug>(coc-format-selected)     :<C-u>call CocActionAsync('formatSelected', visualmode())<CR>
-" vnoremap <Plug>(coc-codeaction-selected) :<C-u>call CocActionAsync('codeAction',     visualmode())<CR>
-" nnoremap <Plug>(coc-codeaction)          :<C-u>call CocActionAsync('codeAction',     '')<CR>
-" nnoremap <Plug>(coc-rename)              :<C-u>call CocActionAsync('rename')<CR>
-" nnoremap <Plug>(coc-format-selected)     :<C-u>set  operatorfunc=<SID>FormatFromSelected<CR>g@
-" nnoremap <Plug>(coc-codeaction-selected) :<C-u>set  operatorfunc=<SID>CodeActionFromSelected<CR>g@
-" nnoremap <Plug>(coc-format)              :<C-u>call CocActionAsync('format')<CR>
-" nnoremap <Plug>(coc-diagnostic-info)     :<C-u>call CocActionAsync('diagnosticInfo')<CR>
-" nnoremap <Plug>(coc-diagnostic-next)     :<C-u>call CocActionAsync('diagnosticNext')<CR>
-" nnoremap <Plug>(coc-diagnostic-prev)     :<C-u>call CocActionAsync('diagnosticPrevious')<CR>
-" nnoremap <Plug>(coc-definition)          :<C-u>call CocActionAsync('jumpDefinition')<CR>
-" nnoremap <Plug>(coc-implementation)      :<C-u>call CocActionAsync('jumpImplementation')<CR>
-" nnoremap <Plug>(coc-type-definition)     :<C-u>call CocActionAsync('jumpTypeDefinition')<CR>
-" nnoremap <Plug>(coc-references)          :<C-u>call CocActionAsync('jumpReferences')<CR>
-" nnoremap <Plug>(coc-openlink)            :<C-u>call CocActionAsync('openLink')<CR>
-" nnoremap <Plug>(coc-fix-current)         :<C-u>call CocActionAsync('doQuickfix')<CR>
-" inoremap <silent> <Plug>_                <C-r>=coc#_complete()<CR>
-
-function! s:lsp_specified_mappings() abort
-
-
-
-" nnoremap <Plug>(coc-codelens-action)     :<C-u>call CocActionAsync('codeLensAction')<CR>
-
- " call SpaceVim#mapping#space#langSPC('nmap', ['l','g', 'di'],
-       " \ 'call CocActionAsync("diagnosticInfo")' , 'Diagnostic Info', 1)
-"
-" call SpaceVim#mapping#space#langSPC('nmap', ['l','g', 'dn'],
-       " \ 'call CocActionAsync("diagnosticNext")' , 'Diagnostic Next', 1)
-"
-" call SpaceVim#mapping#space#langSPC('nmap', ['l','g', 'dp'],
-       " \ 'call CocActionAsync("diagnosticPrevious")' , 'Diagnostic Previous', 1)
-
- 
-endfunction
-
-" call SpaceVim#mapping#space#regesit_lang_mappings('cpp', function('s:lsp_specified_mappings'))
-
-
-
-
-

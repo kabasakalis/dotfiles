@@ -24,7 +24,6 @@ autocmd StdinReadPre * let s:std_in=1
             " \ |   wincmd w
             " \ | endif
 
-
 autocmd VimEnter * Startify | NERDTree  | wincmd w
 
 let g:NERDTreeMinimalUI=1

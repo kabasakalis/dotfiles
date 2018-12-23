@@ -39,8 +39,8 @@
   #Enable/Disable relativenumber, by default it is enabled.
   relativenumber = false
   enable_language_specific_leader = 1
-  bootstrap_before = "customspacevim#before" 
-  bootstrap_after = "customspacevimafter#after" 
+  bootstrap_before = "config_before#before" 
+  bootstrap_after = "config_after#after" 
   project_rooter_automatically = 0
   #vimcompatible = true 
   #snippet_engine
@@ -92,6 +92,10 @@ name = 'autocomplete'
 
 [[custom_plugins]]
   name = "simeji/winresizer"
+  merged = 0
+
+[[custom_plugins]]
+  name = "bkad/CamelCaseMotion"
   merged = 0
 
 [[custom_plugins]]
