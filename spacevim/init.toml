@@ -3,7 +3,7 @@
 # Configuration for SpaceVim
 #
 # Author: Spiros kabasakalis < kabasakalis at gmail.com >
-# URL: https://github.com/kabasakalis 
+# URL: https://github.com/kabasakalis
 # Copyright (c) 2016-2017 Wang Shidong & Contributors
 # License: GPLv3
 #=============================================================================
@@ -39,10 +39,10 @@
   #Enable/Disable relativenumber, by default it is enabled.
   relativenumber = false
   enable_language_specific_leader = 1
-  bootstrap_before = "config_before#before" 
-  bootstrap_after = "config_after#after" 
+  bootstrap_before = "config_before#before"
+  bootstrap_after = "config_after#after"
   project_rooter_automatically = 0
-  #vimcompatible = true 
+  #vimcompatible = true
   #snippet_engine
   snippet_engine = "ultisnips"
   #Windows Leader
@@ -117,4 +117,21 @@ name = 'autocomplete'
 
 [[custom_plugins]]
   name = "neoclide/coc.nvim"
+  merged = 0
+
+
+[[custom_plugins]]
+  name = "tpope/vim-git"
+  merged = 0
+
+[[custom_plugins]]
+  name = "martin-svk/vim-yaml"
+  merged = 0
+
+[[custom_plugins]]
+  name = "tpope/vim-markdown"
+  merged = 0
+
+[[custom_plugins]]
+  name = "vim-scripts/tComment"
   merged = 0

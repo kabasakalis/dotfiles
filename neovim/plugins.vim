@@ -24,7 +24,8 @@ Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
-
+Plug 'mhartington/oceanic-next'
+'
 
 "}}}
 
@@ -165,15 +166,23 @@ Plug 'rhysd/vim-clang-format', {'for': 'cpp' }
 " ---------------------------------------------------------------------------------------------------------------------
 
 " HTML5 syntax
-Plug 'othree/html5.vim'
+"Plug 'othree/html5.vim'
 " SCSS syntax
-Plug 'cakebaker/scss-syntax.vim'
+"Plug 'cakebaker/scss-syntax.vim'
 " Color highlighter
-Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xhtml', 'javascript', 'javascript.jsx'] }
+"Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xhtml', 'javascript', 'javascript.jsx'] }
 " Elixir syntax
-Plug 'elixir-lang/vim-elixir'
+"Plug 'elixir-lang/vim-elixir'
 " Elm syntax
-Plug 'lambdatoast/elm.vim'
+"Plug 'lambdatoast/elm.vim'
+" Typescript completion
+"Plug 'Quramy/tsuquyomi'
+" Typescrtipt syntax
+"Plug 'leafgarland/typescript-vim'
+" Angular syntax
+"Plug 'burnettk/vim-angular'
+" Windows Resizer
+Plug 'simeji/winresizer'
 " Yaml indentation
 Plug 'martin-svk/vim-yaml'
 " Markdown syntax
@@ -186,13 +195,6 @@ Plug 'tejr/vim-tmux'
 Plug 'honza/dockerfile.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'slim-template/vim-slim'
-
-" Typescript completion
-Plug 'Quramy/tsuquyomi'
-" Typescrtipt syntax
-Plug 'leafgarland/typescript-vim'
-" Angualar syntax
-Plug 'burnettk/vim-angular'
 
 "}}}
 

@@ -2,7 +2,7 @@
 " Spiros kabasakalis
 " Custom bootstrap_before Configuration for SpaceVim
 " Author: Spiros kabasakalis < kabasakalis at gmail.com >
-" URL: https://github.com/kabasakalis 
+" URL: https://github.com/kabasakalis
 " Copyright (c) 2018 - 2019  Spiros Kabasakalis
 " License: MIT
 "=======================================================================================================================
@@ -11,7 +11,7 @@ function! config_before#before() abort
 call SpaceVim#logger#info('** Custom Spacevim settings loaded from bootstrap_before (customspacevim) **')
 
 " ======================================================================================================================
-" Core Vim settings 
+" Core Vim settings
 
 " Python
 if has("win32")
@@ -20,7 +20,8 @@ if has("win32")
  let g:python2_host_prog = "F:\Programs\python-3.7.1\python.exe"
 elseif has("unix")
   " Linux Options Neovim
-" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+  let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+  let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
 else
 endif
 
@@ -136,7 +137,7 @@ hi StartifySpecial ctermfg=240
 
 
 " ----------------------------------------------------------------------------------------------------------------------
-" Search settings 
+" Search settings
 " ----------------------------------------------------------------------------------------------------------------------
 set ignorecase                    " Ignore case by default
 set smartcase                     " Make search case sensitive only if it contains uppercase letters
@@ -153,7 +154,7 @@ autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 :au filetype help :nnoremap <buffer><BS> <c-T>
 
 " ----------------------------------------------------------------------------------------------------------------------
-" Core key bindings-remappings 
+" Core key bindings-remappings
 " ======================================================================================================================
 
 " leader, leave SPACE for spacevim
@@ -226,6 +227,9 @@ vmap x "_d
 nnoremap c "xc
 xnoremap c "xc
 
+" Copy Word
+nmap ,w yiw
+
 " Reselect last-pasted text
 nnoremap gp `[v`]
 
@@ -284,7 +288,7 @@ vnoremap <C-o> <C-o>zz
 nnoremap <CR> i<CR><Esc>
 
 " ----------------------------------------------------------------------------------------------------------------------
-" Early Spacevim configurations 
+" Early Spacevim configurations
 " ======================================================================================================================
 "
 let g:spacevim_statusline_right_sections =
@@ -300,16 +304,22 @@ let g:spacevim_statusline_right_sections =
 " Additional core remappings of important Spacevim key bindings to leader mappings for less
 " keystrokes. Also see customspacevimafter.vim for spacevim leader custom mappings.
 " ======================================================================================================================
-"Example for SPC group key binding 
+"Example for SPC group key binding
 "call SpaceVim#custom#SPCGroupName(['G'], '+TestGroup')
 "call SpaceVim#custom#SPC('nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
 
-"Example  for SPC key binding with existing group 
+"Example  for SPC key binding with existing group
 "call SpaceVim#custom#SPC('nnoremap', ['f', 't'], 'echom "hello world"', 'test custom SPC', 1)
 
 
 " Home screen
 nmap  <leader>i <Space>bh
+
+" Quiting and saving all
+cnoremap ww wqall
+" Quiting and not saving all
+cnoremap qq qall
+
 
 " Kill buffer
 nmap <leader>k  <Space>bd
@@ -320,11 +330,17 @@ nnoremap <leader>s :w<CR>
 " Save all buffers
 nmap <leader>S  <Space>fS
 
-" Next buffer may not work in UBUNTU
+" Next Previous buffer
+if has("win32")
+" Windows
 nmap <M-l>  <Space>bn
-
-" Previous buffer may not work in UBUNTU
 nmap <M-h>  <Space>bp
+elseif has("unix")
+" Unix
+nmap <Space>l  :bn<CR>
+nmap <Space>h  :bp<CR>
+  else
+endif
 
 " Swap buffer
 nmap <leader>m  <Space>wM
@@ -342,31 +358,31 @@ nmap <leader>D  <Space>fD
 " Edit Spacevim configuration
 nmap <leader>g  <Space>fvd
 
-" Easy Motion Word 
+" Easy Motion Word
 nmap <leader>j  <Space>jw
 
-" Cycle theme 
+" Cycle theme
 nmap <leader>u  <Space>Tn
 
-" Fuzzy find theme 
+" Fuzzy find theme
 nmap <leader>r  <Space>Ts
 
-" Transpose character, word or line. 
+" Transpose character, word or line.
 nmap <leader>x  <Space>xt
 
 " Switch between the last two buffers
 nnoremap <silent> [Window]s <c-^>
- 
+
 " Format
 nmap  ff <Space>bf
 
-" Content Search with FlyGrep on current buffer <SPC>ss 
+" Content Search with FlyGrep on current buffer <SPC>ss
 " Content Search with FlyGrep on current Project <SPC>sp
 " Content Search with FlyGrep on current buffer directory <SPC>sd
-" Use capitalized last key on above mappings for word under cursor. 
+" Use capitalized last key on above mappings for word under cursor.
 
 " Content Search  with ag
-" ag must be installed and in the path 
+" ag must be installed and in the path
 nmap <leader>f  <Space>sa
 
 " Content search with Denite and ag, open quick fix

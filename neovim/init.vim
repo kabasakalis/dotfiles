@@ -27,13 +27,13 @@ endif
 " let g:python3_host_prog = expand("$HOME/.pyenv/versions/neovim3/bin/python")
 
 " UBUNTU
-" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
-" let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+ let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+ let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
 
 " Mac OS
-let g:python_host_prog  = "/usr/local/bin/python2"
-let g:python3_host_prog = "/usr/local/bin/python3"
-
+" let g:python_host_prog  = "/usr/local/bin/python2"
+" let g:python3_host_prog = "/usr/local/bin/python3"
+"
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:
 
@@ -115,18 +115,44 @@ endif
 let g:rehash256=1
 
 "" Available themes:
-" jellybeans
-" lucid
-" railscasts
-" Tomorrow-Night
-" seoul256
-" tropikos
-" gotham256
+" Colorscheme jellybeans
+" Colorscheme lucid
+" Colorscheme railscasts
+" Colorscheme seoul256
+" Colorscheme tropikos
+" Colorscheme gotham256
+" colorscheme  OceanicNext
 " Color scheme based on time
-colorscheme  Tomorrow-Night
+" colorscheme PaperColor
 " colorscheme seoul256
 " colorscheme tropikos
 " colorscheme jellybeans
+" colorscheme  Tomorrow-Night
+colorscheme  OceanicNext
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+
+" PaperColor
+" colorscheme PaperColor
+" set background=dark
+" let g:PaperColor_Theme_Options = {
+"   \   'theme': {
+"   \     'default.dark': {
+"   \       'transparent_background': 1
+"   \     }
+"   \   }
+"   \ }
+" let g:PaperColor_Theme_Options = {
+"   \   'theme': {
+"   \     'default.dark': {
+"   \       'override' : {
+"   \         'color00' : ['#080808', '232'],
+"   \         'linenumber_bg' : ['#080808', '232']
+"   \       }
+"   \     }
+"   \   }
+"   \ }
+
 
 "transparency
 hi Normal  ctermfg=252 ctermbg=none
@@ -282,6 +308,8 @@ endif
 " ---------------------------------------------------------------------------------------------------------------------
 " Core key bindings-Remappings {{{
 " ======================================================================================================================
+" Startify Home screen
+nnoremap <silent> <leader>i :Startify<CR>
 
 " Save file
 nnoremap <Leader>s :w<CR>
@@ -290,8 +318,8 @@ nnoremap <Leader>s :w<CR>
 cnoremap ww wqall
 " Quiting and not saving all
 cnoremap qq qall
-cnoremap <ESC><ESC> qall!<CR>
 
+cnoremap <ESC><ESC> qall!<CR>
 
 " Quicker window movement
 nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
@@ -301,18 +329,12 @@ nmap <silent> <C-w><C-w> :call utils#intelligentCycling()<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-
 " Intelligent windows resizing using ctrl + arrow keys
 " Easier for Poker 3.
 nnoremap <silent> <Right> :call utils#intelligentVerticalResize('right')<CR>
 nnoremap <silent> <Left> :call utils#intelligentVerticalResize('left')<CR>
 nnoremap <silent> <Up> :resize +1<CR>
 nnoremap <silent> <Down> :resize -1<CR>
-
-" nnoremap <silent> <C-Right> :call utils#intelligentVerticalResize('right')<CR>
-" nnoremap <silent> <C-Left> :call utils#intelligentVerticalResize('left')<CR>
-" nnoremap <silent> <C-Up> :resize +1<CR>
-" nnoremap <silent> <C-Down> :resize -1<CR>
 
 nnoremap <silent> ,r zR
 
@@ -325,8 +347,12 @@ nnoremap <leader>\ :call utils#NumberToggle()<cr>
 " Buffers navigation and management
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>[  :bp<CR>
+nmap <Space>l  :bn<CR>
+nmap <Space>h  :bp<CR>
+
 "Close buffer workaround
 map <C-x> :bn<cr>:bd #<cr>:bp<cr>
+
 
 "Close all buffers
 "map <C-c> :bufdo bd<cr>
@@ -359,7 +385,7 @@ vnoremap p "_dP`]
 nnoremap p p`]
 
 " Copy Word
-nmap ,c yiw
+nmap ,w yiw
 
 " Yank and paste from clipboard
 nnoremap <leader>y "+y
@@ -382,9 +408,9 @@ xnoremap c "xc
 " Reselect last-pasted text
 nnoremap gp `[v`]
 
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+" Move visual block with page UP and page DOWN
+vnoremap U :m '>+1<CR>gv=gv
+vnoremap O :m '<-2<CR>gv=gv
 
 " Fix the cw at the end of line bug default Vim has special treatment (:help cw)
 nmap cw ce
@@ -470,6 +496,9 @@ sunmap b
 sunmap e
 sunmap ge
 
+" Comment (additional mapping for tComment)
+nmap <leader>c gcc
+vmap <leader>c gcc
 
 " vim-test mappings
 map <silent> <leader>f :TestFile<CR>
