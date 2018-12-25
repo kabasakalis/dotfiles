@@ -13,7 +13,8 @@
   # set spacevim theme. by default colorscheme layer is not loaded,
   # if you want to use more colorscheme, please load the colorscheme
   # layer
-  colorscheme = "oceanicNext"
+  colorscheme = "OceanicNext"
+  # colorscheme = "Tomorrow-Night"
   # colorscheme = "gruvbox"
   # colorscheme = "jellybeans"
   # colorscheme = "nord"
@@ -22,7 +23,7 @@
   background = "dark"
   # Disable guicolors in basic mode, many terminal do not support 24bit
   # true colors
-  enable_guicolors = true
+  enable_guicolors = false
   # Disable statusline separator, if you want to use other value, please
   # install nerd fonts: arrow, curve, slant, nil, fire
   statusline_separator = "arrow"
@@ -35,7 +36,7 @@
   # Set the guifont of SpaceVim. Default is DejaVu Sans Mono For Powerline
   # NOTE: On windows only fixed width fonts are allowed.
   # NOTE 2: You need Nerd Fonts for devicons plugin to work.
-  guifont = "DejaVu Sans Mono for Powerline:h10"
+  # guifont = "DejaVu Sans Mono for Powerline:h10"
   #Enable/Disable relativenumber, by default it is enabled.
   relativenumber = false
   enable_language_specific_leader = 1

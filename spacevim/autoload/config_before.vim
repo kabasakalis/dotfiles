@@ -27,7 +27,10 @@ endif
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
-set guicursor=
+" set guicursor=
+" Solves NASTY CURSOR BUG
+let g:spacevim_terminal_cursor_shape = 0
+
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
 set runtimepath+=~/
