@@ -41,7 +41,7 @@ filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 
 set guicursor=
-let mapleader=" "                 " leader
+let mapleader=";"                 " leader
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
 set runtimepath+=~/

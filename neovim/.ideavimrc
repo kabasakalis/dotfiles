@@ -88,8 +88,8 @@ set surround " doesn't work though.
 " Save file
 " Ctrl+S, IDE mapping.
 
-" let mapleader = "," " leader
-" let mapleader=" " " Leader
+" let mapleader = "" " leader
+ let mapleader=";"
 
 "
 " Quicker window movement
