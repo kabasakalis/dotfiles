@@ -13,17 +13,23 @@
   # set spacevim theme. by default colorscheme layer is not loaded,
   # if you want to use more colorscheme, please load the colorscheme
   # layer
-  colorscheme = "OceanicNext"
-  # colorscheme = "Tomorrow-Night"
+  # colorscheme = "OceanicNext"
   # colorscheme = "gruvbox"
+  colorscheme = "deep-space"
+  # colorscheme = "zenburn"
+  # colorscheme = "gotham"
+  # colorscheme = "iceberg"
+  # colorscheme =  "Tomorrow-Night"
+  # colorscheme = "chocolate"
+  # colorscheme = "onehalfdark"
+  # colorscheme = "base16-tomorrow-night"
   # colorscheme = "jellybeans"
+  # colorscheme = "PaperColor"
   # colorscheme = "nord"
-  # colorscheme = "material"
   # colorscheme = "one"
+  # colorscheme = "material"
   background = "dark"
-  # Disable guicolors in basic mode, many terminal do not support 24bit
-  # true colors
-  enable_guicolors = false
+
   # Disable statusline separator, if you want to use other value, please
   # install nerd fonts: arrow, curve, slant, nil, fire
   statusline_separator = "arrow"
@@ -48,13 +54,12 @@
   snippet_engine = "ultisnips"
   #Windows Leader
   #windows_leader = ","
-
   # disabled_plugins = ["vimproc"]
-
+  # Vimfiler 
   # enable_vimfiler_filetypeicon = true
   # enable_vimfiler_welcome = 0
   # enable_vimfiler_gitstatus = true
-
+#
   # the default value is vimfiler
   filemanager = "nerdtree"
 

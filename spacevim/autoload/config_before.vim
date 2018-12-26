@@ -27,9 +27,7 @@ endif
 
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
-" set guicursor=
-" Solves NASTY CURSOR BUG
-let g:spacevim_terminal_cursor_shape = 0
+
 
 set nocompatible                  " choose no compatibility with legacy vi
 set hidden
@@ -79,10 +77,13 @@ set tags=./tags;                  " Set the tag file search order
 " ----------------------------------------------------------------------------------------------------------------------
 " Color and highlighting settings
 " ======================================================================================================================
-
-" if (has("termguicolors"))
-"   set termguicolors
-" endif
+"
+"
+" set t_Co=256
+" Fixes NASTY CURSOR BUG for Neovim
+set guicursor=
+" Fixes NASTY CURSOR BUG for Spacevim
+let g:spacevim_terminal_cursor_shape = 0
 
 " Switch syntax highlighting on, when the terminal has colors
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -92,10 +93,38 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax sync minlines=256
 endif
 
+"Disable guicolors in basic mode, many terminal do not support 24bit  true colors
+if has("gui_running")
+ let g:spacevim_enable_guicolors = 1
+else
+" IMPORTANT: Keep this zero in terminator or suffer a 
+" NASTY bug with themes not
+ let g:spacevim_enable_guicolors = 0
+ " IMPORTANT NOTE TO MY FUTURE SELF TO PREVENT MENTAL HEALTH ISSUES
+ " I don't have enough time to debug my own coding let alone fix this 
+ " stupid shit. 
+ " Some combination of g:spacevim_enable_guicolors and termguicolors
+ " is required for a specific theme to work on a particular terminal.
+ " Problem fixed after I upgraded Terminator, but it's wise to
+ " have these comments here to protect my future sanity.
+endif
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+
+func! s:transparent_background()
+    highlight Normal guibg=NONE ctermbg=NONE
+    highlight NonText guibg=NONE ctermbg=NONE
+endf
+" autocmd ColorScheme * call s:transparent_background()
+
+
+
 let g:rehash256=1
 
 "transparency
-hi Normal  ctermfg=252 ctermbg=none
+" hi Normal  ctermfg=252 ctermbg=none
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -116,7 +145,8 @@ highlight SpecialKey ctermfg=235 guifg=gray
 " Remove underline in folded lines
 hi! Folded term=NONE cterm=NONE gui=NONE ctermbg=NONE
 
-" LineNumber Gutter background color
+" LineNumber Gutter 
+" background color
 highlight LineNr ctermfg=NONE ctermbg=NONE
 
 " SignColumn (Git Gutter)

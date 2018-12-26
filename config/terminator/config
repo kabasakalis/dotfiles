@@ -1,12 +1,11 @@
 [global_config]
-  always_on_top = True
-  geometry_hinting = False
-  hide_on_lose_focus = True
+  dbus = False
   inactive_color_offset = 1.0
   title_font = SauceCodePro Nerd Font Medium 10
   title_receive_fg_color = "#809aa0"
   title_transmit_bg_color = "#140095"
   title_transmit_fg_color = "#97c7c6"
+  title_use_system_font = False
 [keybindings]
   close_term = Disabled
   close_window = Disabled
@@ -109,15 +108,19 @@
 [profiles]
   [[default]]
     allow_bold = False
+    background_color = "#061427"
     background_darkness = 0.74
-    background_image = /home/spiros/home_assets/wallpapers/milky_way_eclipse.jpg
-    background_type = image
     copy_on_selection = True
-    cursor_blink = False
     cursor_color = "#326bdc"
-    font = LiterationMonoPowerline Nerd Font 11
+    custom_command = export TERM=xterm-256color &&  zsh
+    exit_action = hold
+    font = SauceCodePro Nerd Font 10
+    foreground_color = "#d6ffff"
     icon_bell = False
+    login_shell = True
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     scroll_background = False
     scrollback_infinite = True
+    use_custom_command = True
     use_system_font = False
     word_chars = ""

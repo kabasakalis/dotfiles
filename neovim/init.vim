@@ -98,7 +98,7 @@ set tags=./tags;                  " Set the tag file search order
 " ---------------------------------------------------------------------------------------------------------------------
 " Color and highlighting settings {{{
 " ======================================================================================================================
-
+set t_Co=256
 
 " if (has("termguicolors"))
 "   set termguicolors
@@ -121,14 +121,14 @@ let g:rehash256=1
 " Colorscheme seoul256
 " Colorscheme tropikos
 " Colorscheme gotham256
-" colorscheme  OceanicNext
+" Colorscheme gotham256
 " Color scheme based on time
 " colorscheme PaperColor
 " colorscheme seoul256
 " colorscheme tropikos
 " colorscheme jellybeans
 " colorscheme  Tomorrow-Night
-colorscheme  OceanicNext
+" colorscheme  OceanicNext
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 
