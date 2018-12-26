@@ -2,7 +2,7 @@
   "languageserver": {
     "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp, cmake, txt"],
       "trace.server": "verbose",
       "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {

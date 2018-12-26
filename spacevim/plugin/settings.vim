@@ -92,9 +92,17 @@ if has("win32")
   let g:ale_cpp_gcc_options="-Wall -O3"
   let g:ale_c_gcc_options="-Wall -O2"
 elseif has("unix")
+  let g:ale_set_balloons = 1 
   " Linux Options Neovim
   let g:ale_cpp_gcc_executable = '/usr/bin/gcc'
   let g:ale_c_gcc_executable = '/usr/bin/gcc'
+  "CLANG
+  let g:ale_c_clang_executable = '/usr/bin/clang++'
+  let g:ale_linters = { 'cpp': [ 'clangtidy']}
+  let g:ale_fixers = { 'cpp': ['clang-format']}
+" g:ale_linters_explicit = 1
+  let g:ale_cpp_gcc_options="-Wall -O3"
+  let g:ale_c_gcc_options="-Wall -O2"
 else
 endif
 
