@@ -370,8 +370,8 @@ nmap <M-l>  <Space>bn
 nmap <M-h>  <Space>bp
 elseif has("unix")
 " Unix
-nmap <Space>l  :bn<CR>
-nmap <Space>h  :bp<CR>
+nmap <Right>  :bn<CR>
+nmap <Left>  :bp<CR>
   else
 endif
 

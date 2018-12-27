@@ -86,7 +86,7 @@ if has("win32")
   let g:ale_set_balloons = 1 
   ""* C++ (filetype cpp): `clang`, `clangd`, `clangcheck`!!, `clangtidy`!!, `clang-format`, `clazy`!!, `cppcheck`, `cpplint`!!, `cquery`, `flawfinder`, `gcc`, `uncrustify`, `ccls`
   " let g:ale_linters = { 'cpp': ['ccls', 'clangtidy']}
-  let g:ale_linters = { 'cpp': [ 'clangtidy']}
+  let g:ale_linters = { 'cpp': [ 'clangtidy'], 'java':[]}
   let g:ale_fixers = { 'cpp': ['clang-format']}
 " g:ale_linters_explicit = 1
   let g:ale_cpp_gcc_options="-Wall -O3"

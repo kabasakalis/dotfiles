@@ -14,8 +14,8 @@ export HUNTER_ROOT="$HOME/.hunter"
 export PYENV_ROOT="$HOME/.pyenv"
 export MINICONDA3="$HOME/miniconda3"
 export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
-# export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
+export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+# export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
 # export PATH="$PATH:`yarn global bin`"
 
 # PATH
@@ -42,6 +42,11 @@ $HOME/.ccls/bin
 EOF
 )
 typeset -U PATH
+
+# https://vi.stackexchange.com/questions/7644/use-vim-with-virtualenv/7654#7654
+if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
+  source "${VIRTUAL_ENV}/bin/activate"
+fi
 
 # chruby
 source /usr/local/share/chruby/chruby.sh

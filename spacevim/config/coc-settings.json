@@ -2,28 +2,42 @@
   "languageserver": {
     "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp, cmake, txt"],
+      "filetypes": [
+        "c",
+        "cpp",
+        "cuda",
+        "objc",
+        "objcpp, cmake, txt"
+      ],
       "trace.server": "verbose",
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
       "initializationOptions": {
-         "cacheDirectory": "/tmp/ccls"
-       }
+        "cacheDirectory": "/tmp/ccls"
+      }
     }
   },
   "coc.preferences.autoTrigger": "none",
   "coc.preferences.triggerAfterInsertEnter": false,
   "coc.preferences.timeout": 2000,
   "coc.preferences.noselect": true,
-  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnType": false,
   "coc.preferences.minTriggerInputLength": 2,
   "coc.preferences.snippetIndicator": "➤",
   "coc.preferences.jumpCommand": "edit",
   "coc.preferences.watchmanPath": "",
-  "coc.preferences.diagnostic.enable": false,
+  "coc.preferences.diagnostic.enable": true,
   "coc.preferences.diagnostic.signOffset": 1000,
   "coc.preferences.diagnostic.errorSign": "✖",
   "coc.preferences.diagnostic.warningSign": "➤",
   "coc.preferences.diagnostic.infoSign": "🛈",
-  "coc.preferences.diagnostic.hintSign": ">"
+  "coc.preferences.diagnostic.hintSign": ">",
+  "java.format.enabled":true,
+  "java.format.comments.enabled":true,
+  "java.trace.server": "verbose"
 }
-
