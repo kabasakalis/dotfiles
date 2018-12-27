@@ -22,8 +22,6 @@
       }
     }
   },
-  "coc.preferences.autoTrigger": "none",
-  "coc.preferences.triggerAfterInsertEnter": false,
   "coc.preferences.timeout": 2000,
   "coc.preferences.noselect": true,
   "coc.preferences.formatOnType": false,
@@ -37,7 +35,8 @@
   "coc.preferences.diagnostic.warningSign": "➤",
   "coc.preferences.diagnostic.infoSign": "🛈",
   "coc.preferences.diagnostic.hintSign": ">",
-  "java.format.enabled":true,
-  "java.format.comments.enabled":true,
-  "java.trace.server": "verbose"
+  "java.format.enabled": true,
+  "java.format.comments.enabled": true,
+  "java.trace.server": "verbose",
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml"
 }

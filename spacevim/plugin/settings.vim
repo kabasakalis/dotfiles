@@ -38,6 +38,7 @@ let g:clang_snippets_engine = 'ultisnips'
 "  ---------------------------------------------------------------------------------------------------------------------
 "  w0rp/ale, Asynchronous maker and linter 
 " ----------------------------------------------------------------------------------------------------------------------
+let g:ale_enabled = 0
 let g:ale_sign_column_always = 1
 " let g:ale_sign_error = '>>'
 " let g:ale_sign_warning = '--'

@@ -55,6 +55,7 @@
   #Windows Leader
   #windows_leader = ","
   # disabled_plugins = ["vimproc"]
+  disabled_plugins = ["deoplete"]
   # Vimfiler 
   # enable_vimfiler_filetypeicon = true
   # enable_vimfiler_welcome = 0
@@ -70,6 +71,7 @@
 name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
   auto-completion-tab-key-behavior = "smart"
+  enable = false
 [[layers]]
   name = 'shell'
   default_position = 'bottom'
@@ -122,9 +124,9 @@ name = 'autocomplete'
   # merged = 0
 
 # To enable coc.vim also move coc.vim to plugin folder 
-# [[custom_plugins]]
-  # name = "neoclide/coc.nvim"
-  # merged = 0
+[[custom_plugins]]
+  name = "neoclide/coc.nvim"
+  merged = 0
 
 [[custom_plugins]]
   name = "tpope/vim-git"
