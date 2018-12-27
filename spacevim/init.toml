@@ -121,10 +121,10 @@ name = 'autocomplete'
   # name = "uplus/vim-clang-rename"
   # merged = 0
 
+# To enable coc.vim also move coc.vim to plugin folder 
 # [[custom_plugins]]
   # name = "neoclide/coc.nvim"
   # merged = 0
-
 
 [[custom_plugins]]
   name = "tpope/vim-git"
