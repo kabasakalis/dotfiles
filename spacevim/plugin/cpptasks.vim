@@ -120,3 +120,52 @@ call plugin#cpprunner#reg_runner('build_run_release_command',g:cmd . g:build_run
 
 " Apply mappings
 call SpaceVim#mapping#space#regesit_lang_mappings('cpp', function('s:language_specified_mappings'))
+
+" Semantic navigation. Roughly,
+" D=> first child declaration L => previous declaration 'R' => next declaration 'U' => parent declaration
+nn <silent> ,,jj :call CocLocations('ccls','$ccls/navigate',{'direction':'D'})<cr>
+nn <silent> ,,hh :call CocLocations('ccls','$ccls/navigate',{'direction':'L'})<cr>
+nn <silent> ,,ll :call CocLocations('ccls','$ccls/navigate',{'direction':'R'})<cr>
+nn <silent> ,,kk :call CocLocations('ccls','$ccls/navigate',{'direction':'U'})<cr>
+
+
+" caller
+nn <silent> ,,ca :call CocLocations('ccls','$ccls/call')<cr>
+" callee
+nn <silent> ,,ce :call CocLocations('ccls','$ccls/call',{'callee':v:true})<cr>
+
+
+" $ccls/member
+" member variables / variables in a namespace
+nn <silent> ,,mv :call CocLocations('ccls','$ccls/member')<cr>
+" member functions / functions in a namespace
+nn <silent> ,,mf :call CocLocations('ccls','$ccls/member',{'kind':3})<cr>
+" nested classes / types in a namespace
+nn <silent> ,,nc :call CocLocations('ccls','$ccls/member',{'kind':2})<cr>
+
+nn <silent> ,,vv :call CocLocations('ccls','$ccls/vars')<cr>
+nn <silent> ,,v1 :call CocLocations('ccls','$ccls/vars',{'kind':1})<cr>
+
+
+" bases
+nn <silent> ,,bb :call CocLocations('ccls','$ccls/inheritance')<cr>
+" bases of up to 3 levels
+nn <silent> ,,b3 :call CocLocations('ccls','$ccls/inheritance',{'levels':3})<cr>
+" derived
+nn <silent>  ,,dd :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true})<cr>
+" derived of up to 3 levels
+nn <silent> ,d3 :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true,'levels':3})<cr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
