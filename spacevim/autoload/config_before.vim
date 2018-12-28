@@ -118,8 +118,13 @@ func! s:transparent_background()
     highlight NonText guibg=NONE ctermbg=NONE
 endf
 " autocmd ColorScheme * call s:transparent_background()
-
-
+" DESPACIO THEME
+"DARKER GRAY
+" let g:despacio_Sunset = 1
+"DARKEST GRAY
+" let g:despacio_Twilight = 1
+"ALMOST BLACK
+" let g:despacio_Midnight = 1
 
 let g:rehash256=1
 
@@ -371,7 +376,7 @@ nmap <M-h>  <Space>bp
 elseif has("unix")
 " Unix
 nmap <Right>  :bn<CR>
-nmap <Left>  :bp<CR>
+nmap <Left> :bp<CR>
   else
 endif
 
