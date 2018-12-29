@@ -134,7 +134,7 @@ vmap x "_d
 nnoremap c "xc
 xnoremap c "xc
 
-" Change line
+" Change line, better use S for this.
 nmap cc 1S
 
 " Copy Word
@@ -191,41 +191,45 @@ endif
 
 " Generic IDE
 map <A-a>    :action GotoAction<CR>
-map <Space>f :action Forward<CR>
-map <Space>b :action Back<CR>
-map <Space>tt :action ShowSettings<CR>
+map <leader>f :action Forward<CR>
+map <leader>b :action Back<CR>
+map <leader>tt :action ShowSettings<CR>
 "
 "
 " " File Operations
-map <Space>s :action SaveAll<CR>
+map <leader>s :action SaveAll<CR>
 " Find
 map / :action Find<CR>
 " Preserve  ideavim search
 map g/ /
 map ,/ :action Replace<CR>
-map <Space>n :action NextOccurence<CR>
-map <Space>p :action PreviousOccurence<CR>
-map <Space>cc :action CloseContent<CR>
-map <Space><Space> :action VimFilePrevious<CR>
-map <Space>l :action NextTab<CR>
-map <Space>h :action PreviousTab<CR>
-map <Space>ot :action ReopenClosedTab<CR>
-map <Space>a :action $SelectAll<CR>
+map <leader>n :action NextOccurence<CR>
+map <leader>p :action PreviousOccurence<CR>
+map <leader>kk :action CloseContent<CR>
+map <leader><leader> :action VimFilePrevious<CR>
+
+map <Right> :action NextTab<CR>
+map <Left> :action PreviousTab<CR>
+" map <leader>l :action NextTab<CR>
+" map <leader>h :action PreviousTab<CR>
+
+map <leader>ot :action ReopenClosedTab<CR>
+map <leader>a :action $SelectAll<CR>
 map  ,sfp :action ShowFilePath<CR>
-map <Space>ncl :action NewClass<CR>
-" map <Space>nfo :action NewDir<CR>
-" map <Space>nfi :action NewFile<CR>
-map <Space>np  :action NewProject<CR>
-map <Space>nsb :action NewScratchBuffer<CR>
-map <Space>nw :action OpenElementInNewWindow<CR>
-map <Space>ca :action CloseAllEditors<CR>
-map <Space>co :action CloseAllEditorsButActive<CR>
-map <Space>kk :action EditorAddOrRemoveCaret<CR>
-map <Space>ku :action EditorCloneCaretAbove<CR>
-map <Space>kd :action EditorCloneCaretBelow<CR>
-map <Space>fw :action FindWordAtCaret<CR>
-map <Space>tc :action EditorToggleCase<CR>
-map <Space>mo :action MoveEditorToOppositeTabGroup<CR>
+map <leader>ncl :action NewClass<CR>
+" map <leader>nfo :action NewDir<CR>
+" map <leader>nfi :action NewFile<CR>
+map <leader>np  :action NewProject<CR>
+map <leader>nsb :action NewScratchBuffer<CR>
+map <leader>nw :action OpenElementInNewWindow<CR>
+map <leader>ca :action CloseAllEditors<CR>
+map <leader>co :action CloseAllEditorsButActive<CR>
+map <leader>cc :action EditorAddOrRemoveCaret<CR>
+map <leader>ku :action EditorCloneCaretAbove<CR>
+map <leader>kd :action EditorCloneCaretBelow<CR>
+map <leader>fw :action FindWordAtCaret<CR>
+map <leader>tc :action EditorToggleCase<CR>
+map <leader>mo :action MoveEditorToOppositeTabGroup<CR>
 
 " " Code navigation
 
@@ -305,32 +309,32 @@ map ,si :action SelectIn<CR>
 
 "  Windows Actions
 
-map <Space>wh :action SplitHorizontally<CR>
-map <Space>wv :action SplitVertically<CR>
-map <Space>q  :action HideAllWindows<CR>
-map <Space>whs :action HideSideWindows<CR>
-map <Space>wha  :action HideActiveWindow<CR>
-map <Space>wl :action JumpToLastWindow<CR>
-map <Space>x :action VimWindowClose<CR>
+map <leader>wh :action SplitHorizontally<CR>
+map <leader>wv :action SplitVertically<CR>
+map <leader>q  :action HideAllWindows<CR>
+map <leader>whs :action HideSideWindows<CR>
+map <leader>wha  :action HideActiveWindow<CR>
+map <leader>wl :action JumpToLastWindow<CR>
+map <leader>x :action VimWindowClose<CR>
 " map  mm :action MaximizeToolWindow<CR>
-map <Space>pc :action CloseProject<CR>
-map <Space>wjr :action ActivateJRebelToolWindow<CR>
+map <leader>pc :action CloseProject<CR>
+map <leader>wjr :action ActivateJRebelToolWindow<CR>
 
-map <Space>wst :action ActivateStructureToolWindow<CR>
-map <Space>was :action ActivateApplicationServersToolWindow<CR>
-map <Space>wbv :action ActivateBeanValidationToolWindow<CR>
-map <Space>wdi :action ActivateCDIToolWindow<CR>
-map <Space>wcs :action ActivateCheckStyleToolWindow<CR>
-map <Space>wdb :action ActivateDatabaseToolWindow<CR>
-map <Space>wbg :action ActivateDebugToolWindow<CR>
-map <Space>wel :action ActivateEventLogToolWindow<CR>
-map <Space>wil :action ActivateImageLayersToolWindow<CR>
-map <Space>wje :action ActivateJavaEnterpriseToolWindow<CR>
-map <Space>wsf :action ActivateJSFToolWindow<CR>
-map <Space>wmv :action ActivateMavenProjectsToolWindow<CR>
-map <Space>wtt :action ActivateTerminalToolWindow<CR>
-map <Space>git :action ActivateVersionControlToolWindow<CR>
-map <Space>www :action MaximizeToolWindow<CR>
+map <leader>wst :action ActivateStructureToolWindow<CR>
+map <leader>was :action ActivateApplicationServersToolWindow<CR>
+map <leader>wbv :action ActivateBeanValidationToolWindow<CR>
+map <leader>wdi :action ActivateCDIToolWindow<CR>
+map <leader>wcs :action ActivateCheckStyleToolWindow<CR>
+map <leader>wdb :action ActivateDatabaseToolWindow<CR>
+map <leader>wbg :action ActivateDebugToolWindow<CR>
+map <leader>wel :action ActivateEventLogToolWindow<CR>
+map <leader>wil :action ActivateImageLayersToolWindow<CR>
+map <leader>wje :action ActivateJavaEnterpriseToolWindow<CR>
+map <leader>wsf :action ActivateJSFToolWindow<CR>
+map <leader>wmv :action ActivateMavenProjectsToolWindow<CR>
+map <leader>wtt :action ActivateTerminalToolWindow<CR>
+map <leader>git :action ActivateVersionControlToolWindow<CR>
+map <leader>www :action MaximizeToolWindow<CR>
 
 
 " Git
