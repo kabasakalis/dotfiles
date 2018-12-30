@@ -126,6 +126,7 @@ endf
 " let g:despacio_Midnight = 1
 
 let g:rehash256=1
+
 let g:spacevim_wildignore='*/tmp/*,*.so,*.swp,tags,*.jpg,*.ttf,*.TTF,*.png,*/target/*,.git,.svn,.hg,.DS_Store,*.svg'
 
 "transparency
