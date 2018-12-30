@@ -33,4 +33,3 @@ nnoremap <silent> [Window]d :cclose<CR>
 
 " call SpaceVim#custom#SPC('nnoremap', ['l', 'o'], ':! ls -a ','kakakak', 1)
 endfunction "bootstrap_after function body ends here
-

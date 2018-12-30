@@ -15,9 +15,9 @@ call SpaceVim#logger#info('** Custom Spacevim settings loaded from bootstrap_bef
 
 " Python
 if has("win32")
-  " Windows Options GVim
- let g:python3_host_prog = "F:\Programs\python-3.7.1\python.exe"
- let g:python2_host_prog = "F:\Programs\python-3.7.1\python.exe"
+  " Windows Options
+ let g:python3_host_prog = "F://Programs//Python//37//python.exe"
+ let g:python2_host_prog = "F://Programs//Python//27//python.exe"
 elseif has("unix")
   " Linux Options Neovim
   let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
@@ -77,7 +77,7 @@ set tags=./tags;                  " Set the tag file search order
 " ----------------------------------------------------------------------------------------------------------------------
 " Color and highlighting settings
 " ======================================================================================================================
-"
+set guioptions+=m
 "
 " set t_Co=256
 " Fixes NASTY CURSOR BUG for Neovim
@@ -99,7 +99,7 @@ if has("gui_running")
 else
 " IMPORTANT: Keep this zero in terminator or suffer a 
 " NASTY bug with themes not
- let g:spacevim_enable_guicolors = 0
+ let g:spacevim_enable_guicolors = 1
  " IMPORTANT NOTE TO MY FUTURE SELF TO PREVENT MENTAL HEALTH ISSUES
  " I don't have enough time to debug my own coding let alone fix this 
  " stupid shit. 
@@ -111,7 +111,6 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
-
 
 func! s:transparent_background()
     highlight Normal guibg=NONE ctermbg=NONE
@@ -127,6 +126,7 @@ endf
 " let g:despacio_Midnight = 1
 
 let g:rehash256=1
+let g:spacevim_wildignore='*/tmp/*,*.so,*.swp,tags,*.jpg,*.ttf,*.TTF,*.png,*/target/*,.git,.svn,.hg,.DS_Store,*.svg'
 
 "transparency
 " hi Normal  ctermfg=252 ctermbg=none

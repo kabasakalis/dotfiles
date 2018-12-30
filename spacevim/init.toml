@@ -43,6 +43,9 @@
   # NOTE: On windows only fixed width fonts are allowed.
   # NOTE 2: You need Nerd Fonts for devicons plugin to work.
   # guifont = "DejaVu Sans Mono for Powerline:h10"
+  guifont = "DejaVuSansMono NF:h10"
+  # guifont = "LiterationMono NF:h10"
+  # guifont = "SauceCodePro Nerd Font:h10"
   #Enable/Disable relativenumber, by default it is enabled.
   relativenumber = false
   enable_language_specific_leader = 1
