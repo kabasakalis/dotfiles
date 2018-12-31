@@ -15,10 +15,8 @@
   a = add
   aa = add --all
   ap = add --patch
-  di = diff
-  ds = diff --staged
-  dt = difftool --no-prompt
   ci = commit --verbose
+  cm = commit -m
   cim = commit --verbose --reedit-message=HEAD --reset-author
   amend = commit --amend --verbose
   co = checkout
@@ -37,19 +35,21 @@
 	lol =log --graph --decorate --all --oneline
   g1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   g2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
-  wc = whatchanged -p --abbrev-commit --pretty=medium
-  unstage = reset HEAD --
-  edit = "!nvim `git ls-files -m`"
-  st = status -s -b
-  cp = cherry-pick
   l = log --oneline --decorate --graph --all
   ll = log --pretty=medium --decorate --graph --stat
   ls = log --name-only --oneline
+  timeline = log --graph --branches --pretty=oneline --decorate
+  di = diff
+  ds = diff --staged
+  dt = difftool --no-prompt
+  st = status -s -b
+  wc = whatchanged -p --abbrev-commit --pretty=medium
+  edit = "!nvim `git ls-files -m`"
+  cp = cherry-pick
   hist = log --pretty=format:\"%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\" --graph --date=short
   fixup = commit --amend -c HEAD
-  timeline = log --graph --branches --pretty=oneline --decorate
-  untracked-files = ls-files -o --exclude-standard
-  ignored-files = ls-files --others -i --exclude-standard
+  uf = ls-files -o --exclude-standard
+  if = ls-files --others -i --exclude-standard
   mf = ls-files -m
   unstage = reset HEAD
   bl = blame -C
