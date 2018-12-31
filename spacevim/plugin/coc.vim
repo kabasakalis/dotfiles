@@ -1,5 +1,12 @@
 " ----------------------------------------------------------------------------------------------------------------------
 " Language Server Protocol mappings with coc.vim client
+" Note: After you update the plugin you must reinstall the binary:
+" The normal way to do this is to run :call coc#util#install() from neovim command line
+" If this doesn't work for some reason go to plugin folder, typically 
+" [HOME]\.cache\vimfiles\repos\github.com\neoclide\coc.nvim
+" and run yarn install, and then install.cmd, this should download a zip with coc-win executable,
+" which you should unzip to bin folder.
+"
 " ======================================================================================================================
 
 " let g:coc_filetype_map = {
