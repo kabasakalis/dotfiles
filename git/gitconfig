@@ -1,7 +1,8 @@
 [user]
   name = Spiros Kabasakalis
   email = kabasakalis@gmail.com
-
+[github]
+    user = kabasakalis
 [core]
 	excludesfile = /Users/spiros/.gitignore_global
   safecrlf = warn
@@ -58,8 +59,6 @@
   oops = reset --hard 'HEAD@{1}'
   unstage = reset HEAD --
   trust = "!sh -c 'mkdir -p .git/safe && hash -r'"
-[github]
-    user = kabasakalis
 [color]
   status = auto
   diff = auto
@@ -110,7 +109,11 @@
 [difftool "nvimdiff"]
     cmd = diff_wrapper "$LOCAL" "$REMOTE"
 
-
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 
 #alternative mergetool kdfiff3
 #[difftool "kdiff3"]
@@ -130,6 +133,6 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+#[mergetool "sourcetree"]
+#	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+#	trustExitCode = true
