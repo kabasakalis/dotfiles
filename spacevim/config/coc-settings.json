@@ -39,5 +39,6 @@
   "java.format.comments.enabled": true,
   "java.trace.server": "verbose",
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -DGRADLE_HOME=F://gradle-4.10.3"
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -DGRADLE_HOME=F://gradle-4.10.3",
+  "java.home": "F:\\jdk-8"
 }

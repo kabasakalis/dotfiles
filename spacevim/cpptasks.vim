@@ -14,6 +14,10 @@
 " commands invoked by the sh wrapper of the MSYS installation. It is assumed that 
 " [MSYS installation folder]\usr\bin and  [MSYS installation folder]\\mingw64\bin are 
 " included in Windows PATH. You can also execute these commands directly from the Mingw environment. 
+
+
+
+"DISABLED IF OUTSIDE plugin folder! Move it there to enable.
 "=======================================================================================================================
 
 " Adjust these according to your project configuration 
@@ -155,17 +159,3 @@ nn <silent> ,,b3 :call CocLocations('ccls','$ccls/inheritance',{'levels':3})<cr>
 nn <silent>  ,,dd :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true})<cr>
 " derived of up to 3 levels
 nn <silent> ,d3 :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true,'levels':3})<cr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

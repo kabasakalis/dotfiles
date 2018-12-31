@@ -32,6 +32,22 @@ nmap <silent> ,,td <Plug>(coc-type-definition)<cr>
 
 nmap <silent> ,,gi <Plug>(coc-implementation)
 
+
+nnoremap <silent> ,,co :call CocActionAsync('runCommand',
+						\ 'java.workspace.compile')<cr>
+
+
+nnoremap <silent> ,,pu :call CocActionAsync('runCommand',
+						\ 'java.projectConfiguration.update')<cr>
+
+
+nnoremap <silent> ,,ol :call CocActionAsync('runCommand',
+						\ 'java.open.serverLog')<cr>
+
+
+nnoremap <silent> ,,ok :call CocActionAsync('runCommand',
+						\ 'java.edit.organizeImports')<cr>
+
 set updatetime=300
 au CursorHold * sil call CocActionAsync('highlight')
 au CursorHoldI * sil call CocActionAsync('showSignatureHelp')

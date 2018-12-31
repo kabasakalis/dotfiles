@@ -1,6 +1,7 @@
 "=======================================================================================================================
 " Spiros kabasakalis
 " Custom bootstrap_before Configuration for SpaceVim
+" This configuration is combined with init.toml
 " Author: Spiros kabasakalis < kabasakalis at gmail.com >
 " URL: https://github.com/kabasakalis
 " Copyright (c) 2018 - 2019  Spiros Kabasakalis
@@ -77,9 +78,9 @@ set tags=./tags;                  " Set the tag file search order
 " ----------------------------------------------------------------------------------------------------------------------
 " Color and highlighting settings
 " ======================================================================================================================
+" enables menu but works only for GVim , not nvim-qt
 set guioptions+=m
 "
-" set t_Co=256
 " Fixes NASTY CURSOR BUG for Neovim
 set guicursor=
 " Fixes NASTY CURSOR BUG for Spacevim
@@ -97,10 +98,9 @@ endif
 if has("gui_running")
  let g:spacevim_enable_guicolors = 1
 else
-" IMPORTANT: Keep this zero in terminator or suffer a 
-" NASTY bug with themes not
+" IMPORTANT: Keep this zero in terminator or suffer a NASTY bug with themes
  let g:spacevim_enable_guicolors = 1
- " IMPORTANT NOTE TO MY FUTURE SELF TO PREVENT MENTAL HEALTH ISSUES
+ " IMPORTANT NOTE TO MY FUTURE SELF TO PREVENT MENTAL HEALTH ISSUES for non-graphical neovim
  " I don't have enough time to debug my own coding let alone fix this 
  " stupid shit. 
  " Some combination of g:spacevim_enable_guicolors and termguicolors
@@ -128,7 +128,6 @@ endf
 let g:rehash256=1
 
 let g:spacevim_wildignore='*/tmp/*,*.so,*.swp,tags,*.jpg,*.ttf,*.TTF,*.png,*/target/*,.git,.svn,.hg,.DS_Store,*.svg'
-
 "transparency
 " hi Normal  ctermfg=252 ctermbg=none
 
@@ -432,70 +431,6 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'p'], ':DeniteProjectDir file/rec<CR>
 
 " File search in current open buffers with Denite
 call SpaceVim#custom#SPC('nnoremap', ['f', 'b'], ':Denite buffer<CR>', 'Find files in open buffers (Denite) - *', 1)
-
-
-" Quick search - method call under cursor
-" inoremap <Leader>m :Ag \.<cword>\b<CR>
-" nnoremap <Leader>m :Ag \.<cword>\b<CR>
-" vnoremap <Leader>m :<C-U>exec  . GetVisualSelection() ."\b'"<CR>
-" File search in current open buffers with Denite
-" call SpaceVim#custom#SPC('nnoremap', [',', 'o'], ':cexpr system("ls -a") | :copen ','Description', 1)
-
-" call SpaceVim#mapping#space#langSPC('nmap', ['l','o'],
-        " \ ':! ls -a',
-        " \ 'exexute SHELL, list dir', 1)
-
-" File search in current open buffers with Denite
-
-" nmap  ,o :cexpr system('ls -a') | copen |
-
-
-
-"CMake configure debug build
-" nnoremap <silent>  ,cd :cexpr system(g:configure_debug_command) <bar> :copen<CR>
-
-"CMake configure release build
-" nnoremap <silent>  ,cr :cexpr system(g:configure_release_command) <bar> :copen<CR>
-
-"Build Debug
-" nnoremap <silent>  ,bd :cexpr system(g:build_debug_command) <bar> :copen<CR>
-
-"Build Release
-" nnoremap <silent>  ,br :cexpr system(g:build_release_command) <bar> :copen<CR>
-
-"Run Debug
-" nnoremap <silent>  ,rd :cexpr system(g:run_debug_command) <bar> :copen<CR>
-
-"Run Release
-" nnoremap <silent>  ,rr :cexpr system(g:run_release_command) <bar> :copen<CR>
-
-
-"Build and Run Debug
-" nnoremap   ,dd  <bar> :cexpr system(g:build_debug_command) <bar> :copen <bar> :cexpr system(g:run_debug_command)<CR>
-
-"Build and Run Release
-" nnoremap <silent>  ,rr :cexpr system(g:build_release_command) <bar> :copen <bar> :cexpr system(g:run_release_command)<CR>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 " ======================================================================================================================

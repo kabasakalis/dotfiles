@@ -12,6 +12,10 @@
 " specific keys.
 "=============================================================================
 
+
+
+"DISABLED IF OUTSIDE plugin folder! Move it there to enable.
+
 let s:JOB = SpaceVim#api#import('job')
 let s:BUFFER = SpaceVim#api#import('vim#buffer')
 let s:STRING = SpaceVim#api#import('data#string')

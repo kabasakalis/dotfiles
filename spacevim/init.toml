@@ -1,6 +1,6 @@
 #=============================================================================
 # Spiros kabasakalis
-# Configuration for SpaceVim
+# Configuration for SpaceVim, also see autoload/config_before.vim
 #
 # Author: Spiros kabasakalis < kabasakalis at gmail.com >
 # URL: https://github.com/kabasakalis
@@ -36,8 +36,8 @@
   statusline_inactive_separator = "arrow"
   enable_tabline_filetype_icon = true
   enable_statusline_mode = true
-  #Use ale for syntax checking, disabled by default.
-  enable_ale = true
+  #Use ale for syntax checking, disabled by default.(Used only for C++)
+  enable_ale = false
   terminal_cursor_shape = 1
   # Set the guifont of SpaceVim. Default is DejaVu Sans Mono For Powerline
   # NOTE: On windows only fixed width fonts are allowed.
@@ -55,22 +55,16 @@
   #vimcompatible = true
   #snippet_engine
   snippet_engine = "ultisnips"
-  #Windows Leader
-  #windows_leader = ","
+  filemanager = "nerdtree"
+
   # disabled_plugins = ["vimproc"]
   # disabled_plugins = ["deoplete", "neoformat"]
-  # Vimfiler 
-  # enable_vimfiler_filetypeicon = true
-  # enable_vimfiler_welcome = 0
-  # enable_vimfiler_gitstatus = true
-#
   # the default value is vimfiler
-  filemanager = "nerdtree"
 
 [[layers]]
   name = 'denite'
 # Enable autocomplete layer
-# Disable this if using coc.vim for autocompletion!
+# CAUTION: Disable this if using coc.vim for autocompletion!
 [[layers]]
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
@@ -90,12 +84,14 @@
   name = "lang#c"
   # clang_executable = "/usr/bin/clang"
   clang_executable = "F:\Programs\LLVM\bin\clang.exe"
-  [layer.clang_std]
-    c = "c11"
-    # cpp = "c++1z"
-    cpp = "c++17"
-    objc = "c11"
-    objcpp = "c++1z"
+  enable = false
+[layer.clang_std]
+  c = "c11"
+  # cpp = "c++1z"
+  cpp = "c++17"
+  objc = "c11"
+  objcpp = "c++1z"
+  enable = false
 
 # add custom_plugins: https://github.com/mhartington/oceanic-next
 [[custom_plugins]]
@@ -123,10 +119,6 @@
   name = "octol/vim-cpp-enhanced-highlight"
   merged = 0
 
-# [[custom_plugins]]
-  # name = "uplus/vim-clang-rename"
-  # merged = 0
-
 # To enable coc.vim also move coc.vim to plugin folder 
 [[custom_plugins]]
   name = "neoclide/coc.nvim"
@@ -147,3 +139,15 @@
 [[custom_plugins]]
   name = "vim-scripts/tComment"
   merged = 0
+
+[[custom_plugins]]
+  name = "SirVer/ultisnips"
+  merged = 0
+
+[[custom_plugins]]
+  name = "honza/vim-snippets"
+  merged = 0
+
+# [[custom_plugins]]
+  # name = "uplus/vim-clang-rename"
+  # merged = 0
