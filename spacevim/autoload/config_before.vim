@@ -127,7 +127,7 @@ endf
 
 let g:rehash256=1
 
-let g:spacevim_wildignore='*/tmp/*,*.so,*.swp,tags,*.jpg,*.ttf,*.TTF,*.png,*/target/*,.git,.svn,.hg,.DS_Store,*.svg'
+let g:spacevim_wildignore='*/tmp/*,*.so,*.swp,tags,*.jpg,*.ttf,*.TTF,*.png,*/target/*,.svn,.hg,.DS_Store,*.svg'
 "transparency
 " hi Normal  ctermfg=252 ctermbg=none
 
