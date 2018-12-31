@@ -1,8 +1,10 @@
 [user]
   name = Spiros Kabasakalis
   email = kabasakalis@gmail.com
+
 [github]
-    user = kabasakalis
+  user = kabasakalis
+
 [core]
 	excludesfile = /Users/spiros/.gitignore_global
   safecrlf = warn
@@ -32,18 +34,14 @@
   lo = log --oneline -n 15
   lg = log --pretty=format:'%h | %cd | %an | %s' -n 15
   ls = log --stat -n 5
-	lol = git log --graph --decorate --all --oneline
+	lol =log --graph --decorate --all --oneline
   g1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   g2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
   wc = whatchanged -p --abbrev-commit --pretty=medium
   unstage = reset HEAD --
   edit = "!nvim `git ls-files -m`"
   st = status -s -b
-  di = diff
-  co = checkout
-  ci = commit
   cp = cherry-pick
-  br = branch
   l = log --oneline --decorate --graph --all
   ll = log --pretty=medium --decorate --graph --stat
   ls = log --name-only --oneline
@@ -52,7 +50,7 @@
   timeline = log --graph --branches --pretty=oneline --decorate
   untracked-files = ls-files -o --exclude-standard
   ignored-files = ls-files --others -i --exclude-standard
-  modified-files = ls-files -m
+  mf = ls-files -m
   unstage = reset HEAD
   bl = blame -C
   amend = commit --amend --reuse-message=HEAD
@@ -109,11 +107,7 @@
 [difftool "nvimdiff"]
     cmd = diff_wrapper "$LOCAL" "$REMOTE"
 
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+
 
 #alternative mergetool kdfiff3
 #[difftool "kdiff3"]
@@ -133,6 +127,6 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-#[mergetool "sourcetree"]
-#	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-#	trustExitCode = true
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
