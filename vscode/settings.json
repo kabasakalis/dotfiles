@@ -1,0 +1,80 @@
+{
+    "C_Cpp.default.cppStandard": "c++14",
+    "cmake.configureOnOpen": true,
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=C:\\Users\\spiros\\cpp\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+    ],
+    "cmake.configureSettings": {},
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    //JAVA
+    "java.format.settings.url": "eclipse-formatter.xml",
+    //VIM
+    "vim.easymotion": true,
+    "vim.leader": ";",
+    "vim.neovimPath": "F:\\Programs\\nvim\\bin\\nvim.exe",
+    "vim.enableNeovim": true,
+    "vim.normalModeKeyBindings": [],
+    "vim.insertModeKeyBindings": [],
+    "vim.sneak": false,
+    "vim.visualModeKeyBindings": [],
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColorControl": true,
+    "vim.debug.loggingLevel": "debug",
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "S"
+            ],
+            "commands": [
+                "workbench.action.files.saveAll",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "ss"
+            ],
+            "commands": [
+                "workbench.action.files.saveAs",
+            ]
+        },
+        {
+            "before": [
+                "g", "s", "c"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "workbench.editor.highlightModifiedTabs": true
+}
