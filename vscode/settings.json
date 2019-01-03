@@ -10,17 +10,17 @@
     "java.format.settings.url": "eclipse-formatter.xml",
     //VIM
     "vim.easymotion": true,
-    "vim.leader": ";",
     "vim.neovimPath": "F:\\Programs\\nvim\\bin\\nvim.exe",
     "vim.enableNeovim": true,
-    "vim.normalModeKeyBindings": [],
-    "vim.insertModeKeyBindings": [],
     "vim.sneak": false,
     "vim.visualModeKeyBindings": [],
     "vim.useSystemClipboard": true,
     "vim.statusBarColorControl": true,
     "vim.debug.loggingLevel": "debug",
+    "vim.leader": ";",
+    "vim.insertModeKeyBindings": [],
     "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindings": [],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -51,12 +51,193 @@
         },
         {
             "before": [
-                "g", "s", "c"
+                "g",
+                "s",
+                "c"
             ],
             "commands": [
                 "workbench.action.showCommands",
             ]
-        }
+        },
+        //WINDOW NAVIGATION
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+        {
+            "before": [
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeEditorsInGroup"
+            ]
+        },
+        {
+            "before": [
+                "Q"
+            ],
+            "commands": [
+                "workbench.action.closeAllGroups"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "co"
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
+
+        {
+            "before": [
+                "<leader>",
+                "ml"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToLeftGroup"
+            ]
+        },
+
+        {
+            "before": [
+                "<leader>",
+                "mr"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToRightGroup"
+            ]
+        },
+
+        {
+            "before": [
+                "<leader>",
+                "left"
+            ],
+            "commands": [
+                "workbench.action.moveEditorLeftInGroup"
+            ]
+        },
+
+        {
+            "before": [
+                "<leader>",
+                "right"
+            ],
+            "commands": [
+                "workbench.action.moveEditorRightInGroup"
+            ]
+        },
+
+        {
+            "before": [
+                "left"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+
+        {
+            "before": [
+                "right"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+
+        
+        {
+            "before": [
+                "<leader>",
+                "cw"
+            ],
+            "commands": [
+                "workbench.action.closeWindow"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "cf"
+            ],
+            "commands": [
+                "workbench.action.closeFolder"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "of"
+            ],
+            "commands": [
+                "workbench.action.openFolder"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "ks"
+            ],
+            "commands": [
+                "workbench.action.openGlobalKeybindings"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "or"
+            ],
+            "commands": [
+                "workbench.action.openRecent"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "os"
+            ],
+            "commands": [
+                "workbench.action.openSettings2"
+            ]
+        },
+
+        {
+            "before": [
+                "<leader>",
+                "dt"
+            ],
+            "commands": [
+                "workbench.action.webview.OpenDeveloperTools"
+            ]
+        },
+
+
+        
+        //FILES
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {

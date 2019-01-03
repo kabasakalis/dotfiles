@@ -214,7 +214,8 @@ nnoremap <leader>] :bn<CR>
 nnoremap <leader>[  :bp<CR>
 
 "Close buffer workaround
-map <C-x> :bn<cr>:bd #<cr>:bp<cr>
+" map <C-x> :bn<cr>:bd #<cr>:bp<cr>
+map <leader>x :bn<cr>:bd #<cr>:bp<cr>
 
 "Close all buffers, kind of dangerous
 "map <C-c> :bufdo bd<cr>
