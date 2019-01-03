@@ -255,7 +255,7 @@ nnoremap <leader>yy "+yy
 nnoremap <leader>p "+p
 
 " have x (removes single character) not go into the default registry
-nnoremap x "_x
+" nnoremap x "_x
 " Make X an operator that removes without placing text in the default registry
 nmap X "_d
 nmap XX "_dd

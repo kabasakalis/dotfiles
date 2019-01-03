@@ -13,15 +13,229 @@
     "vim.neovimPath": "F:\\Programs\\nvim\\bin\\nvim.exe",
     "vim.enableNeovim": true,
     "vim.sneak": false,
-    "vim.visualModeKeyBindings": [],
     "vim.useSystemClipboard": true,
     "vim.statusBarColorControl": true,
     "vim.debug.loggingLevel": "debug",
     "vim.leader": ";",
     "vim.insertModeKeyBindings": [],
     "vim.insertModeKeyBindingsNonRecursive": [],
-    "vim.normalModeKeyBindings": [],
+    "vim.visualModeKeyBindings": [],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ],
+        },
+// After block yank and paste, move cursor to the end of operated text and don't override register
+
+       {
+            "before": [
+                "y"
+            ],
+            "after": [
+                "y", "`","]"
+            ]
+        },
+
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                 "\"","_","d","P", "`"
+            ]
+        },
+
+
+         {
+            "before": [
+                "leader", "b"
+            ],
+            "after": [
+                "g", "C"
+            ]
+        },
+
+
+        
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        //GENERAL 
+        {
+            "before": [
+                "<leader>","h"
+            ],
+            "commands": [
+                // "workbench.action.focusSideBar",
+                "workbench.action.toggleSidebarVisibility",
+                // "workbench.files.action.focusFilesExplorer"
+            ]
+        },
+
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.newWindow",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.openSettings2"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.openSettingsJson"
+            ]
+        },
+        //CORE SETTINGS COPIED FROM MY RAW VIM SETTINGS
+        // H to beginning of line, L to the end
+        {
+            "before": [
+                "H"
+            ],
+            "commands": [
+                "cursorHome"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "commands": [
+                "cursorEnd"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "after": [
+                "y", "i", "w"
+            ]
+        },
+
+// Copy file contents to clipboard maggVG"*y`a
+        {
+            "before": [
+                "leader",
+                "a"
+            ],
+            "after": [
+                "m","a", "g", "g","V","G","\"","*","y","`","a"
+            ]
+        },
+
+// Go to visual mode and select all contents of file, <esc>ggVG<CR>
+
+        {
+            "before": [
+                "leader",
+                "v"
+            ],
+            "after": [
+                "escape","g", "g","V","G", "enter"
+            ]
+        },
+
+// " After  paste, move cursor to the end of operated text and don't override register
+         {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "p", "`","]"
+            ]
+        },
+
+
+//  Comment
+         {
+            "before": [
+                "leader", "c"
+            ],
+            "after": [
+                "g", "c", "c"
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {
             "before": [
                 "leader",
@@ -40,26 +254,27 @@
                 "workbench.action.files.saveAll",
             ]
         },
+        //WORKBENCH NAVIGATION
         {
             "before": [
-                "leader",
-                "ss"
+                "g",
+                "s",
+                "h"
             ],
             "commands": [
-                "workbench.action.files.saveAs",
+                "workbench.action.splitEditor"
             ]
         },
         {
             "before": [
                 "g",
                 "s",
-                "c"
+                "v"
             ],
             "commands": [
-                "workbench.action.showCommands",
+                "workbench.action.splitEditorOrthogonal"
             ]
         },
-        //WINDOW NAVIGATION
         {
             "before": [
                 "<C-h>"
@@ -104,53 +319,52 @@
         {
             "before": [
                 "<leader>",
-                "co"
+                "c", "o"
             ],
             "commands": [
                 "workbench.action.closeOtherEditors"
             ]
         },
-
         {
             "before": [
                 "<leader>",
-                "ml"
+                "m",
+                "h"
             ],
             "commands": [
-                "workbench.action.moveEditorToLeftGroup"
+                "workbench.action.moveActiveEditorGroupLeft"
             ]
         },
-
         {
             "before": [
                 "<leader>",
-                "mr"
+                "m",
+                "l"
             ],
             "commands": [
-                "workbench.action.moveEditorToRightGroup"
+                "workbench.action.moveActiveEditorGroupRight"
             ]
         },
-
         {
             "before": [
                 "<leader>",
-                "left"
+                "e",
+                "h"
             ],
             "commands": [
                 "workbench.action.moveEditorLeftInGroup"
             ]
         },
-
         {
             "before": [
                 "<leader>",
-                "right"
+                "e",
+                "l"
             ],
             "commands": [
                 "workbench.action.moveEditorRightInGroup"
             ]
         },
-
         {
             "before": [
                 "left"
@@ -159,7 +373,6 @@
                 "workbench.action.previousEditor"
             ]
         },
-
         {
             "before": [
                 "right"
@@ -168,12 +381,10 @@
                 "workbench.action.nextEditor"
             ]
         },
-
-        
         {
             "before": [
                 "<leader>",
-                "cw"
+                "c", "w"
             ],
             "commands": [
                 "workbench.action.closeWindow"
@@ -182,7 +393,7 @@
         {
             "before": [
                 "<leader>",
-                "cf"
+                "c", "f"
             ],
             "commands": [
                 "workbench.action.closeFolder"
@@ -191,16 +402,16 @@
         {
             "before": [
                 "<leader>",
-                "of"
+                "o", "f"
             ],
             "commands": [
-                "workbench.action.openFolder"
+                "workbench.action.files.openFolder"
             ]
         },
         {
             "before": [
                 "<leader>",
-                "ks"
+                "k", "s"
             ],
             "commands": [
                 "workbench.action.openGlobalKeybindings"
@@ -209,7 +420,7 @@
         {
             "before": [
                 "<leader>",
-                "or"
+                "o", "r"
             ],
             "commands": [
                 "workbench.action.openRecent"
@@ -218,44 +429,15 @@
         {
             "before": [
                 "<leader>",
-                "os"
+                "d","t"
             ],
             "commands": [
-                "workbench.action.openSettings2"
+                "workbench.action.webview.openDeveloperTools"
             ]
         },
-
-        {
-            "before": [
-                "<leader>",
-                "dt"
-            ],
-            "commands": [
-                "workbench.action.webview.OpenDeveloperTools"
-            ]
-        },
-
-
-        
         //FILES
     ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-    "workbench.editor.highlightModifiedTabs": true
+    "workbench.editor.highlightModifiedTabs": true,
+    "extensions.ignoreRecommendations": false,
+    "workbench.sideBar.location": "left"
 }
