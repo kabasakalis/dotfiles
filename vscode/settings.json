@@ -1,10 +1,10 @@
 {
-    "C_Cpp.default.cppStandard": "c++14",
-    "cmake.configureOnOpen": true,
-    "cmake.configureArgs": [
-        "-DCMAKE_TOOLCHAIN_FILE=C:\\Users\\spiros\\cpp\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
-    ],
-    "cmake.configureSettings": {},
+    // "C_Cpp.default.cppStandard": "c++14",
+    // "cmake.configureOnOpen": true,
+    // "cmake.configureArgs": [
+    //     "-DCMAKE_TOOLCHAIN_FILE=C:\\Users\\spiros\\cpp\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+    // ],
+    // "cmake.configureSettings": {},
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     //JAVA
     "java.format.settings.url": "eclipse-formatter.xml",
@@ -108,10 +108,271 @@
             ],
             "commands": [
                 // "workbench.action.focusSideBar",
-                "workbench.action.toggleSidebarVisibility",
+                // "workbench.action.toggleSidebarVisibility",
                 "workbench.files.action.focusFilesExplorer"
             ]
         },
+
+        // Show Open Editors in Explorer 
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                // "workbench.action.toggleSidebarVisibility",
+                "workbench.files.action.focusOpenEditorsView"
+            ]
+        },
+
+        //  Sidebar View Next    
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                // "workbench.action.toggleSidebarVisibility",
+                "workbench.action.nextSideBarView"
+            ]
+        },
+
+
+
+        // Show Context Menu
+        {
+            "before": [
+                "M"
+            ],
+            "commands": [
+                "editor.action.showContextMenu"
+            ]
+        },
+        // Show Context Menu
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "v"
+            ],
+            "commands": [
+                "workbench.view.debug"
+            ]
+        },
+        // Show Breakpoints
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "b"
+            ],
+            "commands": [
+                "workbench.debug.action.focusBreakpointsView"
+            ]
+        },
+        // Toggle Breakpoint
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint",
+            ]
+        },
+        // Add  Conditonal Breakpoint
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "c"
+            ],
+            "commands": [
+                "editor.debug.action.conditionalBreakpoint",
+            ]
+        },
+        // Go To Previous Breakpoint
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "p"
+            ],
+            "commands": [
+                "editor.debug.action.goToPreviousBreakpoint"
+            ]
+        },
+        // Go To Next Breakpoint
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "n"
+            ],
+            "commands": [
+                "editor.debug.action.goToNextBreakpoint"
+            ]
+        },
+        // Debug Watch View Focus
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "w"
+            ],
+            "commands": [
+                "workbench.debug.action.focusWatchView"
+            ]
+        },
+
+
+
+        // Start Debugging F5
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.debug.start",
+            ]
+        },
+        // Start Without Debugging - Run Ctrl+ F5
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.debug.run"
+            ]
+        },
+        // Debug Stop Shift + F5
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.debug.stop"
+            ]
+        },
+        // Debug Pause F6
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.debug.pause"
+            ]
+        },
+        // Debug Continue F5
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.debug.continue"
+            ]
+        },
+        // Debug StepInto F11
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "i"
+            ],
+            "commands": [
+                "workbench.action.debug.stepInto"
+            ]
+        },
+        // Debug StepOut Shift + F11
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.debug.stepOut"
+            ]
+        },
+        // Debug StepOver F10
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.debug.stepOver"
+            ]
+        },
+
+
+        // Panel Toggle
+        {
+            "before": [
+                "<leader>",
+                "p",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.togglePanel"
+            ]
+        },
+
+
+
+    
+
+       // Debug Run to Cursor
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "t"
+            ],
+            "commands": [
+                "editor.debug.action.runToCursor"
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //Go To Previous Editor
         {
             "before": [
@@ -140,7 +401,7 @@
         {
             "before": [
                 "<leader>",
-                "p"
+                "Tab"
             ],
             "commands": [
                 "workbench.action.showCommands",
@@ -202,10 +463,9 @@
                 "r"
             ],
             "commands": [
-                 "editor.action.startFindReplaceAction"
+                "editor.action.startFindReplaceAction"
             ]
         },
-
         //Find and replace in  files
         {
             "before": [
@@ -213,11 +473,9 @@
                 "R"
             ],
             "commands": [
-              "workbench.action.replaceInFiles"
+                "workbench.action.replaceInFiles"
             ]
         },
-
-
         //CORE SETTINGS COPIED FROM MY RAW VIM SETTINGS
         // H to beginning of line, L to the end
         {
@@ -296,7 +554,7 @@
         //  Comment
         {
             "before": [
-                "leader",
+                "g",
                 "c"
             ],
             "after": [
@@ -362,6 +620,7 @@
         },
         {
             "before": [
+                "<leader>",
                 "q"
             ],
             "commands": [
@@ -532,7 +791,6 @@
                 "editor.action.moveLinesDownAction"
             ]
         },
-
         //NAVIGATION
         {
             "before": [
@@ -541,7 +799,7 @@
                 "s"
             ],
             "commands": [
-              "workbench.action.showAllSymbols"
+                "workbench.action.showAllSymbols"
             ]
         },
         {
@@ -551,13 +809,11 @@
                 "y"
             ],
             "commands": [
-"workbench.action.gotoSymbol"
-
+                "workbench.action.gotoSymbol"
             ]
         },
-// JAVA
-
-// Peek definiton.
+        // JAVA
+        // Peek definiton.
         {
             "before": [
                 "<leader>",
@@ -565,15 +821,60 @@
                 "p"
             ],
             "commands": [
-"editor.action.peekDefinition"
-
+                "editor.action.peekDefinition",
+                "list.focusFirstChild"
             ]
         },
-
-
+        // Open definiton to the side
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "s"
+            ],
+            "commands": [
+                "editor.action.revealDefinitionAside"
+            ]
+        },
+        // Open definiton to the side
+        {
+            "before": [
+                "q",
+                "f"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        // Show References
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "s"
+            ],
+            "commands": [
+                "editor.action.referenceSearch.trigger",
+            ]
+        },
+        // Rename Symbol
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "e"
+            ],
+            "commands": [
+                "editor.action.rename",
+            ]
+        },
     ],
     "workbench.editor.highlightModifiedTabs": true,
     "extensions.ignoreRecommendations": false,
     "workbench.sideBar.location": "left",
-    "workbench.colorTheme": "Visual Studio Dark"
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "default",
+    "breadcrumbs.enabled": false
 }
