@@ -53,62 +53,100 @@
                 "$"
             ],
         },
-// After block yank and paste, move cursor to the end of operated text and don't override register
-
-       {
+        // After block yank and paste, move cursor to the end of operated text and don't override register
+        {
             "before": [
                 "y"
             ],
             "after": [
-                "y", "`","]"
+                "y",
+                "`",
+                "]"
             ]
         },
-
         {
             "before": [
                 "p"
             ],
             "after": [
-                 "\"","_","d","P", "`"
+                "\"",
+                "_",
+                "d",
+                "P",
+                "`"
             ]
         },
-
-
-         {
+        {
             "before": [
-                "leader", "b"
+                "leader",
+                "b"
             ],
             "after": [
-                "g", "C"
+                "g",
+                "C"
             ]
         },
-
-
-        
+        // Format Selection
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatSelection",
+            ]
+        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         //GENERAL 
+        // Show Files Explorer
         {
             "before": [
-                "<leader>","h"
+                "<leader>",
+                "h"
             ],
             "commands": [
                 // "workbench.action.focusSideBar",
                 "workbench.action.toggleSidebarVisibility",
-                // "workbench.files.action.focusFilesExplorer"
+                "workbench.files.action.focusFilesExplorer"
             ]
         },
-
+        //Go To Previous Editor
         {
             "before": [
                 "<leader>",
-                "c",
+                "<leader>"
+            ],
+            "commands": [
+                // "workbench.action.focusSideBar",
+                "workbench.action.openPreviousEditorFromHistory",
+                "list.select"
+                // "workbench.files.action.focusFilesExplorer"
+            ]
+        },
+        // Format Document
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument",
+            ]
+        },
+        // Open Command Palette 
+        {
+            "before": [
+                "<leader>",
                 "p"
             ],
             "commands": [
                 "workbench.action.showCommands",
             ]
         },
+        // Open New Window 
         {
             "before": [
                 "<leader>",
@@ -139,6 +177,47 @@
                 "workbench.action.openSettingsJson"
             ]
         },
+        {
+            "before": [
+                "g",
+                "f"
+            ],
+            "commands": [
+                "actions.find"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "F"
+            ],
+            "commands": [
+                "workbench.view.search"
+            ]
+        },
+        //Find and replace in current file
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                 "editor.action.startFindReplaceAction"
+            ]
+        },
+
+        //Find and replace in  files
+        {
+            "before": [
+                "g",
+                "R"
+            ],
+            "commands": [
+              "workbench.action.replaceInFiles"
+            ]
+        },
+
+
         //CORE SETTINGS COPIED FROM MY RAW VIM SETTINGS
         // H to beginning of line, L to the end
         {
@@ -163,79 +242,69 @@
                 "w"
             ],
             "after": [
-                "y", "i", "w"
+                "y",
+                "i",
+                "w"
             ]
         },
-
-// Copy file contents to clipboard maggVG"*y`a
+        // Copy file contents to clipboard maggVG"*y`a
         {
             "before": [
                 "leader",
                 "a"
             ],
             "after": [
-                "m","a", "g", "g","V","G","\"","*","y","`","a"
+                "m",
+                "a",
+                "g",
+                "g",
+                "V",
+                "G",
+                "\"",
+                "*",
+                "y",
+                "`",
+                "a"
             ]
         },
-
-// Go to visual mode and select all contents of file, <esc>ggVG<CR>
-
+        // Go to visual mode and select all contents of file, <esc>ggVG<CR>
         {
             "before": [
                 "leader",
                 "v"
             ],
             "after": [
-                "escape","g", "g","V","G", "enter"
+                "escape",
+                "g",
+                "g",
+                "V",
+                "G",
+                "enter"
             ]
         },
-
-// " After  paste, move cursor to the end of operated text and don't override register
-         {
+        // " After  paste, move cursor to the end of operated text and don't override register
+        {
             "before": [
                 "p"
             ],
             "after": [
-                "p", "`","]"
+                "p",
+                "`",
+                "]"
             ]
         },
-
-
-//  Comment
-         {
+        //  Comment
+        {
             "before": [
-                "leader", "c"
+                "leader",
+                "c"
             ],
             "after": [
-                "g", "c", "c"
+                "g",
+                "c",
+                "c"
             ]
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {
             "before": [
                 "leader",
@@ -319,7 +388,8 @@
         {
             "before": [
                 "<leader>",
-                "c", "o"
+                "c",
+                "o"
             ],
             "commands": [
                 "workbench.action.closeOtherEditors"
@@ -384,7 +454,8 @@
         {
             "before": [
                 "<leader>",
-                "c", "w"
+                "c",
+                "w"
             ],
             "commands": [
                 "workbench.action.closeWindow"
@@ -393,7 +464,8 @@
         {
             "before": [
                 "<leader>",
-                "c", "f"
+                "c",
+                "f"
             ],
             "commands": [
                 "workbench.action.closeFolder"
@@ -402,7 +474,8 @@
         {
             "before": [
                 "<leader>",
-                "o", "f"
+                "o",
+                "f"
             ],
             "commands": [
                 "workbench.action.files.openFolder"
@@ -411,7 +484,8 @@
         {
             "before": [
                 "<leader>",
-                "k", "s"
+                "k",
+                "s"
             ],
             "commands": [
                 "workbench.action.openGlobalKeybindings"
@@ -420,7 +494,8 @@
         {
             "before": [
                 "<leader>",
-                "o", "r"
+                "o",
+                "r"
             ],
             "commands": [
                 "workbench.action.openRecent"
@@ -429,15 +504,76 @@
         {
             "before": [
                 "<leader>",
-                "d","t"
+                "d",
+                "t"
             ],
             "commands": [
                 "workbench.action.webview.openDeveloperTools"
             ]
         },
-        //FILES
+        //EDITING
+        {
+            "before": [
+                "g",
+                "l",
+                "u"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "l",
+                "d"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+
+        //NAVIGATION
+        {
+            "before": [
+                "g",
+                "a",
+                "s"
+            ],
+            "commands": [
+              "workbench.action.showAllSymbols"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "y",
+                "y"
+            ],
+            "commands": [
+"workbench.action.gotoSymbol"
+
+            ]
+        },
+// JAVA
+
+// Peek definiton.
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "p"
+            ],
+            "commands": [
+"editor.action.peekDefinition"
+
+            ]
+        },
+
+
     ],
     "workbench.editor.highlightModifiedTabs": true,
     "extensions.ignoreRecommendations": false,
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Visual Studio Dark"
 }
