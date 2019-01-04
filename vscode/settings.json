@@ -113,6 +113,17 @@
             ]
         },
 
+        // Show Welcome 
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.showWelcomePage",
+            ]
+        },
+
         // Show Open Editors in Explorer 
         {
             "before": [
@@ -137,6 +148,17 @@
             ]
         },
 
+        //  Open View  
+        {
+            "before": [
+                "Alt",
+                "v"
+            ],
+            "commands": [
+                // "workbench.action.toggleSidebarVisibility",
+                "workbench.action.openView"
+            ]
+        },
 
 
         // Show Context Menu
@@ -791,6 +813,30 @@
                 "editor.action.moveLinesDownAction"
             ]
         },
+
+     // Add Cursor Above / Below
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "commands": [
+                "editor.action.insertCursorAbove"
+            ]
+        },
+
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "commands": [
+                "editor.action.insertCursorBelow"
+            ]
+        },
+
+
+
+
+
         //NAVIGATION
         {
             "before": [
@@ -868,6 +914,20 @@
                 "editor.action.rename",
             ]
         },
+
+        // Optimize Imports
+        {
+            "before": [
+                "<leader>",
+                "i"
+            ],
+            "commands": [
+                "editor.action.organizeImports",
+            ]
+        },
+
+
+
     ],
     "workbench.editor.highlightModifiedTabs": true,
     "extensions.ignoreRecommendations": false,
@@ -876,5 +936,6 @@
     "workbench.activityBar.visible": true,
     "workbench.statusBar.visible": true,
     "window.menuBarVisibility": "default",
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "editor.multiCursorModifier": "alt"
 }

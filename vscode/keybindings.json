@@ -18,5 +18,9 @@
         "key": "ctrl+j",
         "command": "-workbench.action.togglePanel"
     },
+    {
+        "key": "alt+v",
+        "command": "workbench.action.openView"
+    },
               
 ]
