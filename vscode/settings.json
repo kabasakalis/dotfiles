@@ -953,4 +953,10 @@
             ]
         },
     ],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "sync.gist": "a16763fc2598ea9538f0639e8db55b5f",
 }
