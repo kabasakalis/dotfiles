@@ -5,10 +5,20 @@
     //     "-DCMAKE_TOOLCHAIN_FILE=C:\\Users\\spiros\\cpp\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
     // ],
     // "cmake.configureSettings": {},
+    // CORE SETTINGS
+    "workbench.editor.highlightModifiedTabs": true,
+    "extensions.ignoreRecommendations": false,
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "default",
+    "breadcrumbs.enabled": false,
+    "editor.multiCursorModifier": "alt",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    //JAVA
+    // Java Red Hat
     "java.format.settings.url": "eclipse-formatter.xml",
-    //VIM
+    //VSVim Massive configuration with keybindings to match my native vim bindings as close as possible.
     "vim.easymotion": true,
     "vim.neovimPath": "F:\\Programs\\nvim\\bin\\nvim.exe",
     "vim.enableNeovim": true,
@@ -20,7 +30,9 @@
     "vim.insertModeKeyBindings": [],
     "vim.insertModeKeyBindingsNonRecursive": [],
     "vim.visualModeKeyBindings": [],
+    // VISUAL MODE KEY BINDINGS
     "vim.visualModeKeyBindingsNonRecursive": [
+        // Have the indent commands re-highlight the last visual selection to make multiple indentations easier
         {
             "before": [
                 ">"
@@ -37,6 +49,7 @@
                 "editor.action.outdentLines"
             ]
         },
+        // H to beginning of line, L to the end
         {
             "before": [
                 "H"
@@ -76,9 +89,10 @@
                 "`"
             ]
         },
+        // Comment Block
         {
             "before": [
-                "leader",
+                "g",
                 "b"
             ],
             "after": [
@@ -97,9 +111,212 @@
                 "editor.action.formatSelection",
             ]
         },
+        // have x (removes single character) not go into the default registry
+        // nnoremap x "_x
+        // Make X an operator that removes without placing text in the default registry
+        {
+            "before": [
+                "X"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "x"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        // Don't yank to default register when changing something
+        {
+            "before": [
+                "c"
+            ],
+            "after": [
+                "\"",
+                "x",
+                "c"
+            ]
+        },
     ],
+    // NORMAL MODE KEYBINDINGS
     "vim.normalModeKeyBindingsNonRecursive": [
-        //GENERAL 
+        // GENERAL 
+        // Open Command Palette 
+        {
+            "before": [
+                "<leader>",
+                "Tab"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        // Open New Window 
+        {
+            "before": [
+                "<leader>",
+                "n",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.newWindow",
+            ]
+        },
+        // Close Window 
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.closeWindow"
+            ]
+        },
+        // User Settings UI
+        {
+            "before": [
+                "<leader>",
+                "u",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.openSettings2"
+            ]
+        },
+        // User Settings JSON
+        {
+            "before": [
+                "<leader>",
+                "u",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.openSettingsJson"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.closeFolder"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "o",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.files.openFolder"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.openGlobalKeybindings"
+            ]
+        },
+
+        //EDITING
+        //  Comment
+        {
+            "before": [
+                "g",
+                "c"
+            ],
+            "after": [
+                "g",
+                "c",
+                "c"
+            ]
+        },
+        // Save
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+        // Save All
+        {
+            "before": [
+                "leader",
+                "S"
+            ],
+            "commands": [
+                "workbench.action.files.saveAll",
+            ]
+        },
+
+        // Format Document
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument",
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "l",
+                "u"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "l",
+                "d"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        // Add Cursor Above / Below
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "commands": [
+                "editor.action.insertCursorAbove"
+            ]
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "commands": [
+                "editor.action.insertCursorBelow"
+            ]
+        },
+        //DISPLAY
         // Show Files Explorer
         {
             "before": [
@@ -107,23 +324,19 @@
                 "h"
             ],
             "commands": [
-                // "workbench.action.focusSideBar",
-                // "workbench.action.toggleSidebarVisibility",
                 "workbench.files.action.focusFilesExplorer"
             ]
         },
-
         // Show Welcome 
         {
             "before": [
-                "<leader>",
+                "g",
                 "w"
             ],
             "commands": [
                 "workbench.action.showWelcomePage",
             ]
         },
-
         // Show Open Editors in Explorer 
         {
             "before": [
@@ -131,23 +344,9 @@
                 "o"
             ],
             "commands": [
-                // "workbench.action.toggleSidebarVisibility",
                 "workbench.files.action.focusOpenEditorsView"
             ]
         },
-
-        //  Sidebar View Next    
-        {
-            "before": [
-                "<leader>",
-                "k"
-            ],
-            "commands": [
-                // "workbench.action.toggleSidebarVisibility",
-                "workbench.action.nextSideBarView"
-            ]
-        },
-
         //  Open View  
         {
             "before": [
@@ -155,12 +354,9 @@
                 "v"
             ],
             "commands": [
-                // "workbench.action.toggleSidebarVisibility",
                 "workbench.action.openView"
             ]
         },
-
-
         // Show Context Menu
         {
             "before": [
@@ -170,23 +366,25 @@
                 "editor.action.showContextMenu"
             ]
         },
-        // Show Context Menu
+        // Show open recent files
         {
             "before": [
                 "<leader>",
-                "d",
-                "v"
+                "o",
+                "r"
             ],
             "commands": [
-                "workbench.view.debug"
+                "workbench.action.openRecent"
             ]
         },
-        // Show Breakpoints
+
+        // DEBUG
+        // Show (List) Breakpoints View
         {
             "before": [
                 "<leader>",
-                "d",
-                "b"
+                "b",
+                "l"
             ],
             "commands": [
                 "workbench.debug.action.focusBreakpointsView"
@@ -247,9 +445,6 @@
                 "workbench.debug.action.focusWatchView"
             ]
         },
-
-
-
         // Start Debugging F5
         {
             "before": [
@@ -338,25 +533,7 @@
                 "workbench.action.debug.stepOver"
             ]
         },
-
-
-        // Panel Toggle
-        {
-            "before": [
-                "<leader>",
-                "p",
-                "c"
-            ],
-            "commands": [
-                "workbench.action.togglePanel"
-            ]
-        },
-
-
-
-    
-
-       // Debug Run to Cursor
+        // Debug Run to Cursor
         {
             "before": [
                 "<leader>",
@@ -367,99 +544,7 @@
                 "editor.debug.action.runToCursor"
             ]
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //Go To Previous Editor
-        {
-            "before": [
-                "<leader>",
-                "<leader>"
-            ],
-            "commands": [
-                // "workbench.action.focusSideBar",
-                "workbench.action.openPreviousEditorFromHistory",
-                "list.select"
-                // "workbench.files.action.focusFilesExplorer"
-            ]
-        },
-        // Format Document
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "f"
-            ],
-            "commands": [
-                "editor.action.formatDocument",
-            ]
-        },
-        // Open Command Palette 
-        {
-            "before": [
-                "<leader>",
-                "Tab"
-            ],
-            "commands": [
-                "workbench.action.showCommands",
-            ]
-        },
-        // Open New Window 
-        {
-            "before": [
-                "<leader>",
-                "n",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.newWindow",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "u",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.openSettings2"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "u",
-                "j"
-            ],
-            "commands": [
-                "workbench.action.openSettingsJson"
-            ]
-        },
+        // SEARCH AND REPLACE
         {
             "before": [
                 "g",
@@ -498,6 +583,166 @@
                 "workbench.action.replaceInFiles"
             ]
         },
+        //EDITOR MANAGEMENT
+        //Go To Previous Editor
+        {
+            "before": [
+                "<leader>",
+                "<leader>"
+            ],
+            "commands": [
+                "workbench.action.openPreviousEditorFromHistory",
+                "list.select"
+            ]
+        },
+        // Split Editor horizontally
+        {
+            "before": [
+                "g",
+                "s",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        // Split Editor vertically
+        {
+            "before": [
+                "g",
+                "s",
+                "v"
+            ],
+            "commands": [
+                "workbench.action.splitEditorOrthogonal"
+            ]
+        },
+
+        // Focus left editor group
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        // Focus right editor group
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+        // Close editors group
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeEditorsInGroup"
+            ]
+        },
+        // Close all groups
+        {
+            "before": [
+                "<leader>",
+                "Q"
+            ],
+            "commands": [
+                "workbench.action.closeAllGroups"
+            ]
+        },
+        // Close active editor
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        //  Close other editors
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
+        //  Move editors group left
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupLeft"
+            ]
+        },
+        //  Move editors group right
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupRight"
+            ]
+        },
+
+        //  Move editor left in same group
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.moveEditorLeftInGroup"
+            ]
+        },
+        //  Move editor right in same group
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.moveEditorRightInGroup"
+            ]
+        },
+
+        //  Focus on previous editor in group
+        {
+            "before": [
+                "left"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        //  Focus on next editor in group
+        {
+            "before": [
+                "right"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+
         //CORE SETTINGS COPIED FROM MY RAW VIM SETTINGS
         // H to beginning of line, L to the end
         {
@@ -516,6 +761,7 @@
                 "cursorEnd"
             ]
         },
+        // Easier word yanking
         {
             "before": [
                 "leader",
@@ -562,282 +808,64 @@
                 "enter"
             ]
         },
-        // " After  paste, move cursor to the end of operated text and don't override register
+        // have x (removes single character) not go into the default registry
+        // nnoremap x "_x
+        // Make X an operator that removes without placing text in the default registry
         {
             "before": [
-                "p"
+                "X"
             ],
             "after": [
-                "p",
-                "`",
-                "]"
+                "\"",
+                "_",
+                "d"
             ]
         },
-        //  Comment
         {
             "before": [
-                "g",
+                "XX"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "d"
+            ]
+        },
+        // Don't yank to default register when changing something
+        {
+            "before": [
                 "c"
             ],
             "after": [
-                "g",
-                "c",
+                "\"",
+                "x",
                 "c"
             ]
         },
+        //Fix the cw at the end of line bug default Vim has special treatment (:help cw)
         {
             "before": [
-                "leader",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.files.save",
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "S"
-            ],
-            "commands": [
-                "workbench.action.files.saveAll",
-            ]
-        },
-        //WORKBENCH NAVIGATION
-        {
-            "before": [
-                "g",
-                "s",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.splitEditor"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "s",
-                "v"
-            ],
-            "commands": [
-                "workbench.action.splitEditorOrthogonal"
-            ]
-        },
-        {
-            "before": [
-                "<C-h>"
-            ],
-            "commands": [
-                "workbench.action.focusLeftGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-l>"
-            ],
-            "commands": [
-                "workbench.action.focusRightGroup"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "commands": [
-                "workbench.action.closeEditorsInGroup"
-            ]
-        },
-        {
-            "before": [
-                "Q"
-            ],
-            "commands": [
-                "workbench.action.closeAllGroups"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "x"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "o"
-            ],
-            "commands": [
-                "workbench.action.closeOtherEditors"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "m",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.moveActiveEditorGroupLeft"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "m",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.moveActiveEditorGroupRight"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.moveEditorLeftInGroup"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.moveEditorRightInGroup"
-            ]
-        },
-        {
-            "before": [
-                "left"
-            ],
-            "commands": [
-                "workbench.action.previousEditor"
-            ]
-        },
-        {
-            "before": [
-                "right"
-            ],
-            "commands": [
-                "workbench.action.nextEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
                 "c",
                 "w"
             ],
-            "commands": [
-                "workbench.action.closeWindow"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
+            "after": [
                 "c",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.closeFolder"
+                "e"
             ]
         },
         {
             "before": [
-                "<leader>",
-                "o",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.files.openFolder"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "k",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.openGlobalKeybindings"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "o",
-                "r"
-            ],
-            "commands": [
-                "workbench.action.openRecent"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
                 "d",
-                "t"
+                "w"
             ],
-            "commands": [
-                "workbench.action.webview.openDeveloperTools"
+            "after": [
+                "d",
+                "e"
             ]
         },
-        //EDITING
-        {
-            "before": [
-                "g",
-                "l",
-                "u"
-            ],
-            "commands": [
-                "editor.action.moveLinesUpAction"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "l",
-                "d"
-            ],
-            "commands": [
-                "editor.action.moveLinesDownAction"
-            ]
-        },
-
-     // Add Cursor Above / Below
-        {
-            "before": [
-                "<C-k>"
-            ],
-            "commands": [
-                "editor.action.insertCursorAbove"
-            ]
-        },
-
-        {
-            "before": [
-                "<C-j>"
-            ],
-            "commands": [
-                "editor.action.insertCursorBelow"
-            ]
-        },
-
-
-
-
-
-        //NAVIGATION
+        // RICH LANGUAGES EDITING
+        // Show all symbols
         {
             "before": [
                 "g",
@@ -848,6 +876,7 @@
                 "workbench.action.showAllSymbols"
             ]
         },
+        // Go to symbol
         {
             "before": [
                 "g",
@@ -858,31 +887,30 @@
                 "workbench.action.gotoSymbol"
             ]
         },
-        // JAVA
         // Peek definiton.
         {
             "before": [
                 "<leader>",
-                "d",
-                "p"
+                "p",
+                "d"
             ],
             "commands": [
                 "editor.action.peekDefinition",
                 "list.focusFirstChild"
             ]
         },
-        // Open definiton to the side
+        // Open definiton to the side 
         {
             "before": [
-                "<leader>",
-                "d",
-                "s"
+                "g",
+                "s",
+                "d"
             ],
             "commands": [
                 "editor.action.revealDefinitionAside"
             ]
         },
-        // Open definiton to the side
+        //  Quick Fix 
         {
             "before": [
                 "q",
@@ -914,7 +942,6 @@
                 "editor.action.rename",
             ]
         },
-
         // Optimize Imports
         {
             "before": [
@@ -925,17 +952,5 @@
                 "editor.action.organizeImports",
             ]
         },
-
-
-
     ],
-    "workbench.editor.highlightModifiedTabs": true,
-    "extensions.ignoreRecommendations": false,
-    "workbench.sideBar.location": "left",
-    "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.activityBar.visible": true,
-    "workbench.statusBar.visible": true,
-    "window.menuBarVisibility": "default",
-    "breadcrumbs.enabled": false,
-    "editor.multiCursorModifier": "alt"
 }
