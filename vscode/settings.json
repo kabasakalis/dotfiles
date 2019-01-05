@@ -14,7 +14,7 @@
     "window.menuBarVisibility": "default",
     "breadcrumbs.enabled": false,
     "editor.multiCursorModifier": "alt",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Tesla",
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     // Java Red Hat
     "java.format.settings.url": "eclipse-formatter.xml",
