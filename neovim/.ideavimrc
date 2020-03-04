@@ -238,7 +238,7 @@ map gf :action GotoFile<CR>
 map gs :action GotoSymbol<CR>
 map gi :action GotoImplementation<CR>
 map gd :action GotoDeclaration<CR>
-map gsm :action GotoSuperMethod<CR>
+map gu :action GotoSuperMethod<CR>
 map fu :action FindUsages<CR>
 " map fuf :action FindUsagesInFile<CR>
 " map ,huu :action HighlightUsages<CR>
@@ -339,23 +339,23 @@ map <leader>www :action MaximizeToolWindow<CR>
 
 " Git
 
-map ,gad :action Git.Add<CR>
-map ,gcl :action Git.Clone<CR>
-map ,gcr :action Git.Configure.Remotes<CR>
-map ,gnb :action Git.CreateNewBranch<CR>
-map ,gnt :action Git.CreateNewTag<CR>
-map ,gfe :action Git.Fetch<CR>
-map ,gin :action Git.Init<CR>
-map ,glo :action Git.Log<CR>
-map ,gme :action Git.Merge<CR>
-map ,gpl :action Git.Pull<CR>
-map ,grb :action Git.Rebase<CR>
-map ,gre :action Git.Reset<CR>
-map ,grc :action Git.ResolveConflicts<CR>
-map ,gst :action Git.Stash<CR>
-map ,gta :action Git.Tag<CR>
-map ,guc :action Git.Uncommit<CR>
-map ,gus :action Git.UnStash<CR>
+" map ,gad :action Git.Add<CR>
+" map ,gcl :action Git.Clone<CR>
+" map ,gcr :action Git.Configure.Remotes<CR>
+" map ,gnb :action Git.CreateNewBranch<CR>
+" map ,gnt :action Git.CreateNewTag<CR>
+" map ,gfe :action Git.Fetch<CR>
+" map ,gin :action Git.Init<CR>
+" map ,glo :action Git.Log<CR>
+" map ,gme :action Git.Merge<CR>
+" map ,gpl :action Git.Pull<CR>
+" map ,grb :action Git.Rebase<CR>
+" map ,gre :action Git.Reset<CR>
+" map ,grc :action Git.ResolveConflicts<CR>
+" map ,gst :action Git.Stash<CR>
+" map ,gta :action Git.Tag<CR>
+" map ,guc :action Git.Uncommit<CR>
+" map ,gus :action Git.UnStash<CR>
 
 "  Github
 
