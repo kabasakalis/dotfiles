@@ -1,9 +1,4 @@
-#=============================================================================
-# Spiros kabasakalis
-# Configuration for SpaceVim, also see autoload/config_before.vim
-#
-# Author: Spiros kabasakalis < kabasakalis at gmail.com >
-# URL: https://github.com/kabasakalis
+#============================================================================= Spiros kabasakalis Configuration for SpaceVim, also see autoload/config_before.vim Author: Spiros kabasakalis < kabasakalis at gmail.com > URL: https://github.com/kabasakalis
 # License: GPLv3
 #=============================================================================
 
@@ -148,6 +143,6 @@
   name = "honza/vim-snippets"
   merged = 0
 
-# [[custom_plugins]]
-  # name = "uplus/vim-clang-rename"
-  # merged = 0
+[[custom_plugins]]
+  name = "uplus/vim-clang-rename"
+  merged = 0

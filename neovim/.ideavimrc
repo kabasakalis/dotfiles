@@ -291,12 +291,13 @@ map ,rr :action Run<CR>
 map ,cr :action ChooseRunConfiguration<CR>
 map ,dd :action Debug<CR>
 map ,cd :action ChooseDebugConfiguration<CR>
-map ,rcl :action RunClass<CR>
+" map ,rcl :action RunClass<CR>
 map ,dcl :action DebugClass<CR>
 map ,b :action ToggleLineBreakpoint<CR>
 map ,vb :action ViewBreakpoints<CR>
 map ,cc :action Compile<CR>
 map ,cp :action CompileProject<CR>
+map ,rc :action Debugger.ReloadFile<CR>
 
 " View
 

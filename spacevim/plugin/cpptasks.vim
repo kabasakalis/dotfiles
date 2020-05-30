@@ -29,7 +29,7 @@ let g:executable_name_release = "sfml_project" "see CMakeLists.txt
 let g:cmd = "cmd /c " "windows command
 
 " CMake configure commands
-let g:configure_debug_command = "cd ". g:build_debug_folder . " && sh ../tasks/cmake_config_debug.sh "
+let g:configure_debug_command = "pwd &&  cd ". g:build_debug_folder . " && sh .\\..\\tasks\\cmake_config_debug.sh "
 let g:configure_release_command = "cd " . g:build_release_folder . " && sh ../tasks/cmake_config_release.sh "
 
 " CMake build build commands

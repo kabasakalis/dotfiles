@@ -14,7 +14,7 @@
     "window.menuBarVisibility": "default",
     "breadcrumbs.enabled": false,
     "editor.multiCursorModifier": "alt",
-    "workbench.colorTheme": "Tesla",
+    "workbench.colorTheme": "City Lights",
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     // Java Red Hat
     "java.format.settings.url": "eclipse-formatter.xml",
@@ -587,8 +587,8 @@
         //Go To Previous Editor
         {
             "before": [
-                "<leader>",
-                "<leader>"
+                "<Ctrl>",
+                "<Ctrl>"
             ],
             "commands": [
                 "workbench.action.openPreviousEditorFromHistory",
@@ -958,5 +958,10 @@
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
     },
-    "sync.gist": "a16763fc2598ea9538f0639e8db55b5f",
+    "sync.gist": "7205ee5cd3bf70d5be40eafd870f7287",
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
