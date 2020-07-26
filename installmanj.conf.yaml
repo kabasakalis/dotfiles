@@ -1,0 +1,65 @@
+- defaults:
+    link:
+        relink: true
+        create: true
+- clean: ['~']
+
+- link:
+    #zsh
+      ~/.zshrc: zsh/zshrc
+      ~/.dircolors: zsh/.dircolors
+      ~/.zshenv: zsh/zshenv
+      ~/.zsh_aliases: zsh/zsh_aliases
+    #oh-my-zsh
+      ~/.oh-my-zsh/themes/bullet-train.zsh-theme: zsh/bullet-train.zsh-theme
+    #bash
+      ~/.profile: bash/profile
+      ~/.bash_profile: bash/bash_profile
+      ~/.bashrc: bash/bashrc
+      ~/.bash_logout: bash/bash_logout
+      ~/.bash_aliases: bash/bash_aliases
+    #scripts
+      ~/.scripts: scripts
+    #git
+      ~/.gitconfig: git/gitconfig
+      ~/.gitignore_global: git/gitignore_global
+    #vim
+      ~/.vimrc: neovim/init.vim
+      ~/.vim/colors: neovim/colors
+      ~/.vim/colors: neovim/colors
+      ~/.vim/plugins.vim: neovim/plugins.vim
+      ~/.vim/autoload/utils.vim: neovim/autoload/utils.vim
+      ~/.vim/pythonx: neovim/pythonx
+      ~/.vim/ftplugin: neovim/ftplugin
+      ~/ackrc: vim/ackrc
+    #Spacevim
+      ~/.SpaceVim.d: spacevim
+      ~/.config/nvim/coc-settings.json: spacevim/config/coc-settings.json
+      ~/.vim/coc-settings.json: spacevim/config/coc-settings.json
+    #neovim
+      ~/.config/nvim/init.vim: neovim/init.vim
+      ~/.ideavimrc: neovim/.ideavimrc
+      ~/.config/nvim/plugins.vim: neovim/plugins.vim
+      ~/.config/nvim/colors: neovim/colors
+      ~/.config/nvim/syntax: neovim/syntax
+      ~/.config/nvim/sessions: neovim/sessions
+      ~/.config/nvim/autoload/utils.vim: neovim/autoload/utils.vim
+      ~/.config/nvim/.ycm_extra_conf.py: neovim/ycm_extra_conf.py
+      ~/.vimsnippets: neovim/vimsnippets
+      ~/.config/nvim/dictionary.utf-8.add: neovim/spell/dictionary.utf-8.add
+      ~/.config/nvim/ftplugin: neovim/ftplugin
+      ~/.config/nvim/pythonx: neovim/pythonx
+      ~/.config/nvim/plugins/c-support/c-support/templates/Templates:
+        create: true,
+        path: neovim/c-support/Templates
+    #home_assets
+      ~/home_assets: home_assets
+    #c++
+      ~/.lldbinit: cpp/.lldbinit
+      ~/.lldb: cpp/.lldb
+    #docker
+      ~/.zsh/completion/_docker-compose: docker/_docker-compose
+    #powerline fonts
+      ~/.fonts: fonts/
+    #ag
+      ~/.agignore: misc/agignore
