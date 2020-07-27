@@ -27,16 +27,16 @@ endif
 " let g:python3_host_prog = expand("$HOME/.pyenv/versions/neovim3/bin/python")
 
 " UBUNTU
- let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
- let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+" let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+" let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
 
 " Mac OS
 " let g:python_host_prog  = "/usr/local/bin/python2"
-" let g:python3_host_prog = "/usr/local/bin/python3"
+" let g:python3_host_prog = "/usr/bin/python"
 "
 " let g:loaded_python_provider = 1 "To disable Python 2 support:
 " let g:loaded_python3_provider = 1 " To disable Python 3 support:
-
+"
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 
@@ -115,6 +115,7 @@ endif
 let g:rehash256=1
 
 "" Available themes:
+colorscheme  Tomorrow-Night
 " Colorscheme jellybeans
 " Colorscheme lucid
 " Colorscheme railscasts
@@ -127,10 +128,9 @@ let g:rehash256=1
 " colorscheme seoul256
 " colorscheme tropikos
 " colorscheme jellybeans
-" colorscheme  Tomorrow-Night
 " colorscheme  OceanicNext
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
 
 " PaperColor
 " colorscheme PaperColor

@@ -1,28 +1,12 @@
 #Reload zsh
 alias rl=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
-
-#apt-get, ubuntu
-alias install='sudo apt-get install'
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade'
-alias up='sudo apt-get update && sudo apt-get upgrade -y'
-alias autoremove='sudo apt-get autoremove'
-alias purge='sudo apt-get purge'
-alias dist-upgrade='sudo apt-get dist-upgrade'
-
-# services
-alias ss='sudo service'
-alias ssmysql='sudo service mysql start'
-alias sspg='sudo service postgresql start'
-alias ssredis='sudo service redis-server start'
-alias sselastic='sudo service elasticsearch start'
-
-
 #Dotfiles Regenerate symbolic links
+alias dotfiles='cd ~/dotfiles && nvim'
 alias dot='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/install.conf.yaml'
 alias dotmac='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmac.conf.yaml'
-alias dotfiles='cd ~/dotfiles && nvim'
+alias dotmanj='cd  ~/dotfiles && dotbot/bin/dotbot -d ~/dotfiles -c ~/dotfiles/installmanj.conf.yaml'
+
 
 #neovim
 alias v='nvim'
@@ -52,11 +36,6 @@ alias dgrip='cd /opt/DataGrip-2017.2.2/bin && ./datagrip.sh'
 # Postman
 alias pman='cd /opt/Postman && ./Postman'
 
-
-alias e5b='cd ~/logisfera/e5-greece.backend'
-alias e5f='cd ~/logisfera/e5-greece.front'
-alias portal='cd ~/logisfera/ergo.hellas.portal.backend'
-
 #cpp
 alias cgcc='sudo update-alternatives --config gcc'
 alias ccpp='sudo update-alternatives --config c++'
@@ -79,27 +58,6 @@ alias cmt='cmake --build build-debug --target test' #specific target
 # alias qb='cd /home/spiros/qt/circular_membrane/build &&  /home/spiros/Qt/5.9.1/gcc_64/bin/qmake -o Makefile  /home/spiros/qt/circular_membrane/circular_membrane.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make'
 # alias qr='cd /home/spiros/qt/circular_membrane/ && ./build/circular_membrane'
 
-#tmux
-alias tt='tmux'
-alias tl='tmux list-sessions'
-#alias ta='tmux attach -t'
-alias ta='tmux attach -t main || tmux new -s main'
-alias tal='tmux attach'
-alias tns='tmux new -s'
-alias tks='tmux kill-session -t'
-alias ti='tmux info'
-alias td='tmux detach'
-alias treset='ka rails && ka nvim && tka'
-
-#tmuxinator
-alias txs='tmuxinator start'
-alias txc='tmuxinator copy'
-alias txl='tmuxinator list'
-alias txd='tmuxinator delete'
-alias txdoc='tmuxinator doctor'
-alias txh='tmuxinator help'
-alias txdeb='tmuxinator debug'
-alias txv='tmuxinator version'
 
 #git aliases
 alias ga='git add'
@@ -149,22 +107,8 @@ alias gdi='git diff'
 
 # Java
 
-# Glassfish
-# alias gfstart='sudo /opt/glassfish5/glassfish/bin/asadmin start-domain'
-# alias gfstop='sudo /opt/glassfish5/glassfish/bin/asadmin stop-domain'
-
-#ruby
-# alias ds="DISABLE_SPRING=1"
-# alias fc="ds foreman run rails console"
-# alias bl="bundle --gemfile Gemfile.rb"
-# alias sk_kill= "ps -ef | grep sidekiq | grep -v grep | awk '{print $2}' | xargs kill -9"
-
-
 #Quick nav
-alias labs="cd ~/Labs/ && ls"
-alias demo="cd ~/projects/DEMOS && ls"
-alias jv="cd ~/java && ls"
-alias ur="cd ~/upstream_repos && ls"
+alias pr="cd ~/projects/ && ls -la"
 
 
 #Add extra protection against mistakes
@@ -178,22 +122,6 @@ alias tre='trash-empty' #empty the trashcan(s).
 alias trl='trash-list' #list trashed file.
 alias rt='restore-trash' #restore a trashed file.
 
-#cheatsheets
-alias vcs1='google-chrome  ~/home_assets/cheatsheets/vim1.png'
-alias vcs2='google-chrome  ~/home_assets/cheatsheets/vim2.pdf'
-alias ideavimcs='google-chrome  http://ideavim.sourceforge.net/vim/index.html'
-# alias excs='google-chrome  ~/home_assets/cheatsheets/elixir.pdf'
-alias ccs='google-chrome  ~/home_assets/cheatsheets/c-hotkeys.pdf'
-# alias anacs='google-chrome  ~/home_assets/cheatsheets/anacoda.pdf'
-alias doccs='google-chrome  ~/home_assets/cheatsheets/docker.pdf'
-alias ngformcs='google-chrome  ~/home_assets/cheatsheets/ngform.pdf'
-alias ng4cs='google-chrome  ~/home_assets/cheatsheets/ng4.pdf'
-alias sbacs='google-chrome  ~/home_assets/cheatsheets/sbacs.pdf'
-alias sbacs2='google-chrome  ~/home_assets/cheatsheets/sbacs2.pdf'
-
-#Unity Launcher position
-alias launcherb='gsettings set com.canonical.Unity.Launcher launcher-position Bottom'
-alias launcherl='gsettings set com.canonical.Unity.Launcher launcher-position Left'
 
 #various
 alias int="sudo service network-manager restart"

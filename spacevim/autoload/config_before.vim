@@ -21,8 +21,8 @@ if has("win32")
  let g:python2_host_prog = "F://Programs//Python//27//python.exe"
 elseif has("unix")
   " Linux Options Neovim
-  let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
-  let g:python3_host_prog = "/home/spiros/.pyenv/versions/neovim3/bin/python"
+  " let g:python_host_prog  = "/home/spiros/.pyenv/versions/neovim2/bin/python"
+  let g:python3_host_prog = "/usr/bin/python3.8"
 else
 endif
 

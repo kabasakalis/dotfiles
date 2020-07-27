@@ -35,18 +35,19 @@ let g:startify_lists = [
 
 " let g:startify_custom_indices = ['1', '2', '3']
 let g:startify_bookmarks = [
-            \ { '1': '~/dotfiles/spacevim/init.toml'},
-            \ { '2': '~/dotfiles/spacevim/autoload/config_before.vim'},
-            \ { '3': '~/dotfiles/spacevim/autoload/config_after.vim'},
-            \ { '4': '~/dotfiles/spacevim/plugin/settings.vim'},
-            \ { '5': '~/dotfiles/spacevim/plugin/coc.vim'},
-            \ { '5': '~/dotfiles/neovim/init.vim' },
-            \ { '6': '~/dotfiles/neovim/plugins.vim'},
-            \ { '7': '~/dotfiles/neovim/autoload/utils.vim'},
-            \ { '8': '~/dotfiles/zsh/zshrc'},
-            \ { '9': '~/dotfiles/zsh/zshenv'},
-            \ { '10': '~/dotfiles/zsh/zsh_aliases'},
-            \ { '11': '~/dotfiles/install.conf.yaml'}
+            \ { '21': '~/dotfiles/spacevim/init.toml'},
+            \ { '22': '~/dotfiles/spacevim/autoload/config_before.vim'},
+            \ { '23': '~/dotfiles/spacevim/autoload/config_after.vim'},
+            \ { '24': '~/dotfiles/spacevim/plugin/settings.vim'},
+            \ { '25': '~/dotfiles/spacevim/plugin/coc.vim'},
+            \ { '25': '~/dotfiles/neovim/init.vim' },
+            \ { '26': '~/dotfiles/neovim/plugins.vim'},
+            \ { '27': '~/dotfiles/neovim/autoload/utils.vim'},
+            \ { '28': '~/dotfiles/zsh/zshrc'},
+            \ { '29': '~/dotfiles/zsh/zshenv'},
+            \ { '30': '~/dotfiles/zsh/zsh_aliases'},
+            \ { '31': '~/dotfiles/install.conf.yaml'},
+            \ { '32': '~/Documents/scratch.txt'}
             \ ]
 
 let g:startify_commands = [

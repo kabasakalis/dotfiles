@@ -18,10 +18,10 @@ void printMaze() {
   std::cout << "kakakakakkaka" << std::endl;
 
   std::cout << "kakakakakkaka" << std::endl;
-  
+
   int kaka = 99;
-  
-  
+
+
 }
 
 }  // namespace cppmaze

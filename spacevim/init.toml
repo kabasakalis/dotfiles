@@ -7,9 +7,9 @@
   # set spacevim theme. by default colorscheme layer is not loaded,
   # if you want to use more colorscheme, please load the colorscheme
   # layer
+  colorscheme = "deep-space"
   # colorscheme = "OceanicNext"
   # colorscheme = "gruvbox"
-  colorscheme = "deep-space"
   # colorscheme = "zenburn"
   # colorscheme = "gotham"
   # colorscheme = "iceberg"
@@ -58,13 +58,14 @@
 
 [[layers]]
   name = 'denite'
+  enable = true
 # Enable autocomplete layer
 # CAUTION: Disable this if using coc.vim for autocompletion!
 [[layers]]
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
   auto-completion-tab-key-behavior = "smart"
-  enable = false
+  enable = true
 [[layers]]
   name = 'shell'
   default_position = 'bottom'
@@ -115,9 +116,10 @@
   merged = 0
 
 # To enable coc.vim also move coc.vim to plugin folder 
-[[custom_plugins]]
-  name = "neoclide/coc.nvim"
-  merged = 0
+# [[custom_plugins]]
+  # name = "neoclide/coc.nvim"
+  # merged = 0
+  # enable = false
 
 [[custom_plugins]]
   name = "tpope/vim-git"

@@ -131,7 +131,7 @@ Plug 'w0rp/ale'
 " ---------------------------------------------------------------------------------------------------------------------
 "  AutoCompletion roxma/nvim-completion-manager {{{
 " ---------------------------------------------------------------------------------------------------------------------
-Plug 'roxma/nvim-completion-manager'
+"Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/ncm-rct-complete'
 Plug 'sassanh/nvim-cm-eclim'
 "}}}

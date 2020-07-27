@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 ###
 #Frequently used directories
 setopt AUTO_CD
-cdpath=($HOME/projects $HOME/projects/DEMOS $HOME/Labs $HOME/Warehouse $HOME/Downloads $HOME/dotfiles $HOME/Documents)
+cdpath=($HOME/projects $HOME/Downloads $HOME/dotfiles $HOME/Documents)
 # use share_history instead of setopt APPEND_HISTORY         # appends history to .zsh_history
 setopt AUTO_PARAM_SLASH       # adds slash at end of tabbed dirs
 setopt CHECK_JOBS             # check bg jobs on exit
@@ -81,12 +81,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git rails ruby bundler copydir copyfile docker docker-compose jhipster)
-plugins=(git bower  git-hubflow git-flow mvn osx postgres common-aliases httpie zsh-syntax-highlighting docker docker-compose)
+#
+plugins=(git git-hubflow git-flow mvn  common-aliases httpie  docker docker-compose)
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-#plugins=(adb bgnotify bower bundler common-aliases docker extract gem gitfast gulp heroku httpie jsontools meteor mix
-#npm rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
@@ -95,11 +92,8 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -139,7 +133,7 @@ BULLETTRAIN_TIME_12HR=false
 BULLETTRAIN_TIME_BG='black'
 BULLETTRAIN_TIME_FG='cyan'
 #CUSTOM
-BULLETTRAIN_CUSTOM_MSG='Liknoss'
+BULLETTRAIN_CUSTOM_MSG='-'
 BULLETTRAIN_CUSTOM_BG='black'
 BULLETTRAIN_CUSTOM_FG='white'
 #CONTEXT
@@ -170,9 +164,6 @@ BULLETTRAIN_EXEC_TIME_FG='black'
 # ensure correct PATH zshenv
 source $HOME/.zshenv
 
-#tmuxinator
-source ~/.bin/tmuxinator.zsh
-
 
 ###
 # ssh host completion
@@ -191,12 +182,6 @@ function gdt() {
 
 #system helpers
 
-# FIND PROCESS
-#usage e.g: "p csp_build" , "p python" etc
-function p(){
-  ps aux | grep -i $1 | grep -v grep
-  pgrep -fl "$1"
-}
 # KILL ALL
 #usage e.g: "ka csp_build" , "ka python" etc
 function ka(){
@@ -210,18 +195,7 @@ function ka(){
   fi
 }
 
-#tmux
-function tka(){
-  echo "Killing all tmux sessions"
-  for i in $(tmux ls | grep : | cut -d: -f1); do tmux kill-session -t $i; done
-  echo "Done"
-}
 
-#general
-olh() {
-  local port=${1:-3000}
-  open  "GoogleChrome" http://localhost:$port;
-}
 
 function dl_repo_to {
   url=$1;
@@ -244,7 +218,7 @@ download-video() {
 }
 
 chrome_localhost_tab(){
-  /usr/bin/google-chrome "http://localhost:$1"
+  /usr/bin/google-chrome-stable "http://localhost:$1"
 }
 
 
@@ -272,11 +246,6 @@ ex ()
   fi
 }
 
-# get ruby version
-function get_ruby_version {
-  echo -n $(ruby -v | cut -d ' ' -f 2)
-}
-
 
 #generate dummy files
 function gfiles() {
@@ -287,6 +256,7 @@ function gfiles() {
     yes  "File $basename $i Content " | head -1 > "$basename-$i.txt";
   done
 }
+
 #dummy commit
 function commit() {
   gfiles $1 $2 ;
@@ -299,12 +269,3 @@ function commit() {
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
-
-# tabtab source for jhipster package
-# uninstall by removing these lines or running `tabtab uninstall jhipster`
-# [[ -f /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/spiros/java/springify/node_modules/tabtab/.completions/jhipster.zsh
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

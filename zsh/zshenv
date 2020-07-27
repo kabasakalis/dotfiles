@@ -4,35 +4,19 @@ export EDITOR='nvim'
 export MYNVIMRC='~/.config/nvim/init.vim'
 export ALTERNATE_EDITOR=""
 export TERM="xterm-256color"
-# export TERM="screen-256color"
-# export TERM="tmux-256color"
+#export TERM="screen-256color"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 export VIMRUNTIME="/usr/share/nvim/runtime"
 export NVIMRUNTIME="/usr/share/nvim/runtime"
-# export PYTHONPATH='/usr/lib/llvm-3.8/lib/python2.7/site-packages'
-export HUNTER_ROOT="$HOME/.hunter"
-export PYENV_ROOT="$HOME/.pyenv"
-export MINICONDA3="$HOME/miniconda3"
-export ECLIPSE_HOME="$HOME/jee-oxygen/eclipse"
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-# export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
+export PYTHONPATH="/usr/lib/python3.8/site-packages"
+export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 # export PATH="$PATH:`yarn global bin`"
 
 # PATH
 PATH=$(paste -d ":" -s << EOF
 $PATH
-$HOME/.gem/ruby/2.5.1/bin
-$HOME/.rubies/ruby-2.5.1/bin
-$HOME/chruby-0.3.9/bin
 $HOME/dotfiles/scripts
 $HOME/.local/bin
-$PYENV_ROOT/bin
-$MINICONDA3/bin
-$HOME/jasypt-1.9.2/bin
-$HOME/.ccls/bin
-/opt/apache-maven-3.5.2/bin
-/usr/share/elasticsearch/bin
-/usr/local/heroku/bin
 /usr/local/sbin
 /usr/local/bin
 /usr/sbin
@@ -48,18 +32,10 @@ if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
   source "${VIRTUAL_ENV}/bin/activate"
 fi
 
-# chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-#chruby 2.4.0
 
 #REMAP CAPS LOCK to CTRL
 #gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 
-# pyenv, disable this line to stop managing python version with penv
-eval "$(pyenv init -)"
-# Auto activation of virtual evs.
-eval "$(pyenv virtualenv-init -)"
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-material.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
