@@ -24,6 +24,11 @@ Refer to these links:
 
 [Set up a fresh MacOS For Development](https://github.com/kabasakalis/dotfiles/wiki/Set-up-a-fresh-MacOS-For-Development)
 
+#### IMPORTANT UPDATE July 27th, 2020
+I have completed dumped shitty Ubuntu for Manjaro awesomeness.
+Made some SpaceVim updates and deleted  all my custom  LSP configurations for cpp. 
+Might set them up again using updated native SpaceVim configurations and not my previous messy hacks.
+
 #### Important Disclaimer
 
 Open source software changes rapidly and usually with no concern for backwards compatibility.
